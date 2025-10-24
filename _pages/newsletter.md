@@ -1,14 +1,14 @@
 ---
 layout: single
-title: "Power Platform Tips Newsletter"
+title: "Power Platform Newsletter - Weekly Tips & Tutorials | PowerPlatformTip"
 permalink: /newsletter/
-description: "Subscribe to weekly Power Platform Tips and receive exclusive insights directly in your inbox."
-excerpt: "Stay updated with #PowerPlatformTips – weekly tips, tricks, and updates about the Power Platform."
-keywords: "PowerPlatformTips Newsletter, Power Platform, Marcel Lehmann, MVP, ThePowerAddicts"
+description: "Subscribe to the weekly PowerPlatformTip Newsletter by MVP Marcel Lehmann. Exclusive tips, tutorials and updates on Power Apps, Power Automate & Copilot Studio directly to your inbox."
+excerpt: "Stay up to date with weekly Power Platform tips, best practices and news directly from Microsoft MVP Marcel Lehmann."
+keywords: "PowerPlatformTips Newsletter, Power Platform, Marcel Lehmann, MVP, ThePowerAddicts, Power Apps Tutorial, Power Automate Tips, Copilot Studio"
 author_profile: false
 sitemap:
-  priority: 0.7
-  changefreq: monthly
+  priority: 0.8
+  changefreq: weekly
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.2"

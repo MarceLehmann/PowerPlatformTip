@@ -15,7 +15,7 @@ remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "en-US" # English locale for international audience
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "PowerPlatformTip"
 title_separator          : "-"
@@ -28,7 +28,7 @@ repository: "MarceLehmann/PowerPlatformTip"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : # true, false (default)
+breadcrumbs              : true # true, false (default) - SEO optimization enabled
 words_per_minute         : 200
 enable_copy_code_button  : true # true, false (default)
 future                   : false

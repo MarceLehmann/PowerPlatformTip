@@ -1,10 +1,10 @@
 ---
 layout: single
-title: "Power Platform Learning Resources - Expert Training & Certification Guide"
+title: "Power Platform Training & Certifications | Learning Resources"
 permalink: /learning-resources/
-description: "Comprehensive Power Platform learning resources including Microsoft Learn courses, certification paths, community forums, and professional training from MVP Marcel Lehmann."
-excerpt: "Discover the best Power Platform learning resources including official Microsoft training, expert courses, community support, and professional coaching services."
-keywords: "Power Platform training, Microsoft Learn, Power Apps certification, Power Automate courses, Copilot Studio learning, MVP training, professional development"
+description: "Comprehensive Power Platform learning resources: Microsoft Learn courses, certification paths, community forums and professional training by MVP Marcel Lehmann from Switzerland."
+excerpt: "Discover the best Power Platform learning resources including official Microsoft training, expert courses, community support and professional coaching."
+keywords: "Power Platform Training, Microsoft Learn, Power Apps Certification, Power Automate Courses, Copilot Studio Learning, MVP Coaching, Professional Development, Switzerland"
 author_profile: false
 sitemap:
   priority: 0.7

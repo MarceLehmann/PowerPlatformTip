@@ -1,13 +1,13 @@
 ---
 layout: single
-title: "About PowerPlatformTip - Marcel Lehmann's Microsoft Power Platform Blog"
+title: "About Marcel Lehmann - Microsoft Power Platform MVP | PowerPlatformTip"
 permalink: /about/
-description: "Learn about Marcel Lehmann, Microsoft Power Platform MVP from Switzerland, and PowerPlatformTip blog featuring expert tips on Power Apps, Power Automate, Copilot Studio, and more."
-excerpt: "Discover PowerPlatformTip by Marcel Lehmann, BizzApps MVP providing expert guidance on Microsoft Power Platform including Power Apps, Power Automate, and Copilot Studio solutions."
-keywords: "Marcel Lehmann, Power Platform MVP, Power Apps expert, Power Automate consultant, Copilot Studio specialist, Microsoft MVP, Switzerland, PowerPlatform tips"
+description: "Marcel Lehmann, Microsoft Business Applications MVP from Switzerland. Expert in Power Apps, Power Automate and Copilot Studio. Coaching, consulting & training for Power Platform solutions."
+excerpt: "Discover PowerPlatformTip by Marcel Lehmann, BizzApps MVP providing expert guidance on Microsoft Power Platform including Power Apps, Power Automate and Copilot Studio solutions."
+keywords: "Marcel Lehmann, Power Platform MVP, Power Apps expert, Power Automate consultant, Copilot Studio specialist, Microsoft MVP, Switzerland, PowerPlatform tips, BizzApps MVP, ThePowerAddicts"
 author_profile: false
 sitemap:
-  priority: 0.8
+  priority: 0.9
   changefreq: monthly
 header:
   overlay_color: "#38c9c3"

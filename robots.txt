@@ -1,0 +1,32 @@
+# PowerPlatformTip Robots.txt
+# Allow all crawlers by default
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.powerplatformtip.com/sitemap.xml
+
+# Disallow search result pages and admin areas (if any)
+Disallow: /search?
+Disallow: /404.html
+
+# Allow CSS and JavaScript for proper rendering
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /*.css$
+Allow: /*.js$
+
+# Common bot-specific rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay for aggressive crawlers (optional, adjust as needed)
+# User-agent: *
+# Crawl-delay: 1

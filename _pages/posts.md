@@ -1,10 +1,10 @@
 ---
 layout: posts
-title: "All Power Platform Blog Posts - Expert Tips & Solutions"
+title: "All Power Platform Tips - Expert Solutions | PowerPlatformTip"
 permalink: /posts/
-description: "Browse all PowerPlatformTip blog posts featuring expert solutions for Power Apps, Power Automate, Copilot Studio, and Microsoft Power Platform development by MVP Marcel Lehmann."
-excerpt: "Complete collection of Power Platform expert blog posts including step-by-step guides, best practices, and real-world solutions for enterprise development."
-keywords: "Power Platform blog posts, Power Apps tutorials, Power Automate guides, Copilot Studio tips, Microsoft MVP blog, enterprise solutions, development guides"
+description: "Browse all PowerPlatformTip blog posts with expert solutions for Power Apps, Power Automate, Copilot Studio and Microsoft Power Platform by MVP Marcel Lehmann."
+excerpt: "Complete collection of all Power Platform expert posts with step-by-step guides, best practices and practical solutions for enterprise development."
+keywords: "Power Platform Blog Posts, Power Apps Tutorials, Power Automate Guides, Copilot Studio Tips, Microsoft MVP Blog, Enterprise Solutions, Development Guides"
 author_profile: false
 sitemap:
   priority: 1.0

@@ -1,16 +1,123 @@
+{%- comment -%}
+Enhanced Schema.org structured data for PowerPlatformTip
+Supports: Organization, Person, Article, BreadcrumbList
+{%- endcomment -%}
+
+{%- if page.url == '/' or page.layout == 'home' -%}
+{%- comment -%} Homepage: Organization/Person Schema {%- endcomment -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  {% if site.social.type == "Organization" -%}
-    "@type": "Organization",
-    "url": {{ '/' | absolute_url | jsonify }}{% if site.og_image %},
-    "logo": {{ site_og_image | jsonify }}{% endif %}{% if site.social.links %},
-    "sameAs": {{ site.social.links | jsonify }}{% endif %}
-  {%- else -%}
-    "@type": "Person",
-    "name": {{ site.social.name | default: site.name | jsonify }},
-    "url": {{ '/' | absolute_url | jsonify }}{% if site.social.links %},
-    "sameAs": {{ site.social.links | jsonify }}{% endif %}
-  {%- endif %}
+  "@type": "Person",
+  "name": "Marcel Lehmann",
+  "url": "https://www.powerplatformtip.com",
+  "image": "{{ '/assets/images/bio-photo.jfif' | absolute_url }}",
+  "jobTitle": "Microsoft Business Applications MVP",
+  "description": "{{ site.description }}",
+  "alumniOf": "BizzApps MVP",
+  "knowsAbout": ["Power Apps", "Power Automate", "Copilot Studio", "Microsoft Power Platform", "Dataverse"],
+  "sameAs": [
+    "https://www.linkedin.com/in/marcelehmann/",
+    "https://thepoweraddicts.ch",
+    "https://github.com/MarceLehmann"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "CH",
+    "addressRegion": "Switzerland"
+  }
 }
 </script>
+{%- endif -%}
+
+{%- if page.layout == 'single' and page.date -%}
+{%- comment -%} Blog Post: Article Schema {%- endcomment -%}
+{%- assign author = page.author | default: page.authors[0] | default: site.author -%}
+{%- assign author = site.data.authors[author] | default: author -%}
+{%- assign page_image = page.header.og_image | default: page.header.overlay_image | default: page.header.image | default: page.header.teaser | absolute_url -%}
+{%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
+{%- if seo_description -%}
+  {%- assign seo_description = seo_description | markdownify | strip_html | newline_to_br | strip_newlines | replace: '<br />', ' ' | escape_once | strip -%}
+{%- endif -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ seo_description | jsonify }},
+  "image": {% if page_image %}"{{ page_image }}"{% else %}null{% endif %},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {% if page.last_modified_at or page.updated -%}
+  "dateModified": "{{ page.last_modified_at | default: page.updated | date_to_xmlschema }}",
+  {%- else -%}
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  {%- endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ author.name | default: author | default: 'Marcel Lehmann' }}",
+    "url": "{{ site.url }}/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PowerPlatformTip",
+    "url": "{{ site.url }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/assets/images/bio-photo.jfif' | absolute_url }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  {% if page.categories -%}
+  "articleSection": {{ page.categories | first | jsonify }},
+  {%- endif %}
+  {% if page.tags -%}
+  "keywords": {{ page.tags | join: ', ' | jsonify }},
+  {%- endif %}
+  "inLanguage": "en-US",
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>
+{%- endif -%}
+
+{%- if page.breadcrumbs != false and site.breadcrumbs -%}
+{%- comment -%} BreadcrumbList Schema {%- endcomment -%}
+{%- unless page.url == '/' -%}
+{%- assign crumbs = page.url | split: '/' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}"
+    }
+    {%- assign crumb_count = 1 -%}
+    {%- for crumb in crumbs offset: 1 -%}
+      {%- if crumb != '' -%}
+        {%- assign crumb_count = crumb_count | plus: 1 -%}
+        {%- assign crumb_path = '' -%}
+        {%- for c in crumbs offset: 1 limit: crumb_count -%}
+          {%- if c != '' -%}
+            {%- assign crumb_path = crumb_path | append: '/' | append: c -%}
+          {%- endif -%}
+        {%- endfor -%}
+    ,{
+      "@type": "ListItem",
+      "position": {{ crumb_count }},
+      "name": "{{ crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize }}",
+      "item": "{{ site.url }}{{ crumb_path }}"
+    }
+      {%- endif -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endunless -%}
+{%- endif -%}
