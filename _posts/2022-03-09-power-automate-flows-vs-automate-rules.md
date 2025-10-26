@@ -1,5 +1,5 @@
 ﻿---
-title: "Power Automate Flows vs Automate Rules â€“ Performance and Efficiency Comparison by Daniel Christian"
+title: "Power Automate Flows vs Automate Rules – Performance and Efficiency Comparison by Daniel Christian"
 date: 2022-03-09
 permalink: "/article/powerplatform/2022/03/09/power-automate-flows-vs-automate-rules/"
 updated: 2025-06-26

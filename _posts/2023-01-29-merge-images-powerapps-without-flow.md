@@ -30,11 +30,11 @@ I'm proud to present you an amazing component for PowerApps from my talented bro
 
 Gone are the days of struggling with third-party tools or Power Automate to add notes or drawings to existing images. Martin's component makes it all simple. You can easily overlay multiple images, make notes, and save the final image all in one place.
 
-## ðŸŽ¯ What Makes This Special?
+## 🎯 What Makes This Special?
 
 **The best part?** The interface is super user-friendly, making it a breeze to add annotations to your images with **no premium connectors or third-party tools needed.**
 
-## ðŸ’¡ Problem Solved
+## 💡 Problem Solved
 
 Traditionally, merging images or adding annotations in PowerApps required:
 - Complex Power Automate flows
@@ -44,7 +44,7 @@ Traditionally, merging images or adding annotations in PowerApps required:
 
 This solution eliminates all those dependencies!
 
-## âœ¨ Key Features
+## ✨ Key Features
 
 - **Pure PowerApps Solution**: No external dependencies
 - **Image Overlay**: Combine multiple images seamlessly
@@ -53,7 +53,7 @@ This solution eliminates all those dependencies!
 - **Save & Export**: Generate final merged images
 - **SVG-Based**: Scalable vector graphics for quality output
 
-## ðŸ”§ How It Works
+## 🛠️ How It Works
 
 The component leverages SVG capabilities within PowerApps to:
 1. **Load base images** into the canvas
@@ -61,11 +61,11 @@ The component leverages SVG capabilities within PowerApps to:
 3. **Combine everything** into a single image
 4. **Export the result** as a usable image file
 
-## ðŸš€ Getting Started
+## 🚀 Getting Started
 
 ### Download & Implementation
 
-**[ðŸ“¥ Get the Component from GitHub](https://github.com/mlnc21/PowerApps-SVG-Merge-Modul)**
+**[📥 Get the Component from GitHub](https://github.com/mlnc21/PowerApps-SVG-Merge-Modul)**
 
 The repository includes:
 - Complete PowerApps component

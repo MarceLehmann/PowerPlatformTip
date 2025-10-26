@@ -1,5 +1,5 @@
 ﻿---
-title: "Power Apps Print Directly to a Printer with an API â€“ PDFs, Labels, Barcodes, and More with Flow from Shane Young"
+title: "Power Apps Print Directly to a Printer with an API – PDFs, Labels, Barcodes, and More with Flow from Shane Young"
 date: 2020-12-10
 permalink: "/article/powerplatform/2020/12/10/power-apps-print-directly-printer-api/"
 updated: 2025-06-26
