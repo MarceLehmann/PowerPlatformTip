@@ -1,6 +1,7 @@
 ---
 title: "PowerPlatformTip 44 – Calculate the Distance"
 date: 2023-04-13
+modified: 2025-11-21
 categories:
   - Article
   - PowerPlatformTip
