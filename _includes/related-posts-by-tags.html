@@ -1,24 +1,25 @@
 {% assign current_tags = page.tags | default: [] %}
-{% assign related = site.posts | where_exp: "post", "post.id != page.id and post.hidden != true" %}
+{% assign related = site.posts | where_exp: "post", "post.id != page.id" %}
+{% unless page.hidden == false %}
+  {% assign related = related | where_exp: "post", "post.hidden != true" %}
+{% endunless %}
 
-{% assign related_with_score = related | map: "post" %}
-{% assign scored_posts = [] %}
+{% assign posts_with_common_tags = "" | split: "" %}
 
 {% for post in related %}
-  {% assign score = 0 %}
+  {% assign has_common_tag = false %}
   {% for tag in post.tags %}
     {% if current_tags contains tag %}
-      {% assign score = score | plus: 1 %}
+      {% assign has_common_tag = true %}
+      {% break %}
     {% endif %}
   {% endfor %}
-  {% if score > 0 %}
-    {% assign scored_posts = scored_posts | push: post | sort: "score" %}
-    {% assign post = post | merge: { "score": score } %}
+  {% if has_common_tag %}
+    {% assign posts_with_common_tags = posts_with_common_tags | push: post %}
   {% endif %}
 {% endfor %}
 
-{% assign sorted = scored_posts | sort: "score" | reverse %}
-{% assign top_related = sorted | slice: 0, 3 %}
+{% assign top_related = posts_with_common_tags | slice: 0, 3 %}
 
 {% if top_related.size > 0 %}
 <div class="page__related">
