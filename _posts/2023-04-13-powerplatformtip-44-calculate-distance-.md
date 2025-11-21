@@ -20,8 +20,6 @@ toc: true
 toc_sticky: true
 ---
 
-## 🚀 PowerPlatformTip 44 – Calculate the Distance
-
 Here’s a cool tip to calculate the distance between two places without relying on premium services like Google or Bing maps.
 
 ## 💡 Challenge
