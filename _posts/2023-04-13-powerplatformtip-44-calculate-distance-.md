@@ -22,7 +22,7 @@ toc_sticky: true
 
 ## 🚀 PowerPlatformTip 44 – Calculate the Distance
 
-Here’s a cool tip to calculate the distance between two places without relying on premium services like Google or Bing maps.[web:19]
+Here’s a cool tip to calculate the distance between two places without relying on premium services like Google or Bing maps.
 
 ## 💡 Challenge
 
@@ -30,16 +30,16 @@ How do you provide accurate, real-time location-based distance calculations insi
 
 ## ✅ Solution
 
-You can use the Haversine formula – a proven geospatial calculation mechanism.[web:19]
+You can use the Haversine formula – a proven geospatial calculation mechanism.
 - There’s a ready-to-use code snippet available:  
-  [CalculateDistance.json @ GitHub – Marcel Lehmann](https://github.com/MarceLehmann/CodeSnippets/blob/main/CalculateDistance.json)[web:19]
+  [CalculateDistance.json @ GitHub – Marcel Lehmann](https://github.com/MarceLehmann/CodeSnippets/blob/main/CalculateDistance.json)
 - Just copy the JSON logic and paste into your Power Platform workflow (typically as an inline calculation or custom connector).
 - Replace the latitude and longitude values for locations A and B with your own values.
 
 ## 🔧 How it's done
 
 1. Obtain coordinates:
-   - Manually input latitude and longitude for each location, or use the PowerApps location function to fetch the user/device position (`Location.Latitude`, `Location.Longitude`).[web:19][web:5]
+   - Manually input latitude and longitude for each location, or use the PowerApps location function to fetch the user/device position (`Location.Latitude`, `Location.Longitude`).
 2. Drop the values into the shared script or formula:
    ```
    // Example for PowerApps
@@ -68,7 +68,7 @@ You can use the Haversine formula – a proven geospatial calculation mechanism.
 
 ## 🎉 Result
 
-Enjoy accurate, fast, and cost-effective distance calculations for any business scenario – including logistics, travel, or field service.[web:19]
+Enjoy accurate, fast, and cost-effective distance calculations for any business scenario – including logistics, travel, or field service.
 
 ## 🌟 Key Advantages
 
