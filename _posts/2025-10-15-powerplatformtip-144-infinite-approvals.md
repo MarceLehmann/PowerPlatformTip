@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 144 - 'Infinite Approvals beyond 30 days'"
+title: "#PowerPlatformTip 144 - Infinite Approvals beyond 30 days"
 date: 2025-10-15
 categories:
     - Article
