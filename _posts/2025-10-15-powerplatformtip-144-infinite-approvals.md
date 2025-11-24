@@ -1,6 +1,6 @@
 ---
 title: "#PowerPlatformTip 001 – 'Infinite Approvals beyond 30 days'"
-date: 2025-11-25
+date: 2025-10-15
 categories:
     - Article
     - PowerPlatformTip
