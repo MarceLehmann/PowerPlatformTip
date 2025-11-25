@@ -8,6 +8,10 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
+  - title: "Tools"
+    url: https://tools.powerplatformtip.com
+    target: _blank
+    description: "Power Platform Tools & Utilities"
   - title: "Learning Resources"
     url: /learning-resources/
   - title: "About"

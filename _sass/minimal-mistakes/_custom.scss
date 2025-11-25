@@ -1,0 +1,60 @@
+/* ==========================================================================
+   CUSTOM OVERRIDES - PowerPlatformTip
+   ========================================================================== */
+
+/*
+   Fix: Sticky Sidebar (ToC) causing horizontal scroll
+   Problem: Negative margin pushes sidebar outside viewport
+   Solution: Ensure sidebar stays within bounds with proper constraints
+   ========================================================================== */
+
+.sidebar__right {
+  @include breakpoint($large) {
+    // Override default negative margin that causes horizontal scroll
+    margin-inline-end: 0 !important;
+    
+    // Ensure it stays within viewport
+    max-width: $right-sidebar-width-narrow;
+    
+    &.sticky {
+      // Keep sticky positioning but prevent overflow
+      right: 0;
+      
+      .toc {
+        // Ensure ToC menu has proper constraints
+        max-width: 100%;
+        
+        .toc__menu {
+          // Prevent text overflow
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+        }
+      }
+    }
+  }
+
+  @include breakpoint($x-large) {
+    max-width: $right-sidebar-width;
+  }
+}
+
+// Ensure page content doesn't overlap with fixed sidebar
+.page {
+  @include breakpoint($large) {
+    // Reduce padding to account for sidebar positioning fix
+    padding-inline-end: calc(#{$right-sidebar-width-narrow} + 1em);
+  }
+
+  @include breakpoint($x-large) {
+    padding-inline-end: calc(#{$right-sidebar-width} + 1em);
+  }
+}
+
+// Prevent body horizontal overflow
+body {
+  overflow-x: hidden;
+}
+
+#main {
+  overflow-x: hidden;
+}
