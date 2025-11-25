@@ -3,9 +3,9 @@
    ========================================================================== */
 
 /*
-   Fix: Sticky Sidebar (ToC) causing horizontal scroll
-   Problem: Negative margin pushes sidebar outside viewport
-   Solution: Ensure sidebar stays within bounds with proper constraints
+   Fix: Sticky Sidebar (ToC) causing horizontal scroll and scroll hijacking
+   Problem: Negative margin pushes sidebar outside viewport, sticky menu captures scroll
+   Solution: Ensure sidebar stays within bounds with proper constraints and pointer events
    ========================================================================== */
 
 .sidebar__right {
@@ -16,6 +16,9 @@
     // Ensure it stays within viewport
     max-width: $right-sidebar-width-narrow;
     
+    // Prevent sidebar from capturing scroll events
+    pointer-events: none;
+    
     &.sticky {
       // Keep sticky positioning but prevent overflow
       right: 0;
@@ -24,10 +27,16 @@
         // Ensure ToC menu has proper constraints
         max-width: 100%;
         
+        // Re-enable pointer events for interactive elements
+        pointer-events: auto;
+        
         .toc__menu {
           // Prevent text overflow
           word-wrap: break-word;
           overflow-wrap: break-word;
+          
+          // Prevent scroll hijacking when scrolling over ToC
+          overscroll-behavior: contain;
         }
       }
     }
