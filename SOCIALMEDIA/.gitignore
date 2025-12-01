@@ -1,0 +1,12 @@
+# .gitignore for SOCIALMEDIA folder
+
+# Ignore processed files archive
+1_INPUT/_PROCESSED/
+
+# Ignore any temporary or draft files
+*.tmp
+*.draft
+*~
+
+# Keep folder structure
+!.gitkeep
