@@ -25,17 +25,15 @@ def print_header():
     print(f"{Colors.BLUE}╚════════════════════════════════════════════════╝{Colors.NC}\n")
 
 def extract_phase_block(content, phase_name, code_type="markdown"):
-    """Extrahiert einen PHASE-Block aus dem Content"""
-    # Suche nach PHASE-Block (case-insensitive)
+    """Extrahiert den letzten PHASE-Block (Rückwärtskompatibilität)."""
+    blocks = extract_phase_blocks(content, phase_name, code_type)
+    return blocks[-1] if blocks else None
+
+def extract_phase_blocks(content, phase_name, code_type="markdown"):
+    """Extrahiert alle PHASE-Blöcke als Liste (Erscheinungsreihenfolge)."""
     pattern = rf'###\s*{phase_name}\s*[^\n]*\n\n```{code_type}\n(.*?)```'
-    
     matches = list(re.finditer(pattern, content, re.DOTALL | re.IGNORECASE))
-    
-    if matches:
-        # Nimm das letzte Match (neueste Version von unten)
-        return matches[-1].group(1).strip()
-    
-    return None
+    return [m.group(1).strip() for m in matches]
 
 def extract_metadata(markdown_content):
     """Extrahiert Metadaten aus dem Jekyll Frontmatter"""
@@ -70,24 +68,27 @@ def create_slug(title):
     return slug
 
 def generate_newsletter_from_markdown(metadata, markdown_content):
-        """Erzeuge einfachen HTML Newsletter aus dem Markdown (Fallback)."""
-        challenge = extract_section(markdown_content, '💡 Challenge')
-        solution = extract_section(markdown_content, '✅ Solution')
-        advantages = extract_section(markdown_content, '🌟 Key Advantages')
+    """Erzeuge einfachen HTML Newsletter aus dem Markdown (Fallback) mit sauberer Bullet-Liste."""
+    challenge = extract_section(markdown_content, '💡 Challenge')
+    solution = extract_section(markdown_content, '✅ Solution')
+    advantages = extract_section(markdown_content, '🌟 Key Advantages')
 
-        # Liste der Vorteile extrahieren (Zeilen mit Bullet oder Emoji)
-        adv_items = []
-        for line in advantages.splitlines():
-                if line.strip().startswith('🔸') or line.strip().startswith('-'):
-                        adv_items.append(line.strip().lstrip('🔸').lstrip('-').strip())
+    # Vorteile Zeilenweise parsen (Originalzeilen erhalten)
+    adv_items = []
+    for raw_line in advantages.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        if line.startswith('🔸') or line.startswith('-'):
+            cleaned = re.sub(r'^(🔸\s*|-\s*)', '', line).strip()
+            adv_items.append(cleaned)
+    advantages_html = ''.join(f'<li>{item}</li>' for item in adv_items)
 
-        advantages_html = ''.join(f'<li>{item}</li>' for item in adv_items) if adv_items else ''
+    title = metadata.get('title', 'PowerPlatformTip')
+    tip_number = metadata.get('tip_number', 'XXX')
+    date = metadata.get('date', '')
 
-        title = metadata.get('title', 'PowerPlatformTip')
-        tip_number = metadata.get('tip_number', 'XXX')
-        date = metadata.get('date', '')
-
-        html = f"""<!DOCTYPE html>
+    html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -122,78 +123,67 @@ def generate_newsletter_from_markdown(metadata, markdown_content):
     <div class="footer">Generated automatically from PowerPlatformTip Markdown fallback.</div>
 </body>
 </html>"""
-        return html
+    return html
 
 def extract_section(markdown_content, heading):
-        """Extrahiert Text unter einer Abschnittsüberschrift bis zur nächsten Überschrift."""
-        lines = markdown_content.splitlines()
-        capture = False
-        buffer = []
-        for line in lines:
-                if line.strip().startswith('##') and heading in line:
-                        capture = True
-                        continue
-                if capture:
-                        if line.strip().startswith('## '):  # nächste Überschrift
-                                break
-                        buffer.append(line)
-        return ' '.join(buffer).strip()
+    """Extrahiert Text unter einer Abschnittsüberschrift bis zur nächsten Überschrift (Zeilen erhalten)."""
+    lines = markdown_content.splitlines()
+    capture = False
+    buffer = []
+    for line in lines:
+        if line.strip().startswith('##') and heading in line:
+            capture = True
+            continue
+        if capture:
+            if line.strip().startswith('## '):  # nächste Überschrift beginnt
+                break
+            buffer.append(line)
+    return '\n'.join(buffer).strip()
 
 def process_file(input_file, blog_dir, newsletter_dir):
-    """Verarbeitet eine Input-Datei"""
+    """Verarbeitet eine Input-Datei und erzeugt für alle PHASE 2 Varianten jeweils Blog+Newsletter."""
     print(f"{Colors.BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{Colors.NC}")
     print(f"{Colors.GREEN}📄 {input_file.name}{Colors.NC}\n")
-    
-    # Lese Datei
-    content = input_file.read_text(encoding='utf-8')
-    
-    # PHASE 2: Jekyll Markdown
-    print(f"{Colors.BLUE}  → Suche PHASE 2 (Jekyll Markdown)...{Colors.NC}")
-    phase2_content = extract_phase_block(content, "PHASE 2.*JEKYLL MARKDOWN", "markdown")
-    
-    if phase2_content:
-        # Extrahiere Metadaten
-        metadata = extract_metadata(phase2_content)
-        
-        if metadata.get('tip_number') and metadata.get('date') and metadata.get('title'):
-            # Fixe toc_sticky
-            phase2_content = re.sub(r'toc_sticky:\s*true', 'toc_sticky: false', phase2_content)
-            
-            # Erstelle Dateinamen
-            slug = create_slug(metadata['title'])
-            blog_filename = f"{metadata['date']}-powerplatformtip-{metadata['tip_number']}-{slug}.md"
-            
-            # Schreibe Blog-Post
-            blog_file = blog_dir / blog_filename
-            blog_file.write_text(phase2_content, encoding='utf-8')
-            
-            print(f"{Colors.GREEN}  ✓ Blog erstellt: {blog_filename}{Colors.NC}")
-            print(f"    Tip #{metadata['tip_number']} | {metadata['date']}")
 
-            # Versuche PHASE 3 (HTML Newsletter) zu extrahieren
-            print(f"\n{Colors.BLUE}  → Suche PHASE 3 (HTML Newsletter)...{Colors.NC}")
-            phase3_html = extract_phase_block(content, "PHASE 3", "html")
-            if phase3_html:
-                newsletter_filename = f"{metadata['date']}-tip-{metadata['tip_number']}.html"
-                (newsletter_dir / newsletter_filename).write_text(phase3_html, encoding='utf-8')
-                print(f"{Colors.GREEN}  ✓ Newsletter (PHASE 3) erstellt: {newsletter_filename}{Colors.NC}")
-                newsletter_created = True
-            else:
-                # Fallback: Newsletter aus Challenge / Solution / Advantages erzeugen
-                print(f"{Colors.YELLOW}  ⚠ Kein PHASE 3 Block – generiere Fallback Newsletter aus PHASE 2{Colors.NC}")
-                fallback_html = generate_newsletter_from_markdown(metadata, phase2_content)
-                newsletter_filename = f"{metadata['date']}-tip-{metadata['tip_number']}.html"
-                (newsletter_dir / newsletter_filename).write_text(fallback_html, encoding='utf-8')
-                print(f"{Colors.GREEN}  ✓ Newsletter (Fallback) erstellt: {newsletter_filename}{Colors.NC}")
-                newsletter_created = True
-            
-            return metadata
-        else:
-            print(f"{Colors.YELLOW}  ⚠ Metadaten unvollständig (Nummer, Datum oder Titel fehlt){Colors.NC}")
-            return None
-    else:
+    content = input_file.read_text(encoding='utf-8')
+
+    print(f"{Colors.BLUE}  → Suche PHASE 2 Varianten (Jekyll Markdown)...{Colors.NC}")
+    phase2_blocks = extract_phase_blocks(content, "PHASE 2.*JEKYLL MARKDOWN", "markdown")
+
+    if not phase2_blocks:
         print(f"{Colors.YELLOW}  ⚠ Kein PHASE 2 Block gefunden{Colors.NC}")
-        return None
+        return 0
+
+    processed_variants = 0
+    for idx, phase2_content in enumerate(phase2_blocks, start=1):
+        metadata = extract_metadata(phase2_content)
+        if not (metadata.get('tip_number') and metadata.get('date') and metadata.get('title')):
+            print(f"{Colors.YELLOW}  ⚠ Variante {idx}: Metadaten unvollständig – übersprungen{Colors.NC}")
+            continue
+
+        phase2_content = re.sub(r'toc_sticky:\s*true', 'toc_sticky: false', phase2_content)
+        slug = create_slug(metadata['title'])
+
+        blog_filename = f"{metadata['date']}-powerplatformtip-{metadata['tip_number']}-{slug}.md"
+        blog_file = blog_dir / blog_filename
+        blog_file.write_text(phase2_content, encoding='utf-8')
+        print(f"{Colors.GREEN}  ✓ Blog Variante {idx} erstellt: {blog_filename}{Colors.NC}")
+
+        # PHASE 3 einmal global extrahieren (falls vorhanden nur für erste Variante verwenden?)
+        phase3_html = extract_phase_block(content, "PHASE 3", "html")
+        if phase3_html:
+            newsletter_filename = f"{metadata['date']}-tip-{metadata['tip_number']}-{slug}.html"
+            (newsletter_dir / newsletter_filename).write_text(phase3_html, encoding='utf-8')
+            print(f"{Colors.GREEN}    → Newsletter (PHASE 3) erstellt: {newsletter_filename}{Colors.NC}")
+        else:
+            fallback_html = generate_newsletter_from_markdown(metadata, phase2_content)
+            newsletter_filename = f"{metadata['date']}-tip-{metadata['tip_number']}-{slug}.html"
+            (newsletter_dir / newsletter_filename).write_text(fallback_html, encoding='utf-8')
+            print(f"{Colors.YELLOW}    ⚠ Kein PHASE 3 → Fallback Newsletter erstellt: {newsletter_filename}{Colors.NC}")
+
+        processed_variants += 1
+
+    return processed_variants
 
 def main():
     script_dir = Path(__file__).parent
@@ -222,8 +212,8 @@ def main():
     processed_count = 0
     
     for input_file in input_files:
-        metadata = process_file(input_file, blog_dir, newsletter_dir)
-        
+        count_created = process_file(input_file, blog_dir, newsletter_dir)
+
         # Archiviere Input-Datei
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         archived_name = f"{timestamp}_{input_file.name}"
@@ -231,14 +221,14 @@ def main():
         
         print(f"\n{Colors.GREEN}  ✓ Archiviert: _PROCESSED/{archived_name}{Colors.NC}\n")
         
-        if metadata:
+        if count_created:
             processed_count += 1
     
     print(f"{Colors.BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{Colors.NC}")
     print(f"{Colors.GREEN}✓ Verarbeitung abgeschlossen!{Colors.NC}\n")
     print(f"📊 Statistik:")
-    print(f"   {Colors.GREEN}{processed_count}{Colors.NC} von {len(input_files)} Datei(en) erfolgreich verarbeitet")
-    print(f"   {Colors.BLUE}BLOG/{Colors.NC} enthält nun die Jekyll-Posts")
+    print(f"   {Colors.GREEN}{processed_count}{Colors.NC} von {len(input_files)} Datei(en) mit mind. einer Variante verarbeitet")
+    print(f"   {Colors.BLUE}BLOG/{Colors.NC} & {Colors.BLUE}NEWSLETTER/{Colors.NC} enthalten nun alle Varianten")
     print(f"\n{Colors.YELLOW}💡 Nächster Schritt:{Colors.NC} Blog-Posts nach {Colors.BLUE}_posts/{Colors.NC} kopieren\n")
 
 if __name__ == "__main__":
