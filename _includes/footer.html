@@ -12,10 +12,41 @@
       {% endfor %}
     {% endif %}
 
+    <li>
+      <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=marcelehmann" rel="nofollow noopener noreferrer" target="_blank">
+        <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Follow on LinkedIn
+      </a>
+    </li>
+
     {% unless site.atom_feed.hide %}
       <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
     {% endunless %}
   </ul>
+</div>
+
+<div class="page__footer-services">
+  <div class="footer-services">
+    <div class="footer-services__content">
+      <div class="footer-services__icon">
+        <i class="fas fa-chalkboard-teacher"></i>
+      </div>
+      <div class="footer-services__text">
+        <h4 class="footer-services__title">Need Expert Power Platform Help?</h4>
+        <p class="footer-services__description">
+          Get professional workshops, consulting, and training for your Power Platform projects. 
+          Benefit from MVP-level expertise and proven solutions.
+        </p>
+      </div>
+      <div class="footer-services__cta">
+        <a href="https://www.thepoweraddicts.com" 
+           class="footer-services__button"
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="fas fa-arrow-right"></i> Explore Services
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} <a href="{{ site.copyright_url | default: site.url }}">{{ site.copyright | default: site.title }}</a>. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>

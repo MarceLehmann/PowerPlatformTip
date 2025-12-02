@@ -1,0 +1,82 @@
+<!-- TechArticle Schema for Blog Posts -->
+{% if page.id %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "{{ page.title | replace: '|', '&#124;' | strip_html | strip_newlines | escape_once }}",
+  "description": "{{ page.excerpt | default: page.description | markdownify | strip_html | strip_newlines | truncate: 160 | escape_once }}",
+  "image": "{{ page.header.image | default: page.header.overlay_image | default: site.og_image | absolute_url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author | default: site.author.name }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/about/",
+    "jobTitle": "Microsoft Power Platform MVP",
+    "sameAs": [
+      "https://www.linkedin.com/in/marcelehmann/",
+      "https://mvp.microsoft.com/en-US/mvp/profile/6bcfe4e3-2f65-ef11-8a69-7c1e520ce37e"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}{{ site.baseurl }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo | default: '/assets/images/logo.png' | absolute_url }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "url": "{{ page.url | absolute_url }}",
+  "articleSection": "{{ page.categories | first | default: 'Power Platform' }}",
+  "keywords": "{{ page.tags | join: ', ' }}",
+  "inLanguage": "en-US",
+  "about": {
+    "@type": "Thing",
+    "name": "Microsoft Power Platform"
+  },
+  "proficiencyLevel": "{{ page.difficulty | default: 'Intermediate' }}",
+  "dependencies": "Microsoft Power Platform",
+  "programmingLanguage": [
+    {% if page.tags contains 'PowerFx' or page.tags contains 'power-fx' %}"PowerFx",{% endif %}
+    {% if page.tags contains 'JavaScript' or page.tags contains 'javascript' %}"JavaScript",{% endif %}
+    {% if page.tags contains 'TypeScript' or page.tags contains 'typescript' %}"TypeScript",{% endif %}
+    {% if page.tags contains 'C#' or page.tags contains 'csharp' %}"C#",{% endif %}
+    "Power Apps Formula Language"
+  ],
+  "softwareApplication": [
+    {% if page.tags contains 'Power Apps' or page.tags contains 'powerapps' %}
+    {
+      "@type": "SoftwareApplication",
+      "name": "Microsoft Power Apps",
+      "applicationCategory": "BusinessApplication"
+    },
+    {% endif %}
+    {% if page.tags contains 'Power Automate' or page.tags contains 'powerautomate' %}
+    {
+      "@type": "SoftwareApplication",
+      "name": "Microsoft Power Automate",
+      "applicationCategory": "BusinessApplication"
+    },
+    {% endif %}
+    {% if page.tags contains 'Copilot Studio' or page.tags contains 'copilotstudio' %}
+    {
+      "@type": "SoftwareApplication",
+      "name": "Microsoft Copilot Studio",
+      "applicationCategory": "BusinessApplication"
+    }
+    {% endif %}
+  ],
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/ReadAction",
+    "userInteractionCount": "{{ page.views | default: 0 }}"
+  }
+}
+</script>
+{% endif %}

@@ -205,6 +205,39 @@ sass:
 permalink: /:categories/:title/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+# Exclude files from processing
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - minimal-mistakes-jekyll.gemspec
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
+  - /DOCS # ignore documentation folder
+  - /SOCIALMEDIA # ignore social media assets
+  - .htaccess
+
 
 # Pagination with jekyll-paginate
 paginate: 5 # amount of posts to show

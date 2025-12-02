@@ -1,0 +1,98 @@
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent" class="cookie-consent" style="display: none;">
+  <div class="cookie-consent__content">
+    <div class="cookie-consent__text">
+      <i class="fas fa-cookie-bite"></i>
+      <p>
+        This site uses cookies to improve your experience and deliver personalized content. 
+        By continuing to use this site, you consent to our use of cookies. 
+        <a href="/privacy-policy/" target="_blank">Learn more</a>
+      </p>
+    </div>
+    <div class="cookie-consent__actions">
+      <button class="cookie-consent__button cookie-consent__button--accept" id="cookie-accept">
+        Accept
+      </button>
+      <button class="cookie-consent__button cookie-consent__button--decline" id="cookie-decline">
+        Decline
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+  
+  const COOKIE_NAME = 'cookie_consent';
+  const COOKIE_DAYS = 365;
+  
+  // Cookie helpers
+  function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  
+  function getCookie(name) {
+    const nameEQ = name + '=';
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+  
+  function showConsent() {
+    const consent = getCookie(COOKIE_NAME);
+    if (!consent) {
+      const banner = document.getElementById('cookie-consent');
+      if (banner) {
+        banner.style.display = 'block';
+        setTimeout(() => banner.classList.add('cookie-consent--visible'), 10);
+      }
+    }
+  }
+  
+  function hideConsent() {
+    const banner = document.getElementById('cookie-consent');
+    if (banner) {
+      banner.classList.remove('cookie-consent--visible');
+      setTimeout(() => banner.style.display = 'none', 300);
+    }
+  }
+  
+  function acceptCookies() {
+    setCookie(COOKIE_NAME, 'accepted', COOKIE_DAYS);
+    hideConsent();
+  }
+  
+  function declineCookies() {
+    setCookie(COOKIE_NAME, 'declined', COOKIE_DAYS);
+    hideConsent();
+    
+    // Clear newsletter cookies if declined
+    document.cookie = 'newsletter_popup_dismissed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'newsletter_bar_dismissed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  }
+  
+  // Show banner on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    showConsent();
+    
+    // Event handlers
+    const acceptBtn = document.getElementById('cookie-accept');
+    const declineBtn = document.getElementById('cookie-decline');
+    
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', acceptCookies);
+    }
+    
+    if (declineBtn) {
+      declineBtn.addEventListener('click', declineCookies);
+    }
+  });
+})();
+</script>

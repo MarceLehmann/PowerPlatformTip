@@ -1,0 +1,133 @@
+<!-- Enhanced Breadcrumbs with Schema -->
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% assign crumbs = page.url | split: '/' %}
+    
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <!-- Home -->
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="{{ '/' | relative_url }}" itemprop="item">
+            <span itemprop="name">
+              <i class="fas fa-home" aria-hidden="true"></i>
+              <span class="breadcrumbs__text">Home</span>
+            </span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        
+        {% assign position = 2 %}
+        
+        <!-- Category/Tag -->
+        {% if page.collection %}
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ '/' | append: page.collection | append: '/' | relative_url }}" itemprop="item">
+              <span itemprop="name">{{ page.collection | capitalize }}</span>
+            </a>
+            <meta itemprop="position" content="{{ position }}" />
+          </li>
+          {% assign position = position | plus: 1 %}
+        {% elsif page.taxonomy %}
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ '/' | append: page.taxonomy | append: '/' | relative_url }}" itemprop="item">
+              <span itemprop="name">{{ page.taxonomy | capitalize }}</span>
+            </a>
+            <meta itemprop="position" content="{{ position }}" />
+          </li>
+          {% assign position = position | plus: 1 %}
+        {% elsif page.categories.first %}
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ '/categories/' | relative_url }}" itemprop="item">
+              <span itemprop="name">Categories</span>
+            </a>
+            <meta itemprop="position" content="{{ position }}" />
+          </li>
+          {% assign position = position | plus: 1 %}
+          
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ '/categories/' | append: page.categories.first | append: '/' | relative_url }}" itemprop="item">
+              <span itemprop="name">{{ page.categories.first | replace: '-', ' ' | capitalize }}</span>
+            </a>
+            <meta itemprop="position" content="{{ position }}" />
+          </li>
+          {% assign position = position | plus: 1 %}
+        {% endif %}
+        
+        <!-- Current Page -->
+        <li class="breadcrumbs__item breadcrumbs__item--current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">{{ page.title | truncate: 50 }}</span>
+          <meta itemprop="item" content="{{ page.url | absolute_url }}" />
+          <meta itemprop="position" content="{{ position }}" />
+        </li>
+      </ol>
+    </nav>
+  {% endunless %}
+{% endif %}
+
+<style>
+.breadcrumbs {
+  margin: 0 0 1.5rem 0;
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: '›';
+  margin-left: 0.5rem;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+.breadcrumbs__item a {
+  color: #38c9c3;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbs__item a:hover {
+  color: #2fb3ad;
+  text-decoration: underline;
+}
+
+.breadcrumbs__item--current {
+  color: #666;
+  font-weight: 500;
+}
+
+.breadcrumbs__text {
+  margin-left: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    font-size: 0.8rem;
+  }
+  
+  .breadcrumbs__text {
+    display: none;
+  }
+  
+  .breadcrumbs__item--current span {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+</style>

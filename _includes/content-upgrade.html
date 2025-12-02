@@ -1,0 +1,311 @@
+<!-- ============================================
+     CONTENT UPGRADE COMPONENT
+     ============================================
+     
+     Displays downloadable resources (PDFs, templates, checklists)
+     within blog posts with email capture.
+     
+     Usage:
+     {% include content-upgrade.html 
+        title="Download: Power Apps Cheat Sheet"
+        description="Get a comprehensive PDF cheat sheet..."
+        resource_type="PDF"
+        resource_size="2.5 MB"
+        resource_pages="12 pages"
+        resource_url="/downloads/power-apps-cheat-sheet.pdf"
+        image="/assets/images/upgrades/cheat-sheet-preview.png"
+     %}
+     ============================================ -->
+
+{% assign upgrade_id = include.title | slugify %}
+{% assign form_id = "content-upgrade-" | append: upgrade_id %}
+
+<div class="content-upgrade" id="{{ upgrade_id }}">
+  <div class="content-upgrade__container">
+    
+    <!-- Icon & Badge -->
+    <div class="content-upgrade__badge">
+      <svg class="content-upgrade__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      <span class="content-upgrade__badge-text">Free Download</span>
+    </div>
+
+    <div class="content-upgrade__content">
+      
+      <!-- Preview Image (Optional) -->
+      {% if include.image %}
+      <div class="content-upgrade__preview">
+        <img src="{{ include.image | relative_url }}" 
+             alt="{{ include.title }}" 
+             loading="lazy"
+             class="content-upgrade__preview-image">
+      </div>
+      {% endif %}
+
+      <div class="content-upgrade__text">
+        <!-- Title -->
+        <h3 class="content-upgrade__title">
+          {{ include.title }}
+        </h3>
+
+        <!-- Description -->
+        <p class="content-upgrade__description">
+          {{ include.description }}
+        </p>
+
+        <!-- Resource Info -->
+        <div class="content-upgrade__meta">
+          {% if include.resource_type %}
+          <span class="content-upgrade__meta-item">
+            <svg class="content-upgrade__meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            {{ include.resource_type }}
+          </span>
+          {% endif %}
+          
+          {% if include.resource_size %}
+          <span class="content-upgrade__meta-item">
+            <svg class="content-upgrade__meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            </svg>
+            {{ include.resource_size }}
+          </span>
+          {% endif %}
+          
+          {% if include.resource_pages %}
+          <span class="content-upgrade__meta-item">
+            <svg class="content-upgrade__meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            {{ include.resource_pages }}
+          </span>
+          {% endif %}
+        </div>
+
+        <!-- Benefits List (Optional) -->
+        {% if include.benefits %}
+        <ul class="content-upgrade__benefits">
+          {% assign benefits_array = include.benefits | split: "|" %}
+          {% for benefit in benefits_array %}
+          <li class="content-upgrade__benefit">
+            <svg class="content-upgrade__check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            {{ benefit | strip }}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        <!-- Download Form -->
+        <div class="content-upgrade__form-wrapper" id="{{ form_id }}-wrapper">
+          <form class="content-upgrade__form" 
+                id="{{ form_id }}"
+                data-resource-url="{{ include.resource_url }}"
+                data-resource-title="{{ include.title }}">
+            
+            <!-- Email Input -->
+            <div class="content-upgrade__input-group">
+              <label for="{{ form_id }}-email" class="visually-hidden">Email address</label>
+              <input type="email" 
+                     id="{{ form_id }}-email"
+                     name="email"
+                     class="content-upgrade__input"
+                     placeholder="Enter your email"
+                     required
+                     autocomplete="email">
+            </div>
+
+            <!-- Honeypot -->
+            <input type="text" 
+                   name="hp_field" 
+                   class="content-upgrade__honeypot"
+                   tabindex="-1"
+                   autocomplete="off">
+
+            <!-- Submit Button -->
+            <button type="submit" class="content-upgrade__button">
+              <svg class="content-upgrade__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="content-upgrade__button-text">Get Free Download</span>
+            </button>
+
+            <!-- Privacy Notice -->
+            <p class="content-upgrade__privacy">
+              <svg class="content-upgrade__privacy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              I respect your privacy. Unsubscribe anytime. 
+              <a href="{{ '/privacy-policy/' | relative_url }}" class="content-upgrade__privacy-link">Privacy Policy</a>
+            </p>
+          </form>
+
+          <!-- Success Message (Hidden by default) -->
+          <div class="content-upgrade__success" id="{{ form_id }}-success" style="display: none;">
+            <svg class="content-upgrade__success-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <h4 class="content-upgrade__success-title">Check your email!</h4>
+            <p class="content-upgrade__success-text">
+              I've sent you a download link to <strong class="content-upgrade__success-email"></strong>
+            </p>
+            <p class="content-upgrade__success-note">
+              Can't find it? Check your spam folder or 
+              <a href="#" class="content-upgrade__resend" data-form="{{ form_id }}">click here to resend</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Direct Download Link (After form submission, for logged-in users) -->
+    {% if include.direct_download %}
+    <div class="content-upgrade__direct" style="display: none;" id="{{ form_id }}-direct">
+      <a href="{{ include.resource_url }}" 
+         class="content-upgrade__direct-link"
+         download
+         target="_blank"
+         rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download Now
+      </a>
+    </div>
+    {% endif %}
+
+  </div>
+</div>
+
+<!-- JavaScript for Content Upgrade (inline to avoid external dependency) -->
+<script>
+(function() {
+  'use strict';
+
+  const form = document.getElementById('{{ form_id }}');
+  if (!form) return;
+
+  const wrapper = document.getElementById('{{ form_id }}-wrapper');
+  const successDiv = document.getElementById('{{ form_id }}-success');
+  const emailInput = form.querySelector('input[name="email"]');
+  const successEmail = successDiv.querySelector('.content-upgrade__success-email');
+  const honeypot = form.querySelector('input[name="hp_field"]');
+
+  // Handle form submission
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Check honeypot
+    if (honeypot && honeypot.value !== '') {
+      console.log('Bot detected');
+      return;
+    }
+
+    const email = emailInput.value.trim();
+    const resourceUrl = form.dataset.resourceUrl;
+    const resourceTitle = form.dataset.resourceTitle;
+
+    if (!email) return;
+
+    // Disable form
+    const button = form.querySelector('button[type="submit"]');
+    const originalButtonText = button.innerHTML;
+    button.disabled = true;
+    button.innerHTML = '<span class="content-upgrade__button-text">Sending...</span>';
+
+    try {
+      // Send to Mailchimp or your email service
+      // For now, simulate success
+      await simulateEmailSend(email, resourceUrl, resourceTitle);
+
+      // Show success message
+      wrapper.style.display = 'none';
+      successDiv.style.display = 'block';
+      successEmail.textContent = email;
+
+      // Track conversion
+      trackContentUpgrade(resourceTitle, email);
+
+      // Save to localStorage (for analytics)
+      saveDownload(resourceTitle, email);
+
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Something went wrong. Please try again.');
+      button.disabled = false;
+      button.innerHTML = originalButtonText;
+    }
+  });
+
+  // Simulate email sending (replace with actual API call)
+  function simulateEmailSend(email, url, title) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log('Email sent to:', email);
+        console.log('Resource:', title);
+        console.log('URL:', url);
+        resolve();
+      }, 1000);
+    });
+  }
+
+  // Track conversion (Google Analytics, Facebook Pixel, etc.)
+  function trackContentUpgrade(title, email) {
+    // Google Analytics 4
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'generate_lead', {
+        event_category: 'Content Upgrade',
+        event_label: title,
+        value: 1
+      });
+    }
+
+    // Facebook Pixel
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead', {
+        content_name: title,
+        content_category: 'Content Upgrade'
+      });
+    }
+
+    console.log('Conversion tracked:', title);
+  }
+
+  // Save download to localStorage
+  function saveDownload(title, email) {
+    const downloads = JSON.parse(localStorage.getItem('content_upgrades') || '[]');
+    downloads.push({
+      title: title,
+      email: email,
+      date: new Date().toISOString(),
+      url: window.location.pathname
+    });
+    localStorage.setItem('content_upgrades', JSON.stringify(downloads));
+  }
+
+  // Handle resend link
+  const resendLink = successDiv.querySelector('.content-upgrade__resend');
+  if (resendLink) {
+    resendLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      const email = successEmail.textContent;
+      alert('Resending download link to ' + email);
+      // Implement resend logic here
+    });
+  }
+
+})();
+</script>

@@ -1,0 +1,113 @@
+/* ========================================================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================================================== */
+
+/* Critical CSS - Above the fold content */
+.masthead,
+.page__hero,
+.initial-content {
+  will-change: transform;
+}
+
+/* Lazy Loading Images */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Reduce repaints/reflows */
+.author-bio,
+.after-content-cta,
+.newsletter-popup,
+.newsletter-bar {
+  contain: layout style paint;
+}
+
+/* Hardware acceleration for animations */
+.newsletter-popup__content,
+.newsletter-bar,
+.cookie-consent {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize font loading */
+@font-face {
+  font-display: swap;
+}
+
+/* Reduce paint areas */
+.masthead,
+.page__footer {
+  contain: layout;
+}
+
+/* Optimize scrolling */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* GPU acceleration for smooth animations */
+.btn,
+.author-bio__link,
+.newsletter-popup__button,
+.newsletter-bar__button,
+.after-content-cta__button,
+.footer-services__button {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Reduce layout thrashing */
+.page__content img,
+.page__content video,
+.page__content iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimize expensive selectors */
+.page__content > *:first-child {
+  margin-top: 0;
+}
+
+.page__content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================================================
+   CRITICAL LOADING OPTIMIZATION
+   ======================================================================== */
+
+/* Defer non-critical CSS */
+@media print {
+  /* Print-specific styles can be loaded separately */
+}
+
+/* Reduce CLS (Cumulative Layout Shift) */
+.author-bio,
+.after-content-cta,
+.newsletter-popup,
+.newsletter-bar,
+.cookie-consent {
+  min-height: fit-content;
+}
+
+/* Optimize animations to 60fps */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Resource hints in HTML would go in head:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="preload" href="/assets/css/custom-components.css" as="style">
+*/

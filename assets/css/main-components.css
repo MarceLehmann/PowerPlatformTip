@@ -1,0 +1,41 @@
+/* ============================================
+   CSS ARCHITECTURE - MAIN ENTRY POINT
+   ============================================
+   
+   This file imports all modular CSS components.
+   Each component is self-contained and follows BEM naming.
+   
+   Order of imports:
+   1. Variables & Theme
+   2. Base Components
+   3. Layout Components
+   4. Feature Components
+   5. Utilities
+   ============================================ */
+
+/* 1. VARIABLES & THEME */
+@import 'variables';
+@import 'theme-dark-mode';
+
+/* 2. BASE COMPONENTS */
+@import 'components/author-bio';
+@import 'components/mvp-badge';
+@import 'components/newsletter-popup';
+@import 'components/newsletter-bar';
+@import 'components/after-content-cta';
+@import 'components/cookie-consent';
+
+/* 3. LAYOUT COMPONENTS */
+@import 'components/footer-services';
+@import 'components/mobile-navigation';
+@import 'components/breadcrumbs';
+
+/* 4. FEATURE COMPONENTS */
+@import 'components/related-posts';
+@import 'components/code-blocks';
+@import 'components/dark-mode-toggle';
+
+/* 5. UTILITIES */
+@import 'utilities/animations';
+@import 'utilities/helpers';
+@import 'utilities/accessibility';

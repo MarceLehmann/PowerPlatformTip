@@ -1,0 +1,303 @@
+<!-- Dark Mode Toggle -->
+<button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+  <span class="dark-mode-toggle__icon dark-mode-toggle__icon--sun">
+    <i class="fas fa-sun"></i>
+  </span>
+  <span class="dark-mode-toggle__icon dark-mode-toggle__icon--moon">
+    <i class="fas fa-moon"></i>
+  </span>
+</button>
+
+<script>
+(function() {
+  'use strict';
+  
+  const STORAGE_KEY = 'dark-mode-preference';
+  const DARK_MODE_CLASS = 'dark-mode';
+  
+  // Get elements
+  const toggleButton = document.getElementById('dark-mode-toggle');
+  const html = document.documentElement;
+  
+  // Check for saved preference or system preference
+  function getInitialMode() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved !== null) {
+      return saved === 'true';
+    }
+    
+    // Check system preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return true;
+    }
+    
+    return false;
+  }
+  
+  // Apply dark mode
+  function applyDarkMode(isDark) {
+    if (isDark) {
+      html.classList.add(DARK_MODE_CLASS);
+      toggleButton.setAttribute('aria-pressed', 'true');
+    } else {
+      html.classList.remove(DARK_MODE_CLASS);
+      toggleButton.setAttribute('aria-pressed', 'false');
+    }
+    
+    // Save preference
+    localStorage.setItem(STORAGE_KEY, isDark);
+    
+    // Update meta theme-color
+    updateThemeColor(isDark);
+  }
+  
+  // Update theme color meta tag
+  function updateThemeColor(isDark) {
+    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (!metaThemeColor) {
+      metaThemeColor = document.createElement('meta');
+      metaThemeColor.name = 'theme-color';
+      document.head.appendChild(metaThemeColor);
+    }
+    metaThemeColor.content = isDark ? '#1a1a1a' : '#38c9c3';
+  }
+  
+  // Toggle dark mode
+  function toggleDarkMode() {
+    const isDark = html.classList.contains(DARK_MODE_CLASS);
+    applyDarkMode(!isDark);
+  }
+  
+  // Initialize on load (prevent flash)
+  const initialMode = getInitialMode();
+  applyDarkMode(initialMode);
+  
+  // Add event listener
+  if (toggleButton) {
+    toggleButton.addEventListener('click', toggleDarkMode);
+  }
+  
+  // Listen for system preference changes
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      // Only apply if user hasn't set a preference
+      if (localStorage.getItem(STORAGE_KEY) === null) {
+        applyDarkMode(e.matches);
+      }
+    });
+  }
+  
+  // Keyboard shortcut: Ctrl/Cmd + Shift + D
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'D') {
+      e.preventDefault();
+      toggleDarkMode();
+    }
+  });
+})();
+</script>
+
+<style>
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #38c9c3 0%, #2fb3ad 100%);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(56, 201, 195, 0.4);
+  z-index: 9997;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(56, 201, 195, 0.5);
+}
+
+.dark-mode-toggle:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.dark-mode-toggle__icon {
+  position: absolute;
+  color: #fff;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle__icon--sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.dark-mode-toggle__icon--moon {
+  opacity: 0;
+  transform: rotate(180deg) scale(0);
+}
+
+.dark-mode .dark-mode-toggle__icon--sun {
+  opacity: 0;
+  transform: rotate(-180deg) scale(0);
+}
+
+.dark-mode .dark-mode-toggle__icon--moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .masthead,
+.dark-mode .page__footer {
+  background: #2a2a2a;
+  border-color: #404040;
+}
+
+.dark-mode .page__content,
+.dark-mode .page__inner-wrap {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .author-bio,
+.dark-mode .related-posts,
+.dark-mode .after-content-cta__primary {
+  background: #2a2a2a;
+  border-color: #404040;
+}
+
+.dark-mode .related-post-card,
+.dark-mode .after-content-cta__secondary {
+  background: #242424;
+  border-color: #404040;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+  color: #fff;
+}
+
+.dark-mode a {
+  color: #5dd3cb;
+}
+
+.dark-mode a:hover {
+  color: #7dddd7;
+}
+
+.dark-mode code {
+  background: #2a2a2a;
+  color: #5dd3cb;
+  border-color: #404040;
+}
+
+.dark-mode pre {
+  background: #2a2a2a !important;
+  border: 1px solid #404040;
+}
+
+.dark-mode .btn,
+.dark-mode .newsletter-popup__button,
+.dark-mode .newsletter-bar__button {
+  background: #38c9c3;
+  color: #fff;
+}
+
+.dark-mode .author-bio__tagline,
+.dark-mode .after-content-cta__description {
+  color: #b0b0b0;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border-color: #404040;
+}
+
+.dark-mode input::placeholder {
+  color: #808080;
+}
+
+.dark-mode .archive__item-title {
+  color: #fff;
+}
+
+.dark-mode .archive__item-excerpt {
+  color: #b0b0b0;
+}
+
+/* Code blocks in dark mode */
+.dark-mode .highlight {
+  background: #2a2a2a;
+}
+
+.dark-mode .page__meta,
+.dark-mode .page__taxonomy {
+  color: #b0b0b0;
+}
+
+.dark-mode .breadcrumbs {
+  border-color: #404040;
+}
+
+.dark-mode .breadcrumbs__item a {
+  color: #5dd3cb;
+}
+
+.dark-mode .sidebar {
+  background: #2a2a2a;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .dark-mode-toggle {
+    bottom: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .dark-mode-toggle__icon {
+    font-size: 1.1rem;
+  }
+}
+
+/* Smooth transition for dark mode */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Exclude elements that shouldn't transition */
+a,
+button,
+.dark-mode-toggle,
+.newsletter-popup,
+.newsletter-bar {
+  transition: none;
+}
+
+/* Re-add specific transitions */
+a {
+  transition: color 0.2s ease;
+}
+
+button {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+</style>

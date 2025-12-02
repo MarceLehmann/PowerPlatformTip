@@ -1,0 +1,488 @@
+/* ============================================
+   EXIT-INTENT POPUP
+   ============================================
+   
+   Styles for exit-intent popup that captures
+   leaving visitors.
+   ============================================ */
+
+.exit-intent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.exit-intent--visible {
+  opacity: 1;
+}
+
+/* Overlay */
+.exit-intent__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+}
+
+/* Modal */
+.exit-intent__modal {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.exit-intent--visible .exit-intent__modal {
+  transform: scale(1);
+}
+
+/* Close Button */
+.exit-intent__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.exit-intent__close:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+}
+
+.exit-intent__close svg {
+  width: 20px;
+  height: 20px;
+  stroke: #333333;
+}
+
+/* Content */
+.exit-intent__content {
+  padding: 3rem 2.5rem 2.5rem;
+  text-align: center;
+}
+
+/* Icon */
+.exit-intent__icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: wave 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+  from { transform: rotate(-10deg); }
+  to { transform: rotate(10deg); }
+}
+
+/* Headline */
+.exit-intent__headline {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.exit-intent__subheadline {
+  font-size: 1.125rem;
+  color: #666666;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+}
+
+.exit-intent__subheadline strong {
+  color: #667eea;
+  font-weight: 700;
+}
+
+/* Benefits */
+.exit-intent__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: left;
+}
+
+.exit-intent__benefit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  color: #333333;
+}
+
+.exit-intent__check {
+  width: 24px;
+  height: 24px;
+  stroke: #4caf50;
+  flex-shrink: 0;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+/* Bonus */
+.exit-intent__bonus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #fff4e0 0%, #ffe8c0 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+.exit-intent__bonus-badge {
+  font-size: 1.5rem;
+}
+
+.exit-intent__bonus-text strong {
+  color: #ff9800;
+  font-weight: 700;
+}
+
+/* Form */
+.exit-intent__form {
+  margin-bottom: 1.5rem;
+}
+
+.exit-intent__input-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.exit-intent__input {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #333333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exit-intent__input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.exit-intent__input::placeholder {
+  color: #999999;
+}
+
+/* Honeypot */
+.exit-intent__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+}
+
+/* Button */
+.exit-intent__button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exit-intent__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.exit-intent__button:active {
+  transform: translateY(0);
+}
+
+.exit-intent__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.exit-intent__button-icon {
+  width: 20px;
+  height: 20px;
+  stroke: #ffffff;
+}
+
+/* Social Proof */
+.exit-intent__social-proof {
+  margin-bottom: 1.5rem;
+}
+
+.exit-intent__avatars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.exit-intent__avatars img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  margin-left: -10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exit-intent__avatars img:first-child {
+  margin-left: 0;
+}
+
+.exit-intent__avatars-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  margin-left: -10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exit-intent__social-text {
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
+}
+
+/* Privacy */
+.exit-intent__privacy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 13px;
+  color: #999999;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.exit-intent__privacy-icon {
+  width: 14px;
+  height: 14px;
+  stroke: #999999;
+  flex-shrink: 0;
+}
+
+.exit-intent__privacy-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.exit-intent__privacy-link:hover {
+  text-decoration: underline;
+}
+
+/* Success State */
+.exit-intent__success {
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+
+.exit-intent__success-icon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  animation: celebration 0.6s ease-in-out;
+}
+
+@keyframes celebration {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(10deg); }
+}
+
+.exit-intent__success-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 1rem 0;
+}
+
+.exit-intent__success-text {
+  font-size: 1.125rem;
+  color: #666666;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+}
+
+.exit-intent__success-text strong {
+  color: #667eea;
+  font-weight: 700;
+}
+
+.exit-intent__success-button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exit-intent__success-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .exit-intent__modal {
+    max-width: 95%;
+    margin: 1rem;
+  }
+
+  .exit-intent__content {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .exit-intent__success {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .exit-intent__icon {
+    font-size: 3rem;
+  }
+
+  .exit-intent__headline {
+    font-size: 1.5rem;
+  }
+
+  .exit-intent__subheadline {
+    font-size: 1rem;
+  }
+
+  .exit-intent__bonus {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .exit-intent__benefit {
+    font-size: 0.95rem;
+  }
+
+  .exit-intent__button {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* Dark Mode */
+.dark-mode .exit-intent__modal {
+  background: #2a2a2a;
+}
+
+.dark-mode .exit-intent__close svg {
+  stroke: #e0e0e0;
+}
+
+.dark-mode .exit-intent__headline {
+  color: #e0e0e0;
+}
+
+.dark-mode .exit-intent__subheadline,
+.dark-mode .exit-intent__benefit {
+  color: #b0b0b0;
+}
+
+.dark-mode .exit-intent__input {
+  background: #1a1a1a;
+  border-color: #444444;
+  color: #e0e0e0;
+}
+
+.dark-mode .exit-intent__input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+}
+
+.dark-mode .exit-intent__social-text {
+  color: #b0b0b0;
+}
+
+.dark-mode .exit-intent__success-title {
+  color: #e0e0e0;
+}
+
+.dark-mode .exit-intent__success-text {
+  color: #b0b0b0;
+}
+
+/* Print */
+@media print {
+  .exit-intent {
+    display: none !important;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .exit-intent,
+  .exit-intent__modal,
+  .exit-intent__icon,
+  .exit-intent__success-icon {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Accessibility */
+.exit-intent__close:focus,
+.exit-intent__button:focus,
+.exit-intent__success-button:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 4px;
+}

@@ -1,0 +1,98 @@
+<!-- Sticky Newsletter Bar -->
+<div id="newsletter-bar" class="newsletter-bar" style="display: none;">
+  <div class="newsletter-bar__content">
+    <button class="newsletter-bar__close" aria-label="Close newsletter bar">
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <div class="newsletter-bar__text">
+      <i class="fas fa-envelope"></i>
+      <span class="newsletter-bar__message">
+        <strong>Weekly Power Platform Tips</strong> – Join <span class="subscriber-count">4,000+</span> professionals
+      </span>
+    </div>
+    
+    <form class="newsletter-bar__form" action="https://powerplatformtip.us14.list-manage.com/subscribe/post?u=YOUR_USER_ID&amp;id=YOUR_LIST_ID" method="post" target="_blank" novalidate>
+      <input type="email" 
+             name="EMAIL" 
+             class="newsletter-bar__input" 
+             placeholder="Your email address" 
+             required 
+             aria-label="Email address">
+      <button type="submit" class="newsletter-bar__button">
+        Subscribe
+      </button>
+      
+      <!-- Honeypot -->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_YOUR_USER_ID_YOUR_LIST_ID" tabindex="-1" value="">
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+  
+  const COOKIE_NAME = 'newsletter_bar_dismissed';
+  const COOKIE_DAYS = 7;
+  const SHOW_DELAY = 5000; // 5 seconds delay
+  
+  // Cookie helpers
+  function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  
+  function getCookie(name) {
+    const nameEQ = name + '=';
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+  
+  function showBar() {
+    if (getCookie(COOKIE_NAME)) return;
+    
+    const bar = document.getElementById('newsletter-bar');
+    if (bar) {
+      bar.style.display = 'block';
+      setTimeout(() => bar.classList.add('newsletter-bar--visible'), 10);
+    }
+  }
+  
+  function hideBar() {
+    const bar = document.getElementById('newsletter-bar');
+    if (bar) {
+      bar.classList.remove('newsletter-bar--visible');
+      setTimeout(() => bar.style.display = 'none', 300);
+    }
+    setCookie(COOKIE_NAME, 'true', COOKIE_DAYS);
+  }
+  
+  // Show bar after delay
+  setTimeout(showBar, SHOW_DELAY);
+  
+  // Event handlers
+  document.addEventListener('DOMContentLoaded', function() {
+    const closeBtn = document.querySelector('.newsletter-bar__close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', hideBar);
+    }
+    
+    // Form submission handler
+    const form = document.querySelector('.newsletter-bar__form');
+    if (form) {
+      form.addEventListener('submit', function() {
+        hideBar();
+      });
+    }
+  });
+})();
+</script>

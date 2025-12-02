@@ -1,0 +1,28 @@
+{
+  "name": "powerplatformtip",
+  "version": "2.0.0",
+  "description": "PowerPlatformTip - Build tools for CSS/JS optimization",
+  "scripts": {
+    "build": "./build.sh",
+    "build:css": "node build-css.js",
+    "minify:css": "cleancss -o assets/css/custom-components.min.css assets/css/custom-components.css && cleancss -o assets/css/performance.min.css assets/css/performance.css && cleancss -o assets/css/mobile-navigation.min.css assets/css/mobile-navigation.css",
+    "minify:js": "uglifyjs assets/js/performance.js -o assets/js/performance.min.js -c -m && uglifyjs assets/js/mobile-navigation.js -o assets/js/mobile-navigation.min.js -c -m",
+    "watch:css": "watch 'npm run minify:css' assets/css/",
+    "watch:js": "watch 'npm run minify:js' assets/js/",
+    "dev": "npm run watch:css & npm run watch:js",
+    "production": "npm run build:css && npm run minify:css && npm run minify:js"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "uglify-js": "^3.17.4",
+    "watch": "^1.0.2"
+  },
+  "keywords": [
+    "power-platform",
+    "power-apps",
+    "power-automate",
+    "jekyll"
+  ],
+  "author": "Marcel Lehmann",
+  "license": "MIT"
+}

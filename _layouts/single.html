@@ -14,12 +14,15 @@ layout: default
 {% endif %}
 {% if page.url != "/" and breadcrumbs_enabled %}
   {% unless paginator %}
-    {% include breadcrumbs.html %}
+    {% include breadcrumbs-enhanced.html %}
   {% endunless %}
 {% endif %}
 
 <div id="main" role="main">
   {% include sidebar.html %}
+  {% if page.id %}
+    {% include social-share-sidebar.html %}
+  {% endif %}
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -40,9 +43,15 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% include schema-techarticle.html %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
+
+      {% if page.id %}
+        {% include author-bio.html %}
+        {% include after-content-cta.html %}
+      {% endif %}
 
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
@@ -69,8 +78,8 @@ layout: default
     {% endif %}
   </article>
 
-  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
-  {% if page.id and page.related %}
-    {% include related-posts-by-tags.html %}
+  {% comment %}<!-- Smart related posts - always show for blog posts -->{% endcomment %}
+  {% if page.id %}
+    {% include related-posts-smart.html %}
   {% endif %}
 </div>

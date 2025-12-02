@@ -1,0 +1,355 @@
+/* ============================================
+   MOBILE NAVIGATION ENHANCEMENTS
+   ============================================ */
+
+/* Enhanced Hamburger Menu */
+.greedy-nav__toggle {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.greedy-nav__toggle:hover {
+  transform: scale(1.1);
+}
+
+.greedy-nav__toggle:active {
+  transform: scale(0.95);
+}
+
+/* Animated Hamburger Icon */
+.navicon {
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background: var(--masthead-link-color);
+  transition: background 0.3s ease;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navicon::before,
+.navicon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--masthead-link-color);
+  transition: all 0.3s ease;
+}
+
+.navicon::before {
+  top: -8px;
+}
+
+.navicon::after {
+  top: 8px;
+}
+
+/* X Animation when menu is open */
+.greedy-nav__toggle.close .navicon {
+  background: transparent;
+}
+
+.greedy-nav__toggle.close .navicon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.greedy-nav__toggle.close .navicon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Dark mode colors */
+.dark-mode .navicon,
+.dark-mode .navicon::before,
+.dark-mode .navicon::after {
+  background: var(--masthead-link-color);
+}
+
+/* Enhanced Hidden Links (Dropdown Menu) */
+.hidden-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 15px;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  min-width: 200px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  z-index: 999;
+  
+  /* Animation */
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hidden-links.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Smooth scrollbar for long menus */
+.hidden-links::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hidden-links::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hidden-links::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.dark-mode .hidden-links::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Menu Items */
+.hidden-links li {
+  margin: 0;
+  list-style: none;
+}
+
+.hidden-links a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.2s ease, color 0.2s ease;
+  position: relative;
+}
+
+.hidden-links a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--primary-color);
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+}
+
+.hidden-links a:hover,
+.hidden-links a:focus {
+  background: var(--code-background-color);
+  color: var(--primary-color);
+}
+
+.hidden-links a:hover::before,
+.hidden-links a:focus::before {
+  transform: scaleY(1);
+}
+
+/* Touch feedback */
+.hidden-links a:active {
+  background: var(--border-color);
+}
+
+/* Backdrop for mobile menu */
+.nav-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-backdrop.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Full-width dropdown on mobile */
+  .hidden-links {
+    right: 10px;
+    left: 10px;
+    width: auto;
+    min-width: unset;
+    margin-top: 10px;
+  }
+  
+  /* Larger touch targets */
+  .hidden-links a {
+    padding: 16px 20px;
+    font-size: 18px;
+  }
+  
+  /* Prevent body scroll when menu is open */
+  body.nav-open {
+    overflow: hidden;
+  }
+  
+  /* Adjust menu position if needed */
+  .greedy-nav {
+    position: relative;
+  }
+  
+  /* Hide MVP badge on very small screens */
+  @media (max-width: 480px) {
+    .site-mvp-badge .mvp-badge-text {
+      display: none;
+    }
+    
+    .site-mvp-badge::after {
+      content: 'MVP';
+      font-size: 12px;
+    }
+  }
+}
+
+/* Tablet improvements */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hidden-links {
+    min-width: 240px;
+  }
+}
+
+/* Accessibility improvements */
+.greedy-nav__toggle:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 4px;
+}
+
+.hidden-links a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: -2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .greedy-nav__toggle,
+  .navicon,
+  .navicon::before,
+  .navicon::after,
+  .hidden-links,
+  .hidden-links a,
+  .nav-backdrop {
+    transition: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .hidden-links {
+    border: 2px solid currentColor;
+  }
+  
+  .hidden-links a {
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+/* Print styles */
+@media print {
+  .greedy-nav__toggle,
+  .hidden-links,
+  .nav-backdrop {
+    display: none !important;
+  }
+}
+
+/* Animation for menu items (stagger effect) */
+.hidden-links.show li {
+  animation: slideInUp 0.3s ease forwards;
+  opacity: 0;
+}
+
+.hidden-links.show li:nth-child(1) { animation-delay: 0.05s; }
+.hidden-links.show li:nth-child(2) { animation-delay: 0.1s; }
+.hidden-links.show li:nth-child(3) { animation-delay: 0.15s; }
+.hidden-links.show li:nth-child(4) { animation-delay: 0.2s; }
+.hidden-links.show li:nth-child(5) { animation-delay: 0.25s; }
+.hidden-links.show li:nth-child(6) { animation-delay: 0.3s; }
+.hidden-links.show li:nth-child(7) { animation-delay: 0.35s; }
+.hidden-links.show li:nth-child(8) { animation-delay: 0.4s; }
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Disable animations if reduced motion is preferred */
+@media (prefers-reduced-motion: reduce) {
+  .hidden-links.show li {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Swipe gesture indicator (optional) */
+.hidden-links::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 2px;
+  margin: 8px auto 12px;
+  opacity: 0.5;
+}
+
+@media (min-width: 769px) {
+  .hidden-links::before {
+    display: none;
+  }
+}
+
+/* Focus trap for keyboard navigation */
+.hidden-links a:first-child:focus,
+.hidden-links a:last-child:focus {
+  position: relative;
+  z-index: 1;
+}
+
+/* Smooth transitions between visible and hidden states */
+.greedy-nav .visible-links {
+  transition: opacity 0.3s ease;
+}
+
+.greedy-nav__toggle.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.greedy-nav__toggle:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+}

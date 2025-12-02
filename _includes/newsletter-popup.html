@@ -1,0 +1,141 @@
+<!-- Newsletter Popup Component -->
+<div id="newsletter-popup" class="newsletter-popup" style="display: none;">
+  <div class="newsletter-popup__content">
+    <button class="newsletter-popup__close" aria-label="Close popup">
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <div class="newsletter-popup__icon">
+      <i class="fas fa-envelope"></i>
+    </div>
+    
+    <h3 class="newsletter-popup__title">Get Weekly Power Platform Tips</h3>
+    <p class="newsletter-popup__description">
+      Join <strong><span class="subscriber-count">4,000+</span> professionals</strong> receiving expert Power Platform insights, practical solutions, and proven best practices directly in their inbox.
+    </p>
+    
+    <form class="newsletter-popup__form" action="https://powerplatformtip.us14.list-manage.com/subscribe/post?u=YOUR_USER_ID&amp;id=YOUR_LIST_ID" method="post" target="_blank" novalidate>
+      <div class="newsletter-popup__input-group">
+        <input type="email" 
+               name="EMAIL" 
+               class="newsletter-popup__input" 
+               placeholder="Enter your email address" 
+               required 
+               aria-label="Email address">
+        <button type="submit" class="newsletter-popup__button">
+          Subscribe
+        </button>
+      </div>
+      
+      <!-- Honeypot for bots -->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_YOUR_USER_ID_YOUR_LIST_ID" tabindex="-1" value="">
+      </div>
+      
+      <p class="newsletter-popup__privacy">
+        <small>
+          <i class="fas fa-lock"></i> No spam. Unsubscribe anytime. 
+          <a href="/privacy-policy/" target="_blank">Privacy Policy</a>
+        </small>
+      </p>
+    </form>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+  
+  const COOKIE_NAME = 'newsletter_popup_dismissed';
+  const COOKIE_DAYS = 30;
+  const TRIGGER_TIME = 30000; // 30 seconds
+  const SCROLL_TRIGGER = 50; // 50% scroll
+  
+  let scrollTriggered = false;
+  let timeTriggered = false;
+  
+  // Cookie helpers
+  function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  
+  function getCookie(name) {
+    const nameEQ = name + '=';
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+  
+  function showPopup() {
+    if (getCookie(COOKIE_NAME)) return;
+    if (scrollTriggered || timeTriggered) return;
+    
+    const popup = document.getElementById('newsletter-popup');
+    if (popup) {
+      popup.style.display = 'block';
+      setTimeout(() => popup.classList.add('newsletter-popup--visible'), 10);
+    }
+  }
+  
+  function hidePopup() {
+    const popup = document.getElementById('newsletter-popup');
+    if (popup) {
+      popup.classList.remove('newsletter-popup--visible');
+      setTimeout(() => popup.style.display = 'none', 300);
+    }
+    setCookie(COOKIE_NAME, 'true', COOKIE_DAYS);
+  }
+  
+  // Time-based trigger
+  setTimeout(function() {
+    if (!scrollTriggered) {
+      timeTriggered = true;
+      showPopup();
+    }
+  }, TRIGGER_TIME);
+  
+  // Scroll-based trigger
+  function checkScroll() {
+    const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    if (scrollPercentage >= SCROLL_TRIGGER && !timeTriggered) {
+      scrollTriggered = true;
+      showPopup();
+      window.removeEventListener('scroll', checkScroll);
+    }
+  }
+  
+  window.addEventListener('scroll', checkScroll);
+  
+  // Close button handler
+  document.addEventListener('DOMContentLoaded', function() {
+    const closeBtn = document.querySelector('.newsletter-popup__close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', hidePopup);
+    }
+    
+    // Close on background click
+    const popup = document.getElementById('newsletter-popup');
+    if (popup) {
+      popup.addEventListener('click', function(e) {
+        if (e.target === popup) {
+          hidePopup();
+        }
+      });
+    }
+    
+    // Form submission handler
+    const form = document.querySelector('.newsletter-popup__form');
+    if (form) {
+      form.addEventListener('submit', function() {
+        hidePopup();
+      });
+    }
+  });
+})();
+</script>
