@@ -17,6 +17,7 @@ header:
 
 <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; max-width: 1200px; margin: 0 auto;">
   <div style="flex: 2 1 600px; min-width: 0;">
+    <h2 style="margin-bottom: 2rem; color: #38c9c3;">📝 Latest Tips</h2>
     <ul class="post-list">
       {% for post in site.posts limit:5 %}
         <li>
@@ -56,6 +57,7 @@ header:
 </div>
 
 <style>
+/* Post List Styles */
 .post-list {
   list-style: none;
   padding: 0;

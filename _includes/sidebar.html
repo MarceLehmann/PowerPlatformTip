@@ -1,5 +1,63 @@
 {% if page.author_profile or layout.author_profile or page.sidebar %}
   <div class="sidebar sticky">
+  
+  <!-- Quick Navigation Cards -->
+  {% if page.id %}
+  <div class="sidebar-nav-cards">
+    <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: #38c9c3;">
+      <i class="fas fa-compass"></i> Quick Navigation
+    </h3>
+    <nav class="sidebar-nav-grid">
+      <a href="{{ site.baseurl }}/posts/" class="sidebar-nav-card">
+        <i class="fas fa-newspaper"></i>
+        <span>All Posts</span>
+      </a>
+      <a href="{{ site.baseurl }}/tags/" class="sidebar-nav-card">
+        <i class="fas fa-tags"></i>
+        <span>Tags</span>
+      </a>
+      <a href="https://tools.powerplatformtip.com" target="_blank" class="sidebar-nav-card">
+        <i class="fas fa-tools"></i>
+        <span>Tools</span>
+      </a>
+      <a href="{{ site.baseurl }}/learning-resources/" class="sidebar-nav-card">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Learning</span>
+      </a>
+      <a href="{{ site.baseurl }}/about/" class="sidebar-nav-card">
+        <i class="fas fa-user-circle"></i>
+        <span>About</span>
+      </a>
+    </nav>
+  </div>
+  
+  <!-- Newsletter Subscription -->
+  <div class="sidebar-newsletter">
+    <div class="sidebar-newsletter__icon">
+      <i class="fas fa-envelope"></i>
+    </div>
+    <h3 class="sidebar-newsletter__title">📧 Stay Updated</h3>
+    <p class="sidebar-newsletter__description">
+      Get weekly Power Platform tips directly in your inbox. Join <strong>4,000+ professionals</strong>!
+    </p>
+    
+    <div class="sidebar-newsletter__form">
+      <!-- systeme.io-Script -->
+      <script
+        id="form-script-tag-18726789"
+        src="https://marcellehman.systeme.io/public/remote/page/30106570e4186c65632a05ef223faa36caf71de7.js">
+      </script>
+    </div>
+    
+    <p class="sidebar-newsletter__privacy">
+      <small>
+        <i class="fas fa-lock"></i> No spam, ever. 
+        <a href="{{ site.baseurl }}/privacy-policy/">Privacy Policy</a>
+      </small>
+    </p>
+  </div>
+  {% endif %}
+  
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
   {% if page.sidebar %}
     {% for s in page.sidebar %}
