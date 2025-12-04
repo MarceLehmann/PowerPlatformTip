@@ -27,10 +27,4 @@ jobs:
         run: sleep 30
       
       - name: Run Lighthouse for Core Web Vitals
-        run: |
-          npx lhci autorun \
-            --collect.url="https://www.powerplatformtip.com" \
-            --collect.settings.chromeFlags="--no-sandbox" \
-            --collect.numberOfRuns=3 \
-            --assert.preset="lighthouse:no-pwa" \
-            --upload.target=temporary-public-storage
+        run: npx lhci autorun

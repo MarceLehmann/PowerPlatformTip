@@ -1,5 +1,5 @@
 ﻿---
-title: "Extract HTML Table from Email in Power Automate â€“ Advanced XML Processing Techniques by Damien Bird"
+title: "Extract HTML Table from Email in Power Automate – Advanced XML Processing Techniques by Damien Bird"
 date: 2022-11-10
 permalink: "/article/powerplatform/2022/11/10/extract-html-table-email-power-automate/"
 updated: 2025-06-26

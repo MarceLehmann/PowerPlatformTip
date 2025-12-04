@@ -26,10 +26,34 @@ header:
         </li>
       {% endfor %}
     </ul>
+    
+    <!-- Tag Cloud Section -->
+    <div class="tag-cloud-section" style="margin: 4rem 0;">
+      <h2 style="text-align: center; margin-bottom: 2rem; color: #38c9c3;">🏷️ Explore Topics</h2>
+      <div class="tag-cloud">
+        {% assign sorted_tags = site.tags | sort %}
+        {% for tag in sorted_tags limit:25 %}
+          {% assign tag_name = tag[0] %}
+          {% assign tag_posts = tag[1] %}
+          {% assign tag_size = tag_posts | size %}
+          {% if tag_size > 1 %}
+            <a href="{{ site.baseurl }}/tags/#{{ tag_name | slugify }}" 
+               class="tag-cloud-item"
+               data-count="{{ tag_size }}"
+               style="font-size: calc(0.9rem + {{ tag_size | times: 0.15 }}rem);">
+              {{ tag_name }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </div>
 
-<hr>
+<!-- Extra spacing before author profile -->
+<div style="margin: 6rem 0 3rem 0;">
+  <hr style="border: none; height: 2px; background: linear-gradient(90deg, transparent, #38c9c3, transparent); margin: 3rem auto; max-width: 600px;">
+</div>
 
 <style>
 .post-list {
@@ -42,10 +66,57 @@ header:
   margin-bottom: 2rem;
   padding: 1.5rem 2rem;
   box-shadow: 0 2px 8px rgba(56,201,195,0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.post-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(56,201,195,0.15);
 }
 .post-list h2 {
   margin-top: 0;
 }
+
+/* Tag Cloud Styles */
+.tag-cloud-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e8f4f3 100%);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 20px rgba(56,201,195,0.1);
+}
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.tag-cloud-item {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: white;
+  border: 2px solid #38c9c3;
+  border-radius: 25px;
+  color: #2fb3ad;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(56,201,195,0.1);
+}
+.tag-cloud-item:hover {
+  background: linear-gradient(135deg, #38c9c3 0%, #2fb3ad 100%);
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(56,201,195,0.3);
+  border-color: #2fb3ad;
+}
+.tag-cloud-item::before {
+  content: '#';
+  opacity: 0.6;
+  margin-right: 0.2rem;
+}
+
 @media (max-width: 900px) {
   .post-list, aside {
     max-width: 100%;
@@ -56,6 +127,16 @@ header:
   }
   aside {
     margin-top: 2rem;
+  }
+  .tag-cloud-section {
+    padding: 2rem 1rem;
+  }
+  .tag-cloud {
+    gap: 0.75rem;
+  }
+  .tag-cloud-item {
+    font-size: 0.85rem !important;
+    padding: 0.4rem 1rem;
   }
 }
 </style>
