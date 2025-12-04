@@ -2,52 +2,54 @@
 {% if page.id and page.tags %}
   {% assign current_tags = page.tags | sort %}
   {% assign current_tag_count = current_tags | size %}
-  {% assign related_posts = '' | split: '' %}
-  {% assign min_match_percentage = 90 %}
   
-  {% comment %}<!-- Calculate minimum tags needed for 90% match -->{% endcomment %}
-  {% assign min_tags_required = current_tag_count | times: min_match_percentage | divided_by: 100.0 | ceil %}
-  
-  {% comment %}<!-- Find posts with high tag overlap -->{% endcomment %}
-  {% for post in site.posts %}
-    {% if post.url != page.url %}
-      {% assign post_tags = post.tags | sort %}
-      {% assign matching_tags = 0 %}
-      
-      {% comment %}<!-- Count matching tags -->{% endcomment %}
-      {% for tag in current_tags %}
-        {% if post_tags contains tag %}
-          {% assign matching_tags = matching_tags | plus: 1 %}
-        {% endif %}
-      {% endfor %}
-      
-      {% comment %}<!-- Calculate match percentage -->{% endcomment %}
-      {% assign match_percentage = matching_tags | times: 100 | divided_by: current_tag_count %}
-      
-      {% comment %}<!-- Add to related posts if meets threshold -->{% endcomment %}
-      {% if match_percentage >= min_match_percentage %}
-        {% assign post_with_score = post.url | append: '|' | append: match_percentage | append: '|' | append: matching_tags %}
-        {% assign related_posts = related_posts | push: post_with_score %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-  
-  {% comment %}<!-- Display related posts if found -->{% endcomment %}
-  {% if related_posts.size > 0 %}
-    <aside class="related-posts">
-      <div class="related-posts__container">
-        <h3 class="related-posts__title">
-          <i class="fas fa-lightbulb"></i> Related Power Platform Tips
-        </h3>
-        <p class="related-posts__subtitle">
-          Based on similar topics and tags – continue your learning journey
-        </p>
+  {% if current_tag_count > 0 %}
+    {% assign related_posts = '' | split: '' %}
+    {% assign min_match_percentage = 90 %}
+    
+    {% comment %}<!-- Calculate minimum tags needed for 90% match -->{% endcomment %}
+    {% assign min_tags_required = current_tag_count | times: min_match_percentage | divided_by: 100.0 | ceil %}
+    
+    {% comment %}<!-- Find posts with high tag overlap -->{% endcomment %}
+    {% for post in site.posts %}
+      {% if post.url != page.url %}
+        {% assign post_tags = post.tags | sort %}
+        {% assign matching_tags = 0 %}
         
-        <div class="related-posts__grid">
-          {% comment %}<!-- Sort by match percentage (highest first) and limit to 4 -->{% endcomment %}
-          {% assign sorted_related = related_posts | sort | reverse %}
-          {% assign display_count = 0 %}
-          {% assign max_display = 4 %}
+        {% comment %}<!-- Count matching tags -->{% endcomment %}
+        {% for tag in current_tags %}
+          {% if post_tags contains tag %}
+            {% assign matching_tags = matching_tags | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        
+        {% comment %}<!-- Calculate match percentage -->{% endcomment %}
+        {% assign match_percentage = matching_tags | times: 100 | divided_by: current_tag_count %}
+        
+        {% comment %}<!-- Add to related posts if meets threshold -->{% endcomment %}
+        {% if match_percentage >= min_match_percentage %}
+          {% assign post_with_score = post.url | append: '|' | append: match_percentage | append: '|' | append: matching_tags %}
+          {% assign related_posts = related_posts | push: post_with_score %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  
+    {% comment %}<!-- Display related posts if found -->{% endcomment %}
+    {% if related_posts.size > 0 %}
+      <aside class="related-posts">
+        <div class="related-posts__container">
+          <h3 class="related-posts__title">
+            <i class="fas fa-lightbulb"></i> Related Power Platform Tips
+          </h3>
+          <p class="related-posts__subtitle">
+            Based on similar topics and tags – continue your learning journey
+          </p>
+          
+          <div class="related-posts__grid">
+            {% comment %}<!-- Sort by match percentage (highest first) and limit to 4 -->{% endcomment %}
+            {% assign sorted_related = related_posts | sort | reverse %}
+            {% assign display_count = 0 %}
+            {% assign max_display = 4 %}
           
           {% for related_item in sorted_related %}
             {% if display_count < max_display %}
@@ -127,5 +129,6 @@
         {% endif %}
       </div>
     </aside>
+    {% endif %}
   {% endif %}
 {% endif %}
