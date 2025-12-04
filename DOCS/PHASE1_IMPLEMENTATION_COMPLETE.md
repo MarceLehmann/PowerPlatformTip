@@ -15,7 +15,7 @@
 **2. MVP Badge im Header** ✅
 - Prominent "Microsoft MVP" Badge neben Logo
 - Sichtbar site-wide
-- Verlinkt zu offiziellem MVP Profil (https://mvp.microsoft.com/en-US/mvp/profile/6bcfe4e3-2f65-ef11-8a69-7c1e520ce37e)
+- Verlinkt zu offiziellem MVP Profil (https://mvp.microsoft.com/en-US/MVP/profile/f67ec6c7-f116-ee11-8f6e-000d3a1ad36b)
 - Responsive Design für Mobile
 
 **4. About Page Rewrite** ✅

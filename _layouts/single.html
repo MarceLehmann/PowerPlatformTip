@@ -20,9 +20,6 @@ layout: default
 
 <div id="main" role="main">
   {% include sidebar.html %}
-  {% if page.id %}
-    {% include social-share-sidebar.html %}
-  {% endif %}
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -50,7 +47,6 @@ layout: default
 
       {% if page.id %}
         {% include author-bio.html %}
-        {% include after-content-cta.html %}
       {% endif %}
 
       <footer class="page__meta">
