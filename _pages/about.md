@@ -84,7 +84,7 @@ My expertise spans across the entire Microsoft Power Platform ecosystem:
 
 ### Professional Services
 
-Through [ThePowerAddicts](https://thepoweraddicts.ch/), I provide professional coaching, consulting, and training services with a focus on:
+Through [KMUpower](https://kmupower.com/), I provide professional coaching, consulting, and training services with a focus on:
 
 - ✅ Custom Power Platform solution implementation
 - ✅ Enterprise-grade application development

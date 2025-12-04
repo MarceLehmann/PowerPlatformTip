@@ -127,7 +127,7 @@ If you are in the European Economic Area (EEA), you have the following rights:
 6. **Right to Object**: Object to processing of your personal data
 7. **Right to Withdraw Consent**: Withdraw consent at any time
 
-To exercise these rights, contact us at: [marcel.lehmann@thepoweraddicts.ch](mailto:marcel.lehmann@thepoweraddicts.ch)
+To exercise these rights, contact us at: [marcel.lehmann@kmupower.com](mailto:marcel.lehmann@kmupower.com)
 
 ## Children's Privacy
 
@@ -158,7 +158,7 @@ Our website may contain links to external sites not operated by us. We are not r
 If you have questions about this Privacy Policy or our privacy practices, please contact:
 
 **Marcel Lehmann**  
-Email: [marcel.lehmann@thepoweraddicts.ch](mailto:marcel.lehmann@thepoweraddicts.ch)  
+Email: [marcel.lehmann@kmupower.com](mailto:marcel.lehmann@kmupower.com)  
 Website: [www.powerplatformtip.com](https://www.powerplatformtip.com)
 
 For data protection inquiries specifically related to GDPR, please include "GDPR Request" in your email subject line.

@@ -106,10 +106,10 @@ author:
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://thepoweraddicts.ch"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:marcel.lehmann@thepoweraddicts.ch" # Uncomment and fill if you want to show email
+      url: "https://kmupower.com"
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:marcel.lehmann@kmupower.com" # Uncomment and fill if you want to show email
     #- label: "GitHub"
     #  icon: "fab fa-fw fa-github"
     #  url: "https://github.com/MarceLehmann" # Your GitHub profile
@@ -129,7 +129,7 @@ footer:
    #   url: "https://github.com/MarceLehmann/PowerPlatformTip" # Link to the blog's repository
     - label: "Website" # Link to your main website
       icon: "fas fa-fw fa-link"
-      url: "https://thepoweraddicts.ch"
+      url: "https://kmupower.com"
     # Add other relevant footer links
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"

@@ -58,7 +58,7 @@ Welcome to the most comprehensive collection of **Microsoft Power Platform learn
 ### **PowerAddicts Professional Training**
 Transform your Power Platform skills with personalized, MVP-level instruction:
 
-**[thepoweraddicts.ch](https://thepoweraddicts.ch/)** - Professional coaching, consulting, and training services featuring:
+**[kmupower.com](https://kmupower.com/)** - Professional coaching, consulting, and training services featuring:
 - **Custom Workshop Design**: Tailored to your organization's specific needs
 - **Enterprise Implementation Support**: End-to-end project guidance
 - **Performance Optimization Consulting**: Troubleshooting and enhancement
@@ -105,4 +105,4 @@ Transform your Power Platform skills with personalized, MVP-level instruction:
 
 ---
 
-*Ready to accelerate your learning? Start with our [practical blog posts](/posts/), explore [specialized categories](/categories/), or find specific solutions using our [comprehensive tags](/tags/). For personalized training, visit [thepoweraddicts.ch](https://thepoweraddicts.ch/) for professional coaching and consulting services.*
+*Ready to accelerate your learning? Start with our [practical blog posts](/posts/), explore [specialized categories](/categories/), or find specific solutions using our [comprehensive tags](/tags/). For personalized training, visit [kmupower.com](https://kmupower.com/) for professional coaching and consulting services.*

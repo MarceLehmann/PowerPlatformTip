@@ -366,9 +366,9 @@ Next features to implement:
 ## 📞 Support
 
 **Questions?** Contact Marcel Lehmann:
-- Email: marcel.lehmann@thepoweraddicts.ch
+- Email: marcel.lehmann@kmupower.com
 - LinkedIn: https://www.linkedin.com/in/marcelehmann/
-- Website: https://thepoweraddicts.ch
+- Website: https://kmupower.com
 
 ---
 
