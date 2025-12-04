@@ -1,6 +1,6 @@
 ---
 title: "#PowerPlatformTip 146 – Encode & Decode Functions"
-date: 2025-12-09
+date: 2025-12-04
 categories:
   - Article
   - PowerPlatformTip
