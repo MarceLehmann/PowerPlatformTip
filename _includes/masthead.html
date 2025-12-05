@@ -1,30 +1,38 @@
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 
 <div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}" loading="lazy"></a>
-        {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">
-          {{ site.masthead_title | default: site.title }}
-          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
-        </a>
-        <a href="https://mvp.microsoft.com/en-US/MVP/profile/f67ec6c7-f116-ee11-8f6e-000d3a1ad36b" 
-           class="site-mvp-badge" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           title="Microsoft MVP since 2023">
-          <span class="mvp-badge-text">Microsoft MVP</span>
-        </a>
-        {% if site.search == true %}
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
-          <i class="fas fa-search"></i>
-        </button>
-        {% endif %}
-      </nav>
+  <!-- Header Section with Title and Subtitle -->
+  <div class="masthead__header">
+    <div class="masthead__header-inner">
+      <h1 class="masthead__site-title">
+        <a href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
+      </h1>
+      {% if site.subtitle %}
+      <p class="masthead__site-subtitle">{{ site.subtitle }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Navigation Menu Bar -->
+  <div class="masthead__menu-bar">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <a href="https://mvp.microsoft.com/en-US/MVP/profile/f67ec6c7-f116-ee11-8f6e-000d3a1ad36b" 
+             class="site-mvp-badge" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             title="Microsoft MVP since 2023">
+            <span class="mvp-badge-text">Microsoft MVP</span>
+          </a>
+          {% if site.search == true %}
+          <button class="search__toggle" type="button">
+            <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+            <i class="fas fa-search"></i>
+          </button>
+          {% endif %}
+        </nav>
+      </div>
     </div>
   </div>
 </div>
