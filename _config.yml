@@ -17,9 +17,9 @@ minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "
 # Site Settings
 locale                   : "en-US" # English locale for international audience
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Cloud und mehr"
+title                    : "PowerPlatformTip"
 title_separator          : "-"
-subtitle                 : "Office 365 Tipps und Tricks aus Admin- und Usersicht" # site tagline that appears below site title in masthead
+subtitle                 : "Learn and find tips & tricks around the PowerPlatformTip" # site tagline that appears below site title in masthead
 name                     : "Marcel Lehmann"
 description              : "Learn and find tips & tricks around the Power Platform. Your go-to source for insights on Power Apps, Power Automate, and more, by Marcel Lehmann, BizzApps MVP."
 url: "https://www.powerplatformtip.com"
@@ -325,7 +325,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: true
       share: true
