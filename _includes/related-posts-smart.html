@@ -1,18 +1,14 @@
-<!-- Smart Related Posts Component - 90%+ Tag Match -->
+<!-- Smart Related Posts Component - Top 3 Tag Matches -->
 {% if page.id and page.tags %}
   {% assign current_tags = page.tags | sort %}
   {% assign current_tag_count = current_tags | size %}
   
   {% if current_tag_count > 0 %}
     {% assign related_posts = '' | split: '' %}
-    {% assign min_match_percentage = 90 %}
     
-    {% comment %}<!-- Calculate minimum tags needed for 90% match -->{% endcomment %}
-    {% assign min_tags_required = current_tag_count | times: min_match_percentage | divided_by: 100.0 | ceil %}
-    
-    {% comment %}<!-- Find posts with high tag overlap -->{% endcomment %}
+    {% comment %}<!-- Find all posts with at least 1 matching tag and score them -->{% endcomment %}
     {% for post in site.posts %}
-      {% if post.url != page.url %}
+      {% if post.url != page.url and post.tags %}
         {% assign post_tags = post.tags | sort %}
         {% assign matching_tags = 0 %}
         
@@ -23,12 +19,15 @@
           {% endif %}
         {% endfor %}
         
-        {% comment %}<!-- Calculate match percentage -->{% endcomment %}
-        {% assign match_percentage = matching_tags | times: 100 | divided_by: current_tag_count %}
-        
-        {% comment %}<!-- Add to related posts if meets threshold -->{% endcomment %}
-        {% if match_percentage >= min_match_percentage %}
-          {% assign post_with_score = post.url | append: '|' | append: match_percentage | append: '|' | append: matching_tags %}
+        {% comment %}<!-- Only include if at least 1 tag matches -->{% endcomment %}
+        {% if matching_tags > 0 %}
+          {% comment %}<!-- Create sortable score: pad matching_tags to 2 digits for proper sorting -->{% endcomment %}
+          {% if matching_tags < 10 %}
+            {% assign score_padded = matching_tags | prepend: '0' %}
+          {% else %}
+            {% assign score_padded = matching_tags %}
+          {% endif %}
+          {% assign post_with_score = score_padded | append: '|' | append: post.url | append: '|' | append: matching_tags %}
           {% assign related_posts = related_posts | push: post_with_score %}
         {% endif %}
       {% endif %}
@@ -42,20 +41,19 @@
             <i class="fas fa-lightbulb"></i> Related Power Platform Tips
           </h3>
           <p class="related-posts__subtitle">
-            Based on similar topics and tags – continue your learning journey
+            Posts with similar tags – continue your learning journey
           </p>
           
           <div class="related-posts__grid">
-            {% comment %}<!-- Sort by match percentage (highest first) and limit to 4 -->{% endcomment %}
+            {% comment %}<!-- Sort by matching tags count (highest first) and limit to 3 -->{% endcomment %}
             {% assign sorted_related = related_posts | sort | reverse %}
             {% assign display_count = 0 %}
-            {% assign max_display = 4 %}
+            {% assign max_display = 3 %}
           
           {% for related_item in sorted_related %}
             {% if display_count < max_display %}
               {% assign item_parts = related_item | split: '|' %}
-              {% assign post_url = item_parts[0] %}
-              {% assign match_percent = item_parts[1] %}
+              {% assign post_url = item_parts[1] %}
               {% assign match_count = item_parts[2] %}
               
               {% comment %}<!-- Find the actual post -->{% endcomment %}
@@ -65,7 +63,7 @@
                 <article class="related-post-card">
                   <div class="related-post-card__match">
                     <span class="related-post-card__match-badge">
-                      {{ match_percent }}% match
+                      {{ match_count }} matching tag{% if match_count != "1" %}s{% endif %}
                     </span>
                   </div>
                   
@@ -89,24 +87,24 @@
                       </span>
                     {% endif %}
                     
-                    {% if related_post.read_time %}
-                      <span class="related-post-card__read-time">
-                        <i class="far fa-clock"></i>
-                        {% assign words = related_post.content | number_of_words %}
-                        {% assign minutes = words | divided_by: 200 %}
-                        {% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
-                        {{ minutes }} min read
-                      </span>
-                    {% endif %}
+                    <span class="related-post-card__read-time">
+                      <i class="far fa-clock"></i>
+                      {% assign words = related_post.content | number_of_words %}
+                      {% assign minutes = words | divided_by: 200 %}
+                      {% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
+                      {{ minutes }} min read
+                    </span>
                   </div>
                   
                   <div class="related-post-card__tags">
-                    {% comment %}<!-- Show matching tags -->{% endcomment %}
-                    {% for tag in current_tags limit: 3 %}
-                      {% if related_post.tags contains tag %}
+                    {% comment %}<!-- Show matching tags (up to 4) -->{% endcomment %}
+                    {% assign shown_tags = 0 %}
+                    {% for tag in current_tags %}
+                      {% if related_post.tags contains tag and shown_tags < 4 %}
                         <span class="related-post-card__tag related-post-card__tag--match">
                           {{ tag }}
                         </span>
+                        {% assign shown_tags = shown_tags | plus: 1 %}
                       {% endif %}
                     {% endfor %}
                   </div>
@@ -124,7 +122,7 @@
         
         {% if display_count == 0 %}
           <p class="related-posts__empty">
-            No closely related posts found. <a href="/posts/">Explore all tips</a>
+            No related posts found. <a href="/posts/">Explore all tips</a>
           </p>
         {% endif %}
       </div>
