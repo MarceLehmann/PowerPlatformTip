@@ -1,0 +1,124 @@
+name: Post Scheduler Check
+
+on:
+  push:
+    paths:
+      - '_posts/**'
+  pull_request:
+    paths:
+      - '_posts/**'
+  schedule:
+    - cron: '0 5 * * *'  # Täglich um 5 Uhr UTC prüfen
+  workflow_dispatch:
+
+jobs:
+  validate-posts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: Validate post frontmatter
+        run: |
+          echo "🔍 Checking post frontmatter..."
+          errors=0
+          
+          for file in _posts/*.md; do
+            if [[ -f "$file" ]]; then
+              filename=$(basename "$file")
+              
+              # Check filename format (YYYY-MM-DD-title.md)
+              if ! [[ "$filename" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}-.+\.md$ ]]; then
+                echo "❌ Invalid filename format: $filename"
+                echo "   Expected: YYYY-MM-DD-title.md"
+                ((errors++))
+              fi
+              
+              # Check for required frontmatter
+              if ! grep -q "^title:" "$file"; then
+                echo "❌ Missing 'title' in: $filename"
+                ((errors++))
+              fi
+              
+              if ! grep -q "^date:" "$file"; then
+                echo "⚠️  Missing 'date' in: $filename (will use filename date)"
+              fi
+              
+              # Check for empty title
+              if grep -q "^title: *$" "$file"; then
+                echo "❌ Empty 'title' in: $filename"
+                ((errors++))
+              fi
+              
+              # Extract date from filename
+              file_date=$(echo "$filename" | grep -oE "^[0-9]{4}-[0-9]{2}-[0-9]{2}")
+              
+              # Check if date is valid
+              if ! date -d "$file_date" &>/dev/null; then
+                echo "❌ Invalid date in filename: $filename"
+                ((errors++))
+              fi
+            fi
+          done
+          
+          echo ""
+          echo "📊 Validation complete!"
+          
+          if [[ $errors -gt 0 ]]; then
+            echo "❌ Found $errors error(s)"
+            exit 1
+          else
+            echo "✅ All posts are valid!"
+          fi
+
+      - name: Check scheduled posts
+        run: |
+          echo "📅 Checking for scheduled posts..."
+          today=$(date +%Y-%m-%d)
+          future_posts=0
+          
+          for file in _posts/*.md; do
+            if [[ -f "$file" ]]; then
+              filename=$(basename "$file")
+              file_date=$(echo "$filename" | grep -oE "^[0-9]{4}-[0-9]{2}-[0-9]{2}")
+              
+              if [[ "$file_date" > "$today" ]]; then
+                echo "📆 Scheduled for $file_date: $filename"
+                ((future_posts++))
+              fi
+            fi
+          done
+          
+          echo ""
+          if [[ $future_posts -gt 0 ]]; then
+            echo "📊 Found $future_posts scheduled post(s) for future publication"
+          else
+            echo "ℹ️  No scheduled posts found"
+          fi
+
+      - name: Generate post statistics
+        run: |
+          echo ""
+          echo "📈 Post Statistics:"
+          echo "==================="
+          total=$(ls -1 _posts/*.md 2>/dev/null | wc -l)
+          echo "📝 Total posts: $total"
+          
+          # Posts per year
+          echo ""
+          echo "📅 Posts per year:"
+          for year in $(ls _posts/*.md | grep -oE "[0-9]{4}" | sort -u); do
+            count=$(ls _posts/$year-*.md 2>/dev/null | wc -l)
+            echo "   $year: $count posts"
+          done
+          
+          # Recent posts
+          echo ""
+          echo "🕐 Last 5 posts:"
+          ls -1 _posts/*.md | sort -r | head -5 | while read file; do
+            basename "$file"
+          done
