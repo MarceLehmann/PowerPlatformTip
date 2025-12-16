@@ -1,5 +1,7 @@
 ---
+
 title: "#PowerPlatformTip 143 - Reduce AI Costs with Thumbnail-First Document Processing"
+seo_title: "#PowerPlatformTip 143 - Reduce AI Costs with Thumbnail-First"
 date: 2025-10-01
 categories:
   - Article
@@ -18,6 +20,7 @@ header:
   overlay_filter: 0.5
 toc: true
 toc_sticky: true
+
 ---
 
 With AI Builder credits ending November 1, 2025, and Copilot Credits costing significantly more, organizations need smarter AI processing strategies. Process only the SharePoint thumbnail of documents first using Get File Properties action, extract required data, and fall back to full PDF processing only when necessary. This thumbnail-first approach works with any AI provider (Azure AI Document Intelligence, OpenAI Vision API, Google Document AI, AI Builder) and reduces processing costs by 70-95% while maintaining data accuracy.

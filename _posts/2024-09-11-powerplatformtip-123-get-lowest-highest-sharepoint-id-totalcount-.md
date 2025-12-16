@@ -1,5 +1,7 @@
 ---
+
 title: "#PowerPlatformTip 123 – 'Get Lowest / Highest SharePoint ID & TotalCount'"
+seo_title: "#PowerPlatformTip 123 – 'Get Lowest / Highest SharePoint ID"
 date: 2024-09-11
 categories:
   - Article
@@ -17,6 +19,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+
 ---
 
 ## 💡 Challenge

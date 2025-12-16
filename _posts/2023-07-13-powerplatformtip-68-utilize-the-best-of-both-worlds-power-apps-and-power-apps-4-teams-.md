@@ -1,5 +1,7 @@
 ---
+
 title: "#PowerPlatformTip 68 – 'Utilize the best of both worlds: Power Apps and Power Apps 4 Teams'"
+seo_title: "#PowerPlatformTip 68 – 'Utilize the best of both worlds:"
 date: 2023-07-13
 categories:
   - Article
@@ -18,6 +20,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+
 ---
 
 ## 💡 Challenge

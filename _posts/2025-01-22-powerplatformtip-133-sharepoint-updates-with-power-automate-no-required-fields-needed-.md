@@ -1,5 +1,7 @@
 ---
+
 title: "#PowerPlatformTip 133 – 'SharePoint Updates with Power Automate – No Required Fields Needed'"
+seo_title: "#PowerPlatformTip 133 – 'SharePoint Updates with Power"
 date: 2025-01-22
 categories:
   - Article
@@ -20,6 +22,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+
 ---
 
 ## 💡 Challenge

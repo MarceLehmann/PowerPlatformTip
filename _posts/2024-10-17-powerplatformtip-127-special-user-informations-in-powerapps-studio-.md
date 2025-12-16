@@ -1,5 +1,7 @@
 ---
+
 title: "#PowerPlatformTip 127 – 'Special User-Informations in PowerApps Studio'"
+seo_title: "#PowerPlatformTip 127 – 'Special User-Informations in"
 date: 2024-10-17
 categories:
   - Article
@@ -23,6 +25,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+
 ---
 
 ## 💡 Challenge

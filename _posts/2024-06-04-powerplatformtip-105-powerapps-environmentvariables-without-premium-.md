@@ -1,5 +1,7 @@
 ---
+
 title: "#PowerPlatformTip 105 – 'PowerApps – EnvironmentVariables Without Premium'"
+seo_title: "#PowerPlatformTip 105 – 'PowerApps – EnvironmentVariables"
 date: 2024-06-04
 categories:
   - Article
@@ -19,6 +21,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+
 ---
 
 ## 💡 Challenge

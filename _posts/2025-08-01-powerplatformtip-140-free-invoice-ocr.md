@@ -1,5 +1,7 @@
 ---
+
 title: "#PowerPlatformTip 140 – Free Invoice OCR (Process 500 PDFs/Month for €0)"
+seo_title: "#PowerPlatformTip 140 – Free Invoice OCR (Process 500"
 date: 2025-08-01
 categories:
   - Article
@@ -18,6 +20,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+
 ---
 
 ## 💡 Challenge

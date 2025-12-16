@@ -1,5 +1,7 @@
 ---
+
 title: "#PowerPlatformTip 8 – 'automate export and import flows/powerapps/solutions'"
+seo_title: "#PowerPlatformTip 8 – 'automate export and import"
 date: 2022-12-17
 categories:
   - Article
@@ -16,6 +18,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+
 ---
 
 ## 💡 Challenge

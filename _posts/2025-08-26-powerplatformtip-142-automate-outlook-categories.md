@@ -1,5 +1,7 @@
 ---
+
 title: "#PowerPlatformTip 142 - Automate Outlook Categories"
+seo_title: "#PowerPlatformTip 142 - Automate Outlook Categories"
 date: 2025-08-26
 categories:
   - Article
@@ -17,6 +19,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+
 ---
 
 Tired of manually categorizing your Outlook meetings? This simple tip shows how to use Power Automate to automatically set categories for calendar events. This keeps you organized with almost no effort.

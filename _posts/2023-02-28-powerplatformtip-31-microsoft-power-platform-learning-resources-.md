@@ -1,5 +1,7 @@
 ---
+
 title: "#PowerPlatformTip 31 – 'Microsoft Power Platform: Learning Resources'"
+seo_title: "#PowerPlatformTip 31 – 'Microsoft Power Platform: Learning"
 date: 2023-02-28
 categories:
   - Article
@@ -16,6 +18,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+
 ---
 
 ## 💡 Challenge
