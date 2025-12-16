@@ -1,0 +1,27 @@
+---
+layout: default
+permalink: /404.html
+---
+
+<div class="page">
+  <div class="page__inner-wrap">
+    <section class="page__content" aria-label="Content">
+      <h1>Page not found</h1>
+      <p>Sorry, we couldn’t find that page.</p>
+      <p><a href="/">Go back to the homepage</a></p>
+    </section>
+  </div>
+</div>
+
+<script>
+  (function() {
+    try {
+      var path = window.location.pathname || "";
+      if (path.toLowerCase().endsWith("/feed.xml")) {
+        // Redirect any */feed.xml to the global feed
+        window.location.replace("/feed.xml");
+        return;
+      }
+    } catch(e) { /* noop */ }
+  })();
+</script>
