@@ -46,6 +46,10 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Setup IndexNow Key File
+        run: echo "${{ secrets.INDEXNOW_KEY }}" > c50323b8794e4a118d52d2ef430cbedd.txt
+      - name: Copy IndexNow Key to output directory
+        run: cp c50323b8794e4a118d52d2ef430cbedd.txt _site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

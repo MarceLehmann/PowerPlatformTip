@@ -1,0 +1,21 @@
+name: "IndexNow Submission"
+
+on:
+  workflow_run:
+    workflows: ["Deploy Jekyll site to Pages"]
+    types: [completed]
+  schedule:
+    - cron: "0 2 * * *" # daily at 02:00 UTC
+  workflow_dispatch:
+
+jobs:
+  submit-to-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit sitemap to IndexNow
+        uses: bojieyang/indexnow-action@v2
+        with:
+          sitemap-location: "https://powerplatformtip.com/sitemap.xml"
+          key: ${{ secrets.INDEXNOW_KEY }}
+          since: 1
+          since-unit: "week"
