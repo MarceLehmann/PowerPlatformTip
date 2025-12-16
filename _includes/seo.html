@@ -1,7 +1,7 @@
 <!-- begin _includes/seo.html -->
 {%- assign title_separator = site.title_separator | default: '-' -%}
 
-{%- assign page_title = page.title | default: site.title | replace: '|', '&#124;' -%}
+{%- assign page_title = page.seo_title | default: page.title | default: site.title | replace: '|', '&#124;' -%}
 {%- if page_title contains site.title -%}
   {%- assign seo_title = page_title | replace: '|', '&#124;' -%}
 {%- else -%}
@@ -35,7 +35,13 @@
   {%- assign og_type = "website" -%}
 {%- endif -%}
 
-<title>{{ seo_title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
+{%- assign full_title = seo_title -%}
+{%- if paginator -%}
+  {%- unless paginator.page == 1 -%}
+    {%- assign full_title = full_title | append: " " | append: title_separator | append: " " | append: site.data.ui-text[site.locale].page | default: "Page" | append: " " | append: paginator.page -%}
+  {%- endunless -%}
+{%- endif -%}
+<title>{{ full_title | truncate: 70, '' }}</title>
 <meta name="description" content="{{ seo_description }}">
 
 {% if author.name %}
