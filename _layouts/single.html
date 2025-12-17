@@ -42,6 +42,10 @@ layout: default
       <section class="page__content" itemprop="text">
         {% include schema-techarticle.html %}
         {{ content }}
+        {% comment %}<!-- Smart related posts - show directly below content -->{% endcomment %}
+        {% if page.id %}
+          {% include related-posts-smart.html %}
+        {% endif %}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
@@ -74,8 +78,5 @@ layout: default
     {% endif %}
   </article>
 
-  {% comment %}<!-- Smart related posts - always show for blog posts -->{% endcomment %}
-  {% if page.id %}
-    {% include related-posts-smart.html %}
-  {% endif %}
+  
 </div>
