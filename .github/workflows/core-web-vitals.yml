@@ -28,3 +28,5 @@ jobs:
       
       - name: Run Lighthouse for Core Web Vitals
         run: npx lhci autorun
+        env:
+          LHCI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
