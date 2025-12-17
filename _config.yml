@@ -35,19 +35,7 @@ future                   : false
 copyright                : # "copyright" name, defaults to site.title
 copyright_url            : # "copyright" URL, defaults to site.url
 comments:
-  provider               : "giscus"
-  giscus:
-    repo_id              : # Get this value from giscus.app
-    category_name        : "General"
-    category_id          : # Get this value from giscus.app
-    discussion_term      : "pathname"
-    reactions_enabled    : "1"
-    theme                : "light"
-    strict               : "0"
-    input_position       : "bottom"
-    emit_metadata        : "0"
-    lang                 : "en"
-    lazy                 : true
+  provider               : false
 reCaptcha:
   siteKey                :
   secret                 :
