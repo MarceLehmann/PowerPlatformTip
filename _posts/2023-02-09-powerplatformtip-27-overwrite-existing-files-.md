@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 27 – 'Overwrite existing files'"
+title: "#PowerPlatformTip 27 – 'Overwrite existing files' (The Settings Hack)"
 date: 2023-02-09
 categories:
   - Article
@@ -9,8 +9,9 @@ tags:
   - sharepoint
   - file overwrite
   - file management
-  - onedrive
-excerpt: "Prevent duplicate files in SharePoint and OneDrive by configuring Power Automate flows to overwrite existing files. Keep your workspace organized."
+  - chunking
+  - settings hack
+excerpt: "Enable file overwriting in SharePoint by disabling 'Allow Chunking' – a simple settings tweak that unlocks the hidden overwrite toggle in Power Automate."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -19,38 +20,46 @@ toc_sticky: true
 ---
 
 ## 💡 Challenge
-Got a case of the duplicates in your SharePoint? It happens to the best of us. You’re rolling along, using ‘Create File’ in your flows, and bam – you’re swimming in files with the same name.
+You want to overwrite existing files in SharePoint using Power Automate's **Create File** action – but the **Overwrite** toggle is missing or greyed out!
 
 ## ✅ Solution
-Configure your flow to overwrite existing files by checking for existing files and deleting them before creation in SharePoint, or simply toggle overwrite in the OneDrive for Business connector.
+Disable the **Allow Chunking** setting in your SharePoint connector – this instantly unlocks the **Overwrite** option.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. For the SharePoint Aficionados:  
-   🔸 Use **Get files (properties only)** or **Get file metadata** to find existing files.  
-   🔸 Add a **Condition** to delete the file if it exists before using **Create File** again.  
-2. For the OneDrive for Business Crew:  
-   🔸 In the **Create File** action, enable the **Overwrite** toggle.  
-   🔸 New versions replace the old file automatically without extra steps.
+
+![SharePoint Create File Settings - Allow Chunking disabled to enable Overwrite](/assets/images/posts/powerplatformtip-27-overwrite.jpg "Disable Allow Chunking to unlock Overwrite")
+
+1. Open your **Create File** action in Power Automate.  
+2. Click **Settings** (top right of the action).  
+3. Scroll to **Content Transfer** section.  
+4. Set **Allow Chunking** to **Off**.  
+5. Close Settings – the **Overwrite** toggle now appears in your action!
+
+## ⚠️ Trade-offs
+🔸 **100 MB Limit**: With chunking disabled, files larger than 100 MB will fail. Keep chunking enabled for large file scenarios.  
+🔸 **Version History**: Overwriting replaces the file entirely. Enable SharePoint versioning if you need rollback capability.
 
 ## 🎉 Result
-Your SharePoint and OneDrive libraries stay clean without duplicates, making file management smoother and more reliable.
+Your files get cleanly replaced without duplicates – no delete-then-create workarounds needed.
 
 ## 🌟 Key Advantages
-🔸 Prevent duplicate file buildup in SharePoint and OneDrive.  
-🔸 Keep your digital workspace organized and clutter-free.  
-🔸 Utilize built-in connector settings to streamline your flows.
+🔸 **One-Click Fix**: A simple settings toggle – no extra actions in your flow.  
+🔸 **Faster Flows**: Skip the "check if exists → delete → create" dance.  
+🔸 **Cleaner Libraries**: No more \`filename(1).docx\` clutter.
 
 ---
 
 ## 🛠️ FAQ
-**1. What happens to the original file when it gets overwritten?**  
-The original file is replaced completely. Consider enabling versioning in SharePoint to maintain backup copies if needed.
+**1. Why is the Overwrite option hidden by default?**  
+Microsoft enables chunking by default to support large files (up to 250 MB). Since chunked uploads can't overwrite, the toggle is hidden until you disable chunking.
 
-**2. Can I use this setting with all file types?**  
-Yes, the overwrite setting works with most file types including documents, images, and other common file formats.
+**2. What happens if my file exceeds 100 MB?**  
+The flow will fail with a size limit error. For files larger than 100 MB, keep chunking enabled and use a delete-then-create pattern instead.
 
-**3. Does overwriting files affect sharing permissions?**  
-No, overwriting a file maintains the same sharing permissions and links as the original file.
+**3. Does overwriting preserve sharing permissions?**  
+Yes, overwriting maintains existing sharing links, permissions, and metadata. The file ID stays the same.
+
+**4. Can I use this for OneDrive too?**  
+OneDrive for Business has the Overwrite toggle available by default – no settings hack needed there!
 
 ---
