@@ -39,7 +39,8 @@ layout: null
 
   <!-- Pages from _pages folder -->
   {% for page in site.pages %}
-    {% if page.sitemap != false and page.permalink %}
+    {% unless page.sitemap == false %}
+    {% if page.permalink %}
     <url>
       <loc>{{ page.url | absolute_url }}</loc>
       <lastmod>
@@ -53,6 +54,7 @@ layout: null
       <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% else %}0.7{% endif %}</priority>
     </url>
     {% endif %}
+    {% endunless %}
   {% endfor %}
 
   <!-- Tag Pages -->

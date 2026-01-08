@@ -55,7 +55,7 @@ function parseFrontmatter(content) {
   let currentValue = [];
   
   lines.forEach(line => {
-    const keyMatch = line.match(/^(\w+):\s*(.*)$/);
+    const keyMatch = line.match(/^([\w\-_]+):\s*(.*)$/);
     if (keyMatch) {
       if (currentKey) {
         frontmatter[currentKey] = currentValue.join('\n').trim();
@@ -157,7 +157,7 @@ function scanPosts() {
       return;
     }
     
-    const published = frontmatter.published !== 'false';
+    const published = frontmatter.published !== 'false' && frontmatter.published !== false;
     if (published) {
       results.summary.publishedPosts++;
     } else {
