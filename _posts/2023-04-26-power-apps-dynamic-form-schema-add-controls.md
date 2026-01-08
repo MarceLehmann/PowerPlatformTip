@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Power Apps Dynamic Form Schema: Add Controls on the Fly"
 date: 2023-04-26
 permalink: "/article/powerplatform/2023/04/26/power-apps-dynamic-form-schema-add-controls/"
@@ -19,6 +19,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 ## ðŸ’¡ Challenge

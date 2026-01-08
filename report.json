@@ -1,0 +1,1515 @@
+{
+  "timestamp": "2026-01-08T14:22:38.708Z",
+  "summary": {
+    "totalPosts": 164,
+    "totalPages": 8,
+    "publishedPosts": 146,
+    "unpublishedPosts": 0,
+    "brokenLinks": 4,
+    "validUrls": 5,
+    "invalidUrls": 0
+  },
+  "posts": [
+    {
+      "file": "2020-12-10-power-apps-print-directly-printer-api.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2020-12-30-restore-earlier-version-flow-power-automate.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2021-03-07-the-big-5.md",
+      "url": "\"/article/powerplatform/2025/08/27/the-big-5-variables-parameters-powerapps/\"",
+      "published": true,
+      "title": "\"The Big 5: Variables and Parameters in PowerApps\"",
+      "date": "2021-03-07",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false,
+      "permalink": "\"/article/powerplatform/2025/08/27/the-big-5-variables-parameters-powerapps/\""
+    },
+    {
+      "file": "2021-04-26-power-apps-combo-box-defaultselecteditems.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2021-06-11-powerapps-pdf-viewer-sharepoint-document-library.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2021-08-23-power-apps-refresh-alternative-method-performance.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2021-10-13-send-1-1-message-flow-teams.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2022-03-09-power-automate-flows-vs-automate-rules.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2022-04-20-implement-onkeydown-onkeypress-powerapps-text-input.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2022-04-27-fill-and-sign-word-document-power-apps-automate.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2022-05-18-how-to-track-the-current-progress-of-a-flow-in-the-powerapp.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2022-05-18-power-apps-elevated-permissions-power-automate.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2022-05-23-return-an-array-from-powerautomate-to-powerapps-split-method.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2022-07-20-how-to-load-multiple-data-sources-into-one-collection.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2022-08-30-how-to-restore-create-backup-flow.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2022-11-10-extract-html-table-email-power-automate.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2022-12-10-powerplatformtip-1-explore-community-resources-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-1-explore-community-resources-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 1 – 'Explore Community Resources'\"",
+      "date": "2022-12-10",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-11-powerplatformtip-2-transfer-powerapp-ownership-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-2-transfer-powerapp-ownership-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 2 – 'Transfer PowerApp Ownership'\"",
+      "date": "2022-12-11",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-12-powerplatformtip-3-advanced-filtering-array-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-3-advanced-filtering-array-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 3 – 'Advanced Filtering Array'\"",
+      "date": "2022-12-12",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-13-powerplatformtip-4-json-viewer-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-4-json-viewer-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 4 – 'JSON Viewer'\"",
+      "date": "2022-12-13",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-14-powerplatformtip-5-less-variables-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-5-less-variables-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 5 – 'Less Variables'\"",
+      "date": "2022-12-14",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-15-powerplatformtip-6-formatdatetime-in-utcnow-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-6-formatdatetime-in-utcnow-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 6 – 'formatDateTime in utcNow'\"",
+      "date": "2022-12-15",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-16-powerplatformtip-7-union-and-filterarray-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-7-union-and-filterarray-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 7 – 'UNION and FilterArray'\"",
+      "date": "2022-12-16",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-17-powerplatformtip-8-automate-export-and-import-flows-powerapps-solutions-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-8-automate-export-and-import-flows-powerapps-solutions-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 8 – 'automate export and import flows/powerapps/solutions'\"",
+      "date": "2022-12-17",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-18-powerplatformtip-9-powerautomate-preview-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-9-powerautomate-preview-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 9 – 'PowerAutomate – Preview'\"",
+      "date": "2022-12-18",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-19-powerplatformtip-10-use-all-variables-in-powerapps-.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2022-12-20-powerplatformtip-11-trigger-condition-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-11-trigger-condition-/",
+      "published": true,
+      "title": "\"PowerPlatformTip 11 – Trigger Condition\"",
+      "date": "2022-12-20",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-21-powerplatformtip-12-components-for-powerautomate-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-12-components-for-powerautomate-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 12 – 'Components for PowerAutomate'\"",
+      "date": "2022-12-21",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-22-powerplatformtip-13-powerapps4teams-in-make-powerapps-com-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-13-powerapps4teams-in-make-powerapps-com-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 13 – 'PowerApps4Teams in make.powerapps.com'\"",
+      "date": "2022-12-22",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-23-powerplatformtip-14-template-screens-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-14-template-screens-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 14 – 'Template Screens'\"",
+      "date": "2022-12-23",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2022-12-24-powerplatformtip-15-try-catch-finally-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-15-try-catch-finally-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 15 – 'try-catch-finally'\"",
+      "date": "2022-12-24",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-01-03-powerplatformtip-16-powerapps-collections-cookbook-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-16-powerapps-collections-cookbook-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 16 – 'PowerApps – Collections Cookbook'\"",
+      "date": "2023-01-03",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-01-05-powerplatformtip-17-format-data-by-example-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-17-format-data-by-example-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 17 – 'Format data by example'\"",
+      "date": "2023-01-05",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-01-10-powerplatformtip-18-download-and-save-files-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-18-download-and-save-files-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 18 – 'Download & Save Files'\"",
+      "date": "2023-01-10",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-01-12-powerplatformtip-19-resize-files-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-19-resize-files-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 19 – 'Resize files'\"",
+      "date": "2023-01-12",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-01-17-powerplatformtip-20-change-flow-owner-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-20-change-flow-owner-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 20 – 'Change Flow-Owner'\"",
+      "date": "2023-01-17",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-01-19-powerplatformtip-21-use-triggeroutput-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-21-use-triggeroutput-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 21 – 'Use Triggeroutput'\"",
+      "date": "2023-01-19",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-01-24-powerplatformtip-22-change-fill-and-color-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-22-change-fill-and-color-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 22 – 'Change Fill & Color'\"",
+      "date": "2023-01-24",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-01-26-powerplatformtip-23-filter-blank-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-23-filter-blank-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 23 – 'Filter Blank'\"",
+      "date": "2023-01-26",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-01-29-merge-images-powerapps-without-flow.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2023-01-31-powerplatformtip-24-merge-arrays-or-tables-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-24-merge-arrays-or-tables-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 24 – 'Merge arrays or tables'\"",
+      "date": "2023-01-31",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-02-02-powerplatformtip-25-weekly-tips-insights-and-updates-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-25-weekly-tips-insights-and-updates-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 25 – 'Weekly tips, insights and updates'\"",
+      "date": "2023-02-02",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-02-07-powerplatformtip-26-microsoft-cloud-skills-challenge-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-26-microsoft-cloud-skills-challenge-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 26 – 'Microsoft Cloud Skills Challenge'\"",
+      "date": "2023-02-07",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-02-09-powerplatformtip-27-overwrite-existing-files-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-27-overwrite-existing-files-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 27 – 'Overwrite existing files' (The Settings Hack)\"",
+      "date": "2023-02-09",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-02-14-powerplatformtip-28-fast-tips-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-28-fast-tips-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 28 – 'Fast tips'\"",
+      "date": "2023-02-14",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-02-15-powerplatformtip-29-parsejson-description-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-29-parsejson-description-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 29 – 'ParseJSON Description'\"",
+      "date": "2023-02-15",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-02-21-powerplatformtip-30-powerapps-code-review-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-30-powerapps-code-review-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 30 – 'PowerApps – Code Review'\"",
+      "date": "2023-02-21",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-02-28-powerplatformtip-31-microsoft-power-platform-learning-resources-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-31-microsoft-power-platform-learning-resources-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 31 – 'Microsoft Power Platform: Learning Resources'\"",
+      "date": "2023-02-28",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-03-02-powerplatformtip-32-use-groupby-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-32-use-groupby-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 32 – 'Optimize with GroupBy'\"",
+      "date": "2023-03-02",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-03-07-powerplatformtip-33-coalesce-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-33-coalesce-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 33 – 'Coalesce'\"",
+      "date": "2023-03-07",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-03-09-powerplatformtip-34-powerapps-v2-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-34-powerapps-v2-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 34 – 'PowerApps V2'\"",
+      "date": "2023-03-09",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-03-14-powerplatformtip-35-concurrent-control-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-35-concurrent-control-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 35 – 'Concurrent Control'\"",
+      "date": "2023-03-14",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-03-16-powerplatformtip-36-static-result-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-36-static-result-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 36 – 'Static Result'\"",
+      "date": "2023-03-16",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-03-21-powerplatformtip-37-table-to-json-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-37-table-to-json-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 37 – 'Table to JSON'\"",
+      "date": "2023-03-21",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-03-23-powerplatformtip-38-data-refresh-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-38-data-refresh-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 38 – 'Data Refresh'\"",
+      "date": "2023-03-23",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-03-28-powerplatformtip-39-mastering-fetchxml-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-39-mastering-fetchxml-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 39 – 'Mastering FetchXML'\"",
+      "date": "2023-03-28",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-03-30-powerplatformtip-40-delete-apps-flows-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-40-delete-apps-flows-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 40 – 'Delete Apps / Flows'\"",
+      "date": "2023-03-30",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-04-04-powerplatformtip-41-standard-tables-in-dataverse-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-41-standard-tables-in-dataverse-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 41 – 'Standard tables in DataVerse'\"",
+      "date": "2023-04-04",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-04-06-powerplatformtip-42-dataverse-views-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-42-dataverse-views-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 42 – 'Dataverse Views'\"",
+      "date": "2023-04-06",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-04-11-powerplatformtip-43-with-function-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-43-with-function-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 43 – 'With function'\"",
+      "date": "2023-04-11",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-04-13-powerplatformtip-44-calculate-distance-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-44-calculate-distance-/",
+      "published": true,
+      "title": "\"PowerPlatformTip 44 – Calculate the Distance\"",
+      "date": "2023-04-13",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-04-18-powerplatformtip-45-use-scopes-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-45-use-scopes-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 45 – 'Use Scopes'\"",
+      "date": "2023-04-18",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-04-20-powerplatformtip-46-powertoys-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-46-powertoys-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 46 – 'PowerToys'\"",
+      "date": "2023-04-20",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-04-25-powerplatformtip-47-batch-method-within-sharepoint-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-47-batch-method-within-sharepoint-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 47 – 'Batch-Method within SharePoint'\"",
+      "date": "2023-04-25",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-04-26-power-apps-dynamic-form-schema-add-controls.md",
+      "error": "No frontmatter found"
+    },
+    {
+      "file": "2023-04-27-powerplatformtip-48-sharing-of-flows-and-power-apps-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-48-sharing-of-flows-and-power-apps-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 48 – 'Sharing of Flows & Power Apps'\"",
+      "date": "2023-04-27",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-05-02-powerplatformtip-49-do-until-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-49-do-until-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 49 – 'Do-Until'\"",
+      "date": "2023-05-02",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-05-04-powerplatformtip-50-use-templateapp-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-50-use-templateapp-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 50 – 'Use TemplateApp'\"",
+      "date": "2023-05-04",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-05-09-powerplatformtip-51-which-flow-calls-which-flow-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-51-which-flow-calls-which-flow-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 51 – 'Which Flow Calls Which Flow'\"",
+      "date": "2023-05-09",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-05-11-powerplatformtip-52-dv4t-budget-friendly-choice-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-52-dv4t-budget-friendly-choice-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 52 – 'DV4T: Budget-Friendly Choice'\"",
+      "date": "2023-05-11",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-05-16-powerplatformtip-53-launch-function-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-53-launch-function-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 53 – 'Launch function'\"",
+      "date": "2023-05-16",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-05-23-powerplatformtip-54-use-galleries-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-54-use-galleries-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 54 – 'Use Galleries'\"",
+      "date": "2023-05-23",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-05-25-powerplatformtip-55-picking-colors-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-55-picking-colors-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 55 – 'Picking colors'\"",
+      "date": "2023-05-25",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-05-30-powerplatformtip-56-empowering-tools-in-coe-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-56-empowering-tools-in-coe-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 56 – 'Empowering Tools in CoE'\"",
+      "date": "2023-05-30",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-06-01-powerplatformtip-57-mastering-patch-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-57-mastering-patch-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 57 – 'Mastering PATCH'\"",
+      "date": "2023-06-01",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-06-06-powerplatformtip-58-http-actions-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-58-http-actions-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 58 – 'HTTP Actions'\"",
+      "date": "2023-06-06",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-06-08-powerplatformtip-59-handle-dynamic-content-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-59-handle-dynamic-content-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 59 – 'Handle Dynamic Content'\"",
+      "date": "2023-06-08",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-06-13-powerplatformtip-60-power-platform-challenges-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-60-power-platform-challenges-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 60 – 'Power Platform Challenges'\"",
+      "date": "2023-06-13",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-06-15-powerplatformtip-61-power-of-environment-variables-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-61-power-of-environment-variables-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 61 – 'Power of Environment Variables'\"",
+      "date": "2023-06-15",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-06-20-powerplatformtip-62-updateif-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-62-updateif-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 62 – 'UpdateIf'\"",
+      "date": "2023-06-20",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-06-22-powerplatformtip-63-mastering-the-lookup-function-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-63-mastering-the-lookup-function-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 63 – 'Mastering the Lookup Function'\"",
+      "date": "2023-06-22",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-06-27-powerplatformtip-64-comparing-lookup-vs-firstfilter-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-64-comparing-lookup-vs-firstfilter-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 64 – 'Comparing Lookup vs. First(Filter)'\"",
+      "date": "2023-06-27",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-06-29-powerplatformtip-65-automate-documentation-with-powerdocu-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-65-automate-documentation-with-powerdocu-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 65 – 'Automate Documentation with PowerDocu'\"",
+      "date": "2023-06-29",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-07-07-powerplatformtip-66-load-data-source-structure-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-66-load-data-source-structure-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 66 – 'Load Data Source Structure'\"",
+      "date": "2023-07-07",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-07-11-powerplatformtip-67-app-to-app-redirection-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-67-app-to-app-redirection-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 67 – 'App-to-App Redirection'\"",
+      "date": "2023-07-11",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-07-13-powerplatformtip-68-utilize-the-best-of-both-worlds-power-apps-and-power-apps-4-teams-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-68-utilize-the-best-of-both-worlds-power-apps-and-power-apps-4-teams-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 68 – 'Utilize the best of both worlds: Power Apps and Power Apps 4 Teams'\"",
+      "date": "2023-07-13",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-07-25-powerplatformtip-69-optimize-loading-with-fullscreen-reference-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-69-optimize-loading-with-fullscreen-reference-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 69 – 'Optimize Loading with Fullscreen Reference'\"",
+      "date": "2023-07-25",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-07-27-powerplatformtip-70-managing-teams-with-powerapps-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-70-managing-teams-with-powerapps-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 70 – 'Managing Teams with PowerApps!'\"",
+      "date": "2023-07-27",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-08-08-powerplatformtip-71-array-to-object-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-71-array-to-object-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 71 – 'Array to Object'\"",
+      "date": "2023-08-08",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-08-10-powerplatformtip-72-powerapps-with-google-maps-api-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-72-powerapps-with-google-maps-api-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 72 – 'PowerApps with Google Maps API'\"",
+      "date": "2023-08-10",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-08-15-powerplatformtip-73-quick-switch-to-maker-mode-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-73-quick-switch-to-maker-mode-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 73 – 'Quick Switch to Maker Mode'\"",
+      "date": "2023-08-15",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-08-22-powerplatformtip-74-elevated-permissions-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-74-elevated-permissions-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 74 – 'Elevated Permissions'\"",
+      "date": "2023-08-22",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-08-29-powerplatformtip-75-boost-efficiency-with-concurrency-control-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-75-boost-efficiency-with-concurrency-control-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 75 – 'Boost Efficiency with Concurrency Control'\"",
+      "date": "2023-08-29",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-09-05-powerplatformtip-76-powerapps-sharing-with-guests-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-76-powerapps-sharing-with-guests-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 76 – 'PowerApps Sharing with Guests'\"",
+      "date": "2023-09-05",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-09-12-powerplatformtip-77-optimize-parallel-object-processing-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-77-optimize-parallel-object-processing-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 77 – 'Optimize Parallel Object Processing'\"",
+      "date": "2023-09-12",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-09-19-powerplatformtip-78-efficient-control-reset-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-78-efficient-control-reset-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 78 – 'Efficient Control Reset'\"",
+      "date": "2023-09-19",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-09-26-powerplatformtip-79-retrieve-record-details-post-update-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-79-retrieve-record-details-post-update-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 79 – 'Retrieve Record Details Post-Update'\"",
+      "date": "2023-09-26",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-10-03-powerplatformtip-80-rapid-dynamic-forms-with-ai-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-80-rapid-dynamic-forms-with-ai-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 80 – 'Rapid Dynamic Forms with AI'\"",
+      "date": "2023-10-03",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-10-10-powerplatformtip-81-fast-datasource-updates-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-81-fast-datasource-updates-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 81 – 'Fast DataSource Updates'\"",
+      "date": "2023-10-10",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-10-17-powerplatformtip-82-automated-code-commenting-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-82-automated-code-commenting-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 82 – 'Automated Code Commenting'\"",
+      "date": "2023-10-17",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-10-24-powerplatformtip-83-organize-power-automate-chat-messages-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-83-organize-power-automate-chat-messages-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 83 – 'Organize Power Automate Chat Messages'\"",
+      "date": "2023-10-24",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-10-31-powerplatformtip-84-tabbing-in-dynamic-forms-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-84-tabbing-in-dynamic-forms-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 84 – 'Tabbing in Dynamic Forms'\"",
+      "date": "2023-10-31",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-11-08-powerplatformtip-85-delay-output-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-85-delay-output-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 85 – 'Delay Output'\"",
+      "date": "2023-11-08",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-11-16-powerplatformtip-86-free-power-apps-icons-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-86-free-power-apps-icons-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 86 – 'Free Power Apps Icons'\"",
+      "date": "2023-11-16",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-11-21-powerplatformtip-87-licensing-sharing-canvas-apps-with-guests-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-87-licensing-sharing-canvas-apps-with-guests-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 87 – 'Licensing – Sharing Canvas Apps with Guests'\"",
+      "date": "2023-11-21",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-11-27-powerplatformtip-88-expert-help-when-you-need-it-most-thepoweraddicts-com-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-88-expert-help-when-you-need-it-most-thepoweraddicts-com-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 88 – 'Expert Help When You Need It Most – ThePowerAddicts.com'\"",
+      "date": "2023-11-27",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-11-30-powerplatformtip-89-code-view-peak-code-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-89-code-view-peak-code-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 89 – 'Code View (Peak Code)'\"",
+      "date": "2023-11-30",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-12-04-powerplatformtip-90-power-platform-community-developer-plan-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-90-power-platform-community-developer-plan-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 90 – 'Power Platform Community Developer Plan'\"",
+      "date": "2023-12-04",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-12-06-powerplatformtip-91-if-function-in-formulas-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-91-if-function-in-formulas-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 91 – 'IF Function in Formulas'\"",
+      "date": "2023-12-06",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-12-08-powerplatformtip-92-free-pdf-tools-in-powerautomate-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-92-free-pdf-tools-in-powerautomate-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 92 – 'Free PDF Tools in PowerAutomate'\"",
+      "date": "2023-12-08",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-12-11-powerplatformtip-93-add-rownumbers-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-93-add-rownumbers-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 93 – 'Add RowNumbers'\"",
+      "date": "2023-12-11",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-12-13-powerplatformtip-94-extract-text-from-docx-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-94-extract-text-from-docx-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 94 – 'Extract Text from DOCX'\"",
+      "date": "2023-12-13",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-12-19-powerplatformtip-95-optimized-sharepoint-queries-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-95-optimized-sharepoint-queries-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 95 – 'Optimized SharePoint Queries'\"",
+      "date": "2023-12-19",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-12-21-powerplatformtip-96-scraping-web-data-with-standard-connectors-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-96-scraping-web-data-with-standard-connectors-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 96 – 'Scraping Web Data with Standard Connectors'\"",
+      "date": "2023-12-21",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-12-22-powerplatformtip-97-enhanced-pagination-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-97-enhanced-pagination-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 97 – 'Enhanced Pagination'\"",
+      "date": "2023-12-22",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2023-12-27-powerplatformtip-98-secure-inputs-secure-outputs-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-98-secure-inputs-secure-outputs-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 98 – 'Secure Inputs / Secure Outputs'\"",
+      "date": "2023-12-27",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-01-08-powerplatformtip-99-timesaver-toolkits-chatgpt-and-flow-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-99-timesaver-toolkits-chatgpt-and-flow-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 99 – 'Timesaver Toolkits – ChatGPT and Flow'\"",
+      "date": "2024-01-08",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-01-22-powerplatformtip-101-centralized-data-handling-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-101-centralized-data-handling-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 101 – 'Centralized Data Handling'\"",
+      "date": "2024-01-22",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-02-14-powerplatformtip-103-quick-setup-guide-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-103-quick-setup-guide-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 103 – 'Quick Setup Guide'\"",
+      "date": "2024-02-14",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-03-05-powerplatformtip-106-word-quick-parts-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-106-word-quick-parts-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 106 – 'Word & Quick Parts'\"",
+      "date": "2024-03-05",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-04-05-powerplatformtip-108-double-click-magic-in-powerapps-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-108-double-click-magic-in-powerapps-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 108 – 'Double-Click Magic in PowerApps'\"",
+      "date": "2024-04-05",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-04-11-powerplatformtip-109-use-timeout-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-109-use-timeout-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 109 – 'Use TimeOut'\"",
+      "date": "2024-04-11",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-04-17-powerplatformtip-110-protect-sharepoint-data-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-110-protect-sharepoint-data-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 110 – 'Protect SharePoint Data'\"",
+      "date": "2024-04-17",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-04-24-powerplatformtip-111-adaptive-cards-for-dynamic-approvals-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-111-adaptive-cards-for-dynamic-approvals-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 111 – 'Adaptive Cards for Dynamic Approvals'\"",
+      "date": "2024-04-24",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-05-01-powerplatformtip-112-consistent-data-formats-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-112-consistent-data-formats-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 112 – 'Consistent Data Formats'\"",
+      "date": "2024-05-01",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-05-10-powerplatformtip-113-combine-multiple-data-sources-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-113-combine-multiple-data-sources-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 113 – 'Combine Multiple Data Sources'\"",
+      "date": "2024-05-10",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-05-17-powerplatformtip-114-send-approvals-to-external-recipients-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-114-send-approvals-to-external-recipients-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 114 – 'Send Approvals to External Recipients'\"",
+      "date": "2024-05-17",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-06-04-powerplatformtip-105-powerapps-environmentvariables-without-premium-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-105-powerapps-environmentvariables-without-premium-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 105 – 'PowerApps – EnvironmentVariables Without Premium'\"",
+      "date": "2024-06-04",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-06-06-powerplatformtip-107-last-item-from-sharepointlist-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-107-last-item-from-sharepointlist-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 107 – 'Last Item from SharePointList'\"",
+      "date": "2024-06-06",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-06-12-powerplatformtip-102-event-coordination-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-102-event-coordination-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 102 – 'Event Coordination'\"",
+      "date": "2024-06-12",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-06-18-powerplatformtip-100-bypassing-complexity-in-powerautomate-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-100-bypassing-complexity-in-powerautomate-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 100 – 'Bypassing Complexity in PowerAutomate'\"",
+      "date": "2024-06-18",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-06-20-powerplatformtip-104-efficient-json-handling-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-104-efficient-json-handling-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 104 – 'Efficient JSON Handling'\"",
+      "date": "2024-06-20",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-06-22-powerplatformtip-115-ai-ocr-models-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-115-ai-ocr-models-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 115 – 'AI OCR Models'\"",
+      "date": "2024-06-22",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-07-09-powerplatformtip-116-ai-automated-solution-design-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-116-ai-automated-solution-design-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 116 – 'AI Automated Solution Design'\"",
+      "date": "2024-07-09",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-07-16-powerplatformtip-117-optimize-parallel-object-processing-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-117-optimize-parallel-object-processing-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 117 – 'Optimize Parallel Object Processing'\"",
+      "date": "2024-07-16",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-07-23-powerplatformtip-118-copy-actions-in-switch_condition-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-118-copy-actions-in-switch_condition-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 118 – 'Copy Actions in Switch/Condition'\"",
+      "date": "2024-07-23",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-08-02-powerplatformtip-119-web-based-editing-with-vs-code-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-119-web-based-editing-with-vs-code-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 119 – 'Web-Based Editing with VS Code'\"",
+      "date": "2024-08-02",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-08-13-powerplatformtip-120-powerautomate-text-processing-2-0-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-120-powerautomate-text-processing-2-0-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 120 – 'PowerAutomate – Text Processing 2.0'\"",
+      "date": "2024-08-13",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-08-21-powerplatformtip-121-filtering-sharepoint-file-fields-with-odata-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-121-filtering-sharepoint-file-fields-with-odata-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 121 – 'Filtering SharePoint File Fields with OData'\"",
+      "date": "2024-08-21",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-08-28-powerplatformtip-122-track-flow-progress-in-powerapps-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-122-track-flow-progress-in-powerapps-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 122 – 'Track Flow Progress in PowerApps'\"",
+      "date": "2024-08-28",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-09-11-powerplatformtip-123-get-lowest-highest-sharepoint-id-totalcount-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-123-get-lowest-highest-sharepoint-id-totalcount-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 123 – 'Get Lowest / Highest SharePoint ID & TotalCount'\"",
+      "date": "2024-09-11",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-09-18-powerplatformtip-124-recognize-plain-text-file-formats-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-124-recognize-plain-text-file-formats-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 124 – 'Recognize Plain Text File Formats'\"",
+      "date": "2024-09-18",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-09-25-powerplatformtip-125-convert-csv-to-json-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-125-convert-csv-to-json-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 125 – 'Convert CSV to JSON'\"",
+      "date": "2024-09-25",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-10-08-powerplatformtip-126-user-context-for-automated-tasks-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-126-user-context-for-automated-tasks-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 126 – 'User Context for Automated Tasks'\"",
+      "date": "2024-10-08",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-10-17-powerplatformtip-127-special-user-informations-in-powerapps-studio-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-127-special-user-informations-in-powerapps-studio-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 127 – 'Special User-Informations in PowerApps Studio'\"",
+      "date": "2024-10-17",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-10-31-powerplatformtip-128-dynamic-data-retrieval-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-128-dynamic-data-retrieval-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 128 – 'Dynamic Data Retrieval'\"",
+      "date": "2024-10-31",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-11-06-powerplatformtip-129-case-sensitive-sharepoint-filtering-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-129-case-sensitive-sharepoint-filtering-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 129 – 'Case-sensitive SharePoint Filtering'\"",
+      "date": "2024-11-06",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2024-11-26-powerplatformtip-130-build-apps-faster-with-yaml-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-130-build-apps-faster-with-yaml-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 130 – 'Build Apps Faster with YAML'\"",
+      "date": "2024-11-26",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-01-08-powerplatformtip-131-forall-patch-optimization-in-powerapps-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-131-forall-patch-optimization-in-powerapps-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 131 – 'ForAll & Patch Optimization in PowerApps'\"",
+      "date": "2025-01-08",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-01-16-powerplatformtip-132-office-files-viewer-in-powerapps-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-132-office-files-viewer-in-powerapps-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 132 – 'Office Files Viewer in PowerApps'\"",
+      "date": "2025-01-16",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-01-22-powerplatformtip-133-sharepoint-updates-with-power-automate-no-required-fields-needed-.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-133-sharepoint-updates-with-power-automate-no-required-fields-needed-/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 133 – 'SharePoint Updates with Power Automate – No Required Fields Needed'\"",
+      "date": "2025-01-22",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-03-13-powerplatformtip-134-optimize-canvas-apps-yaml.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-134-optimize-canvas-apps-yaml/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 134 – 'Optimize Canvas Apps with YAML'\"",
+      "date": "2025-03-13",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-04-01-powerplatformtip-135-One-Flow-Many-Users.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-135-One-Flow-Many-Users/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 135 – 'One Flow, Many Users'\"",
+      "date": "2025-04-01",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-04-15-powerplatformtip-136-patch-coalesce-upsert.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-136-patch-coalesce-upsert/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 136 – Patch Coalesce Upsert\"",
+      "date": "2025-04-15",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-06-05-powerplatformtip-137-SharePoint-Lists-Folder-Permissions.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-137-SharePoint-Lists-Folder-Permissions/",
+      "published": true,
+      "title": "\"PowerPlatformTip 137 – SharePoint Lists Folder Permissions\"",
+      "date": "2025-06-05",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-06-25-PowerPlatformTip-138-Graph-API-HTTP.md",
+      "url": "/-/article/-/powerplatformtip/PowerPlatformTip-138-Graph-API-HTTP/",
+      "published": true,
+      "title": "\"PowerPlatformTip 138 – Graph API HTTP\"",
+      "date": "2025-06-25",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-07-01-PowerPlatformTip-139-Plus-Address-Tracking.md",
+      "url": "/-/article/-/powerplatformtip/PowerPlatformTip-139-Plus-Address-Tracking/",
+      "published": true,
+      "title": "\"PowerPlatformTip 139 – Plus Address Tracking\"",
+      "date": "2025-07-01",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-08-01-powerplatformtip-140-free-invoice-ocr.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-140-free-invoice-ocr/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 140 – Free Invoice OCR (Process 500 PDFs/Month for €0)\"",
+      "date": "2025-08-01",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-08-19-powerplatformtip-141-text-to-array.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-141-text-to-array/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 141 - Text to Array\"",
+      "date": "2025-08-19",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-08-26-powerplatformtip-142-automate-outlook-categories.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-142-automate-outlook-categories/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 142 - Automate Outlook Categories\"",
+      "date": "2025-08-26",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-10-01-powerplatformtip-143-reduce-ai-costs.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-143-reduce-ai-costs/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 143 - Reduce AI Costs with Thumbnail-First Document Processing\"",
+      "date": "2025-10-01",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-10-15-powerplatformtip-144-infinite-approvals.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-144-infinite-approvals/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 144 - Infinite Approvals beyond 30 days\"",
+      "date": "2025-10-15",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-10-18-powerplatformtip-146-encode-decode-functions.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-146-encode-decode-functions/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 146 – Encode & Decode Functions\"",
+      "date": "2025-12-04",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "2025-11-01-powerplatformtip-145-power-platform-tools.md",
+      "url": "/-/article/-/powerplatformtip/powerplatformtip-145-power-platform-tools/",
+      "published": true,
+      "title": "\"#PowerPlatformTip 145 – 'Power Platform Tools'\"",
+      "date": "2025-11-25",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    }
+  ],
+  "pages": [
+    {
+      "file": "about.md",
+      "url": "/about/",
+      "title": "\"About Marcel Lehmann - Microsoft Power Platform MVP | PowerPlatformTip\"",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "categories.md",
+      "url": "/categories/",
+      "title": "\"Power Platform Categories - Browse Expert Tips by Topic\"",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "learning-resources.md",
+      "url": "/learning-resources/",
+      "title": "\"Power Platform Training & Certifications | Learning Resources\"",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "newsletter.md",
+      "url": "/newsletter/",
+      "title": "\"Power Platform Newsletter - Weekly Tips & Tutorials | PowerPlatformTip\"",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "posts.md",
+      "url": "/posts/",
+      "title": "\"All Power Platform Tips - Expert Solutions | PowerPlatformTip\"",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "privacy-policy.md",
+      "url": "/privacy-policy/",
+      "title": "\"Privacy Policy - PowerPlatformTip\"",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "tags.md",
+      "url": "/tags/",
+      "title": "\"Power Platform Tags - Find Specific Solutions Fast\"",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    },
+    {
+      "file": "thank-you.md",
+      "url": "/thank-you/",
+      "title": "\"Thank You for Subscribing!\"",
+      "lastModified": "2026-01-08T04:24:49Z",
+      "hasLastModifiedAt": false
+    }
+  ],
+  "brokenLinks": [
+    {
+      "file": "_posts/2021-10-13-send-1-1-message-flow-teams.md",
+      "linkText": "Teams Direct Message Hero",
+      "linkUrl": "/assets/images/teams-superhero-workspace.jpg",
+      "line": 29
+    },
+    {
+      "file": "_posts/2021-10-13-send-1-1-message-flow-teams.md",
+      "linkText": "Create Chat Step",
+      "linkUrl": "/assets/images/teams-create-chat-step.png",
+      "line": 49
+    },
+    {
+      "file": "_posts/2021-10-13-send-1-1-message-flow-teams.md",
+      "linkText": "Post Message Step",
+      "linkUrl": "/assets/images/teams-post-message-step.png",
+      "line": 61
+    },
+    {
+      "file": "_posts/2023-02-09-powerplatformtip-27-overwrite-existing-files-.md",
+      "linkText": "SharePoint Create File Settings - Allow Chunking disabled to enable Overwrite",
+      "linkUrl": "/assets/images/posts/powerplatformtip-27-overwrite.jpg \"Disable Allow Chunking to unlock Overwrite\"",
+      "line": 30
+    }
+  ],
+  "sitemapIssues": [
+    {
+      "type": "info",
+      "message": "Sitemap uses dynamic generation for posts (good)"
+    },
+    {
+      "type": "info",
+      "message": "Sitemap uses last_modified_at field (good)"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "type": "content_freshness",
+      "message": "146 posts missing last_modified_at field",
+      "action": "Add last_modified_at from git history to all posts"
+    },
+    {
+      "priority": "high",
+      "type": "broken_links",
+      "message": "4 broken internal links found",
+      "action": "Review and fix broken links in report.json"
+    },
+    {
+      "priority": "high",
+      "type": "plugins",
+      "message": "Ensure SEO plugins are configured",
+      "action": "Add jekyll-sitemap, jekyll-seo-tag, jekyll-feed to _config.yml"
+    }
+  ]
+}

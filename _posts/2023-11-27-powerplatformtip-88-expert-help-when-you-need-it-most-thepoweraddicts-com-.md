@@ -22,6 +22,7 @@ header:
 toc: true
 toc_sticky: true
 
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 ## 💡 Challenge

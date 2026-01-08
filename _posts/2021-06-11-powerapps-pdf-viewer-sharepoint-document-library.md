@@ -1,4 +1,4 @@
-﻿---
+---
 title: "PowerApps PDF Viewer SharePoint Document Library without Flow from Reza Dorrani"
 date: 2021-06-11
 permalink: "/article/powerplatform/2021/06/11/powerapps-pdf-viewer-sharepoint-document-library/"
@@ -22,6 +22,7 @@ tags:
   - YouTube
   - PDF Viewer
   - Document Library
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 A great video, which replaces all the cumbersome workarounds via PowerAutomate. Here you learn how to simply "manipulate" data and thus directly view PDF files in the PowerApp.
