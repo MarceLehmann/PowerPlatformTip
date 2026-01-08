@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Power Apps Print Directly to a Printer with an API – PDFs, Labels, Barcodes, and More with Flow from Shane Young"
 date: 2020-12-10
 permalink: "/article/powerplatform/2020/12/10/power-apps-print-directly-printer-api/"
@@ -24,6 +24,7 @@ tags:
   - Barcodes
   - API
   - YouTube
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 Really great, what Shane Young shows. Printing from PowerApps hasn't been possible yet, but this workaround makes it possible.

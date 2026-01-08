@@ -1,4 +1,3 @@
-markdown
 ---
 title: "#PowerPlatformTip 10 – 'Use all variables in PowerApps'"
 date: 2022-12-19
@@ -17,6 +16,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 ## 💡 Challenge

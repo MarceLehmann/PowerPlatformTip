@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to Restore and Create a Backup from a Flow"
 date: 2022-08-30
 permalink: "/article/powerplatform/2022/08/30/how-to-restore-create-backup-flow/"
@@ -22,6 +22,7 @@ tags:
   - Dataverse
   - OneDrive
   - PowerPlatform
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 ![Hard Disk Drive - Backup Concept](https://lehmann.ws/wp-content/uploads/2022/08/pexels-photo-6429164.jpeg){: .align-center}

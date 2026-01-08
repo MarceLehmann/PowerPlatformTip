@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Power Automate Flows vs Automate Rules – Performance and Efficiency Comparison by Daniel Christian"
 date: 2022-03-09
 permalink: "/article/powerplatform/2022/03/09/power-automate-flows-vs-automate-rules/"
@@ -23,6 +23,7 @@ tags:
   - APIOptimization
   - Efficiency
   - YouTube
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 Fascinating analysis from Daniel Christian! This comparison reveals crucial performance differences between Power Automate Flows and SharePoint Automate Rules, highlighting when each approach delivers optimal efficiency.

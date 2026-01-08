@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to Load Multiple Data Sources into ONE Collection"
 date: 2022-07-20
 permalink: "/article/powerplatform/2022/07/20/how-to-load-multiple-data-sources-into-one-collection/"
@@ -21,6 +21,7 @@ tags:
   - AddColumns
   - PowerPlatform
   - Data Management
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 ![Data Collections](https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80){: .align-center}

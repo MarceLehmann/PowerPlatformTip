@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Fill and Sign a Word Document with Power Apps and Power Automate without using any premium actions from Paulie M"
 date: 2022-04-27
 permalink: "/article/powerplatform/2022/04/27/fill-and-sign-word-document-power-apps-automate/"
@@ -23,6 +23,7 @@ tags:
   - Word Documents
   - No Premium
   - ZIP Files
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 Simply convert a Word into a zip file, replace the data a little and convert it back into a zip file -> Ingenious way to create a Word file without premium connectors.

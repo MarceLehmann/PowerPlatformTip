@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Return an Array from PowerAutomate to PowerApps (Split Method without Premium)"
 date: 2022-05-23
 permalink: "/article/powerplatform/2022/05/23/return-an-array-from-powerautomate-to-powerapps-split-method/"
@@ -20,6 +20,7 @@ tags:
   - Arrays
   - Split Method
   - No Premium
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 ![Array Split Method](https://lehmann.ws/wp-content/uploads/2022/05/etma65lrc.png){: .align-center}

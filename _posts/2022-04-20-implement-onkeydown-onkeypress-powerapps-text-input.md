@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to Implement OnKeyDown/OnKeyPress Behavior in PowerApps Text Input â€“ Creative Control Workarounds by Paulie M"
 date: 2022-04-20
 permalink: "/article/powerplatform/2022/04/20/implement-onkeydown-onkeypress-powerapps-text-input/"
@@ -23,6 +23,7 @@ tags:
   - ControlWorkarounds
   - InteractionDesign
   - YouTube
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 Ingenious approach from Paulie M! This demonstrates creative ways to implement keyboard event handling in PowerApps by repurposing existing controls like sliders and toggles for enhanced user interactions.

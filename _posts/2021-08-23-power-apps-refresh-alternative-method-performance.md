@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Power Apps: Refresh Is Killing Your App Performance! Here's an alternative method from Paul O'Flaherty"
 date: 2021-08-23
 permalink: "/article/powerplatform/2021/08/23/power-apps-refresh-alternative-method-performance/"
@@ -21,6 +21,7 @@ tags:
   - Performance
   - Refresh
   - UpdateContext
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 Great demo start, how to refresh used data, which have been updated, best. In such a way that the performance of the app runs optimally.
