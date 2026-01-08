@@ -275,6 +275,9 @@ function findBrokenLinks() {
         continue;
       }
       
+      // Remove title attribute from URL (e.g., "url "title"")
+      linkUrl = linkUrl.split('"')[0].trim();
+      
       // Remove anchor from URL
       const urlWithoutAnchor = linkUrl.split('#')[0];
       
