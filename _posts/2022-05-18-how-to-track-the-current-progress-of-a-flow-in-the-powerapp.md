@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to Track the Current Progress of a Flow in PowerApps"
 date: 2022-05-18
 permalink: "/article/powerplatform/2022/05/18/how-to-track-the-current-progress-of-a-flow-in-the-powerapp/"
@@ -22,6 +22,7 @@ tags:
   - SharePoint
   - GUID
   - PowerPlatform
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 ![Flow Progress Overview](https://lehmann.ws/wp-content/uploads/2022/05/overview-1.gif){: .align-center}

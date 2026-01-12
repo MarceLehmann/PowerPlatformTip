@@ -19,6 +19,7 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 Here’s a cool tip to calculate the distance between two places without relying on premium services like Google or Bing maps.

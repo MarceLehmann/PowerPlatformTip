@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to Restore an Earlier Version of Your Flow (Power Automate) from John Liu"
 date: 2020-12-30
 permalink: "/article/powerplatform/2020/12/30/restore-earlier-version-flow-power-automate/"
@@ -22,6 +22,7 @@ tags:
   - Version History
   - PowerPlatform
   - YouTube
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 PowerStudio.app is a very exciting site for those who want to build flows on a large scale and track them. With the free version, a lot is already possible. In the premium version, you can also restore flow versions - you have a complete version history!

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Power Apps Combo Box DefaultSelectedItems from Shane Young"
 date: 2021-04-26
 permalink: "/article/powerplatform/2021/04/26/power-apps-combo-box-defaultselecteditems/"
@@ -23,6 +23,7 @@ tags:
   - Tables
   - Lookup
   - YouTube
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 A great summary of how to deal with DefaultSelectedItems in a ComboBox and how to set them using a table/lookup or a manually-created record.

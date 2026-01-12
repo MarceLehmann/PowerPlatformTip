@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Run Power Apps Connections with Elevated Permissions via Power Automate â€“ Impersonate Flow Actions from Reza Dorrani"
 date: 2022-05-18
 permalink: "/article/powerplatform/2022/05/18/power-apps-elevated-permissions-power-automate/"
@@ -23,6 +23,7 @@ tags:
   - SharePoint
   - Security
   - YouTube
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 Brilliant solution from Reza Dorrani! This demonstrates how end users can create entries without sufficient permissions through Power Automate's impersonation capabilities. A game-changer for permission management in Power Platform.

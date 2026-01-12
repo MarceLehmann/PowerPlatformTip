@@ -30,3 +30,8 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+
+# SEO audit reports (generated files)
+report.json
+seo-optimization-report.json
+SEO-OPTIMIZATION-REPORT.md

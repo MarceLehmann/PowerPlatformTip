@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Merge Images in PowerApps Without Flow or Code Components"
 date: 2023-01-29
 permalink: "/article/powerplatform/2023/01/29/merge-images-powerapps-without-flow/"
@@ -22,6 +22,7 @@ tags:
   - GitHub
   - Component
   - PowerPlatform
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 ![Image Merge Before and After](https://lehmann.ws/wp-content/uploads/2023/01/img1.png){: .align-center}

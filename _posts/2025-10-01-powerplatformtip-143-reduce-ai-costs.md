@@ -21,6 +21,7 @@ header:
 toc: true
 toc_sticky: true
 
+last_modified_at: 2026-01-08T04:24:49Z
 ---
 
 With AI Builder credits ending November 1, 2025, and Copilot Credits costing significantly more, organizations need smarter AI processing strategies. Process only the SharePoint thumbnail of documents first using Get File Properties action, extract required data, and fall back to full PDF processing only when necessary. This thumbnail-first approach works with any AI provider (Azure AI Document Intelligence, OpenAI Vision API, Google Document AI, AI Builder) and reduces processing costs by 70-95% while maintaining data accuracy.
