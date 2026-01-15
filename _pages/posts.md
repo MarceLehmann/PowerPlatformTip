@@ -7,9 +7,7 @@ excerpt: "Complete collection of all Power Platform expert posts with step-by-st
 keywords: "Power Platform Blog Posts, Power Apps Tutorials, Power Automate Guides, Copilot Studio Tips, Microsoft MVP Blog, Enterprise Solutions, Development Guides"
 author_profile: false
 robots: "noindex, follow"  # Nur eine Liste aller Posts, kein eigenständiger Content
-sitemap:
-  priority: 0.7
-  changefreq: weekly
+sitemap: false  # Nicht in Sitemap aufnehmen
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.2"

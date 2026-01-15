@@ -21,7 +21,6 @@ Disallow: /SOCIALMEDIA/
 Disallow: /categories/
 Disallow: /tags/
 Disallow: /posts/
-Disallow: /newsletter/
 Disallow: /thank-you/
 
 # Allow valuable resources
