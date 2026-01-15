@@ -40,7 +40,8 @@ reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
-  hide                   : true
+  hide: false  # Changed to false - enable Atom feed for RSS readers
+  path: feed.xml  # Explicit path for the feed
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
 search_provider          : lunr # lunr (default), algolia, google
