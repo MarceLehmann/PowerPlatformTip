@@ -6,9 +6,8 @@ description: "Thank you for subscribing to weekly Power Platform Tips."
 excerpt: "Please check your inbox or spam folder to confirm your subscription and get started."
 keywords: "PowerPlatformTips Newsletter, Power Platform, Marcel Lehmann, MVP, ThePowerAddicts"
 author_profile: false
-sitemap:
-  priority: 0.7
-  changefreq: monthly
+robots: "noindex, follow"  # Thank-you Seite nicht indexieren
+sitemap: false  # Nicht in Sitemap aufnehmen
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.2"

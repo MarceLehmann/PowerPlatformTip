@@ -44,6 +44,14 @@
 <title>{{ full_title | truncate: 70, '' }}</title>
 <meta name="description" content="{{ seo_description }}">
 
+{%- comment -%} Robots meta tag for indexing control {%- endcomment -%}
+{%- assign robots_content = page.robots | default: "index, follow" -%}
+{%- if page.sitemap == false -%}
+  {%- assign robots_content = "noindex, follow" -%}
+{%- endif -%}
+<meta name="robots" content="{{ robots_content }}">
+<meta name="googlebot" content="{{ robots_content }}">
+
 {% if author.name %}
   <meta name="author" content="{{ author.name | default: author }}">
   {% if og_type == "article" %}
