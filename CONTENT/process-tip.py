@@ -9,8 +9,14 @@ import re
 import sys
 from pathlib import Path
 from datetime import datetime
+import io
+
+# Force UTF-8 output for Windows console
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 # Farben für Terminal-Output
+    
+    # Farben für Terminal-Output
 class Colors:
     BLUE = '\033[0;34m'
     GREEN = '\033[0;32m'
@@ -20,8 +26,8 @@ class Colors:
 
 def print_header():
     print(f"{Colors.BLUE}╔════════════════════════════════════════════════╗{Colors.NC}")
-    print(f"{Colors.BLUE}║  PowerPlatformTip Content Processor v2.0      ║{Colors.NC}")
-    print(f"{Colors.BLUE}║  KI-Chat-Protokoll → Blog + Newsletter        ║{Colors.NC}")
+    print(f"{Colors.BLUE}║  PowerPlatformTip Content Processor v2.1      ║{Colors.NC}")
+    print(f"{Colors.BLUE}║  KI-Chat-Protokoll → Output Folder            ║{Colors.NC}")
     print(f"{Colors.BLUE}╚════════════════════════════════════════════════╝{Colors.NC}\n")
 
 def extract_phase_block(content, phase_name, code_type="markdown"):
@@ -64,8 +70,119 @@ def create_slug(title):
     slug = title.lower()
     slug = re.sub(r'[^a-z0-9]+', '-', slug)
     slug = re.sub(r'-+', '-', slug)
-    slug = slug.strip('-')
     return slug
+
+def html_to_systeme_markdown(html_content):
+    """
+    Converts HTML content to systeme.io compatible markdown.
+    Supported: **bold**, *italic*, lists, [links](url).
+    Headers are converted to **bold**.
+    """
+    # Normalize newlines
+    text = html_content.replace('\r\n', '\n').replace('\r', '\n')
+    
+    # 0. Remove Head, Style, Script blocks entirely
+    text = re.sub(r'<(head|style|script)[^>]*>.*?</\1>', '', text, flags=re.IGNORECASE | re.DOTALL)
+    
+    # 1. SPECIAL: Handle Template-Specific Classes (Before generic tag stripping)
+    
+    # .section-title -> **Title**
+    text = re.sub(r'<div class="section-title">\s*(.*?)\s*</div>', r'\n\n**\1**\n\n', text, flags=re.IGNORECASE)
+    
+    # .step -> 1. **Title**: Content
+    text = re.sub(
+        r'<div class="step">.*?<span class="step-number">(\d+)</span>\s*<b>(.*?)</b>\s*<br>\s*(.*?)</div>', 
+        r'\n\n\1. **\2**: \3', 
+        text, flags=re.IGNORECASE | re.DOTALL
+    )
+
+    # .use-case -> **Title**\nContent
+    text = re.sub(
+        r'<div class="use-case">\s*<div class="use-case-title">\s*(.*?)\s*</div>\s*(.*?)</div>', 
+        r'\n\n**\1**\n\2', 
+        text, flags=re.IGNORECASE | re.DOTALL
+    )
+
+    # .faq-item -> **Q: ...**\nA: ...
+    text = re.sub(
+        r'<div class="faq-item">\s*<div class="faq-question">\s*(.*?)\s*</div>\s*(.*?)</div>', 
+        r'\n\n**\1**\n\2', 
+        text, flags=re.IGNORECASE | re.DOTALL
+    )
+    
+    # 2. Links: <a href="url">text</a> -> [text](url)
+    text = re.sub(r'<a\s+(?:[^>]*?\s+)?href=["\']([^"\']*)["\'][^>]*>(.*?)</a>', r'[\2](\1)', text, flags=re.IGNORECASE | re.DOTALL)
+    
+    # 3. Lists
+    text = re.sub(r'</?[uo]l[^>]*>', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'<li[^>]*>\s*(.*?)\s*</li>', r'- \1\n', text, flags=re.IGNORECASE | re.DOTALL)
+    
+    # 4. Bold/Headers -> **text**
+    header_pattern = r'<(h[1-6]|b|strong)[^>]*>\s*(.*?)\s*</\1>'
+    def header_replacer(match):
+        tag = match.group(1).lower()
+        content = match.group(2)
+        if tag.startswith('h'): return f'\n\n**{content}**\n\n'
+        return f'**{content}**'
+
+    text = re.sub(header_pattern, header_replacer, text, flags=re.IGNORECASE | re.DOTALL)
+    
+    # 5. Italic -> *text*
+    text = re.sub(r'<(i|em)[^>]*>\s*(.*?)\s*</\1>', r'*\2*', text, flags=re.IGNORECASE | re.DOTALL)
+    
+    # 5. Paragraphs and breaks
+    text = re.sub(r'</p>', '\n\n', text, flags=re.IGNORECASE)
+    text = re.sub(r'<br\s*/?>', '\n', text, flags=re.IGNORECASE)
+    
+    # 6. Remove all other tags
+    text = re.sub(r'<[^>]+>', '', text)
+    
+    # 7. Clean up multiple newlines
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    
+    return text.strip()
+
+def generate_systeme_io_content(metadata, block_content, is_html=False):
+    """Generates systeme.io compatible markdown content."""
+    
+    title_line = f"# PowerPlatformTip #{metadata.get('tip_number', 'XXX')}: {metadata.get('title', 'Title')}\n\n"
+    footer = f"\n\n---\n[Mehr erfahren](https://www.powerplatformtip.com)"
+
+    if is_html:
+        # Use HTML conversion
+        converted_body = html_to_systeme_markdown(block_content)
+        return title_line + converted_body + footer
+    else:
+        # Fallback: Extract from Markdown
+        challenge = extract_section(block_content, '💡 Challenge')
+        solution = extract_section(block_content, '✅ Solution')
+        advantages = extract_section(block_content, '🌟 Key Advantages')
+
+        # Parse advantages to ensure clean list format
+        adv_items = []
+        for raw_line in advantages.splitlines():
+            line = raw_line.strip()
+            if not line:
+                continue
+            if line.startswith('🔸') or line.startswith('-'):
+                cleaned = re.sub(r'^(🔸\s*|-\s*)', '', line).strip()
+                adv_items.append(cleaned)
+        
+        systeme_content = f"""{title_line}**💡 Challenge**
+
+{challenge}
+
+**✅ Solution**
+
+{solution}
+
+**🌟 Key Advantages**
+
+"""
+        for item in adv_items:
+            systeme_content += f"- {item}\n"
+
+        return systeme_content + footer
 
 def generate_newsletter_from_markdown(metadata, markdown_content):
     """Erzeuge einfachen HTML Newsletter aus dem Markdown (Fallback) mit sauberer Bullet-Liste."""
@@ -120,7 +237,7 @@ def generate_newsletter_from_markdown(metadata, markdown_content):
     <div class="section cta">
         <a href="https://www.powerplatformtip.com" target="_blank" rel="noopener">Mehr erfahren</a>
     </div>
-    <div class="footer">Generated automatically from PowerPlatformTip Markdown fallback.</div>
+    <div class="footer">Generated automatically from PowerPlatformTip Markdown fallback. © 2026</div>
 </body>
 </html>"""
     return html
@@ -140,8 +257,8 @@ def extract_section(markdown_content, heading):
             buffer.append(line)
     return '\n'.join(buffer).strip()
 
-def process_file(input_file, blog_dir, newsletter_dir):
-    """Verarbeitet eine Input-Datei und erzeugt für alle PHASE 2 Varianten jeweils Blog+Newsletter."""
+def process_file(input_file, output_base_dir):
+    """Verarbeitet eine Input-Datei und erzeugt Output-Ordner pro Tip."""
     print(f"{Colors.BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{Colors.NC}")
     print(f"{Colors.GREEN}📄 {input_file.name}{Colors.NC}\n")
 
@@ -163,23 +280,40 @@ def process_file(input_file, blog_dir, newsletter_dir):
 
         phase2_content = re.sub(r'toc_sticky:\s*true', 'toc_sticky: false', phase2_content)
         slug = create_slug(metadata['title'])
+        
+        # Erstelle Tip-spezifischen Ordner in 2_OUTPUT
+        tip_folder_name = f"{metadata['date']}-tip-{metadata['tip_number']}-{slug}"
+        tip_dir = output_base_dir / tip_folder_name
+        tip_dir.mkdir(parents=True, exist_ok=True)
 
+        # 1. Blog Post
         blog_filename = f"{metadata['date']}-powerplatformtip-{metadata['tip_number']}-{slug}.md"
-        blog_file = blog_dir / blog_filename
+        blog_file = tip_dir / blog_filename
         blog_file.write_text(phase2_content, encoding='utf-8')
-        print(f"{Colors.GREEN}  ✓ Blog Variante {idx} erstellt: {blog_filename}{Colors.NC}")
+        print(f"{Colors.GREEN}  ✓ Blog Variante {idx} erstellt: {tip_folder_name}/{blog_filename}{Colors.NC}")
 
-        # PHASE 3 einmal global extrahieren (falls vorhanden nur für erste Variante verwenden?)
+        # 2. Newsletter HTML (PHASE 3 oder Fallback)
         phase3_html = extract_phase_block(content, "PHASE 3", "html")
+        newsletter_filename = f"{metadata['date']}-tip-{metadata['tip_number']}-{slug}.html"
+        
         if phase3_html:
-            newsletter_filename = f"{metadata['date']}-tip-{metadata['tip_number']}-{slug}.html"
-            (newsletter_dir / newsletter_filename).write_text(phase3_html, encoding='utf-8')
+            (tip_dir / newsletter_filename).write_text(phase3_html, encoding='utf-8')
             print(f"{Colors.GREEN}    → Newsletter (PHASE 3) erstellt: {newsletter_filename}{Colors.NC}")
+            
+            # 3a. Systeme.io from HTML
+            systeme_content = generate_systeme_io_content(metadata, phase3_html, is_html=True)
         else:
             fallback_html = generate_newsletter_from_markdown(metadata, phase2_content)
-            newsletter_filename = f"{metadata['date']}-tip-{metadata['tip_number']}-{slug}.html"
-            (newsletter_dir / newsletter_filename).write_text(fallback_html, encoding='utf-8')
+            (tip_dir / newsletter_filename).write_text(fallback_html, encoding='utf-8')
             print(f"{Colors.YELLOW}    ⚠ Kein PHASE 3 → Fallback Newsletter erstellt: {newsletter_filename}{Colors.NC}")
+            
+            # 3b. Systeme.io from Markdown Fallback
+            systeme_content = generate_systeme_io_content(metadata, phase2_content, is_html=False)
+            
+        # Write Systeme.io content
+        systeme_filename = "newsletter-systeme.md"
+        (tip_dir / systeme_filename).write_text(systeme_content, encoding='utf-8')
+        print(f"{Colors.GREEN}    → Systeme.io Newsletter erstellt: {systeme_filename}{Colors.NC}")
 
         processed_variants += 1
 
@@ -188,13 +322,11 @@ def process_file(input_file, blog_dir, newsletter_dir):
 def main():
     script_dir = Path(__file__).parent
     input_dir = script_dir / "1_INPUT"
-    blog_dir = script_dir / "BLOG"
-    newsletter_dir = script_dir / "NEWSLETTER"
+    output_base_dir = script_dir / "2_OUTPUT"
     processed_dir = input_dir / "_PROCESSED"
     
     # Erstelle Verzeichnisse
-    blog_dir.mkdir(exist_ok=True)
-    newsletter_dir.mkdir(exist_ok=True)
+    output_base_dir.mkdir(exist_ok=True)
     processed_dir.mkdir(exist_ok=True)
     
     print_header()
@@ -212,7 +344,7 @@ def main():
     processed_count = 0
     
     for input_file in input_files:
-        count_created = process_file(input_file, blog_dir, newsletter_dir)
+        count_created = process_file(input_file, output_base_dir)
 
         # Archiviere Input-Datei
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -228,7 +360,7 @@ def main():
     print(f"{Colors.GREEN}✓ Verarbeitung abgeschlossen!{Colors.NC}\n")
     print(f"📊 Statistik:")
     print(f"   {Colors.GREEN}{processed_count}{Colors.NC} von {len(input_files)} Datei(en) mit mind. einer Variante verarbeitet")
-    print(f"   {Colors.BLUE}BLOG/{Colors.NC} & {Colors.BLUE}NEWSLETTER/{Colors.NC} enthalten nun alle Varianten")
+    print(f"   {Colors.BLUE}2_OUTPUT/{Colors.NC} enthält nun die generierten Ordner")
     print(f"\n{Colors.YELLOW}💡 Nächster Schritt:{Colors.NC} Blog-Posts nach {Colors.BLUE}_posts/{Colors.NC} kopieren\n")
 
 if __name__ == "__main__":

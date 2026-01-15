@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch-Method within SharePoint</title>
+    <style>
+        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f4f4f4; }
+        .preheader { display: none; max-height: 0; overflow: hidden; }
+        .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; }
+        .header { background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%); padding: 40px 30px; text-align: center; color: #ffffff; }
+        .content { padding: 30px; color: #333333; line-height: 1.6; }
+        .section-title { font-size: 20px; font-weight: 600; color: #0d9488; margin-bottom: 15px; border-left: 4px solid #2dd4bf; padding-left: 15px; }
+        .highlight-box { background-color: #f0fdfa; border-left: 4px solid #2dd4bf; padding: 20px; margin: 20px 0; border-radius: 4px; }
+        .step { margin-bottom: 20px; padding-left: 10px; }
+        .step-number { display: inline-block; background-color: #2dd4bf; color: #ffffff; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-weight: 600; margin-right: 10px; }
+        .tip-box { background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; margin: 15px 0 15px 38px; border-radius: 4px; font-size: 14px; }
+        .use-case { background-color: #f8fafc; padding: 15px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #e2e8f0; }
+        .use-case-title { font-weight: 600; color: #0d9488; margin-bottom: 8px; }
+        .faq-item { margin-bottom: 20px; }
+        .faq-question { font-weight: 600; color: #0d9488; margin-bottom: 8px; }
+        .cta-button { display: inline-block; background-color: #2dd4bf; color: #ffffff; padding: 16px 40px; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 20px 0; text-align: center; }
+        .footer { background-color: #1f2937; color: #9ca3af; padding: 30px; text-align: center; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="preheader">Boost SharePoint performance with Batch requests.</div>
+    <div class="container">
+        <div class="header">
+            <h1>#PowerPlatformTip 47</h1>
+            <p>Batch-Method within SharePoint</p>
+        </div>
+        <div class="content">
+            <div class="highlight-box">
+                <div class="section-title">TL;DR</div>
+                <p>Creating 100 items? Don't trigger 100 flows. Use the SharePoint REST API <b>$batch</b> endpoint to create/update up to 1000 items in a single HTTP call.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Why This Matters</div>
+                <p>Looping through 'Create Item' action is slow and consumes API limits rapidly. Batching is 100x faster and safer for bulk operations, preventing throttling and timeouts.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Deep Dive: How to Implement</div>
+                
+        <div class="step"><span class="step-number">1</span><b>Use 'Send HTTP Request'</b><br>Use the 'Send an HTTP request to SharePoint' action. Method: <b>POST</b>. URL: <code>_api/$batch</code>.</div>
+        <div class="step"><span class="step-number">2</span><b>Set Headers</b><br>Content-Type must be <code>multipart/mixed; boundary=batch_GUID</code>. The boundary string separates your requests.</div>
+        <div class="step"><span class="step-number">3</span><b>Construct Body</b><br>You need to build a text payload where each 'Create Item' request is separated by the boundary string. Use a 'Select' action to generate these text blocks from an array.<div class="tip-box">Be careful with newlines! The batch format is very strict about spacing.</div></div>
+        
+            </div>
+
+            <div class="section">
+                <div class="section-title">3 Real-World Use Cases</div>
+                
+        <div class="use-case"><div class="use-case-title">📥 Bulk Import</div>Importing 500 rows from Excel/SQL to a SharePoint list in seconds instead of minutes.</div>
+        <div class="use-case"><div class="use-case-title">🔄 Archive/Migration</div>Moving old items to an archive list in bulk at the end of the year.</div>
+        <div class="use-case"><div class="use-case-title">📝 Audit Logs</div>Writing multiple audit log entries at once at the end of a flow execution.</div>
+        
+            </div>
+
+            <div class="section">
+                <div class="section-title">Quick FAQ</div>
+                
+        <div class="faq-item"><div class="faq-question">Q: Limit per batch?</div>SharePoint allows up to 1000 requests in a single batch, but 50-100 is often a safer sweet spot for timeout management.</div>
+        <div class="faq-item"><div class="faq-question">Q: Is it complex?</div>It requires understanding REST API syntax, but the performance gain is worth the learning curve.</div>
+        <div class="faq-item"><div class="faq-question">Q: Does it work for Updates?</div>Yes, you can Batch Create, Update, and Delete items.</div>
+        
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://www.powerplatformtip.com" class="cta-button">Get Help Implementing This Solution</a>
+            </div>
+            
+            <p><strong>P.S.</strong> Once you master the Batch API, 'Apply to Each' loops for SharePoint updates will feel painfully slow.</p>
+        </div>
+        <div class="footer">
+            #PowerPlatform #PowerApps #SharePoint #PowerPlatformTip<br>
+            © 2026 All rights reserved
+        </div>
+    </div>
+</body>
+</html>

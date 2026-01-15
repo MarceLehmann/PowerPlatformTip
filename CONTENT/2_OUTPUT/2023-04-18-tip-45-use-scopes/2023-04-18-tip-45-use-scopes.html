@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Scopes to Organize Flows</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .preheader {
+            display: none;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .content {
+            padding: 30px;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0d9488;
+            margin-bottom: 15px;
+            border-left: 4px solid #2dd4bf;
+            padding-left: 15px;
+        }
+
+        .highlight-box {
+            background-color: #f0fdfa;
+            border-left: 4px solid #2dd4bf;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .step {
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        .step-number {
+            display: inline-block;
+            background-color: #2dd4bf;
+            color: #ffffff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .tip-box {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 15px 0 15px 38px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .use-case {
+            background-color: #f8fafc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .use-case-title {
+            font-weight: 600;
+            color: #0d9488;
+            margin-bottom: 8px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #0d9488;
+            margin-bottom: 8px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #2dd4bf;
+            color: #ffffff;
+            padding: 16px 40px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #1f2937;
+            color: #9ca3af;
+            padding: 30px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preheader">Clean up your Power Automate flows with Scopes.</div>
+    <div class="container">
+        <div class="header">
+            <h1>#PowerPlatformTip 45</h1>
+            <p>Use Scopes to Organize Flows</p>
+        </div>
+        <div class="content">
+            <div class="highlight-box">
+                <div class="section-title">TL;DR</div>
+                <p>Scopes are containers for your actions. Use them to group logic visually, handle errors with
+                    Try/Catch patterns, and simplify complex flows.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Why This Matters</div>
+                <p>A flat flow with 50 actions is a nightmare to maintain. Scopes provide visual hierarchy (like
+                    folders) and are the *only* way to implement robust error handling in Power Automate.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Deep Dive: How to Implement</div>
+
+                <div class="step"><span class="step-number">1</span><b>Add a Scope</b><br>Search for 'Scope' connector.
+                    It acts as a container. Drag related actions inside it.</div>
+                <div class="step"><span class="step-number">2</span><b>Rename for Clarity</b><br>Name your scopes 'Get
+                    Data', 'Process Loop', 'Update System'. Collapse them to see the high-level logic of your flow.
+                </div>
+                <div class="step"><span class="step-number">3</span><b>Configure 'Run After'</b><br>Click the three dots
+                    on a Scope. Choose 'Configure run after'. This lets you define what happens if the *previous* scope
+                    fails.</div>
+                <div class="step"><span class="step-number">4</span><b>Implement Try/Catch</b><br>Put your main logic in
+                    a 'Try' scope. Put error alerts in a 'Catch' scope. Set 'Catch' to run only if 'Try' has
+                    failed/timed out.<div class="tip-box">This ensures you always get notified of failures instead of
+                        the flow just failing silently.</div>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <div class="section-title">3 Real-World Use Cases</div>
+
+                <div class="use-case">
+                    <div class="use-case-title">🛡️ Error Handling</div>Wrap risky API calls in a Scope to catch
+                    timeouts or 404s gracefully without stopping the flow.
+                </div>
+                <div class="use-case">
+                    <div class="use-case-title">🧹 Visual Cleanup</div>Collapse 20 'Set Variable' or 'Compose' actions
+                    into a single 'Setup' scope to make the flow readable.
+                </div>
+                <div class="use-case">
+                    <div class="use-case-title">⚡ Parallel Branches</div>Use scopes in parallel branches to ensure
+                    strict separation of execution paths.
+                </div>
+
+            </div>
+
+            <div class="section">
+                <div class="section-title">Quick FAQ</div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Do scopes affect performance?</div>No, they are purely logical
+                    containers. They don't add execution overhead.
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: Can I nest scopes?</div>Yes, you can put scopes inside scopes for even
+                    more granular organization.
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: Can I copy/paste a scope?</div>Yes! Copying a scope copies *all*
+                    actions inside it. Great for duplicating logic.
+                </div>
+
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://www.powerplatformtip.com" class="cta-button">Get Help Implementing This Solution</a>
+            </div>
+
+            <p><strong>P.S.</strong> I never build a production flow without a Try/Catch scope pattern. It's the
+                difference between 'I hope it works' and 'I know it works'.</p>
+        </div>
+        <div class="footer">
+            #PowerPlatform #PowerApps #SharePoint #PowerPlatformTip<br>
+            © 2026 All rights reserved
+        </div>
+    </div>
+</body>
+
+</html>
