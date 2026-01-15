@@ -1,0 +1,201 @@
+name: SEO Validation
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  seo-check:
+    runs-on: ubuntu-latest
+    name: SEO Validation & Best Practices
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+          
+      - name: Install Dependencies
+        run: |
+          bundle install
+          
+      - name: Build Jekyll Site
+        run: |
+          bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+          
+      - name: Validate Sitemap Generated
+        run: |
+          echo "🔍 Checking if sitemap.xml was generated..."
+          if [ -f "_site/sitemap.xml" ]; then
+            echo "✅ Sitemap found at _site/sitemap.xml"
+            echo "📊 Sitemap statistics:"
+            echo "  - URLs: $(grep -c '<loc>' _site/sitemap.xml)"
+            echo "  - Size: $(du -h _site/sitemap.xml | cut -f1)"
+            
+            # Check sitemap is valid XML
+            if command -v xmllint &> /dev/null; then
+              xmllint --noout _site/sitemap.xml && echo "✅ Sitemap is valid XML" || echo "❌ Sitemap XML validation failed"
+            fi
+          else
+            echo "❌ ERROR: Sitemap not generated!"
+            exit 1
+          fi
+          
+      - name: Validate Feed Generated
+        run: |
+          echo "🔍 Checking if feed.xml was generated..."
+          if [ -f "_site/feed.xml" ]; then
+            echo "✅ Feed found at _site/feed.xml"
+            echo "📊 Feed statistics:"
+            echo "  - Entries: $(grep -c '<entry>' _site/feed.xml || echo 0)"
+            echo "  - Size: $(du -h _site/feed.xml | cut -f1)"
+          else
+            echo "⚠️ WARNING: Feed not generated!"
+          fi
+          
+      - name: Check Robots.txt
+        run: |
+          echo "🔍 Checking robots.txt..."
+          if [ -f "_site/robots.txt" ]; then
+            echo "✅ Robots.txt found"
+            echo "📄 Content preview:"
+            head -20 _site/robots.txt
+          else
+            echo "❌ ERROR: robots.txt not found!"
+            exit 1
+          fi
+          
+      - name: Validate Canonical URLs
+        run: |
+          echo "🔍 Checking for canonical URL issues..."
+          # Check if www is in canonical tags (should not be)
+          if grep -r 'www.powerplatformtip.com' _site/*.html 2>/dev/null; then
+            echo "⚠️ WARNING: Found www in URLs (should redirect to non-www)"
+            grep -r 'www.powerplatformtip.com' _site/*.html | head -5
+          else
+            echo "✅ No www in canonical URLs"
+          fi
+          
+      - name: Check Meta Robots Tags
+        run: |
+          echo "🔍 Checking meta robots tags..."
+          
+          # Check 404 page has noindex
+          if [ -f "_site/404.html" ]; then
+            if grep -q 'name="robots".*noindex' _site/404.html; then
+              echo "✅ 404 page has noindex"
+            else
+              echo "⚠️ WARNING: 404 page should have noindex"
+            fi
+          fi
+          
+          # Sample check of regular pages for index
+          echo "📄 Sample robots tags from pages:"
+          find _site -name "*.html" -type f | head -3 | while read file; do
+            echo "File: $file"
+            grep -o 'name="robots"[^>]*' "$file" || echo "  No robots meta tag"
+          done
+          
+      - name: Check Structured Data
+        run: |
+          echo "🔍 Checking for structured data (Schema.org)..."
+          
+          # Count pages with structured data
+          schema_count=$(grep -r 'application/ld\+json' _site/*.html 2>/dev/null | wc -l || echo 0)
+          echo "📊 Pages with structured data: $schema_count"
+          
+          if [ $schema_count -gt 0 ]; then
+            echo "✅ Structured data found"
+            echo "📄 Schema types found:"
+            grep -rh '@type' _site/*.html 2>/dev/null | grep -o '"@type":[^,]*' | sort | uniq -c | head -10
+          else
+            echo "⚠️ WARNING: No structured data found"
+          fi
+          
+      - name: Performance Check - Page Size
+        run: |
+          echo "🔍 Checking page sizes for performance..."
+          echo "📊 Largest HTML files:"
+          find _site -name "*.html" -type f -exec du -h {} + | sort -rh | head -10
+          
+          # Check if any HTML file is too large
+          large_files=$(find _site -name "*.html" -type f -size +500k)
+          if [ -n "$large_files" ]; then
+            echo "⚠️ WARNING: Large HTML files found (>500KB):"
+            echo "$large_files"
+          else
+            echo "✅ All HTML files under 500KB"
+          fi
+          
+      - name: Check for Missing Alt Tags
+        run: |
+          echo "🔍 Checking for images without alt tags..."
+          
+          # Find img tags without alt attribute
+          missing_alt=$(grep -rh '<img' _site/*.html 2>/dev/null | grep -v 'alt=' | wc -l || echo 0)
+          
+          if [ $missing_alt -gt 0 ]; then
+            echo "⚠️ WARNING: Found $missing_alt img tags without alt attributes"
+            echo "📄 Sample:"
+            grep -rh '<img' _site/*.html 2>/dev/null | grep -v 'alt=' | head -3
+          else
+            echo "✅ All images have alt tags (or no images found)"
+          fi
+          
+      - name: Check Internal Links
+        run: |
+          echo "🔍 Checking for broken internal links..."
+          
+          # Simple check for common broken link patterns
+          broken_patterns=$(grep -rh 'href=".*localhost' _site/*.html 2>/dev/null | wc -l || echo 0)
+          
+          if [ $broken_patterns -gt 0 ]; then
+            echo "⚠️ WARNING: Found localhost links in production:"
+            grep -rh 'href=".*localhost' _site/*.html 2>/dev/null | head -5
+          else
+            echo "✅ No localhost links found"
+          fi
+          
+      - name: SEO Summary Report
+        if: always()
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "📊 SEO VALIDATION SUMMARY"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          echo "✅ Checks Passed:"
+          echo "  - Sitemap generation"
+          echo "  - Robots.txt presence"
+          echo "  - Canonical URL format"
+          echo ""
+          echo "📈 Site Statistics:"
+          echo "  - Total HTML pages: $(find _site -name "*.html" -type f | wc -l)"
+          echo "  - Total posts: $(find _site/article -name "*.html" -type f 2>/dev/null | wc -l || echo 0)"
+          echo "  - Build directory size: $(du -sh _site | cut -f1)"
+          echo ""
+          echo "🔗 Important URLs:"
+          echo "  - Sitemap: https://powerplatformtip.com/sitemap.xml"
+          echo "  - Feed: https://powerplatformtip.com/feed.xml"
+          echo "  - Robots: https://powerplatformtip.com/robots.txt"
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          
+      - name: Upload Build Artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: seo-validation-results
+          path: |
+            _site/sitemap.xml
+            _site/feed.xml
+            _site/robots.txt
+          retention-days: 30

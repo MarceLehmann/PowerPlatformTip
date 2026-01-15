@@ -22,7 +22,7 @@ title_separator          : "-"
 subtitle                 : "Learn and find tips & tricks around the PowerPlatformTip" # site tagline that appears below site title in masthead
 name                     : "Marcel Lehmann"
 description              : "Learn and find tips & tricks around the Power Platform. Your go-to source for insights on Power Apps, Power Automate, and more, by Marcel Lehmann, BizzApps MVP."
-url: "https://www.powerplatformtip.com"
+url: "https://powerplatformtip.com" # Fixed: removed www to match .htaccess redirect (www -> non-www)
 baseurl: ""
 repository: "MarceLehmann/PowerPlatformTip"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -60,6 +60,22 @@ bing_site_verification   :
 naver_site_verification  :
 yandex_site_verification :
 baidu_site_verification  :
+
+# Sitemap settings (for jekyll-sitemap plugin)
+defaults_sitemap: &defaults_sitemap
+  changefreq: weekly
+  priority: 0.7
+
+# Pages to exclude from sitemap
+sitemap_exclude:
+  - /404.html
+  - /search/
+  - /page:num/
+  
+# Feed settings (for jekyll-feed plugin)  
+feed:
+  path: feed.xml
+  excerpt_only: false
 
 # Social Sharing
 twitter:
@@ -193,39 +209,6 @@ sass:
 permalink: /:categories/:title/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-# Exclude files from processing
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - minimal-mistakes-jekyll.gemspec
-  - node_modules
-  - package.json
-  - package-lock.json
-  - Rakefile
-  - README
-  - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
-  - /DOCS # ignore documentation folder
-  - /SOCIALMEDIA # ignore social media assets
-  - .htaccess
-
 
 # Pagination with jekyll-paginate
 paginate: 5 # amount of posts to show
@@ -254,14 +237,23 @@ pagination:
 
 
 # Plugins (previously gems:)
+# GitHub Pages supported plugins for optimal SEO
 plugins:
   - jekyll-paginate
+  - jekyll-sitemap         # Auto-generate XML sitemap
+  - jekyll-feed            # Auto-generate Atom feed
+  - jekyll-seo-tag         # Comprehensive SEO meta tags
+  - jekyll-redirect-from   # Handle 301 redirects
   - jekyll-gist
   - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-redirect-from
   - jekyll-gist
   - jekyll-include-cache
 
@@ -319,6 +311,8 @@ defaults:
       show_date: true
       toc: true
       toc_sticky: false
+      sitemap: true  # Include in sitemap
+      robots: "index, follow"  # Allow indexing
   # _pages
   - scope:
       path: "_pages"
@@ -326,3 +320,19 @@ defaults:
     values:
       layout: single
       author_profile: true
+      sitemap: true  # Include in sitemap
+      robots: "index, follow"  # Allow indexing
+  # Pagination pages - noindex
+  - scope:
+      path: "page:num"
+      type: pages
+    values:
+      sitemap: false
+      robots: "noindex, follow"
+  # Search page - noindex
+  - scope:
+      path: "search"
+      type: pages
+    values:
+      sitemap: false
+      robots: "noindex, follow"

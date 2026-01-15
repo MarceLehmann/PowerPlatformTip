@@ -1,5 +1,12 @@
 <meta charset="utf-8">
 
+{%- comment %} Preconnect to external domains for performance {%- endcomment -%}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
 {% include seo.html %}
 
 {% unless site.atom_feed.hide %}
