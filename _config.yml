@@ -275,6 +275,8 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+# NOTE: Individual tag/category pages are generated but should have noindex
+# They are utility pages without unique content
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:

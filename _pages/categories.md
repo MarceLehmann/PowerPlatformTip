@@ -6,9 +6,8 @@ description: "Browse PowerPlatformTip posts organized by categories including Po
 excerpt: "Explore Power Platform expert tips organized by categories. Find specific solutions for Power Apps development, Power Automate workflows, Copilot Studio chatbots, and more."
 keywords: "Power Platform categories, Power Apps tips, Power Automate guides, Copilot Studio tutorials, SharePoint integration, data management, workflow automation"
 author_profile: false
-sitemap:
-  priority: 0.9
-  changefreq: weekly
+robots: "noindex, follow"  # Nur eine Liste, kein eigenständiger Content
+sitemap: false  # Nicht in Sitemap aufnehmen
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.2"

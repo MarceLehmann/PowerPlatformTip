@@ -17,6 +17,13 @@ Disallow: /CONTENT/
 Disallow: /DOCS/
 Disallow: /SOCIALMEDIA/
 
+# Block utility pages (keine eigenständigen Inhalte)
+Disallow: /categories/
+Disallow: /tags/
+Disallow: /posts/
+Disallow: /newsletter/
+Disallow: /thank-you/
+
 # Allow valuable resources
 Allow: /assets/css/
 Allow: /assets/images/

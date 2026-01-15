@@ -6,9 +6,10 @@ description: "Browse all PowerPlatformTip blog posts with expert solutions for P
 excerpt: "Complete collection of all Power Platform expert posts with step-by-step guides, best practices and practical solutions for enterprise development."
 keywords: "Power Platform Blog Posts, Power Apps Tutorials, Power Automate Guides, Copilot Studio Tips, Microsoft MVP Blog, Enterprise Solutions, Development Guides"
 author_profile: false
+robots: "noindex, follow"  # Nur eine Liste aller Posts, kein eigenständiger Content
 sitemap:
-  priority: 1.0
-  changefreq: daily
+  priority: 0.7
+  changefreq: weekly
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.2"
