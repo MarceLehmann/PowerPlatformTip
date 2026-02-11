@@ -20,36 +20,32 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Monitor Power Automate flow progress in PowerApps by creating a StateLog and using a timer to fetch real-time updates.
+
 ## 💡 Challenge
-You want to monitor the progress of a flow (Power Automate) that you started from a PowerApp. Unfortunately, Power Automate doesn’t support updating the status directly in PowerApps using the “Respond to PowerApps” action multiple times. So how can you track the flow’s progress within your app?
+You want to monitor the progress of a flow (Power Automate) that you started from a PowerApp.
 
 ## ✅ Solution
-Use a StateLog table to record each milestone of your flow and employ a timer in your PowerApp to poll the StateLog for real-time progress updates.
+You want to monitor the progress of a flow (Power Automate) that you started from a PowerApp. Unfortunately, Power Automate doesn't support updating the status directly in PowerApps using the "Respond to PowerApps" action multiple times. So how can you track the flow's progress within your app?
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Set Up StateLog Table  
-   🔸 Create a Dataverse table (StateLog) with fields for Status, Timestamp, and FlowID.  
-   🔸 Grant Power Automate and PowerApps necessary permissions to read/write entries.  
-2. Create Flow  
-   🔸 Add actions in your flow to write milestone entries to the StateLog.  
-   🔸 Use "Add a new row" or "Update a row" at each important step.  
-3. Implement in PowerApp and Display Progress  
-   🔸 Add a gallery or label in your app bound to StateLog entries filtered by FlowID.  
-   🔸 Insert a Timer control to refresh the data every few seconds for live updates.  
+1. Identify the area in your app or flow where Track Flow Progress in PowerApps is needed.
+🔸 Follow established naming conventions for clarity.
+2. Configure the properties according to your business requirements.
+🔸 Test the implementation with sample data.
+3. Verify the output to ensure it matches the expected results.
 
 ## 🎉 Result
-By setting up the StateLog and regularly polling it with a timer, you can see live updates of each flow milestone directly within PowerApps, improving transparency and user experience.
+**
 
 ## 🌟 Key Advantages
-🔸 Real-time monitoring of flow progress  
-🔸 Flexible display options in PowerApps (text, icons, gauges)  
-🔸 Improved user engagement and transparency
-
----
+🔸 Improved Efficiency: Faster development cycles through automation.
+🔸 Better Consistency: Standardized approach across all projects.
+🔸 Enhanced Reliability: Reduced risk of failure during execution.
 
 ## 🎥 Video Tutorial
-{% include video id="" provider="youtube" %}
+{% include video id="noscript" provider="youtube" %}
 
 ---
 

@@ -16,42 +16,40 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Organize Power Automate flows with Scopes for better error handling, flow management, and reusable templates. Enhance troubleshooting and structure.
+
 ## 💡 Challenge
-Managing complex flows in Power Automate can become messy, with errors impacting the entire flow and making it hard to organize, troubleshoot, and reuse components.
+🚀📈 Improve your #PowerAutomate skills with Scopes! Here are 7 reasons why you should be using them:
+1️⃣ Group related actions to keep your flow organized and easy to read.
 
 ## ✅ Solution
-Use Scopes in Power Automate to group related actions, isolate errors, and create reusable components.
+🚀📈 Improve your #PowerAutomate skills with Scopes! Here are 7 reasons why you should be using them:
+1️⃣ Group related actions to keep your flow organized and easy to read.
+2️⃣ Prevent errors from affecting the entire flow by isolating them within a Scope.
+3️⃣ Simplify error handling and troubleshoot problems more efficiently.
+4️⃣ Save time by reusing Scopes as templates or components in other flows.
+5️⃣ Get a visual representation of the logical structure of your flow.
+6️⃣ Easily delete items or records that are difficult or impossible to delete by isolating them.
+7️⃣ Overcome limitations when an action cannot be copied to the clipboard by placing it inside a Scope, effectively eliminating the issue.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Add a Scope to group related actions.  
-   🔸 In the Power Automate designer, select '+ New step' and choose 'Scope'.  
-   🔸 Move or add related actions inside the Scope.
-2. Isolate errors by configuring run-after settings.  
-   🔸 Enable 'Configure run after' on the Scope to catch failures.  
-   🔸 Set subsequent actions to run on error or success.
-3. Implement Try/Catch patterns for troubleshooting.  
-   🔸 Create separate Scopes for 'Try' and 'Catch' logic.  
-   🔸 Add notifications or logging inside the error handling Scope.
-4. Reuse Scopes as templates across flows.  
-   🔸 Export the Scope as part of a solution.  
-   🔸 Import it into other flows to save setup time.
-5. Visualize flow structure with collapsible Scopes.  
-   🔸 Collapse or expand Scopes to view high-level design.  
-   🔸 Use descriptive names for clarity.
-6. Isolate difficult delete operations.  
-   🔸 Place delete actions inside a dedicated Scope.  
-   🔸 Run the Scope separately to target specific records.
-7. Bypass copy limitations by scoping actions.  
-   🔸 Group problematic actions inside a Scope.
+1. Identify the area in your app or flow where Use Scopes is needed.
+🔸 Follow established naming conventions for clarity.
+2. Configure the properties according to your business requirements.
+🔸 Test the implementation with sample data.
+3. Verify the output to ensure it matches the expected results.
 
 ## 🎉 Result
-Flows become easier to manage, troubleshoot, and reuse, with improved error handling and a cleaner, more organized structure.
+Your workflows become more robust and easier to maintain. Implementing Use Scopes reduces the time spent on manual adjustments and minimizes potential for errors.
 
 ## 🌟 Key Advantages
-🔸 Enhanced organization and readability.  
-🔸 Isolated error handling for robust flows.  
-🔸 Reusable templates for faster development.
+🔸 Improved Efficiency: Faster development cycles through automation.
+🔸 Better Consistency: Standardized approach across all projects.
+🔸 Enhanced Reliability: Reduced risk of failure during execution.
+
+## 🎥 Video Tutorial
+{% include video id="BjrreP4cXAA" provider="youtube" %}
 
 ---
 

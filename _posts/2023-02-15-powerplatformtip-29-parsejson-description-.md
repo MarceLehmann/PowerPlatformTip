@@ -18,40 +18,48 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+When utilizing the Parse JSON action in Power Automate, distinguishing between multiple occurrences of the same name in Dynamic Content can be challenging, leading to confusion about which value corresponds to which name.
+
 ## 💡 Challenge
 When utilizing the Parse JSON action in Power Automate, distinguishing between multiple occurrences of the same name in Dynamic Content can be challenging, leading to confusion about which value corresponds to which name.
 
 ## ✅ Solution
-Enhance clarity and organization of Dynamic Content by incorporating a custom description within the Parse JSON schema.
+Enhance clarity and organization of Dynamic Content by incorporating a custom description within the Parse JSON schema. This simple adjustment allows you to differentiate between similar entries more effectively.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Update the Parse JSON schema  
-   🔸 After the `"type": "string"` line in your field definition, add `"Description": "This is the description for FieldName"`.  
-   🔸 The schema snippet will look like this:  
-   
-   {
-     "properties":
-     {
-       "FieldName":
-       {
-         "type": "string",
-         "Description": "This is the description for FieldName"
-       }
-     }
-   }
-   
-2. Apply and Test  
-   🔸 Save your flow and refresh the Dynamic Content pane.  
-   🔸 The custom description appears under the corresponding entry, helping you select the correct value.
+* In your Parse JSON action, after specifying the type for an element, add an additional line with "Description": "YOURDESCRIPTION". This custom description should provide clarity on the purpose or origin of the data.
+
+* Example Schema Adjustment:
+
+{
+
+  "properties": 
+{
+
+    "FieldName": 
+{
+
+      "type": "string",
+
+      "Description": "This is the description for FieldName"
+
+    }}}
+
+* Upon implementing this change, the description you've added will appear beneath the corresponding Dynamic Content in Power Automate, guiding you to accurately select the right value for your flow operations.
 
 ## 🎉 Result
-You can now easily distinguish between similar Dynamic Content entries, reducing errors and improving flow design clarity.
+A more intuitive and manageable way to work with Dynamic Content in Power Automate, significantly reducing the risk of errors when dealing with multiple occurrences of the same name.
 
 ## 🌟 Key Advantages
-🔸 Improved clarity in Dynamic Content selection.  
-🔸 Reduces confusion and errors in flow design.  
-🔸 Simple enhancement for better usability.
+🔸 **Improved Clarity:** Custom descriptions make it easier to understand the context and purpose of each piece of Dynamic Content. 
+🔸 **Enhanced Organization:** Keeps your flow design tidy and well-documented, facilitating easier maintenance and updates. 
+🔸 **Increased Accuracy:** Minimizes confusion and improves the accuracy of your flow's logic by clearly identifying each data element.
+
+This approach not only simplifies the process of working with complex JSON structures but also enhances the overall reliability and effectiveness of your automated workflows.
+
+## 🎥 Video Tutorial
+{% include video id="sh2QDZouFU0" provider="youtube" %}
 
 ---
 

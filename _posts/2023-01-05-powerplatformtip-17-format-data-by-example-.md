@@ -18,29 +18,35 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Creating complex expressions, especially for formatting dates, strings, and numbers, can be time-consuming and error-prone in Power Platform.
+
 ## 💡 Challenge
 Creating complex expressions, especially for formatting dates, strings, and numbers, can be time-consuming and error-prone in Power Platform.
 
 ## ✅ Solution
-Use the ‘Format data by example’ feature to generate complex formatting expressions by providing a sample of the desired output.
+Leverage the 'Format data by example' feature for creating more complex expressions. This tool allows you to quickly generate the correct expression by providing an example of the desired output.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Choose the data type to format.  
-   🔸 Dates  
-   🔸 Strings  
-   🔸 Numbers
-2. Provide an example of the desired formatted output.  
-3. Let the 'Format data by example' feature generate the corresponding expression automatically.  
-4. Apply the generated expression in your Power Platform project for consistent and accurate data formatting.
+* Choose the type of data you want to format (dates, strings, or numbers).
+
+* Provide an example of how you want the formatted data to look.
+
+* The 'Format data by example' feature will generate the corresponding expression based on your example.
+
+* Apply this expression in your Power Platform project for consistent and accurate data formatting.
 
 ## 🎉 Result
-You’ll be able to create complex expressions for data formatting in a matter of seconds, ensuring accuracy and efficiency in your Power Platform projects.
+You'll be able to create complex expressions for data formatting in a matter of seconds, ensuring accuracy and efficiency in your Power Platform projects.
 
 ## 🌟 Key Advantages
-🔸 Simplifies the creation of complex formatting expressions.  
-🔸 Saves time and reduces errors.  
-🔸 Ensures consistent data presentation across your project.
+🔸 Simplifies the creation of complex expressions. 
+🔸 Saves time and reduces errors. 
+🔸 Versatile for dates, strings, and numbers. 
+🔸 Enhances consistency in data presentation.
+
+## 🎥 Video Tutorial
+{% include video id="wKTVzcU7KnA" provider="youtube" %}
 
 ---
 

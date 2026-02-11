@@ -1,0 +1,18 @@
+# PowerPlatformTip – Agent Configuration
+language: de
+project: PowerPlatformTip
+author: Marcel Lehmann
+website: https://powerplatformtip.com
+default_cli: gemini
+
+# Output paths
+output:
+  posts_dir: _posts
+  content_dir: CONTENT
+  assets_dir: assets/images
+
+# Agent behavior
+agent:
+  response_language: de
+  coding_style: clean
+  test_strategy: ki-automated

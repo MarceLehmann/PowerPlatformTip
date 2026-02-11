@@ -21,28 +21,48 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Speed up Power Apps loading by using App.width and App.height for fullscreen dimensions—improve performance, user experience, and deliver faster app startup times.
+
 ## 💡 Challenge
-In a world where every second counts, speeding up your Power Apps loading process can be a real game-changer. You’re looking for ways to make your Power Apps load faster.
+If you don't want to miss out on any future #PowerPlatformTip posts, be sure to subscribe to my newsletter – you'll be the first to know whenever I publish a new tip!
+								Type your email…							
+								Subscribe							
+💡 **The Challenge:** In a world where every second counts, speeding up your Power Apps loading process can be a real game-changer.
 
 ## ✅ Solution
-Reference App.width and App.height for fullscreen dimensions instead of Parent to make dimensions available immediately and reduce loading time.
+If you don't want to miss out on any future #PowerPlatformTip posts, be sure to subscribe to my newsletter – you'll be the first to know whenever I publish a new tip!
+								Type your email…							
+								Subscribe							
+💡 **The Challenge:** In a world where every second counts, speeding up your Power Apps loading process can be a real game-changer. You're looking for ways to make your Power Apps load faster.
+✅ **The Solution:** When building your Power Apps, make sure to reference App.width and App.height for fullscreen dimensions rather than using Parent.width and Parent.height. Why? Because 'App' loads immediately, whereas 'Parent' follows a sequential loading process. By referencing 'App', you're ensuring that your app's dimensions are available right away, leading to a faster loading time.
+🔧 **How It's Done:**
+1️⃣ **Use 'App':** Instead of 'Parent', use 'App' to reference dimensions. This ensures immediate loading and faster app performance.
+2️⃣ **Optimize Loading Time:** By ensuring your app's dimensions are available right away, you significantly reduce your Power App's loading time.
+🎉 **Result:** You've significantly reduced your Power App's loading time, delivering a seamless and efficient user experience!
+**Key Advantages:**
+1️⃣ **Performance Boost:** By using 'App' to reference dimensions, you can improve your app's performance and reduce loading time.
+2️⃣ **User Experience:** Faster loading times lead to a smoother and more efficient user experience.
+3️⃣ **Efficiency:** This simple change can make a big difference in your app's efficiency, saving valuable time for your users.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Use 'App' for dimensions  
-   🔸 'App' loads immediately, whereas 'Parent' follows a sequential loading process.  
-   🔸 Ensures fullscreen dimensions are available right away.
-2. Optimize loading time  
-   🔸 Significantly reduce your Power App's loading time.  
-   🔸 Deliver a smoother and more efficient user experience.
+1️⃣ **Use 'App':** Instead of 'Parent', use 'App' to reference dimensions. This ensures immediate loading and faster app performance.
+2️⃣ **Optimize Loading Time:** By ensuring your app's dimensions are available right away, you significantly reduce your Power App's loading time.
 
 ## 🎉 Result
-You’ve significantly reduced your Power App’s loading time, delivering a seamless and efficient user experience!
+You've significantly reduced your Power App's loading time, delivering a seamless and efficient user experience!
+**Key Advantages:**
+1️⃣ **Performance Boost:** By using 'App' to reference dimensions, you can improve your app's performance and reduce loading time.
+2️⃣ **User Experience:** Faster loading times lead to a smoother and more efficient user experience.
+3️⃣ **Efficiency:** This simple change can make a big difference in your app's efficiency, saving valuable time for your users.
 
 ## 🌟 Key Advantages
-🔸 Performance Boost: Improve app performance and reduce loading time by using 'App' references.  
-🔸 User Experience: Faster loading leads to a smoother and more efficient user experience.  
-🔸 Efficiency: This simple change enhances overall app efficiency, saving valuable time for users.
+🔸 Improved Efficiency: Faster development cycles through automation.
+🔸 Better Consistency: Standardized approach across all projects.
+🔸 Enhanced Reliability: Reduced risk of failure during execution.
+
+## 🎥 Video Tutorial
+{% include video id="noscript" provider="youtube" %}
 
 ---
 

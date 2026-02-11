@@ -10,7 +10,7 @@ excerpt: "Learn how to enable end users to perform actions with elevated permiss
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://img.youtube.com/vi/ts-ggDAy7IQ/0.jpg
+  teaser: /assets/images/posts/external/ext_59d11f448cdb2bb804f0baff9be9b931.jpg
 toc: true
 toc_sticky: true
 tags:

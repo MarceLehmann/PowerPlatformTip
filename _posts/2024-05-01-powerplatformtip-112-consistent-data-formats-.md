@@ -20,29 +20,41 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Data comes in various shapes and sizes, and when it’s time to compare or validate this data, format inconsistencies can derail your workflow, causing errors that are tricky to debug.
+
 ## 💡 Challenge
 Data comes in various shapes and sizes, and when it’s time to compare or validate this data, format inconsistencies can derail your workflow, causing errors that are tricky to debug.
 
 ## ✅ Solution
-Harmonize your data formats before comparison or validation by converting text to a uniform case, stripping extra spaces, and ensuring data types match across the board.
+Harmonize your data formats before comparison or validation. This involves converting text to a uniform case, stripping any extra spaces, and ensuring data types match across the board.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Identify the Data  
-   🔸 Zero in on the data points you need to compare or validate within your app or flow.  
-2. Standardize the Format  
-   🔸 In Power Apps: Use `Lower(Trim(TextInput.Text))` to trim spaces and convert text to lowercase.  
-   🔸 In Power Automate: Use `toLower(trim(triggerOutputs()?['headers']['x-ms-file-last-modified']))` to achieve similar cleanliness in your data.  
+* **Identify the Data:** Zero in on the data points you need to compare or validate within your app or flow.
+
+* **Standardize the Format:** Apply functions to clean and normalize data formats. For instance:
+
+**In Power Apps:** Use Lower(Trim(TextInput.Text)) to trim spaces and convert text to lowercase.
+
+* **In Power Automate:** Opt for toLower(trim(triggerOutputs()?['headers']['x-ms-file-last-modified'])) to achieve similar cleanliness in your data.
+
+📌 **Unique Tips:**
+
+* **Data Consistency:** Keeping your data in a consistent format can dramatically reduce the occurrence of errors.
+
+* **Function Utilization:** Embrace the power of Trim and Lower in Power Apps, alongside trim and toLower in Power Automate, to ensure your data plays nice.
 
 ## 🎉 Result
 A seamless, error-resistant experience in both Power Apps and Power Automate, thanks to the proactive standardization of data formats.
 
 ## 🌟 Key Advantages
-🔸 Reliability: Mitigates errors caused by mismatched data formats, boosting the robustness of your applications.  
-🔸 Efficiency: Streamlines data comparison and validation processes by removing unnecessary format-related hurdles.  
-🔸 Best Practices: Embraces sound data management practices by advocating for data format uniformity.  
+* **Reliability:** Mitigates errors caused by mismatched data formats, boosting the robustness of your applications.
 
----
+* **Efficiency:** Streamlines data comparison and validation processes by removing unnecessary format-related hurdles.
+
+* **Best Practices:** Embraces sound data management practices by advocating for data format uniformity.
+
+A stitch in time saves nine, and in the realm of Power Platform, a little attention to data formats can save hours of debugging down the road. Ensure your workflows and apps stand the test of data diversity by enforcing format consistency. 🛠️✨
 
 ## 🎥 Video Tutorial
 {% include video id="gvdtBtNAZkU" provider="youtube" %}

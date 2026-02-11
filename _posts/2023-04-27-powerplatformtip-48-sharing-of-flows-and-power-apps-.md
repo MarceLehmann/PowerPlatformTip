@@ -22,34 +22,37 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Easily share Power Automate flows and Power Apps with colleagues. Learn best practices for secure sharing, permissions, and collaboration in the Power Platform ecosystem.
+
 ## 💡 Challenge
-Manually sharing flows and Power Apps across environments is error-prone and time-consuming, especially when dealing with dependencies and connected flows.
+🚀 Overview of The Sharing of Flows & Power Apps 🌐
+1️⃣ Export Flows on make.
 
 ## ✅ Solution
-Use export/import via make.powerautomate.com and make.powerapps.com, automate permission assignments with a flow, and package apps and flows into a solution to ensure all dependencies are included.
+🚀 Overview of The Sharing of Flows & Power Apps 🌐
+1️⃣ Export Flows on make.powerautomate.com, but the import on this site  is legacy for import. But you can use the import via make.powerapps.com.
+2️⃣ Use a Flow to automate sharing (check out tip [#PowerPlatformTip 8)🔄
+3️⃣ Pack everything into a solution (Power Apps, Power Automate Flows, Connection References, Tables, etc.) & export/import it. ⚠️ Beware of dependency errors – don't miss anything!
+4️⃣ Don't forget you can export a Power App with ALL connected Flows. Just re-enable the Flow & add it back in the app after import.👌
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Export flows  
-   🔸 On make.powerautomate.com, export the desired flows.  
-   🔸 Use make.powerapps.com for import instead of the legacy import site.
-2. Automate sharing  
-   🔸 Create a flow to grant permissions automatically (see #PowerPlatformTip 8).  
-   🔸 Eliminate manual permission steps.
-3. Package into a solution  
-   🔸 Include Power Apps, Power Automate flows, connection references, tables, etc.  
-   🔸 Verify all dependencies to avoid errors during import.
-4. Export Power App with connected flows  
-   🔸 Export the app including all connected flows.  
-   🔸 After import, re-enable and re-add each flow to the app.
+1. Identify the area in your app or flow where Sharing of Flows & Power Apps is needed.
+🔸 Follow established naming conventions for clarity.
+2. Configure the properties according to your business requirements.
+🔸 Test the implementation with sample data.
+3. Verify the output to ensure it matches the expected results.
 
 ## 🎉 Result
-You can seamlessly share flows and Power Apps between environments with all dependencies intact, automate permission assignments, and reduce manual errors.
+Your workflows become more robust and easier to maintain. Implementing Sharing of Flows & Power Apps reduces the time spent on manual adjustments and minimizes potential for errors.
 
 ## 🌟 Key Advantages
-🔸 Centralized solution package with complete dependencies.  
-🔸 Reduced manual effort through automated sharing.  
-🔸 Export and re-enable connected flows in Power Apps for full app consistency.
+🔸 Improved Efficiency: Faster development cycles through automation.
+🔸 Better Consistency: Standardized approach across all projects.
+🔸 Enhanced Reliability: Reduced risk of failure during execution.
+
+## 🎥 Video Tutorial
+{% include video id="4RhSycSfN_4" provider="youtube" %}
 
 ---
 

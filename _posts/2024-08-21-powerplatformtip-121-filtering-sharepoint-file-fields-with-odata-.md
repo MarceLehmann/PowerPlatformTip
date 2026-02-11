@@ -21,33 +21,29 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Quickly and efficiently filter SharePoint files in Power Automate by using FileLeafRef (file name), FileRef (full path), and FileDirRef (folder) fields with simple OData filter expressions – even if you don’t know how these fields work yet.
+
 ## 💡 Challenge
-In Power Automate, you often need to find specific files in SharePoint. But you can't use normal file names or folders directly in filter queries, which makes it hard to select only the files you really want. Many users are also unsure which SharePoint fields work for filtering: What is FileLeafRef, FileRef, or FileDirRef – and how do you use them in OData queries to save time and speed up flows?
+Managing complex workflows in Power Platform can be difficult without the right approach to Filtering SharePoint File Fields with OData. Many developers find themselves struggling with efficiency and manual configuration.
 
 ## ✅ Solution
-Use the FileLeafRef, FileRef, and FileDirRef fields in combination with OData filtering to streamline your SharePoint queries.
+By implementing Filtering SharePoint File Fields with OData, you can automate repetitive tasks and simplify your application logic. This feature provides a native way to handle data more effectively.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Use FileLeafRef to filter by file name  
-   🔸 Filter by specific file names without the path.  
-   🔸 e.g., `FileLeafRef eq 'document.pdf'`
-2. Use FileRef to filter by full path  
-   🔸 Filter by the full path to a file.  
-   🔸 e.g., `FileRef eq '/sites/demo/Shared Documents/document.pdf'`
-3. Use FileDirRef to filter by directory  
-   🔸 Filter by files within a specific directory.  
-   🔸 e.g., `startswith(FileDirRef, '/sites/demo/Shared Documents')`
+* **FileLeafRef**: Filter by specific file names without the path.
+* **FileLeafRef**: Filter by specific file names without the path.
+* **FileRef**: Filter by the full path to a file.
+* **FileDirRef**: Filter by files within a specific directory.
+This approach is particularly useful for optimizing your SharePoint queries, as discussed in my other tip [#PowerPlatformTip 95 – ‘Optimized SharePoint Queries’, which focused on efficient query design.
 
 ## 🎉 Result
-Using these OData filters drastically reduces the amount of data returned and results in faster, more efficient query processing, saving time and system resources.
+Your workflows become more robust and easier to maintain. Implementing Filtering SharePoint File Fields with OData reduces the time spent on manual adjustments and minimizes potential for errors.
 
 ## 🌟 Key Advantages
-🔸 Faster access to desired files  
-🔸 Minimal data retrieval for maximum efficiency  
-🔸 Seamless integration with existing SharePoint processes
-
----
+🔸 Improved Efficiency: Faster development cycles through automation.
+🔸 Better Consistency: Standardized approach across all projects.
+🔸 Enhanced Reliability: Reduced risk of failure during execution.
 
 ## 🎥 Video Tutorial
 {% include video id="2DmwfItne0Q" provider="youtube" %}

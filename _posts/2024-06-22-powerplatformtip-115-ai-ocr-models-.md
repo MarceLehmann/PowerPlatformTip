@@ -21,33 +21,51 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Automating document processing efficiently is crucial for handling various types of documents.
+
 ## 💡 Challenge
 Automating document processing efficiently is crucial for handling various types of documents. Choosing the right AI OCR tool within Power Platform can make a significant difference.
 
 ## ✅ Solution
-Power Platform offers two main AI OCR tools—AI Builder and Azure Document Intelligence Service—each providing different models, integration options, and cost structures.
+Power Platform offers two main AI OCR tools for document processing:
+
+* AI Builder
+
+* Azure Document Intelligence Service
+
+Both tools support various prebuilt models to handle different document types.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. AI Builder Approach  
-   🔸 Setup: Access make.powerapps.com, select prebuilt models like invoice processing, receipt processing, business card reader, and form processing.  
-   🔸 Testing & Deployment: Use sample documents to test and integrate into a Power Automate flow.  
-   🔸 Costs: Requires purchasing AI Builder credits, costing around 1.6 cents per page.
-2. Azure Document Intelligence Service  
-   🔸 Setup: Configure the service in Azure, selecting prebuilt models such as invoices, receipts, business cards, and custom documents.  
-   🔸 Integration: Obtain API keys and endpoints for Power Automate.  
-   🔸 Usage: Send requests to the API and process documents with greater control and flexibility.  
-   🔸 Costs: $10 for 1,000 pages (1 cent per page), offering about 40% cost savings compared to AI Builder.
+**1. AI Builder Approach**
+
+* **Setup**: Access make.powerapps.com, select prebuilt models like invoice processing, receipt processing, business card reader, and form processing.
+
+* **Testing & Deployment**: Use sample documents to test and integrate into a Power Automate flow.
+
+* **Costs**: Requires purchasing AI Builder credits, costing around 1.6 cents per page.
+
+**2. Azure Document Intelligence Service**
+
+* **Setup**: Configure the service in Azure, selecting from prebuilt models such as invoices, receipts, business cards, and custom documents.
+
+* **Integration**: Obtain API keys and endpoints for Power Automate.
+
+* **Usage**: Send requests to the API and process documents with greater control and flexibility.
+
+* **Costs**: $10 for 1,000 pages (1 cent per page), offering about 40% cost savings compared to AI Builder.
 
 ## 🎉 Result
-Azure Document Intelligence delivers significant cost savings, a broad selection of prebuilt models, and greater control over document processing workflows, making it the superior choice for most scenarios.
+Azure Document Intelligence offers significant cost savings, a wide range of prebuilt models, and greater control, making it the superior choice for most document processing needs.
 
 ## 🌟 Key Advantages
-🔸 Quick and easy setup with AI Builder, fully integrated into Power Automate.  
-🔸 Cost savings (up to 40%) with Azure Document Intelligence at $0.01 per page.  
-🔸 Broad selection of prebuilt models and greater flexibility with Azure Document Intelligence.
+* **AI Builder**: Easy, quick setup, integrated with Power Automate.
 
----
+* **Azure Document Intelligence**: Cost-effective, flexible, supports various document types, ideal for high-volume processing.
+
+Recommendation: Although AI Builder is simpler to start with, Azure Document Intelligence is typically the better option for its cost efficiency and flexibility.
+
+Special thanks to Damien Bird for the great overview! Watch the full video below
 
 ## 🎥 Video Tutorial
 {% include video id="fLHmEwcg8Jo" provider="youtube" %}

@@ -38,7 +38,7 @@ Here's how to do it:
        
 3. Configure subsequent actions (e.g., send an email) using these outputs.
 
-![Trigger Header](https://lehmann.ws/wp-content/uploads/2023/01/triggerheader-1.png)
+![Trigger Header](/assets/images/posts/2023/01/triggerheader-1.png)
 
 ## 🎉 Result
 The flow now notifies the flow initiator upon success with relevant header information and handles errors gracefully using trigger conditions.

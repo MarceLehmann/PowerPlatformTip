@@ -10,7 +10,7 @@ excerpt: "Master the art of extracting HTML tables from emails using Power Autom
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://img.youtube.com/vi/i4GHCGMAD88/0.jpg
+  teaser: /assets/images/posts/external/ext_0ef91b2efa4c668424d65c664b0cb613.jpg
 toc: true
 toc_sticky: true
 tags:

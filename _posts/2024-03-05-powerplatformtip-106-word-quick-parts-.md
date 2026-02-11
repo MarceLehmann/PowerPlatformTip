@@ -21,6 +21,9 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+The assumption that document automation in Word necessitates a premium subscription can deter users, particularly when it involves integrating external data, like from SharePoint.
+
 ## 💡 Challenge
 The assumption that document automation in Word necessitates a premium subscription can deter users, particularly when it involves integrating external data, like from SharePoint.
 
@@ -28,26 +31,19 @@ The assumption that document automation in Word necessitates a premium subscript
 Utilizing Power Automate in conjunction with Quick Parts within Microsoft Word enables complex document automation tasks to be accomplished without requiring a premium subscription.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. In Microsoft Word, set up Quick Parts placeholders.  
-   🔸 Go to the “Insert” tab.  
-   🔸 Select “Quick Parts” → “Document Property” to create placeholders.
-2. Create a Power Automate flow.  
-   🔸 Fetch data from your chosen source, such as a SharePoint list.
-3. Populate Quick Parts dynamically.  
-   🔸 Use the action to replace placeholders with dynamic content from your data source.
-4. Automate document delivery.  
-   🔸 Configure the flow to save or send the document automatically.
+🔸In Microsoft Word, go to the "Insert" tab, select "Quick Parts," then "Document Property" to set up placeholders for data integration.
+🔸Create a flow in Power Automate to fetch data from your chosen data source, such as a SharePoint list.
+🔸In Power Automate, use the specific action to populate the Quick Parts in your Word document with data, replacing the placeholders with dynamic content from your data source.
+🔸Set up the automation to save or send the document automatically, finalizing the process.
 
 ## 🎉 Result
 The end result is an automatically generated document that is dynamically filled with the latest data from your selected source, all without incurring additional premium service fees.
 
 ## 🌟 Key Advantages
-🔸 No premium subscription required for advanced document automation.  
-🔸 Saves time and reduces errors by automating data insertion.  
-🔸 Offers flexible, dynamic document creation with minimal manual effort.
-
----
+🔸Eliminates the need for premium subscriptions for advanced document automation.
+🔸Saves time and increases efficiency by automating manual document preparation tasks.
+🔸Reduces errors by minimizing manual data entry.
+🔸Offers greater flexibility and customization in the creation of documents.
 
 ## 🎥 Video Tutorial
 {% include video id="87AnDOHxmsI" provider="youtube" %}

@@ -20,33 +20,47 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Instantly switch from play mode to maker mode in Power Apps using a bookmarklet—speed up app editing, boost productivity, and streamline your development workflow.
+
 ## 💡 Challenge
-You’re using a Power App in play mode and realize you need to make some adjustments. Typically, you’d have to navigate back to the environment, locate the app, and then click on “Edit.” This process can be time-consuming and disrupts your workflow.
+If you don't want to miss out on any future #PowerPlatformTip posts, be sure to subscribe to my newsletter – you'll be the first to know whenever I publish a new tip!
+								Type your email…							
+								Subscribe							
+💡 **The Challenge:** You're using a Power App in play mode and realize you need to make some adjustments.
 
 ## ✅ Solution
-Use a simple bookmarklet—a small JavaScript snippet—to swiftly switch from play mode to maker mode without closing or reloading the app.
+If you don't want to miss out on any future #PowerPlatformTip posts, be sure to subscribe to my newsletter – you'll be the first to know whenever I publish a new tip!
+								Type your email…							
+								Subscribe							
+💡 **The Challenge:** You're using a Power App in play mode and realize you need to make some adjustments. Typically, you'd have to navigate back to the environment, locate the app, and then click on "Edit." This process can be time-consuming and disrupt your workflow.
+✅ **The Solution:** Use a simple bookmarklet, which is essentially a JavaScript snippet. This bookmarklet allows you to swiftly switch from play mode to maker mode without closing the app.
+🔧 **How It's Done:**
+1️⃣ Create a bookmarklet containing the JavaScript code. You can find the code at: [https://github.com/MarceLehmann/CodeSnippets/blob/main/PowerAppsPlayToMake.js](https://github.com/MarceLehmann/CodeSnippets/blob/main/PowerAppsPlayToMake.js)
+2️⃣ While in play mode, activate the bookmarklet.
+3️⃣ Instantly transition to maker mode, keeping the app open and ready for edits.
+🎉 **Result:** You've streamlined the process of transitioning between play and maker modes in Power Apps, enhancing your efficiency and productivity!
+**Key Advantages:**
+1️⃣ **Time-Saving:** No more navigating through multiple steps to edit your app.
+2️⃣ **Seamless Workflow:** Stay in the zone by quickly switching modes without disruptions.
+3️⃣ **Enhanced User Experience:** This quick switch method provides a smoother development experience, allowing for rapid iterations.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Create a bookmarklet containing the JavaScript code.  
-   🔸 Open your browser’s bookmark manager and create a new bookmark.  
-   🔸 Copy the JavaScript snippet from: https://github.com/MarceLehmann/CodeSnippets/blob/main/PowerAppsPlayToMake.js into the bookmark’s URL field.
-2. Activate the bookmarklet while in play mode.  
-   🔸 Ensure you are viewing the app in play mode.  
-   🔸 Click the bookmark you just created to run the script.
-3. Switch instantly to maker mode.  
-   🔸 The app reloads in maker mode while keeping your session active.  
-   🔸 You can begin editing immediately without further navigation.
+1️⃣ Create a bookmarklet containing the JavaScript code. You can find the code at: [https://github.com/MarceLehmann/CodeSnippets/blob/main/PowerAppsPlayToMake.js](https://github.com/MarceLehmann/CodeSnippets/blob/main/PowerAppsPlayToMake.js)
+2️⃣ While in play mode, activate the bookmarklet.
+3️⃣ Instantly transition to maker mode, keeping the app open and ready for edits.
 
 ## 🎉 Result
-You’ve streamlined the process of transitioning between play and maker modes in Power Apps, boosting your efficiency and keeping your development flow uninterrupted.
+You've streamlined the process of transitioning between play and maker modes in Power Apps, enhancing your efficiency and productivity!
+**Key Advantages:**
+1️⃣ **Time-Saving:** No more navigating through multiple steps to edit your app.
+2️⃣ **Seamless Workflow:** Stay in the zone by quickly switching modes without disruptions.
+3️⃣ **Enhanced User Experience:** This quick switch method provides a smoother development experience, allowing for rapid iterations.
 
 ## 🌟 Key Advantages
-🔸 Time-Saving: Eliminates multiple navigation steps to edit your app.  
-🔸 Seamless Workflow: Switch modes without disrupting your focus.  
-🔸 Enhanced Productivity: Enables rapid iterations and a smoother development experience.
-
----
+🔸 Improved Efficiency: Faster development cycles through automation.
+🔸 Better Consistency: Standardized approach across all projects.
+🔸 Enhanced Reliability: Reduced risk of failure during execution.
 
 ## 🎥 Video Tutorial
 {% include video id="vfciorDH6bM" provider="youtube" %}

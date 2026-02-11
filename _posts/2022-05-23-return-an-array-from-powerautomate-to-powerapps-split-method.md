@@ -10,7 +10,7 @@ excerpt: "Basically, there are already some posts and videos on this topic. Howe
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://lehmann.ws/wp-content/uploads/2022/05/etma65lrc.png
+  teaser: /assets/images/posts/2022/05/etma65lrc.png
 toc: true
 toc_sticky: true
 tags:
@@ -22,7 +22,7 @@ tags:
   - No Premium
 ---
 
-![Array Split Method](https://lehmann.ws/wp-content/uploads/2022/05/etma65lrc.png){: .align-center}
+![Array Split Method](/assets/images/posts/2022/05/etma65lrc.png){: .align-center}
 
 Basically, there are already some posts and videos on this topic. However, I would like to point out a great post incl. app for generating the function. (by [Brian Dang](https://powerapps.microsoft.com/en-us/blog/author/brdang/))
 

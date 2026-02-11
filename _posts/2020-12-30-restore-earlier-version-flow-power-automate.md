@@ -10,7 +10,7 @@ excerpt: "Discover PowerStudio.app, an exciting platform for building and tracki
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://img.youtube.com/vi/bRFOkrx-1Bo/0.jpg
+  teaser: /assets/images/posts/external/ext_9ce6f04cd6aee2eee26460d6614794c4.jpg
 toc: true
 toc_sticky: true
 tags:
@@ -26,7 +26,7 @@ tags:
 
 PowerStudio.app is a very exciting site for those who want to build flows on a large scale and track them. With the free version, a lot is already possible. In the premium version, you can also restore flow versions - you have a complete version history!
 
-**ðŸ“… UPDATE 08.2022:** Besides this solution, I show in the blog post "[How to restore (and create) a backup from a flow](https://lehmann.ws/2022/08/30/how-to-restore-and-create-a-backup-from-a-flow/)" what free options are available.
+**ðŸ“… UPDATE 08.2022:** Besides this solution, I show in the blog post "[How to restore (and create) a backup from a flow](https://powerplatformtip.com/Article/how-to-restore-and-create-a-backup-from-a-flow/)" what free options are available.
 
 {% include video id="bRFOkrx-1Bo" provider="youtube" %}
 

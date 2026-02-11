@@ -18,37 +18,39 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Boost your Microsoft cloud skills and earn certification discounts by joining the Microsoft Cloud Skills Challenge. Learn, collaborate, and get certified.
+
 ## 💡 Challenge
-How to boost your Microsoft cloud computing skills and earn a certification discount through structured learning and community engagement.
+Check out the Microsoft Cloud Skills Challenge!
+Enhance your skills in cloud computing, work through learning modules, exchange ideas with peers, and be eligible for 50% off Microsoft Certification exams.
 
 ## ✅ Solution
-Participate in the Microsoft Cloud Skills Challenge on Microsoft Learn: complete learning modules, collaborate with peers, and become eligible for a 50% discount on Microsoft Certification exams.
+Check out the Microsoft Cloud Skills Challenge!
+Enhance your skills in cloud computing, work through learning modules, exchange ideas with peers, and be eligible for 50% off Microsoft Certification exams.
+A great opportunity for your career goals.
+International:
+[https://developer.microsoft.com/en-us/offers/30-days-to-learn-it](https://developer.microsoft.com/en-us/offers/30-days-to-learn-it)
+German:
+[https://www.microsoft.com/de-de/techwiese/events/cloud-skills-challenge.aspx#herausforderungen](https://www.microsoft.com/de-de/techwiese/events/cloud-skills-challenge.aspx#herausforderungen)
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Visit the International challenge page.  
-   🔸 Access at https://developer.microsoft.com/en-us/offers/30-days-to-learn-it  
-   🔸 Review the list of cloud skills modules.
-2. Visit the German challenge page.  
-   🔸 Access at https://www.microsoft.com/de-de/techwiese/events/cloud-skills-challenge.aspx#herausforderungen  
-   🔸 Review the local language challenges.
-3. Complete the learning modules.  
-   🔸 Progress through guided tutorials on Microsoft Learn.  
-   🔸 Track your achievements as you go.
-4. Collaborate and exchange ideas.  
-   🔸 Join the community forum to ask questions.  
-   🔸 Share tips and best practices with peers.
-5. Claim your certification discount.  
-   🔸 Upon completion, receive a 50% off voucher for Microsoft Certification exams.  
-   🔸 Redeem the discount when scheduling your exam.
+1. Identify the area in your app or flow where Microsoft Cloud Skills Challenge is needed.
+🔸 Follow established naming conventions for clarity.
+2. Configure the properties according to your business requirements.
+🔸 Test the implementation with sample data.
+3. Verify the output to ensure it matches the expected results.
 
 ## 🎉 Result
-By participating, you’ll gain new skills, connect with the community, and save on certification costs.
+Your workflows become more robust and easier to maintain. Implementing Microsoft Cloud Skills Challenge reduces the time spent on manual adjustments and minimizes potential for errors.
 
 ## 🌟 Key Advantages
-🔸 Structured learning path for Microsoft cloud skills.  
-🔸 Community support and knowledge sharing.  
-🔸 Earn a valuable certification discount.
+🔸 Improved Efficiency: Faster development cycles through automation.
+🔸 Better Consistency: Standardized approach across all projects.
+🔸 Enhanced Reliability: Reduced risk of failure during execution.
+
+## 🎥 Video Tutorial
+{% include video id="noscript" provider="youtube" %}
 
 ---
 

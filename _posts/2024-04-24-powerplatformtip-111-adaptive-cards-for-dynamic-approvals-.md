@@ -20,38 +20,34 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+In many workflows, Power Automate's standard approval function is limited as it doesn't allow for the dynamic selection of the next approver after an approval.
+
 ## 💡 Challenge
-In many workflows, Power Automate’s standard approval function is limited as it doesn’t allow the dynamic selection of the next approver after an approval. Users need a more flexible approval management, choosing the next approver individually after each approval.
+In many workflows, Power Automate's standard approval function is limited as it doesn't allow for the dynamic selection of the next approver after an approval. Users are looking for a solution that makes it possible to manage approvals more flexibly, choosing the next approver individually after each approval.
 
 ## ✅ Solution
-Use Adaptive Cards within Power Automate flows combined with Office 365 User Search to dynamically select the next approver, providing significantly enhanced approval process flexibility.
+The solution is to use Adaptive Cards within Power Automate flows instead of standard approval mechanisms. By leveraging Adaptive Cards combined with the Office 365 User Search, users can dynamically select the next approver, significantly enhancing the flexibility of the process.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Create a Power Automate Flow that sends an Adaptive Card to the first approver as soon as an approval request is initiated.  
-   🔸 Trigger the flow on approval request initiation.  
-   🔸 Use the “Post adaptive card and wait for response” action to send the card.  
-2. Incorporate an Office 365 User Search field into the Adaptive Card, allowing the current approver to select the next approver.  
-   🔸 Add a people picker input in the Adaptive Card JSON.  
-   🔸 Enable searching and selecting from Azure AD users.  
-3. After approval by the current user, the Adaptive Card is automatically sent to the next approver based on the selection.  
-   🔸 Extract the selected approver from the card response.  
-   🔸 Send the next Adaptive Card to that user.  
-4. Repeat this process until the approval chain is complete. Each step is logged for tracking and transparency.  
-   🔸 Loop through the selected approvers in sequence.  
-   🔸 Store each approval action in a tracking variable or data store.  
-5. At the end of the process, a summary is generated showing who has seen, approved, or forwarded the approval request.  
-   🔸 Aggregate approval history into a summary table.  
-   🔸 Send the summary to the original requester or store it in SharePoint.
+* Create a Power Automate Flow that sends an Adaptive Card to the first approver as soon as an approval request is initiated.
+
+* Incorporate an Office 365 User Search field into the Adaptive Card, allowing the current approver to select the next approver.
+
+* After approval by the current user, the Adaptive Card is automatically sent to the next approver based on the selection.
+
+* Repeat this process until the approval chain is complete. Each step is logged for tracking and transparency.
+
+* At the end of the process, a summary is generated showing who has seen, approved, or forwarded the approval request.
 
 ## 🎉 Result
 A versatile and dynamic approval process that transcends the limitations of the standard approval function, allowing users to customize the approval flow according to their needs.
-## 🌟 Key Advantages
-🔸 Unmatched flexibility in selecting approvers.  
-🔸 Enables sequential and conditional approvals.  
-🔸 Improved visibility and transparency of the approval history.
 
----
+## 🌟 Key Advantages
+🔸 Unmatched flexibility in choosing approvers.
+🔸 Enables sequential and conditional approvals.
+🔸 Improved oversight and transparency of the approval history.
+🔸 Optimizes user experience through integration with Office 365.
 
 ## 🎥 Video Tutorial
 {% include video id="KoTyWm7Qg4M" provider="youtube" %}

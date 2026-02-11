@@ -20,51 +20,66 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Enhance PowerApps galleries and data sets with dynamic row numbering—improve user experience, data management, and navigation using simple, real-time techniques.
+
 ## 💡 Challenge
-Incorporating a row number feature in PowerApps galleries and other elements can significantly enhance user interaction and data management. However, understanding how and where this operation is executed is vital.
+If you don't want to miss out on any future #PowerPlatformTip posts, be sure to subscribe to my newsletter – you'll be the first to know whenever I publish a new tip!
+								Type your email…							
+								Subscribe							
+**💡 The Challenge:**
+Incorporating a row number feature in PowerApps galleries and other elements can significantly enhance user interaction and data management.
 
 ## ✅ Solution
+If you don't want to miss out on any future #PowerPlatformTip posts, be sure to subscribe to my newsletter – you'll be the first to know whenever I publish a new tip!
+								Type your email…							
+								Subscribe							
+**💡 The Challenge:**
+Incorporating a row number feature in PowerApps galleries and other elements can significantly enhance user interaction and data management. However, understanding how and where this operation is executed is vital.
+**✅ The Solution:**
 Implement a row numbering system within your app to provide real-time, dynamically updated row numbers for each item in your data sets.
+**🔧 How It’s Done:**
+Use the following code snippet, thanks to Devaney, to add a row number to each record:
+With({locLoadedData: YOUR DATA},
+Ungroup(ForAll(Sequence(CountRows(locLoadedData)),
+{myRecord: Table(Index(locLoadedData,Value)),
+RowNumber: Value }),"myRecord"))
+Replace `YOUR DATA` with your specific formula. This operation is executed within the app, ensuring it's regenerated with each app load or data refresh.
+**🎉 Result:**
+Every time your app loads or the data is refreshed, each item in your gallery or data set will have an accurate and updated row number.
+**🌟 Key Advantages:**
+🔸 Enhanced user experience with clear data referencing 
+🔸 Real-time, in-app data processing for up-to-date row numbering 
+🔸 No external processing or storage required 
+🔸 Delegation concerns are mitigated as the process is internal
+**Further Applications and Considerations:**
+– Ideal for forms, reports, and dashboards for easy data navigation and referencing. 
+– Since the operation is in-app, it avoids delegation issues, making it suitable for large datasets.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Load your data into a local variable.  
-   🔸 Use `With({locLoadedData: YOUR_DATA}, …)` to wrap your data formula.  
-   🔸 Replace `YOUR_DATA` with your specific data source or formula.
-2. Generate a sequence of row indices.  
-   🔸 Apply `Sequence(CountRows(locLoadedData))` to create a table of numbers from 1 to the total rows.  
-   🔸 `CountRows(locLoadedData)` ensures the sequence matches your data length.
-3. Iterate and build records with row numbers.  
-   🔸 Use `ForAll(Sequence(...), { myRecord: Table(Index(locLoadedData, Value)), RowNumber: Value })`.  
-   🔸 `Index(locLoadedData, Value)` retrieves each record by its position; `Value` becomes the row number.
-4. Flatten the nested table.  
-   🔸 Wrap the ForAll in `Ungroup(..., "myRecord")` to unnest `myRecord` tables into a single table with `RowNumber`.
-
-powerapps
-With(
-  { locLoadedData: YOUR_DATA },
-  Ungroup(
-    ForAll(
-      Sequence(CountRows(locLoadedData)),
-      {
-        myRecord: Table(Index(locLoadedData, Value)),
-        RowNumber: Value
-      }
-    ),
-    "myRecord"
-  )
-)
-
+**
+Use the following code snippet, thanks to Devaney, to add a row number to each record:
+With({locLoadedData: YOUR DATA},
+Ungroup(ForAll(Sequence(CountRows(locLoadedData)),
+{myRecord: Table(Index(locLoadedData,Value)),
+RowNumber: Value }),"myRecord"))
+Replace `YOUR DATA` with your specific formula. This operation is executed within the app, ensuring it's regenerated with each app load or data refresh.
+**
 
 ## 🎉 Result
+**
 Every time your app loads or the data is refreshed, each item in your gallery or data set will have an accurate and updated row number.
+**
 
 ## 🌟 Key Advantages
-🔸 Enhanced user experience with clear data referencing  
-🔸 Real-time, in-app data processing for up-to-date row numbering  
-🔸 No external processing or storage required
-
----
+**
+🔸 Enhanced user experience with clear data referencing 
+🔸 Real-time, in-app data processing for up-to-date row numbering 
+🔸 No external processing or storage required 
+🔸 Delegation concerns are mitigated as the process is internal
+**Further Applications and Considerations:**
+– Ideal for forms, reports, and dashboards for easy data navigation and referencing. 
+– Since the operation is in-app, it avoids delegation issues, making it suitable for large datasets.
 
 ## 🎥 Video Tutorial
 {% include video id="lPHr8mtZ7bI" provider="youtube" %}

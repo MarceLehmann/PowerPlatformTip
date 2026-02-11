@@ -10,7 +10,7 @@ excerpt: "Safeguarding your workflows with Power Automate: Learn comprehensive m
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://lehmann.ws/wp-content/uploads/2022/08/pexels-photo-6429164.jpeg
+  teaser: /assets/images/posts/2022/08/pexels-photo-6429164.jpeg
 toc: true
 toc_sticky: true
 tags:
@@ -24,7 +24,7 @@ tags:
   - PowerPlatform
 ---
 
-![Hard Disk Drive - Backup Concept](https://lehmann.ws/wp-content/uploads/2022/08/pexels-photo-6429164.jpeg){: .align-center}
+![Hard Disk Drive - Backup Concept](/assets/images/posts/2022/08/pexels-photo-6429164.jpeg){: .align-center}
 *Photo by Sergei Starostin on [Pexels.com](https://www.pexels.com/photo/black-and-white-hard-disk-drive-6429164/)*
 
 The most frequently asked question I receive is **"How to restore (and create) a backup from a flow to restore earlier versions?"**
@@ -35,7 +35,7 @@ Unfortunately, there is no simple standard solution, but I will show you some po
 
 ### 1. Third-Party Solution by John Liu
 
-The first and easiest solution is the one I presented in [this blog post](https://lehmann.ws/2020/12/30/how-do-i-restore-an-earlier-version-of-my-flow-power-automate-from-john-liu/). It is not free, but it does exactly what we want it to do.
+The first and easiest solution is the one I presented in [this blog post](https://powerplatformtip.com/Article/how-do-i-restore-an-earlier-version-of-my-flow-power-automate-from-john-liu/). It is not free, but it does exactly what we want it to do.
 
 ### 2. Backup and Restore Using Solutions and Power Automate
 
@@ -49,7 +49,7 @@ In this solution, the flow is saved with the solution as a ZIP file on OneDrive 
 
 #### ðŸ”„ Backup Process
 
-![Export Solution](https://lehmann.ws/wp-content/uploads/2022/08/exportsolution.png){: .align-center}
+![Export Solution](/assets/images/posts/2022/08/exportsolution.png){: .align-center}
 
 **Steps:**
 1. Build your flow as shown above
@@ -58,7 +58,7 @@ In this solution, the flow is saved with the solution as a ZIP file on OneDrive 
 
 #### ðŸ”„ Restore Process
 
-![Import Solution](https://lehmann.ws/wp-content/uploads/2022/08/importsolution.png){: .align-center}
+![Import Solution](/assets/images/posts/2022/08/importsolution.png){: .align-center}
 
 **Steps:**
 1. Choose file from your data storage (here OneDrive for Business)
@@ -74,11 +74,11 @@ In this solution, the flow is saved as a JSON file on OneDrive for Business, but
 
 #### ðŸ“¤ Backup Implementation
 
-![Export Flow](https://lehmann.ws/wp-content/uploads/2022/08/exportflow.png){: .align-center}
+![Export Flow](/assets/images/posts/2022/08/exportflow.png){: .align-center}
 
 #### ðŸ“¥ Restore Implementation
 
-![Import Flow](https://lehmann.ws/wp-content/uploads/2022/08/importflow.png){: .align-center}
+![Import Flow](/assets/images/posts/2022/08/importflow.png){: .align-center}
 
 ## ðŸ› ï¸ Ready-to-Use Flow Templates
 

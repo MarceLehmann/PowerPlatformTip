@@ -21,28 +21,39 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Improve Power Apps performance and reduce data traffic by enabling Delay Output in TextInput fields—optimize updates, enhance user experience, and streamline app responsiveness.
+
 ## 💡 Challenge
+💡 **The Challenge:**
 Immediate data updates with every user input can slow down your app and overload your data sources.
 
 ## ✅ Solution
-Implement Delay Output in TextInput fields to improve performance and reduce unnecessary data traffic.
+💡 **The Challenge:**
+Immediate data updates with every user input can slow down your app and overload your data sources.
+✅ **The Solution:**
+Implement Delay Output in TextInput fields to improve app performance and reduce unnecessary data traffic.
+🔧 **How It's Done:**
+* Use the Delay Output property to control when the data update is triggered during user input.
+* This ensures that updates and calculations are only made after a user has finished typing, not with each character entered.
+🎉 **Result:**
+Enjoy a faster, more responsive app with optimized data handling.
+🌟 **Key Advantages:**
+* **Improved Performance**: Delays in data processing lead to a smoother user experience.
+* **Reduced Load**: Lessens the number of requests to your data sources, preserving resources.
+* **Efficient Data Traffic**: Minimizes network traffic, leading to quicker app responses.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Use Delay Output  
-   🔸 Configure the Delay Output property on your TextInput control.  
-2. Optimize update timing  
-   🔸 Ensure updates and calculations occur only after the user has finished typing, not on each character.
+* Use the Delay Output property to control when the data update is triggered during user input.
+* This ensures that updates and calculations are only made after a user has finished typing, not with each character entered.
 
 ## 🎉 Result
 Enjoy a faster, more responsive app with optimized data handling.
 
 ## 🌟 Key Advantages
-🔸 Improved Performance  
-🔸 Reduced Load  
-🔸 Efficient Data Traffic
-
----
+* **Improved Performance**: Delays in data processing lead to a smoother user experience.
+* **Reduced Load**: Lessens the number of requests to your data sources, preserving resources.
+* **Efficient Data Traffic**: Minimizes network traffic, leading to quicker app responses.
 
 ## 🎥 Video Tutorial
 {% include video id="nnzW-kENV40" provider="youtube" %}

@@ -19,30 +19,26 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Combine OData filtering with Filter array in Power Automate for precise, case-sensitive SharePoint queries.
+
 ## 💡 Challenge
-SharePoint OData filtering is case-insensitive, leading to inaccurate results when exact letter casing matters.
+SharePoint OData filtering does not differentiate between uppercase and lowercase letters.
 
 ## ✅ Solution
-First use an OData filter for performance, then apply a case-sensitive Filter array action to refine the data.
+Use OData filtering for an initial, quick query. Then, refine the data using the "Filter array" action, which does distinguish between uppercase and lowercase characters.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Apply OData filtering in your SharePoint query for an initial selection.  
-   🔸 Use a filter expression (e.g., `Title eq 'Value'`)  
-   🔸 Quickly reduces the dataset before further processing  
-2. Add a Filter array action to the flow.  
-   🔸 Configure it to match items with exact casing  
-   🔸 Use an expression like `equals(item()?['Field'], 'Value')`  
+Apply OData filtering in your SharePoint query for the first selection (e.g., based on a specific field value).
+Follow it up with the "Filter array" action to perform a case-sensitive check by filtering the text again in the array.
 
 ## 🎉 Result
-You get fast initial filtering with OData and precise, case-sensitive verification with Filter array, ensuring accurate data retrieval.
+You get fast and efficient filtering with OData, combined with precise, case-sensitive verification using "Filter array." This ensures you retrieve exactly the data you're looking for.
 
 ## 🌟 Key Advantages
-🔸 Fast initial queries with OData  
-🔸 Precise case-sensitive validation  
-🔸 Combined efficiency and accuracy
-
----
+🔸 Fast queries with OData
+🔸 Accurate filtering with "Filter array"
+🔸 Combined efficiency and precision
 
 ## 🎥 Video Tutorial
 {% include video id="a7Hendredjs" provider="youtube" %}

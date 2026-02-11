@@ -18,27 +18,36 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+In PowerApps and PowerAutomate, managing multiple potential blank values often results in complex, nested If statements.
+
 ## 💡 Challenge
-In PowerApps and PowerAutomate, managing multiple potential blank values often results in complex, nested If statements. This hinders readability and efficiency.
+In PowerApps and PowerAutomate, managing multiple potential blank values often results in complex, nested If statements. This complexity hinders readability and efficiency.
 
 ## ✅ Solution
-Use the Coalesce function to scan a list of parameters and return the first non-blank value, significantly reducing formula complexity.
+Implement the Coalesce function. This function effectively scans through a list of parameters and returns the first non-blank value, simplifying formula complexity significantly.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Use the Coalesce function with multiple values as parameters.  
-   🔸 List all values as parameters in the Coalesce function instead of nested Ifs.  
-2. Evaluate and return the first non-blank value.  
-   🔸 Coalesce scans each parameter in order.  
-   🔸 Returns the first non-blank value it encounters.
+* Instead of using multiple nested If statements to check each value, list the values as parameters in the Coalesce function.
+
+* The function evaluates each parameter in order and returns the first non-blank value it encounters.
 
 ## 🎉 Result
-Formulas become streamlined, improving readability, development efficiency, and future maintenance of your app or flow.
+This approach streamlines your formulas, making them easier to read and understand. It not only improves the development process but also enhances future maintenance of the app or flow.
 
 ## 🌟 Key Advantages
-🔸 Enhanced readability.  
-🔸 Reduced complexity.  
+🔸 Enhanced readability.
+
+🔸 Reduced complexity.
+
 🔸 Easier maintenance.
+
+🔸 Improved performance in certain scenarios.
+
+For a practical demonstration, refer to the video "[PowerApps Coalesce Function – Return non-blank values" by Shane Young.
+
+## 🎥 Video Tutorial
+{% include video id="8M11aCqHrnY" provider="youtube" %}
 
 ---
 

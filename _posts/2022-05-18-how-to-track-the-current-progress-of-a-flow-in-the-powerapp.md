@@ -10,7 +10,7 @@ excerpt: "Learn how to track Power Automate flow progress in real-time within yo
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://lehmann.ws/wp-content/uploads/2022/05/overview-1.gif
+  teaser: /assets/images/posts/2022/05/overview-1.gif
 toc: true
 toc_sticky: true
 tags:
@@ -24,7 +24,7 @@ tags:
   - PowerPlatform
 ---
 
-![Flow Progress Overview](https://lehmann.ws/wp-content/uploads/2022/05/overview-1.gif){: .align-center}
+![Flow Progress Overview](/assets/images/posts/2022/05/overview-1.gif){: .align-center}
 
 In some scenarios, you or your users would like to see how far a Cloud Flow process (Power Automate) has progressed after starting it via PowerApps.
 
@@ -34,7 +34,7 @@ Unfortunately, it's not possible to use "Respond to PowerApps" multiple times to
 
 For this challenge, we can easily create a StateLog table and check it regularly via a timer control. The key is to send updates to the StateLog entry after reaching important milestones in the flow.
 
-[**Download the complete solution here**](https://lehmannws.sharepoint.com/:u:/s/lehmann.ws/EZPqZIeuWXNBmNMDKrVf7cAB515lmUp4PTtzG8dfWmoZpw?e=8gJXFt) - ready to use at your location.
+[**Download the complete solution here**](https://lehmannws.sharepoint.com/:u:/s/powerplatformtip.com/EZPqZIeuWXNBmNMDKrVf7cAB515lmUp4PTtzG8dfWmoZpw?e=8gJXFt) - ready to use at your location.
 
 ## ðŸ› ï¸ What You Need for Implementation
 
@@ -45,7 +45,7 @@ For this challenge, we can easily create a StateLog table and check it regularly
 
 ## ðŸ“Š Setting Up the StateLog Data Source
 
-![SharePoint List Overview](https://lehmann.ws/wp-content/uploads/2022/05/overview-sp-list-1.png){: .align-center}
+![SharePoint List Overview](/assets/images/posts/2022/05/overview-sp-list-1.png){: .align-center}
 
 **Build a data source with three columns:**
 
@@ -55,7 +55,7 @@ For this challenge, we can easily create a StateLog table and check it regularly
 
 ## âš¡ Configuring the Power Automate Flow
 
-![Cloud Flow Overview](https://lehmann.ws/wp-content/uploads/2022/05/overview-cloudflow.png){: .align-center}
+![Cloud Flow Overview](/assets/images/posts/2022/05/overview-cloudflow.png){: .align-center}
 
 **Create a flow with this structure:**
 
@@ -71,7 +71,7 @@ The scopes named "Flow Actions" are symbolic - use any actions you need. After i
 
 ## ðŸ“± PowerApps Implementation
 
-![PowerApps Overview](https://lehmann.ws/wp-content/uploads/2022/05/overview.png){: .align-center}
+![PowerApps Overview](/assets/images/posts/2022/05/overview.png){: .align-center}
 
 ### 1. Flow Trigger Button
 
@@ -161,7 +161,7 @@ Here's the complete flow definition you can import:
           },
           "parameters":
           {
-            "dataset":"https://lehmannws.sharepoint.com/sites/lehmann.ws",
+            "dataset":"https://lehmannws.sharepoint.com/sites/powerplatformtip.com",
             "table":"5fe8a63f-d26b-419e-a693-6687f7275ebf",
             "item/Title":"Flow started",
             "item/GUID0":"@triggerBody()['text']",

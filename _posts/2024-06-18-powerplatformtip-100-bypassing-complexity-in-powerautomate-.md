@@ -21,6 +21,9 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Streamline Power Automate flows by replacing complex Switch and Condition actions with dynamic JSON objects and formulas for faster, more maintainable automation.
+
 ## 💡 Challenge
 Standard use of Switch or Condition in Power Automate can often be bypassed for more streamlined processes.
 

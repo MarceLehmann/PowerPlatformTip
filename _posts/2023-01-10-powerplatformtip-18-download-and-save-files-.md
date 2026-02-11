@@ -18,6 +18,9 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Downloading files, whether public or password-protected, can present unique challenges in terms of accessibility and security.
+
 ## 💡 Challenge
 Downloading files, whether public or password-protected, can present unique challenges in terms of accessibility and security.
 
@@ -25,21 +28,19 @@ Downloading files, whether public or password-protected, can present unique chal
 Employ different methods for public downloads and password-protected files to ensure secure and efficient file handling.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. For public downloads  
-   🔸 Use the 'Upload file from URL' action.  
-   🔸 This method is straightforward for openly accessible files.  
-2. For password-protected files  
-   🔸 Use the 'HTTP Request & Create File' action.  
-   🔸 This approach handles files that require authentication.
+🔸 For public downloads: Use the 'Upload file from URL' action. This method is straightforward for files that are openly accessible online. 
+🔸 For password-protected files: Utilize the 'HTTP Request & Create File' action. This approach is essential for accessing files that require authentication or are secured.
 
 ## 🎉 Result
 Streamlined and secure process for downloading and saving files, regardless of their accessibility status.
 
 ## 🌟 Key Advantages
-🔸 Ensures secure handling of sensitive, password-protected files  
-🔸 Provides a straightforward method for accessing public files  
+🔸 Ensures secure handling of sensitive, password-protected files
+🔸 Provides a straightforward method for accessing public files
 🔸 Optimizes the file management process in your PowerPlatform solutions
+
+## 🎥 Video Tutorial
+{% include video id="noscript" provider="youtube" %}
 
 ---
 

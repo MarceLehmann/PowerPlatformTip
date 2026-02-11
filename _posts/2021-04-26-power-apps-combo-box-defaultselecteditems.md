@@ -10,7 +10,7 @@ excerpt: "Learn how to properly set DefaultSelectedItems in PowerApps ComboBox c
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://img.youtube.com/vi/AXAbmy9zYTU/0.jpg
+  teaser: /assets/images/posts/external/ext_dfa092c519e3f5f951c7c56374e36f4a.jpg
 toc: true
 toc_sticky: true
 tags:

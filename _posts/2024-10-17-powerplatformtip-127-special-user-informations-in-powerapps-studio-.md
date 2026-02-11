@@ -28,30 +28,33 @@ toc_sticky: true
 
 ---
 
+## 📝 TL;DR
+Automatically switch between test and production user emails in PowerApps Studio using environment detection for secure, automated app testing and deployment.
+
 ## 💡 Challenge
-While developing apps in Power Apps Studio mode, we often use test values like a test email address. However, it’s easy to forget to remove these values before deploying the app to production.
+While developing apps in Power Apps Studio mode, we often use test values like a test email address.
 
 ## ✅ Solution
-Detect when the app is in Studio Mode and use a test email for development, switching to the user’s actual email in production.
+You can implement a check to see if your app is running in Studio Mode. If it is, use a test email account for development. When the app is in the Production-Mode, it will automatically switch to using the user's email address.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Define the Studio Mode variable  
-   🔸 fxIsStudioMode = StartsWith(Host.Version, "PowerApps-Studio")  
-   🔸 Checks if the app is running in Power Apps Studio.  
-2. Define the user email variable  
-   🔸 fxUserEmail = If(fxIsStudioMode, "testaccount@company.com", User().Email)  
-   🔸 Uses the test account in Studio Mode and the user’s email in production.
+Use this formula to detect if your app is in Studio Mode and switch email addresses accordingly:
+fxIsStudioMode = StartsWith(Host.Version, "PowerApps-Studio");
+fxUserEmail = If(
+fxIsStudioMode,
+"testaccount@company.com",
+User().Email
+);
+This way, you'll use a test email during development and the correct user email in production without manual changes.
 
 ## 🎉 Result
-Automatically uses test email during development and correct user email in production, eliminating manual changes and reducing deployment errors.
+No more accidentally deploying apps with hardcoded test emails! This approach makes the switch seamless and automatic.
 
 ## 🌟 Key Advantages
-🔸 Prevents accidental deployment of test data  
-🔸 Saves time by automating email assignment  
+🔸 Prevents accidental deployment of test data
+🔸 Saves time by automating email assignment
 🔸 Enhances app security and consistency
-
----
+Special thanks to [Matthew Devaney](https://www.linkedin.com/in/matthew-devaney) for sharing this fantastic PowerApps tip!
 
 ## 🎥 Video Tutorial
 {% include video id="640i6HAngNU" provider="youtube" %}

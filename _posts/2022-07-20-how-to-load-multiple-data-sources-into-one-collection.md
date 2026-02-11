@@ -10,7 +10,7 @@ excerpt: "Learn efficient techniques to combine multiple data sources into a sin
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80
+  teaser: /assets/images/posts/external/ext_9777c4796176ba3562e990676b9f5d43.png
 toc: true
 toc_sticky: true
 tags:
@@ -23,7 +23,7 @@ tags:
   - Data Management
 ---
 
-![Data Collections](https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80){: .align-center}
+![Data Collections](/assets/images/posts/external/ext_9777c4796176ba3562e990676b9f5d43.png){: .align-center}
 
 Often, data is not stored in just one place, but you need a combination of multiple data sources. While you could solve this with multiple collections, this is not always the most practical approach.
 

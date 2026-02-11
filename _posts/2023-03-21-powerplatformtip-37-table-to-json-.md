@@ -18,6 +18,9 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Working with two-column tables, specifically 'Name' and 'Value' pairs, in Power Automate can be tedious when trying to access individual entries efficiently.
+
 ## 💡 Challenge
 Working with two-column tables, specifically 'Name' and 'Value' pairs, in Power Automate can be tedious when trying to access individual entries efficiently.
 
@@ -25,21 +28,22 @@ Working with two-column tables, specifically 'Name' and 'Value' pairs, in Power 
 A simple method to streamline the selection of individual entries within such tables by converting the data into a JSON record and utilizing the "Parse JSON" action.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Convert your 'Name' and 'Value' table into a JSON record.  
-   🔸 This transformation allows for more flexible data manipulation.  
-   🔸 Prepares data for the Parse JSON action.
-2. Use the "Parse JSON" action in Power Automate.  
-   🔸 You define a JSON schema to enforce structure.  
-   🔸 Enables straightforward access to any entry within your flow.
+* **Step 1:** Convert your 'Name' and 'Value' table into a JSON record. This transformation allows for more flexible data manipulation.
+
+* **Step 2:** Use the "Parse JSON" action in Power Automate. By doing so, you effectively structure your data, enabling straightforward access to any entry within your flow.
 
 ## 🎉 Result
 An enhanced Power Automate experience where accessing and selecting data from two-column tables becomes seamless, saving time and reducing complexity.
 
 ## 🌟 Key Advantages
-🔸 Efficiency: Quickly convert tabular data into a manipulable format.  
-🔸 Simplicity: Access individual data points easily without complex expressions.  
-🔸 Flexibility: Adapt and extend this method for various data structures beyond simple name-value pairs.
+🔸 **Efficiency:** Quickly convert tabular data into a manipulable format. 
+🔸 **Simplicity:** Access individual data points easily without complex expressions. 
+🔸 **Flexibility:** Adapt and extend this method for various data structures beyond simple name-value pairs.
+
+This approach not only optimizes your workflow but also unlocks new possibilities for data processing within Power Automate, making your automation tasks more manageable and efficient.
+
+## 🎥 Video Tutorial
+{% include video id="Oxf1mnN6k0M" provider="youtube" %}
 
 ---
 
@@ -54,4 +58,3 @@ Special characters may need escaping in JSON. Consider using the replace() funct
 While there's no strict limit, very large tables may impact flow performance. Consider batch processing for tables with thousands of rows.
 
 ---
-

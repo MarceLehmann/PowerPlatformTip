@@ -20,36 +20,34 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Protect sensitive data in Power Automate by enabling Secure Inputs and Secure Outputs—mask confidential information in flow logs, enhance compliance, and secure workflows.
+
 ## 💡 Challenge
-In the digital world, data security is paramount. When creating Flows in Power Automate, sensitive data such as personal information and confidential details are often processed and passed between actions. Without proper safeguards, this data could be exposed to unauthorized access or leaks.
+Managing complex workflows in Power Platform can be difficult without the right approach to Secure Inputs / Secure Outputs. Many developers find themselves struggling with efficiency and manual configuration.
 
 ## ✅ Solution
-Utilize "Secure Inputs" and "Secure Outputs" in Power Automate to hide the inputs and outputs of specific actions in your Flow logs, ensuring sensitive data doesn’t get exposed in the run history.
+By implementing Secure Inputs / Secure Outputs, you can automate repetitive tasks and simplify your application logic. This feature provides a native way to handle data more effectively.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Go to the action you want to secure in your Flow.  
-   🔸 Open your Flow in the Power Automate portal.  
-   🔸 Click the target action to expand its options.
-2. In the new designer select 'Settings'.  
-   🔸 Click the ellipsis (…) on the action.  
-   🔸 Choose 'Settings' from the dropdown menu.
-3. Toggle on 'Secure Inputs' and/or 'Secure Outputs' to mask the data in logs.  
-   🔸 Turn on the switch for Secure Inputs.  
-   🔸 Turn on the switch for Secure Outputs as needed.
-4. Save your changes to ensure these settings are applied.  
-   🔸 Click 'Save' in the Flow designer.  
-   🔸 Run a test to verify the settings are active.
+* Go to the action you want to secure in your Flow.
+* Go to the action you want to secure in your Flow.
+* In the new designer select 'Settings'.
+* Toggle on 'Secure Inputs' and/or 'Secure Outputs' to mask the data in logs.
+* Save your changes to ensure these settings are applied.
+By enabling these features, your Flow's sensitive data, such as personal details or confidential information, will be hidden in run history. This means if someone is reviewing the Flow logs, they won't see the actual data that was processed, significantly reducing the risk of data leakage or unauthorized access.
+🔸 **Enhanced Security**: Ensures sensitive data is not visible in Flow logs, protecting against unauthorized access. 
+🔸 **Compliance Friendly**: Helps in maintaining compliance with data protection regulations by safeguarding personal and confidential information. 
+🔸 **Peace of Mind**: Adds an extra layer of security to your automated processes, allowing you to focus on building efficient workflows without compromising data integrity.
+Remember, while "Secure Inputs" and "Secure Outputs" are powerful, they are just one aspect of a comprehensive data security strategy. Always consider the full context of your data processing and adhere to best practices for maximum protection.
 
 ## 🎉 Result
-By enabling Secure Inputs and Secure Outputs, all sensitive data processed by the secured actions will be hidden in the Flow run history. Anyone reviewing the logs will see masked placeholders instead of actual values, significantly reducing the risk of data leakage or unauthorized access.
+Your workflows become more robust and easier to maintain. Implementing Secure Inputs / Secure Outputs reduces the time spent on manual adjustments and minimizes potential for errors.
 
 ## 🌟 Key Advantages
-🔸 Enhanced Security: Ensures sensitive data is not visible in Flow logs, protecting against unauthorized access.  
-🔸 Compliance Friendly: Helps maintain compliance with data protection regulations by safeguarding personal and confidential information.  
-🔸 Peace of Mind: Adds an extra layer of security to your automated processes, allowing you to focus on building workflows without compromising data integrity.
-
----
+🔸 Improved Efficiency: Faster development cycles through automation.
+🔸 Better Consistency: Standardized approach across all projects.
+🔸 Enhanced Reliability: Reduced risk of failure during execution.
 
 ## 🎥 Video Tutorial
 {% include video id="xEmk4Ka5SlE" provider="youtube" %}

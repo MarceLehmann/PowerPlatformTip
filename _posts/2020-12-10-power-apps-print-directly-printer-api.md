@@ -10,7 +10,7 @@ excerpt: "Discover how to print directly from Power Apps using an innovative API
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://img.youtube.com/vi/m4Fu9af2h1c/0.jpg
+  teaser: /assets/images/posts/external/ext_ea5a42e1f2c4e81a1039acb21fd2ead7.jpg
 toc: true
 toc_sticky: true
 tags:

@@ -22,6 +22,9 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Design consistent, flexible, and data-driven menus in Power Apps using the Gallery control. Improve UI, simplify maintenance, and enhance user experience with dynamic menu layouts.
+
 ## 💡 Challenge
 Designing menus in Power Apps with individual buttons leads to inconsistent layouts, tedious styling, and manual updates for each item.
 

@@ -18,30 +18,33 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Show all gallery items in PowerApps when filter input is blank using isblank in your filter logic. Improve user experience and data access.
+
 ## 💡 Challenge
-Filtering galleries in PowerApps based on user input (like text input, dropdown, or combo box) is common. But what if you want to display all items when no input is provided?
+Filtering galleries in PowerApps based on user input (like text input, dropdown, or combo box) is common.
 
 ## ✅ Solution
-Use the `|| isblank(YOUR FILTERINPUT)` condition in your filter formula to show all items when the filter input is empty.
+Use the "|| isblank(YOUR FILTERINPUT)" condition in your filter formula.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Create a gallery and set up your filter inputs (e.g., text input, dropdown, or combo box).  
-2. Apply the following formula to your gallery’s Items property:  
-   
-   Filter(YourDataSource, Condition || isblank(YOUR FILTERINPUT))
-     
-   🔸 YourDataSource is the source of your data.  
-   🔸 Condition is your filtering condition (e.g., `TextInput.Text = ThisItem.Field`).  
-   🔸 YOUR FILTERINPUT is the input control (e.g., TextInput, Dropdown).
+* Create a gallery and set up your filter inputs (e.g., text input, dropdown, combo box).
+* Apply the following formula to your gallery's Items property:
+Filter(YourDataSource, Condition || isblank(YOUR FILTERINPUT))
+🔸 YourDataSource is the source of your data.
+🔸 Condition is your filtering condition (e.g., TextInput.Text = ThisItem.Field).
+🔸 YOUR FILTERINPUT is the input control (e.g., TextInput, Dropdown).
 
 ## 🎉 Result
-When the filter input is empty, the gallery will show all items. If an input is provided, the gallery will filter based on the specified condition.
+When the filter input is empty, the gallery will show all items. If the input is provided, the gallery will filter based on the specified condition.
 
 ## 🌟 Key Advantages
-🔸 Simplifies gallery filtering logic.  
-🔸 Enhances user experience by dynamically displaying all or filtered data.  
+🔸 Simplifies gallery filtering logic.
+🔸 Enhances user experience by dynamically displaying all or filtered data.
 🔸 Reduces the need for multiple filtering conditions.
+
+## 🎥 Video Tutorial
+{% include video id="LsgqI7lM4qM" provider="youtube" %}
 
 ---
 

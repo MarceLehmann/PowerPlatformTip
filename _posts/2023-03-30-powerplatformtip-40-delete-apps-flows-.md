@@ -18,40 +18,38 @@ toc: true
 toc_sticky: true
 ---
 
-## 💡 Challenge  
-Are you battling a chaotic workspace littered with outdated test apps and flows? Don’t worry! We’ve got your back with a step-by-step guide to efficiently eliminate solutions and declutter your workspace.
+## 📝 TL;DR
+Are you battling a chaotic workspace littered with outdated test apps and flows? Don't worry! We've got your back with a step-by-step guide to efficiently eliminate solutions and declutter your workspace.
 
-## ✅ Solution  
+## 💡 Challenge
+Are you battling a chaotic workspace littered with outdated test apps and flows? Don't worry! We've got your back with a step-by-step guide to efficiently eliminate solutions and declutter your workspace.
+
+## ✅ Solution
 Our method ensures you can remove a bulk of apps or flows, especially test ones, by gathering them in a solution and applying the following steps for a tidier and more organized workspace.
 
-## 🔧 How It's Done  
-Here's how to do it:  
-1. Gather all test apps and flows into a single unmanaged solution.  
-   🔸 Open the Power Apps maker portal and navigate to **Solutions**.  
-   🔸 Select **New solution** and add all target apps and flows.  
-2. Verify there are no dependencies from other solutions, including connection references.  
-   🔸 Check **Connection references** in the solution for any external links.  
-   🔸 Resolve or remove any solution dependencies before proceeding.  
-3. Export your solution as a managed solution.  
-   🔸 In the solution details, choose **Export** > **Managed**.  
-   🔸 Download the `.zip` package to your local machine.  
-4. Delete the unmanaged solution (all elements will remain in your environment).  
-   🔸 Select the unmanaged solution and click **Delete**.  
-   🔸 Confirm removal—this only deletes the solution container.  
-5. Re-import the managed solution.  
-   🔸 Go to **Solutions** > **Import**, then upload the managed package.  
-   🔸 Follow prompts to complete the import process.  
-6. Delete the managed solution, which will then remove all old elements.  
-   🔸 Select the managed solution and click **Delete**.  
-   🔸 Confirm to permanently remove apps, flows, and related components.  
+## 🔧 How It's Done
+* Verify there are no dependencies from other solutions, including connection references.
 
-## 🎉 Result  
+* Export your solution as a managed solution.
+
+* Delete the unmanaged solution (all elements will remain in your environment).
+
+* Re-import the managed solution.
+
+* Delete the managed solution, which will then remove all old elements.
+
+## 🎉 Result
 By following this process, you can effectively clear out all those unnecessary test apps and flows from your workspace, leading to a more streamlined and efficient working environment.
 
 ## 🌟 Key Advantages
-🔸 Bulk removal of test apps and flows.  
-🔸 Maintains a clean and organized workspace.  
-🔸 Reduces clutter and improves productivity.
+* Efficient cleanup of large numbers of apps or flows.
+
+* Maintains a neat and organized workspace.
+
+* Ensures all elements are removed without leaving residuals.
+
+## 🎥 Video Tutorial
+{% include video id="4dg4kRAuXz8" provider="youtube" %}
 
 ---
 

@@ -10,7 +10,7 @@ excerpt: "Discover an amazing PowerApps component that allows you to merge image
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://lehmann.ws/wp-content/uploads/2023/01/img1.png
+  teaser: /assets/images/posts/2023/01/img1.png
 toc: true
 toc_sticky: true
 tags:
@@ -24,7 +24,7 @@ tags:
   - PowerPlatform
 ---
 
-![Image Merge Before and After](https://lehmann.ws/wp-content/uploads/2023/01/img1.png){: .align-center}
+![Image Merge Before and After](/assets/images/posts/2023/01/img1.png){: .align-center}
 
 I'm proud to present you an amazing component for PowerApps from my talented brother [Martin Lehmann](https://www.linkedin.com/in/ml92/)!
 
@@ -110,7 +110,7 @@ The component works seamlessly on:
 
 ## ðŸ”„ Comparison: Before vs After
 
-![Before and After Comparison](https://lehmann.ws/wp-content/uploads/2023/01/img8.png){: .align-center}
+![Before and After Comparison](/assets/images/posts/2023/01/img8.png){: .align-center}
 
 The visual comparison shows the dramatic improvement in capability and user experience.
 

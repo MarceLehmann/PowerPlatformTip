@@ -10,7 +10,7 @@ excerpt: "Great demo start, how to refresh used data, which have been updated, b
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://img.youtube.com/vi/BtdOvi5Ui-E/0.jpg
+  teaser: /assets/images/posts/external/ext_e26849c36ba9e2f577204589b9bbd933.jpg
 toc: true
 toc_sticky: true
 tags:

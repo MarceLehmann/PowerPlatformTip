@@ -10,7 +10,7 @@ excerpt: "Explore the differences between Power Automate Flows and SharePoint Au
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://img.youtube.com/vi/mugFvl_lISQ/0.jpg
+  teaser: /assets/images/posts/external/ext_f2d59d1c86fc7f2c7314aff0e8cd4d95.jpg
 toc: true
 toc_sticky: true
 tags:

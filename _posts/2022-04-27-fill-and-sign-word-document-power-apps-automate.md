@@ -10,7 +10,7 @@ excerpt: "Simply convert a Word into a zip file, replace the data a little and c
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://img.youtube.com/vi/dHW-rAqx7qM/0.jpg
+  teaser: /assets/images/posts/external/ext_9eba59781d325292e264501048bc431d.jpg
 toc: true
 toc_sticky: true
 tags:

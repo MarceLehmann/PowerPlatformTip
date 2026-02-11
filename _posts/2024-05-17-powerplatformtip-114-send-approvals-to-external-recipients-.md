@@ -39,7 +39,7 @@ _Advanced Method:_
 2. Create an Adaptive Card with approval options  
 3. Send the Adaptive Card via the Outlook action to external recipients  
 4. Process the response from the Adaptive Card in your flow  
-   🔸 You can find the step-by-step process here: https://lehmann.ws/2021/03/19/power-automate-tutorial-approvals-adaptive-cards-outlook-awesome-from-yash-agarwal/
+   🔸 You can find the step-by-step process here: https://powerplatformtip.com/Article/power-automate-tutorial-approvals-adaptive-cards-outlook-awesome-from-yash-agarwal/
 
 ## 🎉 Result
 External stakeholders can now participate in your approval processes, either by email response or interactively via an Adaptive Card in Outlook.

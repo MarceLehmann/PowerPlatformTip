@@ -16,11 +16,12 @@ Disallow: /assets/js/
 Disallow: /CONTENT/
 Disallow: /DOCS/
 Disallow: /SOCIALMEDIA/
+Disallow: /GOOGLESEARCHCONSOLE/
+Disallow: /NEWOPTIMIZEDPOSTS/
 
 # Block utility pages (keine eigenständigen Inhalte)
 Disallow: /categories/
 Disallow: /tags/
-Disallow: /posts/
 Disallow: /thank-you/
 
 # Allow valuable resources

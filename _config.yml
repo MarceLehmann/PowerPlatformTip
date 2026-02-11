@@ -72,6 +72,11 @@ sitemap_exclude:
   - /404.html
   - /search/
   - /page:num/
+  - /CONTENT/
+  - /DOCS/
+  - /SOCIALMEDIA/
+  - /GOOGLESEARCHCONSOLE/
+  - /NEWOPTIMIZEDPOSTS/
   
 # Feed settings (for jekyll-feed plugin)  
 feed:

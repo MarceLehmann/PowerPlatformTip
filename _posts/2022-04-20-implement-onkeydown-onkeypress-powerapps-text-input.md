@@ -10,7 +10,7 @@ excerpt: "Discover ingenious workarounds for implementing keyboard event handlin
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://img.youtube.com/vi/kzIv6kNuzJ4/0.jpg
+  teaser: /assets/images/posts/external/ext_f34987e1450433149a711b1d4bef03cd.jpg
 toc: true
 toc_sticky: true
 tags:

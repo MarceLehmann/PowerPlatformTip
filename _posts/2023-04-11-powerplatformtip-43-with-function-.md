@@ -18,31 +18,36 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+Complex calculations and expressions in PowerApps can lead to code that's hard to read and maintain.
+
 ## 💡 Challenge
-Complex calculations and expressions in PowerApps can lead to code that's hard to read and maintain, especially when implementing formulas like the Haversine distance calculation which require multiple variable declarations.
+Complex calculations and expressions in PowerApps can lead to code that's hard to read and maintain. Imagine you're calculating the distance between two points on Earth using the Haversine formula. The traditional approach can clutter your code with repetitive variable declarations.
 
 ## ✅ Solution
-The With function in PowerApps allows defining multiple variables in a single block, streamlining complex expressions like the Haversine formula for improved readability and maintainability.
+The "With" function in PowerApps expressions enhances code readability and maintainability. By allowing the definition of multiple variables within a single block, it streamlines complex expressions, like those used in the Haversine formula.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Use the With function to define all necessary variables for the calculation.  
-   🔸 Declare variables for Earth's radius, latitude difference, and longitude difference.  
-   🔸 Compute intermediate values used in the Haversine formula.  
-2. Reference defined variables directly in your formula.  
-   🔸 Avoid repeating expressions like variable computations.  
-   🔸 Make the Haversine formula cleaner and more maintainable.  
-3. Apply the With function syntax.  
-   🔸 Use `With({var1: value1, var2: value2, ...}, YourFormulaHere)`  
-   🔸 Place your formula within the same With block for concise code.  
+* **Step 1:** Use the "With" function to define all necessary variables for the calculation. This includes the radius of Earth, the differences in latitude and longitude, and the Haversine formula itself.
+
+* **Step 2:** Refer to these variables directly within your formula, avoiding repetition and making the code cleaner.
+
+* **Example:** With({var1: value1, var2: value2, ...}, YourFormulaHere)
 
 ## 🎉 Result
-Your PowerApps formula becomes more concise and organized, as With centralizes variable declarations within a single block. Complex calculations like the Haversine formula are now easier to read, update, and maintain.
+A more concise, organized approach to implementing complex formulas. The "With" function encapsulates variable declarations, making the code easier to read and maintain.
 
 ## 🌟 Key Advantages
-🔸 Improved Readability: Groups variable declarations in a single block to reduce clutter.  
-🔸 Ease of Maintenance: Only one location to update variables or logic ensures straightforward changes.  
-🔸 Enhanced Performance: Streamlined expressions can lead to better app performance.
+* **Improved Readability:** Reduces clutter by grouping variable declarations.
+
+* **Ease of Maintenance:** Updates to variables or logic require changes in only one place.
+
+* **Enhanced Performance:** Potentially optimizes your app's performance by streamlining expressions.
+
+Remember, while the "With" function can make your code more efficient and readable, it's essential to use it judiciously to not abstract your code too much, which could lead to its own readability issues for those unfamiliar with your logic.
+
+## 🎥 Video Tutorial
+{% include video id="GlCfiZD8YQk" provider="youtube" %}
 
 ---
 

@@ -10,7 +10,7 @@ excerpt: "A great video, which replaces all the cumbersome workarounds via Power
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
-  teaser: https://img.youtube.com/vi/vqK29FWbLxU/0.jpg
+  teaser: /assets/images/posts/external/ext_9e9b0984b560d3089e0e64c6066ce4a3.jpg
 toc: true
 toc_sticky: true
 tags:

@@ -21,31 +21,36 @@ toc: true
 toc_sticky: true
 ---
 
+## 📝 TL;DR
+You need the latest entry from a SharePoint list in PowerApps, but the direct approach seems out of reach.
+
 ## 💡 Challenge
 You need the latest entry from a SharePoint list in PowerApps, but the direct approach seems out of reach.
 
 ## ✅ Solution
-Use SortByColumns on the SharePoint list to order by ID descending, then retrieve the top item using the First function.
+Employ SortByColumns to sort the SharePoint list by the ID column in descending order, then pluck out the first item with the First function.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Utilize `SortByColumns` on the SharePoint data source, targeting the ID column with a descending sort order.  
-   🔸 Ensures the list is sorted from newest to oldest.  
-   🔸 Places the most recent item first.  
-2. Apply the `First` function around `SortByColumns` to grab the top-most item.  
-   🔸 Retrieves the latest entry efficiently.  
-   🔸 Bypasses the non-delegable `Last` function.
+* Utilize SortByColumns on the SharePoint data source, targeting the ID column with a descending sort order. This method arranges the items such that the latest entry is at the top.
+
+* Apply the First function around the SortByColumns to grab now top-most item, effectively retrieving the last entry in your list.
 
 ## 🎉 Result
-You can reliably access the most recent item from your SharePoint list in PowerApps, bypassing the limitations of the Last function.
+This method ensures you access the most recent item from your SharePoint list in PowerApps, bypassing the limitation with the Last function elegantly.
 
 ## 🌟 Key Advantages
-🔸 Simplicity and efficiency in retrieving the most recent list item.  
-🔸 Versatile sorting approach adaptable to other columns.  
-🔸 Seamless PowerApps integration without complex workarounds.
+* **Simplicity and Efficiency**: A straightforward approach to accessing the most recent list entries.
+
+* **Versatility**: Can be adapted to sort by other columns for different scenarios.
+
+* **PowerApps Integration**: Seamlessly integrates within your PowerApps logic, enhancing functionality without complex workarounds.
+
+## 🎥 Video Tutorial
+{% include video id="8fIiREiIBNM" provider="youtube" %}
+
+---
 
 ## 🛠️ FAQ
-
 **Q: Why can't I use the Last function directly on SharePoint lists?**
 The Last function is not delegable for SharePoint data sources in PowerApps, which means it can only work with the first 500 records. Using SortByColumns with First ensures you get the actual latest item regardless of list size.
 
