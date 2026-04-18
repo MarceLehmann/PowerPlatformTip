@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip NNN – 'Limit Apply to Each with take()'"
+title: "#PowerPlatformTip 148 – 'Limit Apply to Each with take()'"
 date: 2026-01-08
 categories:
   - Article
