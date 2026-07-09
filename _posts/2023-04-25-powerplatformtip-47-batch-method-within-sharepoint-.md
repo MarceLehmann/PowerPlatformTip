@@ -23,6 +23,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Bundle up to 1,000 SharePoint list create/update/delete operations into a single HTTP $batch call for a massive performance boost.
+
 ## 💡 Challenge
 Creating SharePoint list items one by one in Power Automate can be slow and consumes many API actions, especially when dealing with hundreds of items.
 

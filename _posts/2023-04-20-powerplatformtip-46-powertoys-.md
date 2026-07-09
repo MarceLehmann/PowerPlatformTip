@@ -23,6 +23,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Speed up Power Platform work on Windows with Microsoft PowerToys — FancyZones, PowerToys Run, Color Picker, Text Extractor and more.
+
 ## 💡 Challenge
 Finding efficient tools compatible with Power Platform development.
 

@@ -17,6 +17,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Group related actions into Scopes to organize flows, isolate errors, and reuse blocks of logic as templates.
+
 ## 💡 Challenge
 Large Power Automate flows quickly become hard to read, troubleshoot, and maintain when related actions aren't grouped and errors aren't isolated.
 
