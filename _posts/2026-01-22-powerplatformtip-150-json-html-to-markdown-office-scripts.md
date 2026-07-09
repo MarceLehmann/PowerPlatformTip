@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Convert JSON arrays and HTML into clean Markdown inside a flow with two deterministic Office Scripts — pure code, no AI and no premium capacity.
+
 You get structured JSON from an API or SharePoint, or raw HTML from an email or web source, and you need clean Markdown for documentation, a Teams post or a wiki page.
 No need for AI Builder or Copilot: two small Office Scripts convert both formats deterministically, every single time.
 Power Automate stays the orchestrator; the scripts do the formatting.
