@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Define filtering in a Dataverse View so the work happens server-side — faster apps and no delegation headaches when you bind a gallery to it.
+
 ## 💡 Challenge
 Filtering large Dataverse tables directly in a Canvas App can hurt performance and run into delegation limits, especially in PowerApps and PowerApps for Teams.
 

@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use the With function to declare local variables in one block and keep complex formulas like Haversine readable and maintainable.
+
 ## 💡 Challenge
 Complex calculations and expressions in PowerApps can lead to code that's hard to read and maintain. For example, calculating the distance between two points using the Haversine formula can clutter your code with repetitive variable declarations.
 

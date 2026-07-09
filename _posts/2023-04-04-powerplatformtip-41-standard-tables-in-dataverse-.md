@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Reuse Dataverse's built-in standard tables (Account, Contact, Task, Appointment, Email) instead of custom-building them, for consistency and interoperability.
+
 ## 💡 Challenge
 When modeling data in Dataverse (or Dataverse for Teams), it's tempting to build custom tables for everything – but that often duplicates structures Microsoft already ships and makes interoperability harder.
 

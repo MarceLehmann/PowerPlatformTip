@@ -21,6 +21,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Calculate great-circle distance for free using the Haversine formula — copy the ready-made snippet and plug in your two lat/long pairs.
+
 Here’s a cool tip to calculate the distance between two places without relying on premium services like Google or Bing maps.
 
 ## 💡 Challenge
