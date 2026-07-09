@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use triggerOutputs()?['headers'] to pull request header data like the flow starter's email, so you can notify them and handle errors.
+
 ## 💡 Challenge
 By default, flows don’t inform the user of success, details, or errors. How can you notify the flow initiator and handle potential errors within your flow?
 

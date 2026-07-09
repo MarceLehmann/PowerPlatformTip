@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Add || IsBlank(YourFilterInput) to a gallery's Filter so it shows every item when the search box is empty.
+
 ## 💡 Challenge
 Filtering galleries in PowerApps based on user input (like text input, dropdown, or combo box) is common – but when the input is empty you usually want to show all items.
 

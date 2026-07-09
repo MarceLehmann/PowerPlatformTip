@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Merge two arrays and keep duplicates by joining each with a delimiter, concatenating, then splitting back — instead of union which drops duplicates.
+
 ## 💡 Challenge
 You need to merge two arrays in Power Automate but keep the duplicates. The `union` function merges arrays, but it removes duplicates and returns only unique values.
 

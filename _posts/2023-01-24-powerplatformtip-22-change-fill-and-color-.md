@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Centralize your Canvas App colors in an App.OnStart theme variable and use the formula editor's Find & Replace to swap hardcoded values.
+
 ## 💡 Challenge
 Changing the colors and fill of a Canvas App when using the default template can be cumbersome, as there is no straightforward UI for overriding the theme, and colors are often hardcoded across many controls.
 
