@@ -58,6 +58,9 @@ Ownership transfers without export/import, and all connection references and run
 
 🔸 **Business continuity:** owner and new owner become co-owners, avoiding permission gaps.
 
+## 🎥 Video Tutorial
+{% include video id="2C_yw1aouXU" provider="youtube" %}
+
 ---
 
 ## 🛠️ FAQ
