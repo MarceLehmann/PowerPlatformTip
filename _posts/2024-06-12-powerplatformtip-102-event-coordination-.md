@@ -6,14 +6,11 @@ categories:
   - Article
   - PowerPlatformTip
 tags:
-  - Power Automate
-  - Graph API
-  - Event Management
-  - Attendee Privacy
-  - Notification Control
-  - PowerPlatform
-  - Automation
-  - Marcel Lehmann
+  - PowerAutomate
+  - MicrosoftGraph
+  - EventManagement
+  - Calendar
+  - PowerPlatformTip
 excerpt: "Silently manage event attendees in Power Automate using Microsoft Graph API—add guests without notifications and keep attendee lists private for secure event coordination."
 header:
   overlay_color: "#2dd4bf"
@@ -25,35 +22,47 @@ toc_sticky: true
 > **TL;DR:** Use the Microsoft Graph Update Event call with `hideAttendees: true` to add event attendees silently and keep the guest list private.
 
 ## 💡 Challenge
-Organizing event attendees in Power Automate can feel like herding cats. The usual methods often mean everyone gets an alert every time there’s a change, and to make matters worse, everyone can see who else is coming—talk about a lack of privacy!
+When you manage event attendees from Power Automate, the standard approach notifies everyone on every change — and by default all attendees can see the full guest list. That's noisy and, for sensitive events, a privacy problem.
 
 ## ✅ Solution
-Use the Microsoft Graph API with the Update Event call to silently add attendees and hide the guest list by setting the `hideAttendees` parameter to `true`.
+Update the event directly through the Microsoft Graph API. Setting the event's `hideAttendees` property to `true` keeps the guest list private, and writing the merged `attendees` array via a PATCH lets you add people without the usual notification flood.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Kick things off with an HTTP request to snag the details on the current event, including who’s already RSVP’d.  
-   🔸 Use Graph API’s GET `/events/{event-id}` endpoint.  
-   🔸 Capture the `attendees` array from the JSON response.  
-2. Whip up an array for your new guest, filling in the blanks with their info and email.  
-   🔸 Construct a new attendee object with `emailAddress` and `type`.  
-   🔸 Ensure you include name and address fields.  
-3. Bring the new and old attendees together with the magic of the `union` expression.  
-   🔸 Merge arrays without duplicates.  
-   🔸 Use the `union(existingAttendees, newAttendees)` function.  
-4. Send that updated list of party-goers back to the event with another HTTP zinger.  
-   🔸 Use PATCH `/events/{event-id}` with the updated `attendees` array.  
-   🔸 Set `"hideAttendees": true` in the request body.  
-5. OR: Take a shortcut and grab the whole setup from my GitHub.  
-   🔸 See the full JSON flow at https://github.com/MarceLehmann/CodeSnippets/blob/main/EventCoordination.json  
+
+**1. Get the current event and its attendees.**
+
+🔸 GET `/events/{event-id}` via the Graph API.
+
+🔸 Capture the `attendees` array from the JSON response.
+
+**2. Build the new attendee object(s).**
+
+🔸 Each needs an `emailAddress` (with `address` and `name`) and a `type` (e.g. `required`).
+
+**3. Merge existing and new attendees without duplicates.**
+
+🔸 `union(existingAttendees, newAttendees)`.
+
+**4. Write the updated list back to the event.**
+
+🔸 PATCH `/events/{event-id}` with the merged `attendees` array.
+
+🔸 Set `"hideAttendees": true` in the request body.
+
+**5. Optional: grab the full sample flow from GitHub.**
+
+🔸 [EventCoordination.json](https://github.com/MarceLehmann/CodeSnippets/blob/main/EventCoordination.json)
 
 ## 🎉 Result
-And just like that, you’re adding or tweaking your attendee list on the DL—keeping notification spam to a minimum. Plus, with the attendee list set to private, your event has its own VIP secrecy cloak.
+Attendees are added or updated quietly, keeping notification noise to a minimum, and the guest list stays private — participants only see their own RSVP.
 
 ## 🌟 Key Advantages
-🔸 Privacy Enhanced: A cloak of invisibility for your guest list, so attendees can’t peek at others.  
-🔸 Notification Control: No more alert floods—silent updates only.  
-🔸 Flexibility: Easily invite one guest or a crowd without extra configuration.  
+
+🔸 **Privacy:** the guest list stays hidden, so attendees can't see each other.
+
+🔸 **Notification control:** silent updates instead of an alert flood.
+
+🔸 **Flexible:** add one guest or many with the same call.
 
 ---
 
@@ -63,13 +72,13 @@ And just like that, you’re adding or tweaking your attendee list on the DL—k
 ---
 
 ## 🛠️ FAQ
-**1. How do I authenticate the Graph API request?**  
-Register an Azure AD app, grant it the `Calendars.ReadWrite` permission, then use Power Automate’s HTTP with Azure AD connector to obtain a token and call the Graph API.
+**1. How do I authenticate the Graph API request?**
+Register a Microsoft Entra ID app, grant it the `Calendars.ReadWrite` permission, then use Power Automate's HTTP with Microsoft Entra ID connector to obtain a token and call Graph.
 
-**2. What does `hideAttendees = true` do?**  
+**2. What does `hideAttendees = true` do?**
 It hides the full guest list so attendees only see their own RSVP and cannot view other participants.
 
-**3. Can I remove attendees silently as well?**  
-Yes. Retrieve the current `attendees` array, filter out the attendee you want to remove, then PATCH the event with the updated array and `hideAttendees` set to `true`.
+**3. Can I remove attendees silently as well?**
+Yes. Retrieve the current `attendees` array, filter out the one you want to remove, then PATCH the event with the updated array and `hideAttendees` set to `true`.
 
 ---

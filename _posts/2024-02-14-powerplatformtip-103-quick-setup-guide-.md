@@ -6,15 +6,12 @@ categories:
   - Article
   - PowerPlatformTip
 tags:
-  - Power Apps
-  - Quick Setup
-  - Dropdown
-  - ComboBox
+  - PowerApps
   - SharePoint
   - Dataverse
-  - Lookup Columns
-  - PowerPlatform
-  - Marcel Lehmann
+  - ComboBox
+  - Choices
+  - PowerPlatformTip
 excerpt: "Quickly configure dropdowns and ComboBoxes in PowerApps using SharePoint or Dataverse Lookup and Choice columns for rapid, reliable data selection."
 header:
   overlay_color: "#2dd4bf"
@@ -26,28 +23,37 @@ toc_sticky: true
 > **TL;DR:** Populate Power Apps dropdowns and ComboBoxes fast by pointing their `Items` at SharePoint/Dataverse Lookup or Choice columns via `Choices()`.
 
 ## 💡 Challenge
-Achieving a quick setup for dropdown menus or ComboBoxes in PowerApps, especially when under time constraints or needing a temporary solution.
+You need a dropdown or ComboBox populated quickly — under time pressure or as a temporary solution — without building and maintaining a separate data table.
 
 ## ✅ Solution
-Leverage Lookup and Choice columns in SharePoint or Dataverse to manage data sources for dropdown menus or ComboBoxes efficiently.
+Point the control's `Items` at an existing **Lookup** or **Choice** column in SharePoint or Dataverse using `Choices()`. The valid values come straight from the column definition.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Prepare your data source  
-   🔸 Create a Lookup column in Dataverse or SharePoint for relational data.  
-   🔸 Use a Choice column for simple picklists.
-2. Configure the control in PowerApps  
-   🔸 Add a Dropdown or ComboBox control to your canvas.  
-   🔸 Set its `Items` property to:  
-     `Choices([@Tests].cr0a0_LookupAccount)`
+
+**1. Prepare your data source**
+
+🔸 Create a **Lookup** column (Dataverse or SharePoint) for relational data, or a **Choice** column for simple picklists.
+
+**2. Configure the control**
+
+🔸 Add a Dropdown or ComboBox to the canvas.
+
+🔸 Point its `Items` at the column with `Choices()`:
+
+🔸 Dataverse: `Choices([@Tests].cr0a0_LookupAccount)` — `[@Tests]` is the table, `cr0a0_LookupAccount` the lookup/choice column.
+
+🔸 SharePoint: `Choices('Your List'.YourChoiceColumn)`
 
 ## 🎉 Result
-This strategy enables a swift and effective way to manage data for user inputs in PowerApps, ensuring a balance between speed and data integrity. It's particularly beneficial for projects that require immediate results or for developers working within tight deadlines.
+A swift, reliable way to feed user inputs in PowerApps, balancing speed and data integrity — ideal for projects that need immediate results or tight deadlines.
 
 ## 🌟 Key Advantages
-🔸 Speed: Facilitates rapid application development and deployment.  
-🔸 Efficiency: Streamlines the process of integrating data into PowerApps.  
-🔸 Practicality: Offers a viable solution for managing data in scenarios where time or resources are limited.
+
+🔸 **Speed:** rapid app development and deployment.
+
+🔸 **Efficiency:** streamlines integrating data into PowerApps.
+
+🔸 **Practicality:** a viable solution when time or resources are limited.
 
 ---
 
@@ -57,13 +63,13 @@ This strategy enables a swift and effective way to manage data for user inputs i
 ---
 
 ## 🛠️ FAQ
-**1. What is the "quick and dirty" approach in PowerApps?**  
-The "quick and dirty" approach involves using Lookup and Choice columns in SharePoint or Dataverse to populate dropdowns or ComboBoxes quickly without detailed configuration steps.
+**1. What is this fast-setup approach in PowerApps?**
+Pointing a Dropdown/ComboBox `Items` at a SharePoint or Dataverse Lookup/Choice column via `Choices()` populates it instantly, without a separate data table.
 
-**2. Can this method be used with both SharePoint and Dataverse?**  
-Yes, it works with both platforms. Use SharePoint Lookup or Choice columns or Dataverse Lookup columns to source values for the control.
+**2. Can this method be used with both SharePoint and Dataverse?**
+Yes. Use SharePoint Lookup/Choice columns or Dataverse Lookup columns to source the control's values.
 
-**3. Are there any limitations when using the `Choices()` function?**  
-`Choices()` retrieves all values from a Lookup or Choice column but may not support advanced filtering or custom formatting. Ensure delegation limits are considered and test performance for large datasets.
+**3. Are there any limitations when using the `Choices()` function?**
+`Choices()` returns all values from a Lookup or Choice column but may not support advanced filtering or custom formatting. Watch delegation limits and test performance on large datasets.
 
 ---
