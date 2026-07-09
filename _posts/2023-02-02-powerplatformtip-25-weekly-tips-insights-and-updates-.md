@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 25 – 'Weekly tips, insights and updates'"
 date: 2023-02-02
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -26,31 +27,38 @@ Subscribe to dedicated weekly newsletters to receive curated Power Platform tips
 
 ## 🔧 How It's Done
 Here's how to do it:
-1. Go to the Power Platform Dev Weekly website  
-   🔸 Navigate to https://www.ppdevweekly.com/  
-   🔸 Enter your email address to subscribe
-2. Go to the Power Platform Weekly website  
-   🔸 Navigate to https://www.ppweekly.com/  
-   🔸 Enter your email address to subscribe
+
+1. Go to the Power Platform Dev Weekly website.
+   🔸 Navigate to https://www.ppdevweekly.com/
+   🔸 Enter your email address to subscribe.
+
+2. Go to the Power Platform Weekly website.
+   🔸 Navigate to https://www.ppweekly.com/
+   🔸 Enter your email address to subscribe.
 
 ## 🎉 Result
-You will receive two weekly newsletters—Power Platform Dev Weekly and Power Platform Weekly—delivering curated tips, insights, and updates about the Power Platform directly to your inbox.
+You receive two weekly newsletters—Power Platform Dev Weekly and Power Platform Weekly—delivering curated tips, insights, and updates directly to your inbox.
 
 ## 🌟 Key Advantages
-🔸 Stay informed about new Power Platform features and releases  
-🔸 Get curated tips and best practices from experts  
-🔸 Save time by having insights delivered directly to you
+🔸 Stay informed about new Power Platform features and releases.
+
+🔸 Get curated tips and best practices from experts.
+
+🔸 Save time by having insights delivered directly to you.
 
 ---
 
 ## 🛠️ FAQ
-**1. Are these newsletters free to subscribe to?**  
+**1. Are these newsletters free to subscribe to?**
+
 Yes, both Power Platform Dev Weekly and Power Platform Weekly are free newsletters that provide valuable insights and updates.
 
-**2. How often will I receive these newsletters?**  
+**2. How often will I receive these newsletters?**
+
 As the name suggests, both newsletters are sent weekly, giving you regular updates without overwhelming your inbox.
 
-**3. Can I unsubscribe if I no longer want to receive the newsletters?**  
+**3. Can I unsubscribe if I no longer want to receive the newsletters?**
+
 Yes, all newsletters include unsubscribe options, and you can manage your subscription preferences at any time.
 
 ---

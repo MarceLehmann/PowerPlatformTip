@@ -1,16 +1,17 @@
 ---
 title: "#PowerPlatformTip 26 – 'Microsoft Cloud Skills Challenge'"
 date: 2023-02-07
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
 tags:
-  - microsoft
-  - cloud skills
-  - certification
-  - learning
   - power platform
-excerpt: "Boost your Microsoft cloud skills and earn certification discounts by joining the Microsoft Cloud Skills Challenge. Learn, collaborate, and get certified."
+  - learning
+  - cloud skills challenge
+  - microsoft learn
+  - certification
+excerpt: "Boost your Power Platform skills with the Microsoft Cloud Skills Challenge - free, gamified Microsoft Learn modules with leaderboards and prizes."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -18,50 +19,49 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Boost your Microsoft cloud skills and earn certification discounts by joining the Microsoft Cloud Skills Challenge. Learn, collaborate, and get certified.
-
 ## 💡 Challenge
-Check out the Microsoft Cloud Skills Challenge!
-Enhance your skills in cloud computing, work through learning modules, exchange ideas with peers, and be eligible for 50% off Microsoft Certification exams.
+Staying current with Power Platform skills takes consistent learning, but self-paced study is easy to postpone without structure or motivation.
 
 ## ✅ Solution
-Check out the Microsoft Cloud Skills Challenge!
-Enhance your skills in cloud computing, work through learning modules, exchange ideas with peers, and be eligible for 50% off Microsoft Certification exams.
-A great opportunity for your career goals.
-International:
-[https://developer.microsoft.com/en-us/offers/30-days-to-learn-it](https://developer.microsoft.com/en-us/offers/30-days-to-learn-it)
-German:
-[https://www.microsoft.com/de-de/techwiese/events/cloud-skills-challenge.aspx#herausforderungen](https://www.microsoft.com/de-de/techwiese/events/cloud-skills-challenge.aspx#herausforderungen)
+Join a Microsoft Cloud Skills Challenge. These free, time-boxed challenges bundle curated Microsoft Learn modules with a leaderboard, progress tracking, and often prizes or exam discounts – turning learning into a motivating, gamified sprint.
 
 ## 🔧 How It's Done
-1. Identify the area in your app or flow where Microsoft Cloud Skills Challenge is needed.
-🔸 Follow established naming conventions for clarity.
-2. Configure the properties according to your business requirements.
-🔸 Test the implementation with sample data.
-3. Verify the output to ensure it matches the expected results.
+
+1. Find an active challenge.
+   🔸 Watch for Microsoft Cloud Skills Challenges announced around events like Microsoft Ignite and Build, or the recurring "30 Days to Learn It" campaigns.
+
+2. Register with your Microsoft Learn account.
+   🔸 Sign in (or create a free account) so your module progress is tracked automatically.
+
+3. Pick the Power Platform learning path.
+   🔸 Choose the challenge track that matches your goal (Power Apps, Power Automate, Power BI, or a certification like PL-900 / PL-100 / PL-400).
+
+4. Complete the modules before the deadline.
+   🔸 Work through the hands-on units at your own pace and watch your progress climb the leaderboard.
 
 ## 🎉 Result
-Your workflows become more robust and easier to maintain. Implementing Microsoft Cloud Skills Challenge reduces the time spent on manual adjustments and minimizes potential for errors.
+You build Power Platform skills in a structured, motivating way – and often earn certification exam discounts or prizes along the way.
 
 ## 🌟 Key Advantages
-🔸 Improved Efficiency: Faster development cycles through automation.
-🔸 Better Consistency: Standardized approach across all projects.
-🔸 Enhanced Reliability: Reduced risk of failure during execution.
+🔸 Free, curated learning paths straight from Microsoft Learn.
 
-## 🎥 Video Tutorial
-{% include video id="noscript" provider="youtube" %}
+🔸 Gamification and leaderboards keep you motivated and consistent.
+
+🔸 Frequently rewards completion with exam vouchers or discounts.
 
 ---
 
 ## 🛠️ FAQ
-**1. How long do I have to complete the Cloud Skills Challenge?**  
-Challenges typically run for 30 days, but check the specific challenge page for exact dates and deadlines.
+**1. Does the Cloud Skills Challenge cost anything?**
 
-**2. Can I participate in both the international and German challenges?**  
-Yes, you can participate in multiple challenges, but discount vouchers may have usage limitations per person.
+No, participation and the underlying Microsoft Learn modules are free. Some challenges also offer certification exam discounts on completion.
 
-**3. What happens if I don't complete all modules within the timeframe?**  
-You'll still keep any progress made, but you may not receive the certification discount voucher for that specific challenge.
+**2. When do these challenges run?**
+
+They typically launch around major Microsoft events (Ignite, Build) and as recurring campaigns. Watch the Microsoft Learn and Power Platform blogs for the next one.
+
+**3. Do I keep my progress after the challenge ends?**
+
+Yes. All completed Microsoft Learn modules stay in your profile even after the challenge closes.
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 29 – 'ParseJSON Description'"
 date: 2023-02-15
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -18,45 +19,38 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-When utilizing the Parse JSON action in Power Automate, distinguishing between multiple occurrences of the same name in Dynamic Content can be challenging, leading to confusion about which value corresponds to which name.
-
 ## 💡 Challenge
-When utilizing the Parse JSON action in Power Automate, distinguishing between multiple occurrences of the same name in Dynamic Content can be challenging, leading to confusion about which value corresponds to which name.
+When using the Parse JSON action in Power Automate, distinguishing between multiple occurrences of the same name in Dynamic Content can be difficult, leading to confusion about which value corresponds to which name.
 
 ## ✅ Solution
-Enhance clarity and organization of Dynamic Content by incorporating a custom description within the Parse JSON schema. This simple adjustment allows you to differentiate between similar entries more effectively.
+Add a custom `Description` inside the Parse JSON schema. This description appears under the Dynamic Content entry, letting you tell similar entries apart.
 
 ## 🔧 How It's Done
-* In your Parse JSON action, after specifying the type for an element, add an additional line with "Description": "YOURDESCRIPTION". This custom description should provide clarity on the purpose or origin of the data.
 
-* Example Schema Adjustment:
+1. In your Parse JSON action, add a `"Description"` property to an element in the schema, after its `type`:
 
-{
+   ```json
+   {
+     "properties": {
+       "FieldName": {
+         "type": "string",
+         "Description": "This is the description for FieldName"
+       }
+     }
+   }
+   ```
 
-  "properties": 
-{
-
-    "FieldName": 
-{
-
-      "type": "string",
-
-      "Description": "This is the description for FieldName"
-
-    }}}
-
-* Upon implementing this change, the description you've added will appear beneath the corresponding Dynamic Content in Power Automate, guiding you to accurately select the right value for your flow operations.
+2. The description you added now appears beneath the corresponding Dynamic Content in Power Automate, guiding you to the right value.
 
 ## 🎉 Result
-A more intuitive and manageable way to work with Dynamic Content in Power Automate, significantly reducing the risk of errors when dealing with multiple occurrences of the same name.
+A more intuitive way to work with Dynamic Content in Power Automate, reducing the risk of errors when dealing with multiple occurrences of the same name.
 
 ## 🌟 Key Advantages
-🔸 **Improved Clarity:** Custom descriptions make it easier to understand the context and purpose of each piece of Dynamic Content. 
-🔸 **Enhanced Organization:** Keeps your flow design tidy and well-documented, facilitating easier maintenance and updates. 
-🔸 **Increased Accuracy:** Minimizes confusion and improves the accuracy of your flow's logic by clearly identifying each data element.
+🔸 **Improved Clarity:** Custom descriptions explain the context and purpose of each Dynamic Content entry.
 
-This approach not only simplifies the process of working with complex JSON structures but also enhances the overall reliability and effectiveness of your automated workflows.
+🔸 **Enhanced Organization:** Keeps your flow design tidy and well-documented.
+
+🔸 **Increased Accuracy:** Minimizes confusion by clearly identifying each data element.
 
 ## 🎥 Video Tutorial
 {% include video id="sh2QDZouFU0" provider="youtube" %}
@@ -64,13 +58,16 @@ This approach not only simplifies the process of working with complex JSON struc
 ---
 
 ## 🛠️ FAQ
-**1. Can I add descriptions to all field types in Parse JSON schema?**  
+**1. Can I add descriptions to all field types in Parse JSON schema?**
+
 Yes, descriptions can be added to any field type (string, number, boolean, array, object) in your JSON schema.
 
-**2. Do these descriptions affect the actual JSON parsing process?**  
+**2. Do these descriptions affect the actual JSON parsing process?**
+
 No, descriptions are metadata that only affect the Power Automate interface and don't impact the parsing functionality.
 
-**3. Is there a character limit for field descriptions?**  
+**3. Is there a character limit for field descriptions?**
+
 While there's no strict limit, keep descriptions concise for better readability in the Dynamic Content pane.
 
 ---

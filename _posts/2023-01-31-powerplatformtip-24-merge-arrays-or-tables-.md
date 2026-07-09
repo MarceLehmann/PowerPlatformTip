@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 24 – 'Merge arrays or tables'"
 date: 2023-01-31
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -18,58 +19,56 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Ever find yourself wanting to merge two arrays in Power Automate, but you hit a snag because you need to keep those pesky duplicates? If you've tried the union function, you know it's a neat trick for merging arrays, but alas, it leaves behind any duplicates, aiming for uniqueness like it's going out of style.
-
 ## 💡 Challenge
-Ever find yourself wanting to merge two arrays in Power Automate, but you hit a snag because you need to keep those pesky duplicates? If you've tried the union function, you know it's a neat trick for merging arrays, but alas, it leaves behind any duplicates, aiming for uniqueness like it's going out of style.
+You need to merge two arrays in Power Automate but keep the duplicates. The `union` function merges arrays, but it removes duplicates and returns only unique values.
 
 ## ✅ Solution
-Fear not! There's a workaround that's not just a workaround, but a magic trick waiting to be performed. It involves a bit of array alchemy—concatenating the arrays and then pulling a "now you see me, now you don't" with the duplicates.
+Instead of `union`, concatenate the arrays with a unique delimiter and then split the result back into an array. This preserves every element, including duplicates.
 
 ## 🔧 How It's Done
-Let’s break down the spell:
 
-* **Conjure Your Arrays Together:** Use the concat function to merge your two arrays into one. Think of it as inviting all the elements to a grand ball, duplicates included.
+1. **Join each array** into a string using a unique delimiter (`||`).
 
-* **The Secret Sauce – '||':** To keep track of where one array ends and the other begins, we use a unique delimiter, '||'. This is like giving each guest at the ball a unique mask.
+2. **Concatenate** both strings, keeping the delimiter between them.
 
-* **Split to Reveal:** Now, the grand finale. Use the split function to turn this merged string back into an array, using the same '||' delimiter to remove the masks and reveal the identities of all your elements, duplicates proudly standing.
+3. **Split** the combined string back into an array using the same delimiter – all elements, duplicates included, are restored.
 
-Here's the incantation:
+Here's the expression:
 
+```
 split(
-concat(
-join(outputs('Compose_-_2_arrays')?['array1′],'||'),
-'||',
-join(outputs('Compose_-_2_arrays')?['array2'],'||')),
-'||')
+  concat(
+    join(outputs('Compose_-_2_arrays')?['array1'], '||'),
+    '||',
+    join(outputs('Compose_-_2_arrays')?['array2'], '||')
+  ),
+  '||'
+)
+```
 
 ## 🎉 Result
-Voilà! You’ve mastered the art of merging arrays while honoring the presence of duplicates. This isn't just merging; it's merging with style and intelligence.
+You merge both arrays while keeping all duplicate values – something the standard `union` function does not allow.
 
 ## 🌟 Key Advantages
-* **Inclusivity:** Every element gets to join the party, duplicates don’t get left out in the cold.
+🔸 Inclusivity: every element is kept, duplicates included.
 
-* **Flexibility:** Adjust the formula to fit your specific scenario, whether it's for simple lists or complex data structures.
+🔸 Flexibility: adjust the formula for simple lists or more complex data structures.
 
-* **Power:** Empowers you to manipulate data in ways that standard functions don’t directly allow.
-
-Merge arrays, keep the duplicates, and do it all with a flourish. This tip isn't just a solution; it's a performance. Enjoy the show!
-
-## 🎥 Video Tutorial
-{% include video id="noscript" provider="youtube" %}
+🔸 Power: manipulate data in ways the standard functions don't directly allow.
 
 ---
 
 ## 🛠️ FAQ
-**1. What happens if my array contains values that include the delimiter '||'?**  
+**1. What happens if my array contains values that include the delimiter '||'?**
+
 Choose a unique delimiter that doesn't appear in your data, or use a more complex delimiter like '###DELIMITER###'.
 
-**2. Can this method handle arrays with different data types?**  
+**2. Can this method handle arrays with different data types?**
+
 Yes, but ensure all values can be converted to strings for the join operation, then convert back to appropriate types if needed.
 
-**3. Is there a performance impact when merging large arrays?**  
+**3. Is there a performance impact when merging large arrays?**
+
 For very large arrays, consider using the union() function for simple merging without duplicates, or batch processing for better performance.
 
 ---
