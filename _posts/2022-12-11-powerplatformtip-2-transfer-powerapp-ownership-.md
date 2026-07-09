@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 2 – 'Transfer PowerApp Ownership'"
 date: 2022-12-11
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -10,7 +11,7 @@ tags:
   - admin
   - governance
   - coe-toolkit
-excerpt: "Easily transfer PowerApps ownership using the Admin TemplateApp. Streamline admin tasks, ensure governance, and keep your apps managed and secure."
+excerpt: "Transfer Power Apps ownership after a maker leaves – using the CoE Starter Kit admin apps or the Set-AdminPowerAppOwner PowerShell cmdlet. Keep apps governed and running."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -19,42 +20,52 @@ toc_sticky: true
 ---
 
 ## 💡 Challenge
-Transferring ownership of PowerApps after a team member's departure can be a real hassle. It’s often time-consuming, confusing, and let’s face it, nobody wants to deal with administrative headaches when there’s real work to be done. But what if I told you there’s a way to make this process as smooth as Swiss chocolate?
+When a maker leaves the company, the apps they own can become orphaned – and reassigning ownership through the maker UI one by one is slow and easy to miss. You need a reliable, admin-friendly way to hand over Power Apps ownership.
 
 ## ✅ Solution
-Enter the ‘Admin – Set New App Owner’ TemplateApp – your new best friend for PowerApps ownership transfers! This nifty little tool is designed to take the pain out of the process and make ownership changes a walk in the park. It’s like having a magic wand for your PowerApps admin tasks!
+Use an admin approach instead of the maker UI: either the **CoE Starter Kit** admin apps (for a governed, low-code experience) or the **`Set-AdminPowerAppOwner`** cmdlet from the *Microsoft.PowerApps.Administration.PowerShell* module for scripted, bulk changes.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Grab the App within the CoE Toolkit  
-   🔸 Locate the ‘Admin – Set New App Owner’ TemplateApp.  
-   🔸 Think of it as the key to your new admin superpower.  
-2. Install the App in your Power Platform environment  
-   🔸 Select the target environment and confirm installation.  
-   🔸 The process is straightforward and completes in minutes.  
-3. Launch & Operate the App  
-   🔸 Open the app and follow the user-friendly instructions.  
-   🔸 Transfer ownership faster than you can say “PowerApps”!  
+
+**1. Choose your tool**
+
+🔸 For a UI: deploy the [CoE Starter Kit](https://aka.ms/CoEStarterKitRepo) and use its admin apps to inventory and manage app ownership.
+
+🔸 For scripting / bulk: install the `Microsoft.PowerApps.Administration.PowerShell` module.
+
+**2. Set the new owner via PowerShell**
+
+🔸 Run `Set-AdminPowerAppOwner -AppName <AppId> -EnvironmentName <EnvId> -AppOwner <UserObjectId>`.
+
+🔸 Loop over multiple apps to reassign them in bulk.
+
+**3. Verify the result**
+
+🔸 Confirm the new owner in the Power Platform admin center or maker portal.
 
 ## 🎉 Result
-With this TemplateApp in your toolkit, you’ll be modifying PowerApps ownership or sharing apps with your team without breaking a sweat. It’s like having a personal assistant for your PowerApps admin tasks – efficient, reliable, and always ready to help!
+Ownership is reassigned cleanly – no orphaned apps, no manual clicking through each app. Admins keep full control and governance stays intact.
 
 ## 🌟 Key Advantages
-🔸 User-Friendly: Even non-technical users can navigate the app with ease.  
-🔸 Time Saver: Streamlines ownership transfers, freeing up your time for core tasks.  
-🔸 Versatile: Flexible enough for startups and large enterprises alike.
+
+🔸 **Admin-grade:** Works even when you're not the current owner, using admin permissions.
+
+🔸 **Scales:** Script bulk reassignments across many apps at once.
+
+🔸 **Governed:** Fits into a CoE / governance process for departing makers.
 
 ---
 
 ## 🛠️ FAQ
-**1. Can I transfer ownership of multiple apps at once?**  
-Yes, the CoE Toolkit app supports bulk ownership transfers, making it efficient for managing multiple apps simultaneously.
 
-**2. Do I need admin privileges to use this app?**  
-Yes, you need administrative permissions in the Power Platform environment to transfer app ownership.
+**1. Can I reassign ownership of multiple apps at once?**
 
-**3. What happens to the app's data and connections during transfer?**  
-The app's data and connections remain intact during ownership transfer, ensuring continuity of functionality.
+Yes – wrap `Set-AdminPowerAppOwner` in a PowerShell loop to reassign many apps programmatically.
 
----
+**2. Do I need admin privileges?**
 
+Yes. You need a Power Platform / environment admin (or Global admin) role to change ownership for apps you don't own.
+
+**3. What happens to the previous owner?**
+
+`Set-AdminPowerAppOwner` sets the new owner and changes the previous owner to the "Can View" role – they keep read access but no longer own the app. App data and connections remain intact.

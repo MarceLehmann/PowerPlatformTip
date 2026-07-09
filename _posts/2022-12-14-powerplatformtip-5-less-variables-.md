@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 5 – 'Less Variables'"
 date: 2022-12-14
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -10,7 +11,7 @@ tags:
   - flow optimization
   - variables
   - best practices
-excerpt: "Reduce variables in Power Automate by using Parse JSON for static parameters. Simplify flows, minimize API calls, and improve efficiency with this best practice."
+excerpt: "Reduce variables in Power Automate by using Parse JSON or Compose for static parameters. Keep flows readable and loop concurrency intact—reserve variables for values that actually change."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -19,42 +20,49 @@ toc_sticky: true
 ---
 
 ## 💡 Challenge
-In many Power Automate flows, you might find yourself using the ‘Initialize Variable’ action to store a parameter that never changes throughout the flow. It’s like carrying a heavy toolbox when all you need is a single screwdriver!
+In many Power Automate flows, you might find yourself using the 'Initialize Variable' action to store a parameter that never changes throughout the flow. It's like carrying a heavy toolbox when all you need is a single screwdriver!
 
 ## ✅ Solution
-Use ‘Parse JSON’ to handle static parameters instead of ‘Initialize Variable’, reducing API calls and simplifying your flow.
+Use 'Parse JSON' (or 'Compose') to hold static parameters instead of 'Initialize Variable'. You avoid variables entirely—which keeps your flow readable and, importantly, doesn't block parallelism inside loops.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Replace ‘Initialize Variable’  
-   🔸 Swap out the ‘Initialize Variable’ action with ‘Parse JSON’.  
-   🔸 It’s like trading in your Swiss Army knife for a specialized tool!  
-2. Set JSON Schema  
-   🔸 Define the JSON schema to match the parameter you want to set.  
-   🔸 Think of it as creating a custom mold for your data.  
-3. Use in Flow  
-   🔸 Reference the parsed JSON object wherever you would have used the variable.  
-   🔸 It’s like having your data ready and waiting exactly where you need it!
+
+**1. Replace 'Initialize Variable'**
+
+🔸 Swap out the 'Initialize Variable' action for 'Parse JSON' or 'Compose'.
+
+**2. Set the JSON schema**
+
+🔸 Define the JSON schema to match the parameter you want to set.
+
+**3. Use in Flow**
+
+🔸 Reference the parsed object wherever you would have used the variable.
 
 ## 🎉 Result
-By using ‘Parse JSON’ for static parameters, you’ll make your flow more efficient and easier to understand. It’s like decluttering your digital workspace!
+By using 'Parse JSON' for static parameters, your flow stays clean and its intent is clearer—and you keep the option to run 'Apply to each' loops with concurrency enabled.
 
 ## 🌟 Key Advantages
-🔸 Clarity: Makes it crystal clear that the parameter is static and won't change, improving readability.  
-🔸 Efficiency: Saves API calls, which can be crucial in flows with many actions.  
-🔸 Best Practices: Aligns your flow with the intended uses of variables and JSON parsing, making it easier to maintain and troubleshoot.
+
+🔸 **Clarity:** Makes it obvious the parameter is static and won't change, improving readability.
+
+🔸 **Concurrency-friendly:** Unlike variables, Parse JSON / Compose don't force 'Apply to each' loops to run sequentially—you can keep parallelism on.
+
+🔸 **Best Practices:** Reserves variables for values that genuinely change during the run.
 
 ## 🎥 Video Tutorial
 {% include video id="5sVpg6yT-5I" provider="youtube" %}
 
 ## 🛠️ FAQ
-**1. When should I use Parse JSON instead of Initialize Variable?**  
-Use Parse JSON for static values that don't change during flow execution. Use Initialize Variable for values that will be modified during the flow.
 
-**2. Does Parse JSON save API calls compared to Initialize Variable?**  
-Yes, Parse JSON doesn't count as an API call, while Initialize Variable does, making your flow more efficient.
+**1. When should I use Parse JSON instead of Initialize Variable?**
 
-**3. Can I use complex objects with Parse JSON?**  
+Use Parse JSON (or Compose) for static values that don't change during execution. Use Initialize Variable only for values you'll modify while the flow runs.
+
+**2. Does Parse JSON reduce my action / API count compared to Initialize Variable?**
+
+No. Both are built-in actions and each counts as one Power Platform request. The real benefit is readability and keeping loop concurrency—not fewer API calls.
+
+**3. Can I use complex objects with Parse JSON?**
+
 Absolutely! Parse JSON excels at handling complex nested objects and arrays, making it perfect for structured static data.
-
----
