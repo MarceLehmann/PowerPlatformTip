@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Surface multiple SharePoint lists as Dataverse virtual tables (no data copied) and manage them all in a single model-driven app — SharePoint stays the source of truth.
+
 Managing lots of productive SharePoint lists means constant tab-hopping: each list has its own view, its own permissions, and building a separate app per list is no fun.
 Dataverse **virtual tables** let you surface those lists inside Dataverse **without duplicating data**, so you can build **one model-driven app** to manage them all — with SharePoint still the system of record.
 

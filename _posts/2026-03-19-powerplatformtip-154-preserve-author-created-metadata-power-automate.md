@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** After a create-and-delete copy, one `MERGE` HTTP request restores the original `AuthorId`, `EditorId`, `Created` and `Modified` so the migrated file matches the source.
+
 Sometimes a straight *Copy file* isn't possible and you have to recreate a document with *Create file* + *Delete file*. The problem: the new file gets **you** as author, **today** as the created date, and loses the original history.
 With a single REST MERGE call you can write the original **AuthorId**, **EditorId**, **Created** and **Modified** values back onto the new item — so the migrated file is indistinguishable from the source.
 

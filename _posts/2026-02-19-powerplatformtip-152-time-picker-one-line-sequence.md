@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Fill a Power Apps dropdown with every 15-minute time slot using one `Sequence()` + `ForAll()` line — no static data table to maintain.
+
 Building a time picker in Power Apps usually means stacking hour and minute dropdowns or fiddling with input masks.
 There's a much cleaner way: the **`Sequence()`** function generates a table of numbers you can transform into anything — including a full list of time slots — in a single line of Power Fx.
 Credit for the neat time-picker one-liner goes to Matthew Devaney, who popularised this pattern.
@@ -49,7 +51,7 @@ ForAll(Sequence(96), Time(0, Value * 15 - 15, 0))
 ForAll(Sequence(96), Time(0, Value * 15 - 15, 0))
 ```
 
-🔸 `Sequence(96)` yields 1…96. `Value * 15 - 15` maps those to 0, 15, 30 … 1425 minutes — exactly 00:00 through 23:45.
+🔸 `Sequence(96)` yields 1–96. `Value * 15 - 15` maps those to 0, 15, 30 … 1425 minutes — exactly 00:00 through 23:45.
 
 **3. Format the display** so users see a clean time.
 

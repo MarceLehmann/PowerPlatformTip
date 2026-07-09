@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** SharePoint has no rename action — one `MERGE` HTTP request that updates `FileLeafRef` renames a file in place, keeping its ID, version history and metadata.
+
 There's no native "Rename file" action in the SharePoint connector, so people copy-and-delete files — losing the item ID, version history and metadata in the process.
 The clean way is a single REST call: update the item's **`FileLeafRef`** field with a **MERGE** request via *Send an HTTP request to SharePoint*. The file keeps its ID, versions and permissions — only the name changes.
 
