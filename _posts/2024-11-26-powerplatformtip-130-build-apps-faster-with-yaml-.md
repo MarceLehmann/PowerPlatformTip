@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 130 – 'Build Apps Faster with YAML'"
 date: 2024-11-26
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -18,6 +19,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Build Power Apps faster by pasting ready-made YAML component snippets straight into the canvas – no design skills needed.
 
 ## 💡 Challenge
 You need to create Power Apps quickly, but you don’t have a component library, a TemplateApp or the expertise to design specific UI elements like popups or navigation bars. You still want your app to look great and be user-friendly.

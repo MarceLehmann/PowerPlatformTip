@@ -3,6 +3,7 @@
 title: "#PowerPlatformTip 127 – 'Special User-Informations in PowerApps Studio'"
 seo_title: "#PowerPlatformTip 127 – 'Special User-Informations in"
 date: 2024-10-17
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -28,8 +29,7 @@ toc_sticky: true
 
 ---
 
-## 📝 TL;DR
-Automatically switch between test and production user emails in PowerApps Studio using environment detection for secure, automated app testing and deployment.
+> **TL;DR:** Auto-switch to a test email in Power Apps Studio and the real `User().Email` in production via `StartsWith(Host.Version, "PowerApps-Studio")`.
 
 ## 💡 Challenge
 While developing apps in Power Apps Studio mode, we often use test values like a test email address.

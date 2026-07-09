@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 129 – 'Case-sensitive SharePoint Filtering'"
 date: 2024-11-06
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -19,8 +20,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Combine OData filtering with Filter array in Power Automate for precise, case-sensitive SharePoint queries.
+> **TL;DR:** Get case-sensitive SharePoint results in Power Automate by pre-filtering with OData, then refining with a 'Filter array' action.
 
 ## 💡 Challenge
 SharePoint OData filtering does not differentiate between uppercase and lowercase letters.

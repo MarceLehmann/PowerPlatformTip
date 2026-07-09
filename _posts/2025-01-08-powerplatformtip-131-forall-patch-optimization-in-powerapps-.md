@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 131 – 'ForAll & Patch Optimization in PowerApps'"
 date: 2025-01-08
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,6 +22,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Speed up bulk updates in Power Apps by putting `ForAll` inside `Patch` so records update in one batched call.
 
 ## 💡 Challenge
 Your Power App becomes slow when updating multiple records in SharePoint or other data sources. This often happens when combining `ForAll` and `Patch`, resulting in a high number of API calls. Additionally, if some IDs from the source (e.g., a collection) do not exist in the target data source, **Patch** will create new records for these missing IDs, while updating the existing ones.

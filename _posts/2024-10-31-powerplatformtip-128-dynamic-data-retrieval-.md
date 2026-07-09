@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 128 – 'Dynamic Data Retrieval'"
 date: 2024-10-31
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,8 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Use Parse JSON with dynamic keys in Power Automate to flexibly retrieve data without complex conditions.
+> **TL;DR:** Pull values from JSON dynamically in Power Automate using Parse JSON with variable keys – no Switch or If cascades.
 
 ## 💡 Challenge
 We often face the challenge of handling dynamic data in Power Automate without resorting to complex conditional structures like Switch or If statements.
