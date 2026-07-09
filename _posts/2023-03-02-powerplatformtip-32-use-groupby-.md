@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Load your data once and use GroupBy to organize it in memory for dependent filters, avoiding repeated data-source queries.
+
 ## 💡 Challenge
 Reloading the same data source repeatedly for different dependent filters – like categories and subcategories in dropdowns or combo boxes – hurts your app's performance.
 

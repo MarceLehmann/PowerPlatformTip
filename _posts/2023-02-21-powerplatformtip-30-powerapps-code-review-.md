@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Check app quality with the built-in AppChecker and the PowerCAT Power Apps Code Review Tool, which scores your app for performance and quality.
+
 ## 💡 Challenge
 Ensuring PowerApps solutions are high-quality, performant, and accessible is hard without the right tools to measure them.
 

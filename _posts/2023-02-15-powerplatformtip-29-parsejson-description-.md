@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Add a 'Description' property inside your Parse JSON schema so the label shows under the matching Dynamic Content entry and you can tell duplicates apart.
+
 ## 💡 Challenge
 When using the Parse JSON action in Power Automate, distinguishing between multiple occurrences of the same name in Dynamic Content can be difficult, leading to confusion about which value corresponds to which name.
 

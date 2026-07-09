@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use Microsoft's curated 'Power Platform: Learning Resources' hub for tutorials, best practices and SharePoint-integration content across all skill levels.
+
 ## 💡 Challenge
 Whether you're new to the Power Platform or looking to deepen your expertise, finding comprehensive and reliable resources to enhance your skills can be daunting.
 
