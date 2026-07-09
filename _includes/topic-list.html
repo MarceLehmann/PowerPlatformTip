@@ -1,0 +1,28 @@
+{% comment %}
+  Renders every post whose (normalized) tags match one of the pipe-delimited
+  aliases passed in include.aliases.
+  Normalization: lower-case, remove spaces / hyphens / underscores.
+  Example: {% include topic-list.html aliases="|powerautomate|flow|cloudflow|" %}
+  site.posts is already ordered newest-first.
+{% endcomment %}
+{% assign match_count = 0 %}
+<div class="topic-list list__item-wrapper">
+{% for post in site.posts %}
+  {% assign is_match = false %}
+  {% for tag in post.tags %}
+    {% assign nt = tag | downcase | replace: " ", "" | replace: "-", "" | replace: "_", "" %}
+    {% capture needle %}|{{ nt }}|{% endcapture %}
+    {% if include.aliases contains needle %}
+      {% assign is_match = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if is_match %}
+    {% assign match_count = match_count | plus: 1 %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+</div>
+{% if match_count == 0 %}
+<p class="ppt-no-results" style="display:block;">No posts found for this topic yet — check back soon or browse <a href="/posts/">all tips</a>.</p>
+{% endif %}

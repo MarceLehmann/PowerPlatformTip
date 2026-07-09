@@ -110,7 +110,7 @@ analytics:
 author:
   name             : "Marcel Lehmann"
   avatar           : "/assets/images/bio-photo.jfif"
-  bio              : "BizzApps MVP from Switzerland 🇨🇭 - PowerPlatform Expert & Evangelist & MVP - Turning passion into expertise"
+  bio              : "BizzApps MVP from Switzerland 🇭🇨 - PowerPlatform Expert & Evangelist & MVP - Turning passion into expertise"
   location         : "Switzerland"
   email            : # your-email@example.com
   links:
@@ -119,7 +119,7 @@ author:
       url: "https://kmupower.com"
     # - label: "Email"
     #   icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:marcel.lehmann@kmupower.com" # Uncomment and fill if you want to show email
+    #   url: "mailto:marcel.lehmann@kmupower.com" # Uncomment and fill if you want to show email
     #- label: "GitHub"
     #  icon: "fab fa-fw fa-github"
     #  url: "https://github.com/MarceLehmann" # Your GitHub profile

@@ -21,6 +21,16 @@ header:
 
 Explore our comprehensive collection of **PowerPlatformTip** posts organized by topic areas. Whether you're looking for specific Power Apps solutions, Power Automate workflows, or Power BI insights, our categorized approach helps you quickly find exactly what you need.
 
+## Browse curated topic collections
+
+<div class="ppt-topic-tiles">
+  <a class="ppt-topic-tile" href="/topics/power-apps/"><span class="ppt-topic-tile__icon">📱</span>Power Apps</a>
+  <a class="ppt-topic-tile" href="/topics/power-automate/"><span class="ppt-topic-tile__icon">⚙️</span>Power Automate</a>
+  <a class="ppt-topic-tile" href="/topics/sharepoint/"><span class="ppt-topic-tile__icon">🗂️</span>SharePoint</a>
+  <a class="ppt-topic-tile" href="/topics/dataverse/"><span class="ppt-topic-tile__icon">💾</span>Dataverse</a>
+  <a class="ppt-topic-tile" href="/topics/ai-copilot/"><span class="ppt-topic-tile__icon">🤖</span>AI &amp; Copilot</a>
+</div>
+
 ## Featured Categories
 
 🎯 **Power Apps Development**: Custom application building, canvas apps, model-driven apps  
@@ -31,4 +41,3 @@ Explore our comprehensive collection of **PowerPlatformTip** posts organized by 
 🛡️ **Security & Governance**: User permissions, environment management, compliance
 
 *Browse the categories below to discover expert solutions tailored to your specific Power Platform needs.*
-
