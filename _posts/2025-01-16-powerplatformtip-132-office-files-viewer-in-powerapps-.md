@@ -10,11 +10,9 @@ tags:
   - SharePoint
   - OfficeFiles
   - FileViewer
-  - PDF
-  - Word
   - Component
-  - PowerPlatform
   - NoCode
+  - PowerPlatformTip
 excerpt: "Display Office files like PDFs or Word documents directly in PowerApps without external workflows or third-party tools."
 header:
   overlay_color: "#2dd4bf"
@@ -26,43 +24,58 @@ toc_sticky: true
 > **TL;DR:** Show PDFs, Word and Excel files straight from SharePoint inside Power Apps with the Office Files Viewer component – no Power Automate.
 
 ## 💡 Challenge
-Viewing Office files directly in PowerApps is often a hassle. You might end up using complex integrations or additional tools like Power Automate, which can be time-consuming and unnecessary.
+Viewing Office files directly in Power Apps is often a hassle — you end up wiring in complex integrations or extra tools like Power Automate, which is time-consuming and usually unnecessary.
 
 ## ✅ Solution
-Use the Office Files Viewer Component to display Office files directly from SharePoint within PowerApps without Power Automate.
+Use the Office Files Viewer component to display Office files directly from SharePoint inside Power Apps — no Power Automate required.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Prepare the SharePoint Library  
-   🔸 Create a hyperlink column in your SharePoint list.  
-   🔸 Convert the hyperlink column into an image column and add the file URLs.  
-2. Import the Component  
-   🔸 Download and import the Office Files Viewer Component into your PowerApp.  
-   🔸 Find the component and instructions on GitHub.  
-3. Configure the Component Inputs  
-   🔸 Set your SharePoint URL as the data source in the component.  
-   🔸 Follow the provided instructions to display your files directly in PowerApps.  
-4. Test and Optimize  
-   🔸 Verify that files are displayed as expected.  
-   🔸 Adjust the view and integration based on your requirements.
+
+**1. Prepare the SharePoint library**
+
+🔸 Create a hyperlink column in your SharePoint list.
+
+🔸 Convert it into an image column and add the file URLs.
+
+**2. Import the component**
+
+🔸 Download and import the Office Files Viewer component into your app.
+
+🔸 Find the component and instructions on GitHub.
+
+**3. Configure the inputs**
+
+🔸 Set your SharePoint URL as the component's data source.
+
+🔸 Follow the instructions to display your files directly in Power Apps.
+
+**4. Test and optimize**
+
+🔸 Verify that files display as expected.
+
+🔸 Adjust the view and integration to your needs.
 
 ## 🎉 Result
-You now have a user-friendly, integrated way to display Office files directly within PowerApps. No unnecessary tools, just an efficient and seamless solution.
+You get a user-friendly, integrated way to display Office files directly within Power Apps — no unnecessary tools, just an efficient, seamless solution.
 
 ## 🌟 Key Advantages
-🔸 Native Integration: Fully integrated into PowerApps—no need for Power Automate.  
-🔸 Supports Various File Types: View PDFs, Word documents, Excel files, and more.  
-🔸 Time Saver: Streamlines file viewing, giving you more time for critical tasks.  
+
+🔸 **Native integration:** fully built into Power Apps — no Power Automate.
+
+🔸 **Multiple file types:** view PDFs, Word documents, Excel files, and more.
+
+🔸 **Time saver:** streamlines file viewing so you focus on the important work.
 
 ---
 
 ## 🛠️ FAQ
-**1. Can I view other file formats besides PDF?**  
-Yes—you can display PDFs, Word documents, Excel spreadsheets, images and more directly from SharePoint using the component.
+**1. Can I view other file formats besides PDF?**
+Yes — you can display PDFs, Word documents, Excel spreadsheets, images and more directly from SharePoint using the component.
 
-**2. Do I need Power Automate to get this working?**  
-No, the Office Files Viewer Component works natively in PowerApps—no external workflows required.
+**2. Do I need Power Automate to get this working?**
+No. The Office Files Viewer component works natively in Power Apps — no external workflows required.
 
-**3. How do I update file URLs after setup?**  
-Simply update the SharePoint hyperlink/image column with new URLs or adjust the component’s data source settings in PowerApps.
+**3. How do I update file URLs after setup?**
+Update the SharePoint hyperlink/image column with new URLs, or adjust the component's data source settings in Power Apps.
 
+---

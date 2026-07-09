@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 136 – Patch Coalesce Upsert"
+title: "#PowerPlatformTip 136 – 'Patch Coalesce Upsert'"
 date: 2025-04-15
 last_modified_at: 2026-07-09
 categories:
@@ -7,12 +7,11 @@ categories:
   - PowerPlatformTip
 tags:
   - PowerApps
-  - PowerPlatform
   - Patch
   - Coalesce
   - Upsert
-  - Efficiency
   - BestPractices
+  - PowerPlatformTip
 excerpt: "Learn how to use Patch() with Coalesce() in Power Apps to perform creates and updates in a single call, simplifying your code."
 header:
   overlay_color: "#2dd4bf"
@@ -24,53 +23,69 @@ toc_sticky: true
 > **TL;DR:** Do upsert in Power Apps with one `Patch(Source, Coalesce(LookUp(...), Defaults(Source)), {...})` – update or create in a single call.
 
 ## 💡 Challenge
-In Power Apps, maintaining separate logic branches for “Create” and “Update” can bloat your formulas and introduce bugs. How can you streamline this into a single operation?
+In Power Apps, keeping separate logic branches for "Create" and "Update" bloats your formulas and invites bugs. How can you fold this into a single operation?
 
 ## ✅ Solution
 Use a single `Patch()` call combined with `Coalesce()`. If `LookUp()` finds no record, `Coalesce()` falls back to `Defaults(DataSource)`, so the same call either updates an existing record or creates a new one.
 
-## 🔧 How It’s Done
-Here’s the step-by-step approach:
-1. Define your data source (e.g., Contacts)  
-   🔸 Make sure you have a collection or table connection, such as `Contacts`.  
-2. Retrieve any existing record:  
-   🔸 `varRecord = LookUp(Contacts, Email = varEmail)`  
-   (This returns the record if it exists, otherwise Blank.)  
-3. Use `Patch()` with `Coalesce()`:  
-   🔸 
-   Patch(
-     Contacts,
-     Coalesce(
-       varRecord,
-       Defaults(Contacts)
-     ),
-     {
-       Email: varEmail,
-       FullName: txtName.Text,
-       Phone: txtPhone.Text
-     }
-   )  
-   🔸 `Coalesce(varRecord, Defaults(Contacts))` ensures that if `varRecord` is Blank, the `Defaults(Contacts)` record template is used—resulting in a new record.  
-4. Publish and test:  
-   🔸 When a matching record exists, it’s updated. If not, a new record is created with the field values you provided.
+## 🔧 How It's Done
+
+**1. Define your data source**
+
+🔸 Make sure you have a table or collection connection, e.g. `Contacts`.
+
+**2. Retrieve any existing record**
+
+🔸 `varRecord = LookUp(Contacts, Email = varEmail)` — returns the record if it exists, otherwise Blank.
+
+**3. Patch with Coalesce**
+
+🔸 Combine `Patch()` and `Coalesce()`:
+
+```powerapps
+Patch(
+    Contacts,
+    Coalesce(
+        varRecord,
+        Defaults(Contacts)
+    ),
+    {
+        Email: varEmail,
+        FullName: txtName.Text,
+        Phone: txtPhone.Text
+    }
+)
+```
+
+🔸 `Coalesce(varRecord, Defaults(Contacts))` uses the Defaults template when `varRecord` is Blank — creating a new record.
+
+**4. Publish and test**
+
+🔸 If a matching record exists it's updated; otherwise a new record is created with your field values.
 
 ## 🎉 Result
-You’ve consolidated two code paths into one: your form logic is cleaner, easier to maintain, and less error-prone. Now “upsert” (update or insert) happens seamlessly with a single `Patch()`.
+You've consolidated two code paths into one: cleaner form logic, easier to maintain and less error-prone. "Upsert" (update or insert) now happens seamlessly with a single `Patch()`.
 
 ## 🌟 Key Advantages
-🔸 One unified call instead of separate Create/Update branches  
-🔸 No extra variables or `If()` checks needed  
-🔸 Cleaner maintenance and improved performance  
-🔸 Consistent behavior across SharePoint, Dataverse, or any Power Apps data source  
+
+🔸 One unified call instead of separate Create/Update branches
+
+🔸 No extra variables or `If()` checks needed
+
+🔸 Cleaner maintenance and improved performance
+
+🔸 Consistent behavior across SharePoint, Dataverse, or any Power Apps data source
 
 ---
 
 ## 🛠️ FAQ
-**1. Do I still need `If()` conditions to check for existing records?**  
-Coalesce() handles the check for you. If `LookUp()` returns Blank, it automatically uses `Defaults()`, so `If()` is unnecessary.
+**1. Do I still need `If()` conditions to check for existing records?**
+`Coalesce()` handles the check for you. If `LookUp()` returns Blank, it automatically uses `Defaults()`, so `If()` is unnecessary.
 
-**2. Will this approach work with Dataverse tables?**  
-Yes. Both `Patch()` and `Coalesce()` behave identically in Dataverse. Just replace `Contacts` with your table name (e.g., `Accounts`).
+**2. Will this approach work with Dataverse tables?**
+Yes. Both `Patch()` and `Coalesce()` behave identically in Dataverse. Just replace `Contacts` with your table name (e.g. `Accounts`).
 
-**3. What if `LookUp()` returns more than one record?**  
-Ensure your lookup criteria are unique (for example, use a primary key or unique field). Otherwise, `LookUp()` returns the first match and may lead to unexpected updates.
+**3. What if `LookUp()` returns more than one record?**
+Make your lookup criteria unique (for example, a primary key or unique field). Otherwise `LookUp()` returns the first match and may lead to unexpected updates.
+
+---
