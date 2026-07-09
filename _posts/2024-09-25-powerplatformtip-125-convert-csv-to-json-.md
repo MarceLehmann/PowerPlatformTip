@@ -6,13 +6,11 @@ categories:
   - Article
   - PowerPlatformTip
 tags:
-  - Marcel Lehmann
   - PowerAutomate
-  - PowerPlatform
-  - PowerPlatformTip
   - CSV
   - JSON
   - DataTransformation
+  - PowerPlatformTip
 excerpt: "Convert CSV data into JSON in Power Automate using only standard actions without premium connectors or external services."
 header:
   overlay_color: "#2dd4bf"
@@ -24,30 +22,45 @@ toc_sticky: true
 > **TL;DR:** Convert CSV to JSON in Power Automate with only standard actions – split, Select and Parse JSON, no premium connector.
 
 ## 💡 Challenge
-Need to convert CSV data into JSON in Power Automate without using premium connectors or external services?
+You need to convert CSV data into JSON in Power Automate — without premium connectors or external services.
 
 ## ✅ Solution
-Use standard Power Automate actions to split CSV data and map it into JSON format quickly and directly, without relying on premium or other services.
+Use standard Power Automate actions to split the CSV and map it into JSON, quickly and directly, with no premium dependency.
 
 ## 🔧 How It's Done
-1. Split CSV into Lines
-🔸 Use the Compose action with `@split(outputs('CSV_File'), outputs('NewLine'))` to break the CSV content into individual lines.
-2. Extract Field Names
-🔸 Add another Compose action to split the first line (headers) using `@split(first(outputs('SplitByLines')), ',')`.
-3. Map Fields to JSON
-🔸 Use the Select action to map each subsequent line to JSON format. Reference field names with `@{outputs('FieldNames')?[0]}` and map values with `@split(item(), ',')?[1]`, continuing for each required field.
-4. Count Fields
-🔸 Add a Compose action to count the fields using `@length(outputs('FieldNames'))`.
-5. Parse to JSON
-🔸 Finally, use the Parse JSON action with the mapped data to complete the transformation into JSON.
+
+**1. Split the CSV into lines**
+
+🔸 Compose: `@split(outputs('CSV_File'), outputs('NewLine'))` to break the content into individual lines.
+
+**2. Extract the field names**
+
+🔸 Compose: `@split(first(outputs('SplitByLines')), ',')` to get the header row.
+
+**3. Map fields to JSON**
+
+🔸 Use a Select action to map each remaining line. Reference field names with `@{outputs('FieldNames')?[0]}` and values with `@split(item(), ',')?[1]`, continuing for each field.
+
+**4. Count the fields**
+
+🔸 Compose: `@length(outputs('FieldNames'))`.
+
+**5. Parse to JSON**
+
+🔸 Feed the mapped data into a Parse JSON action to finish the transformation.
 
 ## 🎉 Result
-Effortlessly convert CSV data into JSON within Power Automate using only standard actions. No premium connectors or external services required!
+You convert CSV data into JSON entirely within Power Automate using standard actions — no premium connectors or external services required.
 
 ## 🌟 Key Advantages
-🔸 Fully utilize standard Power Automate tools 
-🔸 Fast and direct conversion without extra costs 
+
+🔸 Uses only standard Power Automate actions
+
+🔸 Fast, direct conversion with no extra cost
+
 🔸 Simplifies data handling and integration
+
+---
 
 ## 🎥 Video Tutorial
 {% include video id="hCMduE19pDw" provider="youtube" %}
@@ -55,11 +68,13 @@ Effortlessly convert CSV data into JSON within Power Automate using only standar
 ---
 
 ## 🛠️ FAQ
-**1. Do I need premium connectors to convert CSV to JSON?**  
-No, this approach uses only built-in Power Automate actions—no premium connectors or external services required.
+**1. Do I need premium connectors to convert CSV to JSON?**
+No. This approach uses only built-in Power Automate actions — no premium connectors or external services required.
 
-**2. How can I handle CSV files with different delimiters?**  
-Simply adjust the `split` function to use your delimiter, for example `@split(item(), ';')` for semicolon-separated files.
+**2. How can I handle CSV files with different delimiters?**
+Adjust the `split` function to use your delimiter, for example `@split(item(), ';')` for semicolon-separated files.
 
-**3. What if header names contain spaces or special characters?**  
+**3. What if header names contain spaces or special characters?**
 Use string functions like `replace()` to sanitize header values before mapping, ensuring valid JSON property names.
+
+---
