@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 108 – 'Double-Click Magic in PowerApps'"
 date: 2024-04-05
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,6 +21,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Detect single vs. double clicks on one Power Apps button using a click counter plus a 1-second timer to trigger different actions.
 
 ## 💡 Challenge
 How can we utilize both single and double clicks on the same button in PowerApps to perform separate actions, reflecting the state of interaction more accurately?

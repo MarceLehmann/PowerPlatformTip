@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 106 – 'Word & Quick Parts'"
 date: 2024-03-05
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,8 +22,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-The assumption that document automation in Word necessitates a premium subscription can deter users, particularly when it involves integrating external data, like from SharePoint.
+> **TL;DR:** Automate Word documents for free using Quick Parts placeholders filled by a standard Power Automate flow – no premium license needed.
 
 ## 💡 Challenge
 The assumption that document automation in Word necessitates a premium subscription can deter users, particularly when it involves integrating external data, like from SharePoint.

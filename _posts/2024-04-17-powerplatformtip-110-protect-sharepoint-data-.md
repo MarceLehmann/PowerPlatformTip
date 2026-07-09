@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 110 – 'Protect SharePoint Data'"
 date: 2024-04-17
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -17,6 +18,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Create a custom SharePoint permission level without 'View Application Pages' to force users through your Power App and block direct list access.
 
 ## 💡 Challenge
 How do we ensure that users interact with SharePoint data strictly through Power Apps, preventing direct access and potential data integrity issues?

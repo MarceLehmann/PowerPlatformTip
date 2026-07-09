@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 109 – 'Use TimeOut'"
 date: 2024-04-11
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -19,8 +20,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Approvals or other long-running tasks may take more time than your flow's default timeout period, risking interruptions and unintended cancellations.
+> **TL;DR:** Raise an action's Timeout (ISO 8601, e.g. `P2W`) and add 'Configure run after' handling so long approvals finish without failing the flow.
 
 ## 💡 Challenge
 Approvals or other long-running tasks may take more time than your flow's default timeout period, risking interruptions and unintended cancellations.
