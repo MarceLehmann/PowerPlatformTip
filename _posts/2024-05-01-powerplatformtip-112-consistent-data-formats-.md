@@ -9,9 +9,8 @@ tags:
   - PowerApps
   - PowerAutomate
   - DataConsistency
-  - ConsistentDataFormats
   - DataValidation
-  - PowerPlatform
+  - PowerFx
   - PowerPlatformTip
 excerpt: "Harmonize data formats in Power Apps and Power Automate by trimming spaces, standardizing case, and matching types to prevent comparison and validation errors."
 header:
@@ -24,37 +23,39 @@ toc_sticky: true
 > **TL;DR:** Normalize data before comparing – use `Trim`/`Lower` in Power Apps and `trim`/`toLower` in Power Automate to avoid format-mismatch errors.
 
 ## 💡 Challenge
-Data comes in various shapes and sizes, and when it’s time to compare or validate this data, format inconsistencies can derail your workflow, causing errors that are tricky to debug.
+Data arrives in many shapes and sizes. When it's time to compare or validate it, small format inconsistencies — stray spaces, mixed case, mismatched types — derail your workflow with errors that are tricky to debug.
 
 ## ✅ Solution
-Harmonize your data formats before comparison or validation. This involves converting text to a uniform case, stripping any extra spaces, and ensuring data types match across the board.
+Normalize your data before comparing or validating: trim extra spaces, convert text to a uniform case, and make sure data types match on both sides.
 
 ## 🔧 How It's Done
-* **Identify the Data:** Zero in on the data points you need to compare or validate within your app or flow.
 
-* **Standardize the Format:** Apply functions to clean and normalize data formats. For instance:
+🔸 **Identify the data** you need to compare or validate in your app or flow.
 
-**In Power Apps:** Use Lower(Trim(TextInput.Text)) to trim spaces and convert text to lowercase.
+🔸 **Standardize the format** with cleanup functions before comparing:
 
-* **In Power Automate:** Opt for toLower(trim(triggerOutputs()?['headers']['x-ms-file-last-modified'])) to achieve similar cleanliness in your data.
+🔸 In **Power Apps**: `Lower(Trim(TextInput.Text))` — trims spaces and lowercases the text.
 
-📌 **Unique Tips:**
+🔸 In **Power Automate**: `toLower(trim(triggerOutputs()?['headers']['x-ms-file-last-modified']))` — the same idea in an expression.
 
-* **Data Consistency:** Keeping your data in a consistent format can dramatically reduce the occurrence of errors.
+📌 **Tips:**
 
-* **Function Utilization:** Embrace the power of Trim and Lower in Power Apps, alongside trim and toLower in Power Automate, to ensure your data plays nice.
+🔸 Consistent formatting dramatically reduces hard-to-debug errors.
+
+🔸 Lean on `Trim`/`Lower` in Power Apps and `trim`/`toLower` in Power Automate to keep values aligned.
 
 ## 🎉 Result
-A seamless, error-resistant experience in both Power Apps and Power Automate, thanks to the proactive standardization of data formats.
+Consistent, normalized data makes comparisons and validation in Power Apps and Power Automate reliable — far fewer format-related surprises to debug.
 
 ## 🌟 Key Advantages
-* **Reliability:** Mitigates errors caused by mismatched data formats, boosting the robustness of your applications.
 
-* **Efficiency:** Streamlines data comparison and validation processes by removing unnecessary format-related hurdles.
+🔸 **Reliability:** eliminates errors caused by mismatched formats.
 
-* **Best Practices:** Embraces sound data management practices by advocating for data format uniformity.
+🔸 **Efficiency:** removes format-related hurdles from comparison and validation.
 
-A stitch in time saves nine, and in the realm of Power Platform, a little attention to data formats can save hours of debugging down the road. Ensure your workflows and apps stand the test of data diversity by enforcing format consistency. 🛠️✨
+🔸 **Best practice:** enforces sound, uniform data management.
+
+---
 
 ## 🎥 Video Tutorial
 {% include video id="gvdtBtNAZkU" provider="youtube" %}
@@ -62,11 +63,13 @@ A stitch in time saves nine, and in the realm of Power Platform, a little attent
 ---
 
 ## 🛠️ FAQ
-**1. Why should I standardize data formats before comparison?**  
-Standardization ensures that values match consistently, preventing false mismatches and reducing errors in your apps and flows.
+**1. Why should I standardize data formats before comparison?**
+Standardization ensures values match consistently, preventing false mismatches and reducing errors in your apps and flows.
 
-**2. Which Power Apps functions help normalize text data?**  
-Use `Trim` to remove extra spaces and `Lower` to convert text to lowercase; for example, `Lower(Trim(TextInput.Text))`.
+**2. Which Power Apps functions help normalize text data?**
+Use `Trim` to remove extra spaces and `Lower` to convert text to lowercase, e.g. `Lower(Trim(TextInput.Text))`.
 
-**3. How can I apply the same formatting in Power Automate?**  
-Use the `trim` and `toLower` functions within expressions, e.g., `toLower(trim(triggerOutputs()?['headers']['x-ms-file-last-modified']))` to ensure clean, consistent data.
+**3. How can I apply the same formatting in Power Automate?**
+Use the `trim` and `toLower` functions in expressions, e.g. `toLower(trim(triggerOutputs()?['headers']['x-ms-file-last-modified']))`.
+
+---

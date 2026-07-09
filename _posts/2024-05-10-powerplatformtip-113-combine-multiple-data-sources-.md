@@ -7,15 +7,11 @@ categories:
   - PowerPlatformTip
 tags:
   - PowerApps
-  - PowerPlatform
-  - PowerPlatformTip
-  - StaticData
-  - DataIntegration
+  - PowerFx
   - Ungroup
-  - CanvasApps
-  - Delegation
+  - DataIntegration
   - Collections
-  - TableFunction
+  - PowerPlatformTip
 excerpt: "Simplify merging static and dynamic data in Power Apps by ungrouping mixed data sources into a single flat table for improved management."
 header:
   overlay_color: "#2dd4bf"
@@ -27,21 +23,26 @@ toc_sticky: true
 > **TL;DR:** Merge static and dynamic data in Power Apps into one flat table using the `Ungroup` function.
 
 ## 💡 Challenge
-Combining multiple data sources, including static data, into a single Power Apps project can be challenging. Merging multiple data sources with static data in Power Apps can create complexity in your app’s data management.
+Combining multiple data sources — including hard-coded static data — into a single Power Apps structure adds real complexity to your app's data management.
 
 ## ✅ Solution
-Use the `Ungroup` function to merge different data types into a unified, flat table structure, enhancing data interaction and usability.
+Use the `Ungroup` function to flatten different data types into one unified table, making the data easier to interact with and use.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Combine Data Sources: Mix static and dynamic data in an array.  
-   🔸 Create an array including objects with local static entries and tables from sources.  
-   🔸 Ensure the property name (e.g., locItem) is common across objects.  
-2. Simplify Structure: Apply the `Ungroup` function to flatten complex data arrays into a single manageable format.  
-   🔸 Specify the common nested property as the target to ungroup (e.g., locItem).  
-   🔸 Confirm results return a flat table with all items.
 
-powerapps
+**1. Combine the sources** into an array mixing static and dynamic data.
+
+🔸 Build an array of objects containing local static entries and tables from your data sources.
+
+🔸 Use a common property name (e.g. `locItem`) across all objects.
+
+**2. Flatten with `Ungroup`.**
+
+🔸 Specify the common nested property (`locItem`) as the one to ungroup.
+
+🔸 The result is a single flat table containing all items.
+
+```powerapps
 Ungroup(
    [
       // Object 1
@@ -50,18 +51,21 @@ Ungroup(
       // Object 2
       {locItem: DelegationPlayground}
    ],
-   // The 'locItem' property is specified as the common property to ungroup
+   // The 'locItem' property is the common property to ungroup
    locItem
 )
-
+```
 
 ## 🎉 Result
-A streamlined, efficient data structure that is easier to manage and query, boosting app performance and user experience.
+A streamlined, efficient data structure that's easier to manage and query — boosting app performance and the user experience.
 
 ## 🌟 Key Advantages
-🔸 Facilitates the integration of disparate data sources.  
-🔸 Simplifies querying and data manipulation within the app.  
-🔸 Enhances overall application efficiency and maintainability.
+
+🔸 Integrates disparate data sources into one structure.
+
+🔸 Simplifies querying and data manipulation in the app.
+
+🔸 Improves overall efficiency and maintainability.
 
 ---
 
@@ -71,11 +75,13 @@ A streamlined, efficient data structure that is easier to manage and query, boos
 ---
 
 ## 🛠️ FAQ
-**1. What is the main purpose of the Ungroup function in Power Apps?**  
+**1. What is the main purpose of the Ungroup function in Power Apps?**
 It flattens nested tables or collections into a single level by ungrouping a specific nested property, making mixed data sources easier to work with.
 
-**2. Can I use other functions to merge static and dynamic data?**  
-Yes, you can also use the `Table` function, but `Ungroup` provides more flexibility when combining different data sources into one structure.
+**2. Can I use other functions to merge static and dynamic data?**
+Yes, you can also use the `Table` function, but `Ungroup` gives more flexibility when combining different sources into one structure.
 
-**3. Is Ungroup delegable with large data sets?**  
-Ungroup itself isn’t delegable; however, it works effectively on locally loaded collections or static data after data is retrieved from delegable sources.
+**3. Is Ungroup delegable with large data sets?**
+Ungroup itself isn't delegable, but it works well on locally loaded collections or static data after the data has been retrieved from delegable sources.
+
+---

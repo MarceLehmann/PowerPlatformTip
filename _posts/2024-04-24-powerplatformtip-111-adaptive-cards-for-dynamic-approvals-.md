@@ -6,13 +6,12 @@ categories:
   - Article
   - PowerPlatformTip
 tags:
-  - Adaptive Cards
-  - Power Automate
+  - AdaptiveCards
+  - PowerAutomate
   - Approvals
-  - Dynamic Approvals
-  - Office 365
-  - User Search
+  - Microsoft365
   - Workflow
+  - PowerPlatformTip
 excerpt: "Use Adaptive Cards and Office 365 User Search in Power Automate to dynamically select the next approver, enhancing approval process flexibility."
 header:
   overlay_color: "#2dd4bf"
@@ -24,30 +23,37 @@ toc_sticky: true
 > **TL;DR:** Replace static Power Automate approvals with Adaptive Cards + Office 365 User Search so each approver picks the next one dynamically.
 
 ## 💡 Challenge
-In many workflows, Power Automate's standard approval function is limited as it doesn't allow for the dynamic selection of the next approver after an approval. Users are looking for a solution that makes it possible to manage approvals more flexibly, choosing the next approver individually after each approval.
+Power Automate's standard approval action doesn't let an approver choose the *next* approver on the fly. For flexible, ad-hoc chains you need a way to pick the next person after each approval.
 
 ## ✅ Solution
-The solution is to use Adaptive Cards within Power Automate flows instead of standard approval mechanisms. By leveraging Adaptive Cards combined with the Office 365 User Search, users can dynamically select the next approver, significantly enhancing the flexibility of the process.
+Use Adaptive Cards with a Microsoft 365 user picker instead of the standard approval. Each approver selects who should approve next, so the chain builds itself dynamically.
 
 ## 🔧 How It's Done
-* Create a Power Automate Flow that sends an Adaptive Card to the first approver as soon as an approval request is initiated.
 
-* Incorporate an Office 365 User Search field into the Adaptive Card, allowing the current approver to select the next approver.
+🔸 Create a flow that sends an Adaptive Card to the first approver when a request is initiated.
 
-* After approval by the current user, the Adaptive Card is automatically sent to the next approver based on the selection.
+🔸 Add an **Office 365 User Search** input to the card so the current approver can pick the next approver.
 
-* Repeat this process until the approval chain is complete. Each step is logged for tracking and transparency.
+🔸 After the current approval, send the card automatically to the selected next approver.
 
-* At the end of the process, a summary is generated showing who has seen, approved, or forwarded the approval request.
+🔸 Repeat until the chain is complete, logging each step for tracking and transparency.
+
+🔸 At the end, generate a summary of who saw, approved, or forwarded the request.
 
 ## 🎉 Result
-A versatile and dynamic approval process that transcends the limitations of the standard approval function, allowing users to customize the approval flow according to their needs.
+A versatile, dynamic approval process that goes beyond the standard approval action, letting users shape the approval flow to fit their needs.
 
 ## 🌟 Key Advantages
+
 🔸 Unmatched flexibility in choosing approvers.
+
 🔸 Enables sequential and conditional approvals.
-🔸 Improved oversight and transparency of the approval history.
-🔸 Optimizes user experience through integration with Office 365.
+
+🔸 Better oversight and transparency of the approval history.
+
+🔸 Smooth user experience through Microsoft 365 integration.
+
+---
 
 ## 🎥 Video Tutorial
 {% include video id="KoTyWm7Qg4M" provider="youtube" %}
@@ -55,13 +61,13 @@ A versatile and dynamic approval process that transcends the limitations of the 
 ---
 
 ## 🛠️ FAQ
-**1. How do I implement Office 365 User Search in Adaptive Cards?**  
-You can add a people picker input in the Adaptive Card JSON schema, which connects to Azure AD and allows approvers to search and select users dynamically.
+**1. How do I implement Office 365 User Search in Adaptive Cards?**
+Add a people-picker input to the Adaptive Card JSON schema. It connects to Microsoft Entra ID and lets approvers search and select users dynamically.
 
-**2. What happens if an approver doesn’t respond to the Adaptive Card?**  
-You can configure timeouts or parallel branches in your flow to handle non-responses, such as escalating to a fallback approver or sending reminders automatically.
+**2. What happens if an approver doesn't respond to the Adaptive Card?**
+Configure timeouts or parallel branches in your flow to handle non-responses — escalate to a fallback approver or send automatic reminders.
 
-**3. Can I include conditional logic within the approval flow?**  
-Yes, use conditional actions in Power Automate based on the approver’s selection or other variables, enabling complex approval scenarios and branching logic.
+**3. Can I include conditional logic within the approval flow?**
+Yes. Use conditional actions in Power Automate based on the approver's selection or other variables to build branching approval scenarios.
 
 ---
