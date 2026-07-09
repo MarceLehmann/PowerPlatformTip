@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 102 – 'Event Coordination'"
 date: 2024-06-12
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,6 +21,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Use the Microsoft Graph Update Event call with `hideAttendees: true` to add event attendees silently and keep the guest list private.
 
 ## 💡 Challenge
 Organizing event attendees in Power Automate can feel like herding cats. The usual methods often mean everyone gets an alert every time there’s a change, and to make matters worse, everyone can see who else is coming—talk about a lack of privacy!

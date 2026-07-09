@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 104 – 'Efficient JSON Handling'"
 date: 2024-06-20
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,8 +22,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Effectively managing JSON structures in Power Automate can seem daunting without a solid grasp of JSON structures and schemas.
+> **TL;DR:** Define JSON schemas with types, required fields, constraints and format validation in Power Automate to keep your data clean and your flows reliable.
 
 ## 💡 Challenge
 Effectively managing JSON structures in Power Automate can seem daunting without a solid grasp of JSON structures and schemas.

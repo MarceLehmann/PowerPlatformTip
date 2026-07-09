@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 101 – 'Centralized Data Handling'"
 date: 2024-01-22
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,6 +21,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Centralize Power Apps logic with global variables and Named Formulas so you maintain it in one place instead of duplicating it across buttons and screens.
 
 ## 💡 Challenge
 Establishing a centralized data management system in Power Apps, demonstrated by dynamically updating a supervisor’s email based on user input. This method is applicable to various functions, like data filtering, without the need to embed the logic in multiple places like buttons.

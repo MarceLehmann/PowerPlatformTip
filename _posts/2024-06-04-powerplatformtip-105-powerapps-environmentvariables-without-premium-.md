@@ -3,6 +3,7 @@
 title: "#PowerPlatformTip 105 – 'PowerApps – EnvironmentVariables Without Premium'"
 seo_title: "#PowerPlatformTip 105 – 'PowerApps – EnvironmentVariables"
 date: 2024-06-04
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -23,6 +24,8 @@ toc: true
 toc_sticky: true
 
 ---
+
+> **TL;DR:** Fetch environment variables in PowerApps without premium by calling a solution-based Power Automate flow on OnStart and storing the value locally.
 
 ## 💡 Challenge
 Accessing environment variables in PowerApps requires a premium license, despite being freely available in Power Automate. This limitation contradicts the core advantage of environment variables: their ability to be used universally across platforms.

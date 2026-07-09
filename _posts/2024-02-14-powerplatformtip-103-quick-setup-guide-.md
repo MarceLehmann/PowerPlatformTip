@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 103 – 'Quick Setup Guide'"
 date: 2024-02-14
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,6 +22,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Populate Power Apps dropdowns and ComboBoxes fast by pointing their `Items` at SharePoint/Dataverse Lookup or Choice columns via `Choices()`.
 
 ## 💡 Challenge
 Achieving a quick setup for dropdown menus or ComboBoxes in PowerApps, especially when under time constraints or needing a temporary solution.
