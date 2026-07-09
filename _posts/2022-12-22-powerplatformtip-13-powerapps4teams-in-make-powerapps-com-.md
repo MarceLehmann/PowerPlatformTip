@@ -1,15 +1,17 @@
 ---
 title: "#PowerPlatformTip 13 – 'PowerApps4Teams in make.powerapps.com'"
 date: 2022-12-22
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
 tags:
-  - powerapps
-  - teams
-  - url hack
+  - PowerApps
+  - Teams
+  - url-hack
   - productivity
   - powerapps4teams
+  - PowerPlatformTip
 excerpt: "Edit PowerApps4Teams apps directly in make.powerapps.com using a URL hack. Save time and boost productivity by bypassing the standard Teams creation process."
 header:
   overlay_color: "#2dd4bf"
@@ -18,34 +20,43 @@ toc: true
 toc_sticky: true
 ---
 
+Editing a PowerApps for Teams app normally means going through the Teams creation flow every time.
+With a small URL trick you can open the same app directly in edit mode in the Power Apps studio at make.powerapps.com — by swapping the environment and app IDs into a known edit URL.
+
 ## 💡 Challenge
-If you use #PowerApps4Teams, you know how annoying the creation process can be. It’s like trying to navigate a maze just to get to your app’s editing screen. Wouldn’t it be great if there was a shortcut?
+If you build with PowerApps for Teams, reaching the edit screen through the Teams interface is slow and repetitive. A shortcut straight into the studio would save real time.
 
 ## ✅ Solution
-Copy the environment and app IDs, replace them in a known edit URL, and access your Teams app directly in edit mode in the PowerApps studio.
+Copy the environment ID and app ID, paste them into a standard Power Apps edit URL, and open your Teams app directly in edit mode in the studio.
 
-## 🔧 How It's Done
-Here's how to do it:
-1. Copy the environment ID and app ID from your PowerApps4Teams app.  
-   🔸 Environment ID: found in the app’s details.  
-   🔸 App ID: the unique identifier of your Teams app.  
-2. Open any PowerApps app in edit mode.  
-   🔸 In make.powerapps.com, select an app and click **Edit**.  
-   🔸 Copy the URL from the browser’s address bar.  
-3. Replace the IDs in the URL.  
-   🔸 Paste your environment ID in place of the existing one.  
-   🔸 Replace the app ID segment with your Teams app’s ID.  
-4. Press Enter to load the modified URL.  
-   🔸 The PowerApps studio opens your Teams app for editing.  
-   🔸 Make your changes just like in any other PowerApp.
+## 🔧 How it's done
+
+**1. Copy the IDs**
+
+🔸 Get the **environment ID** and **app ID** from your PowerApps for Teams app details.
+
+**2. Open any app in edit mode**
+
+🔸 In make.powerapps.com, edit any app and copy the URL from the browser's address bar as a template.
+
+**3. Swap the IDs**
+
+🔸 Replace the environment ID and the app ID segments in the URL with your Teams app's values.
+
+**4. Load the URL**
+
+🔸 Press Enter — the studio opens your Teams app for editing like any other canvas app.
 
 ## 🎉 Result
-By using this URL hack, you’ll save time and frustration when editing your PowerApps4Teams apps. No more navigating through the Teams interface just to make a simple edit!
+You jump straight into editing your Teams app in the familiar Power Apps studio, skipping the Teams navigation entirely.
 
 ## 🌟 Key Advantages
-🔸 Time-Saving: Bypass the lengthy creation process and jump straight into editing.  
-🔸 Flexibility: Edit your Teams apps in the familiar PowerApps studio environment.  
-🔸 Efficiency: Make quick edits without the hassle of going through Teams.
+
+🔸 **Time-saving:** bypass the Teams creation process and edit directly.
+
+🔸 **Familiar environment:** work in the full Power Apps studio.
+
+🔸 **Quick edits:** make small changes without navigating through Teams.
 
 ---
 
@@ -55,11 +66,15 @@ By using this URL hack, you’ll save time and frustration when editing your Pow
 ---
 
 ## 🛠️ FAQ
-**1. How do I find the environment and app IDs for my Teams app?**  
-You can find both IDs in the app’s details within make.powerapps.com. Open your Teams app in Teams, click **Edit** to launch the PowerApps studio, and note the IDs in the browser URL or in the app settings.
 
-**2. Can I use this hack for any PowerApps4Teams app?**  
-Yes. As long as the app exists in the environment, you can replace the IDs in any edit URL to open that Teams app directly in the PowerApps studio.
+**Q1: How do I find the environment and app IDs for my Teams app?**
 
-**3. Is this supported by Microsoft or just a workaround?**  
-This is an unofficial workaround. While it uses the standard PowerApps studio, it’s not officially documented by Microsoft. Use it to boost productivity but be aware it may change with future updates.
+Open your Teams app, click **Edit** to launch the studio, and read both IDs from the browser URL or the app settings.
+
+**Q2: Can I use this hack for any PowerApps for Teams app?**
+
+Yes. As long as the app exists in the environment, you can swap the IDs in an edit URL to open that app directly in the studio.
+
+**Q3: Is this supported by Microsoft or just a workaround?**
+
+It's an unofficial workaround. It uses the standard studio, but it isn't documented by Microsoft, so it may change with future updates.

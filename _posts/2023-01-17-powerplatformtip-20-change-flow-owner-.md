@@ -1,16 +1,18 @@
 ---
 title: "#PowerPlatformTip 20 – 'Change Flow-Owner'"
 date: 2023-01-17
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
 tags:
-  - power automate
-  - flow owner
+  - PowerAutomate
+  - flow-owner
   - permissions
   - solutions
   - automation
-excerpt: "Change Power Automate flow owner directly in a solution using the hidden menu. Avoid export/import and keep all connections and history intact."
+  - PowerPlatformTip
+excerpt: "Change a Power Automate flow owner in place by making it solution-aware. Avoid export/import and keep all connections and run history intact."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -18,42 +20,56 @@ toc: true
 toc_sticky: true
 ---
 
+You can't change the owner of a plain (non-solution) cloud flow in place — the owner is part of the flow's identity, so you'd normally have to export and re-import.
+The clean way is to make the flow **solution-aware**, then reassign the owner directly from its **Details**.
+
 ## 💡 Challenge
-Power Automate hides the Change Owner feature for flows outside a solution. Without this option, you must export, adjust permissions, and re-import, which is time-consuming and error-prone.
+For a non-solution flow there's no in-place "change owner" option. Working around it with export, permission changes and re-import is slow and error-prone.
 
 ## ✅ Solution
-Access the hidden Change Owner option by working with your flow inside a solution, allowing direct reassignment of ownership.
+Add the flow to a **solution** (in a Dataverse-enabled environment), which unlocks in-place ownership changes via **Details → Edit → Owner**.
 
-## 🔧 How It's Done
-Here's how to do it:
-1. Navigate to Solutions in the Power Automate portal.  
-   🔸 Select the solution containing your flow.  
-   🔸 Ensures the ellipsis menu shows additional actions.  
-2. Locate the target flow.  
-   🔸 Click the three dots (ellipsis) next to the flow name.  
-   🔸 Choose Change Owner from the menu.  
-3. Assign a new owner.  
-   🔸 Pick the user account to transfer ownership.  
-   🔸 Click Save to apply changes.
+## 🔧 How it's done
+
+**1. Make the flow solution-aware**
+
+🔸 In [make.powerautomate.com](https://make.powerautomate.com), add the flow to a solution (or create it inside one).
+
+**2. Open the flow details**
+
+🔸 Select the flow, then in the **Details** section choose **Edit**.
+
+**3. Set the new owner**
+
+🔸 In the **Owner** section, add the new owner. The original owner and the new owner become **co-owners**, so nothing breaks.
+
+**4. Refresh the license (if needed)**
+
+🔸 For scheduled or automated flows, the new owner's license takes effect within about 7 days — edit and re-save the flow to apply it immediately.
 
 ## 🎉 Result
-The flow's ownership is updated instantly without exporting or interrupting service, maintaining all connections and history intact.
+Ownership transfers without export/import, and all connection references and run history stay intact — no downtime.
 
 ## 🌟 Key Advantages
-🔸 Quickly reassign flow ownership without export/import.  
-🔸 Preserves flow connections and run history.  
-🔸 No downtime or permission lapses during transfer.
+
+🔸 **In-place change:** no export/import round trip.
+
+🔸 **History preserved:** connections and run history carry over.
+
+🔸 **Business continuity:** owner and new owner become co-owners, avoiding permission gaps.
 
 ---
 
 ## 🛠️ FAQ
-**1. Can I change ownership of flows that use premium connectors?**  
-Yes, but the new owner must have appropriate licenses for any premium connectors used in the flow.
 
-**2. What happens to the flow's run history when ownership changes?**  
-The complete run history remains intact and accessible to the new owner after the transfer.
+**Q1: Can I change ownership of flows that use premium connectors?**
 
-**3. Do I need special permissions to change flow ownership?**  
-Yes, you need to be either the current flow owner, a co-owner, or have environment admin privileges.
+Yes, but the new owner needs the appropriate licenses for any premium connectors. Without a premium license, the flow keeps running for a grace period before being turned off.
 
----
+**Q2: What happens to the flow's run history when ownership changes?**
+
+The complete run history stays intact and accessible to the new owner.
+
+**Q3: Do I need special permissions to change flow ownership?**
+
+Yes — you must be the current owner, a co-owner, or an environment admin.

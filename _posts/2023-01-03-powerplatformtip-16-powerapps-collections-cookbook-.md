@@ -1,15 +1,17 @@
 ---
 title: "#PowerPlatformTip 16 – 'PowerApps – Collections Cookbook'"
 date: 2023-01-03
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
 tags:
-  - powerapps
+  - PowerApps
   - collections
-  - code snippets
-  - data manipulation
+  - code-snippets
+  - data-manipulation
   - productivity
+  - PowerPlatformTip
 excerpt: "Access ready-to-use PowerApps collection code snippets with the Collections Cookbook. Enhance data manipulation and boost app development productivity."
 header:
   overlay_color: "#2dd4bf"
@@ -18,40 +20,55 @@ toc: true
 toc_sticky: true
 ---
 
+Manipulating collections in advanced ways — numbering rows, counting distinct values, grouping — often goes beyond the built-in functions you reach for first.
+Matthew Devaney's **PowerApps Collections Cookbook** is a free library of ready-to-use recipes for exactly these tasks.
+
 ## 💡 Challenge
-Need to manipulate and analyze collections in advanced ways not supported by built-in functions? It’s like trying to write a novel with only basic words – you know there’s so much more you could express with the right vocabulary!
+You need advanced collection operations that aren't obvious from the built-in functions, and writing them from scratch each time is slow.
 
 ## ✅ Solution
-Use the PowerApps “Collections Cookbook”, a website filled with ready-to-use code snippets.
+Use the [PowerApps Collections Cookbook](https://www.matthewdevaney.com/powerapps-collections-cookbook/) — a website full of copy-and-paste Power Fx recipes for common collection tasks.
 
-## 🔧 How It's Done
-Here's how to do it:
-1. Visit the Cookbook: Navigate to the Collections Cookbook website.  
-   🔸 Browse the overview of available recipes.  
-2. Find Your Recipe: Browse through the various code snippets to find what you need.  
-   🔸 Look for tasks like adding row numbers or counting distinct items.  
-3. Copy and Paste: Simply copy the code you need and paste it into your app.  
-   🔸 Test snippets in a safe development environment.  
-   🔸 Review and understand the code before implementation.
+## 🔧 How it's done
+
+**1. Open the cookbook**
+
+🔸 Go to [matthewdevaney.com/powerapps-collections-cookbook](https://www.matthewdevaney.com/powerapps-collections-cookbook/) and browse the list of recipes.
+
+**2. Find your recipe**
+
+🔸 Look for the task you need — adding row numbers, counting distinct items, reversing a collection, and more.
+
+**3. Copy, paste and adapt**
+
+🔸 Paste the snippet into your app, test it in a safe screen, and adjust it to your data.
 
 ## 🎉 Result
-By leveraging the Collections Cookbook, you’ll unlock new collection capabilities like numbering rows, counting distinct entries, and more. It’s like gaining superpowers for your collections!
+You unlock advanced collection capabilities — row numbering, distinct counts and more — without writing the logic yourself.
 
 ## 🌟 Key Advantages
-🔸 Ready-to-use code snippets for complex collection tasks.  
-🔸 Enhanced productivity with proven code recipes.  
-🔸 Improved app reliability through tested examples.  
+
+🔸 **Ready-to-use snippets** for complex collection tasks.
+
+🔸 **Higher productivity** with proven recipes instead of trial and error.
+
+🔸 **More reliable apps** thanks to tested examples.
+
+## 🔗 Related Tips
+- [#PowerPlatformTip 93 – Add RowNumbers](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-93-add-rownumbers/) — a specific cookbook-style recipe for numbering collection rows.
 
 ---
 
 ## 🛠️ FAQ
-**1. Are the Collections Cookbook examples compatible with all PowerApps versions?**  
-Most examples work across different PowerApps versions, but some newer functions may require updated versions of PowerApps.
 
-**2. Can I modify the cookbook examples for my specific use case?**  
-Absolutely! The cookbook provides starting points that you can customize and adapt to your specific business requirements.
+**Q1: Are the cookbook examples compatible with all Power Apps versions?**
 
-**3. How often is the Collections Cookbook updated?**  
-The cookbook is regularly updated with new examples and improved code patterns as PowerApps evolves.
+Most work across versions, though some newer functions may require an up-to-date Power Apps authoring version.
 
----
+**Q2: Can I modify the examples for my use case?**
+
+Yes. The recipes are starting points you can customise and adapt to your business requirements.
+
+**Q3: How often is the cookbook updated?**
+
+It's maintained and expanded over time as Power Apps evolves, with new recipes and improved patterns.

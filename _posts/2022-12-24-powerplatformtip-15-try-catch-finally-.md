@@ -1,15 +1,17 @@
 ---
 title: "#PowerPlatformTip 15 – 'try-catch-finally'"
 date: 2022-12-24
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
 tags:
-  - power automate
-  - error handling
-  - flow reliability
+  - PowerAutomate
+  - error-handling
+  - flow-reliability
   - automation
   - logging
+  - PowerPlatformTip
 excerpt: "Implement the try-catch-finally pattern in Power Automate for robust error handling, improved flow reliability, and automated cleanup."
 header:
   overlay_color: "#2dd4bf"
@@ -18,45 +20,60 @@ toc: true
 toc_sticky: true
 ---
 
+Flows that fail silently are painful to troubleshoot.
+Borrow the **try-catch-finally** pattern from programming: run your main logic in a Try scope, handle failures in a Catch scope, and always run cleanup in a Finally scope — driven by each scope's **Configure run after** settings.
+
 ## 💡 Challenge
-Flows fail silently without clear error handling, making troubleshooting difficult.
+Without explicit error handling, flows fail silently and give you little to work with when something breaks.
 
 ## ✅ Solution
-Implement the try-catch-finally pattern using the official template to handle errors proactively.
+Structure your flow into three **Scope** actions — Try, Catch and Finally — and use **Configure run after** so the Catch runs only on failure and the Finally always runs.
 
-## 🔧 How It's Done
-Here's how to do it:
-1. Add a Try block where you put your main logic.  
-   🔸 Put core logic inside the Try container.  
-   🔸 Ensure all critical actions are included.  
-2. Add a Catch block to handle any errors from the Try block.  
-   🔸 Configure error handling actions, such as sending notifications.  
-   🔸 Log error details for troubleshooting.  
-3. Add a Finally block for cleanup tasks executed after Try or Catch.  
-   🔸 Perform cleanup actions, like deleting temporary data.  
-   🔸 Execute common post-processing steps.
+## 🔧 How it's done
 
-Extratip: You can also use just this expression to get the current flow run 
-```concat('https://unitedkingdom.flow.microsoft.com/manage/environments/',workflow()?['tags']['environmentName'],'/flows/',workflow()?['name'],'/runs/',workflow()?['run']['name'])```
+**1. Add a Try scope**
+
+🔸 Put your core logic inside a **Scope** named *Try* — include every critical action.
+
+**2. Add a Catch scope**
+
+🔸 Add a second scope set to **run after** the Try *has failed / timed out*. Put your error handling here — notifications and logging.
+
+**3. Add a Finally scope**
+
+🔸 Add a third scope configured to run after both Try and Catch, whatever their result, for cleanup like deleting temporary data.
+
+**Extra tip:** build a direct link to the current run with this expression:
+
+```
+concat('https://unitedkingdom.flow.microsoft.com/manage/environments/', workflow()?['tags']['environmentName'], '/flows/', workflow()?['name'], '/runs/', workflow()?['run']['name'])
+```
+
+🔸 Adjust the regional host (e.g. `emea`, `unitedstates`) to match your tenant's Power Automate URL.
 
 ## 🎉 Result
-By implementing this pattern, you’ll gain better visibility into flow failures and more control over how your flows behave when things go wrong.
+Failures surface clearly, cleanup always runs, and your flows behave predictably when things go wrong.
 
 ## 🌟 Key Advantages
-🔸 Surface and Handle Failures: No more silent failures; you'll know exactly what went wrong and where.  
-🔸 Isolate Cleanup Logic: Keep your flow tidy with a dedicated Finally block for cleanup tasks.  
-🔸 Improve Reliability: With proper error handling, your flows become more robust and dependable.
+
+🔸 **Surface failures:** no more silent errors — you know what went wrong and where.
+
+🔸 **Isolated cleanup:** a dedicated Finally scope keeps post-processing tidy.
+
+🔸 **Reliability:** structured handling makes flows more robust and dependable.
 
 ---
 
 ## 🛠️ FAQ
-**1. When should I use Try-Catch-Finally in Power Automate?**  
-Use this pattern for critical flows where error handling is important, especially when dealing with external APIs, file operations, or complex business processes.
 
-**2. Can I nest Try-Catch blocks within each other?**  
-Yes, you can nest Try-Catch blocks, but it's recommended to keep error handling logic simple and clear to maintain readability.
+**Q1: When should I use try-catch-finally in Power Automate?**
 
-**3. What information is available in the Catch block about the error?**  
-The Catch block provides error details including error type, message, and stack trace, which you can use for logging and troubleshooting.
+Use it for critical flows where error handling matters — external API calls, file operations, and complex business processes.
 
----
+**Q2: Can I nest Try-Catch scopes?**
+
+Yes, you can nest scopes, but keep the error handling simple and clear so the flow stays readable.
+
+**Q3: What error information is available in the Catch scope?**
+
+Use the `result()` expression on the Try scope to read each action's status, error code and message (there's no stack trace in Power Automate). Feed those values into your logging or notification actions.

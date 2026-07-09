@@ -1,15 +1,17 @@
 ---
 title: "#PowerPlatformTip 14 – 'Template Screens'"
 date: 2022-12-23
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
 tags:
-  - powerapps
+  - PowerApps
   - templates
-  - app development
+  - app-development
   - productivity
-  - canvas apps
+  - canvas-apps
+  - PowerPlatformTip
 excerpt: "Accelerate Power Apps development with pre-built template screens for common functions. Save time, boost productivity, and streamline app creation."
 header:
   overlay_color: "#2dd4bf"
@@ -18,42 +20,52 @@ toc: true
 toc_sticky: true
 ---
 
+Building common app screens from scratch takes time you don't need to spend.
+Power Apps ships **template screens** for frequent functions — add one, customise it, and layer in your own logic.
+
 ## 💡 Challenge
-Building common app functions from scratch takes time. It’s like starting every meal by growing your own ingredients – time-consuming and unnecessary!
+Recreating standard screens — email lists, calendars, tutorials — for every app is repetitive and slow.
 
 ## ✅ Solution
-Use pre-built template screens to kickstart development like having a master chef’s recipe book.
+Insert a pre-built template screen to start with a working layout, then adapt it to your needs.
 
-## 🔧 How It's Done
-Here's how to do it:
-1. Insert Templates  
-   🔸 Start by inserting pre-built templates for common functions like Email, Calendar, etc.  
-   🔸 Think of it as having LEGO blocks ready for building your app.  
-2. Customize Templates  
-   🔸 Tailor these templates to fit your specific needs.  
-   🔸 Add your own special twist to a classic recipe.  
-3. Add App-Specific Logic  
-   🔸 Integrate your unique app logic to make it truly yours.  
-   🔸 Let your creativity shine.  
+## 🔧 How it's done
+
+**1. Insert a template screen**
+
+🔸 On the **Insert** tab choose **New screen** and pick a template for a common function (e.g. Email, Calendar, Tutorial).
+
+**2. Customise it**
+
+🔸 Adjust the layout, controls and colors to match your app.
+
+**3. Add your logic**
+
+🔸 Wire in your data source and app-specific behavior.
 
 ## 🎉 Result
-By leveraging pre-built template screens, you’ll achieve faster app development. It’s like having a head start in a race – you’re already halfway there before you even begin!
+You build common screens far faster by starting from a proven layout instead of a blank screen.
 
 ## 🌟 Key Advantages
-🔸 Reuse Proven Templates: Build on tried-and-tested foundations.  
-🔸 Focus on Unique Logic: Spend time on what makes your app special.  
-🔸 Accelerate Delivery: Get apps into users’ hands faster.
+
+🔸 **Reuse proven layouts:** start from tested foundations.
+
+🔸 **Focus on what's unique:** spend your time on your app's specific logic.
+
+🔸 **Faster delivery:** get apps into users' hands sooner.
 
 ---
 
 ## 🛠️ FAQ
-**1. Where can I find template screens in PowerApps?**  
-Template screens are available when creating a new app. You can also find them in the Insert tab under "New screen" where various pre-built templates are available.
 
-**2. Can I customize template screens after inserting them?**  
-Absolutely! Template screens are fully customizable. You can modify layouts, colors, controls, and add your own business logic to match your requirements.
+**Q1: Where can I find template screens in Power Apps?**
 
-**3. Do template screens work with different data sources?**  
-Yes, template screens are designed to work with various data sources. You can easily connect them to SharePoint, Dataverse, SQL Server, or other supported connectors.
+They're available when creating a new app and under the **Insert** tab via **New screen**, where several pre-built templates are listed.
 
----
+**Q2: Can I customise template screens after inserting them?**
+
+Yes. Template screens are fully customisable — change layouts, colors and controls, and add your own business logic.
+
+**Q3: Do template screens work with different data sources?**
+
+Yes. You can connect them to SharePoint, Dataverse, SQL Server and other supported connectors.

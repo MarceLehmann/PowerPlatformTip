@@ -1,15 +1,17 @@
 ---
 title: "#PowerPlatformTip 18 – 'Download & Save Files'"
 date: 2023-01-10
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
 tags:
-  - power automate
-  - file download
-  - file management
-  - http request
+  - PowerAutomate
+  - file-download
+  - file-management
+  - http-request
   - automation
+  - PowerPlatformTip
 excerpt: "Download and save public or password-protected files in Power Automate using HTTP requests and file management actions. Ensure secure, automated file handling."
 header:
   overlay_color: "#2dd4bf"
@@ -18,40 +20,48 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Downloading files, whether public or password-protected, can present unique challenges in terms of accessibility and security.
+Downloading files in a flow works differently depending on whether the file is openly accessible or behind authentication.
+Use the right action for each case: a simple URL action for public files, and an authenticated HTTP request for protected ones.
 
 ## 💡 Challenge
-Downloading files, whether public or password-protected, can present unique challenges in terms of accessibility and security.
+Public and password-protected files need different handling — one approach doesn't cover both accessibility and security.
 
 ## ✅ Solution
-Employ different methods for public downloads and password-protected files to ensure secure and efficient file handling.
+Use two methods depending on the source: **Upload file from URL** for public files, and **HTTP request + Create file** for files that require authentication.
 
-## 🔧 How It's Done
-🔸 For public downloads: Use the 'Upload file from URL' action. This method is straightforward for files that are openly accessible online. 
-🔸 For password-protected files: Utilize the 'HTTP Request & Create File' action. This approach is essential for accessing files that require authentication or are secured.
+## 🔧 How it's done
+
+**1. Public files**
+
+🔸 Use the **Upload file from URL** action — straightforward for files that are openly accessible online.
+
+**2. Password-protected files**
+
+🔸 Use an **HTTP** request with the correct authentication headers to fetch the file, then a **Create file** action to save the returned content.
 
 ## 🎉 Result
-Streamlined and secure process for downloading and saving files, regardless of their accessibility status.
+A reliable, secure process for downloading and saving files regardless of whether they're public or protected.
 
 ## 🌟 Key Advantages
-🔸 Ensures secure handling of sensitive, password-protected files
-🔸 Provides a straightforward method for accessing public files
-🔸 Optimizes the file management process in your PowerPlatform solutions
 
-## 🎥 Video Tutorial
-{% include video id="noscript" provider="youtube" %}
+🔸 **Secure handling** of sensitive, authenticated files.
+
+🔸 **Simple path** for public files with a single action.
+
+🔸 **Streamlined file management** in your Power Platform solutions.
 
 ---
 
 ## 🛠️ FAQ
-**1. What file types can I download and save using this method?**  
-You can download and save various file types including documents (PDF, Word, Excel), images (JPG, PNG), and many other formats supported by Power Automate.
 
-**2. How do I handle authentication for password-protected files?**  
-Use the HTTP action with proper authentication headers (Basic, Bearer token, or OAuth) depending on the file source's security requirements.
+**Q1: What file types can I download and save?**
 
-**3. Are there size limitations for downloading files?**  
-Yes, Power Automate has limits on file sizes and flow execution time. For large files, consider using chunked downloads or premium connectors.
+Many formats work — documents (PDF, Word, Excel), images (JPG, PNG) and others supported by Power Automate.
 
----
+**Q2: How do I handle authentication for protected files?**
+
+Use the **HTTP** action with the appropriate authentication (Basic, Bearer token or OAuth) for the source's security requirements.
+
+**Q3: Are there size limits when downloading files?**
+
+Yes. Power Automate has file-size and execution-time limits. For large files, consider chunking or premium connectors.
