@@ -22,6 +22,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Call a Power Automate flow with 'Run-only users' set to a service account to let limited users perform elevated actions – like writing to a read-only SharePoint list.
+
 ## 💡 Challenge
 
 You want to run data connections in PowerApps with elevated permissions, allowing users with limited access to perform actions they normally couldn't—like creating items in a SharePoint list they only have read access to.

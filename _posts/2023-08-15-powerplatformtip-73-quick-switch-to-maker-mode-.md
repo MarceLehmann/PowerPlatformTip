@@ -21,6 +21,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use a browser bookmarklet to jump straight from a running Power App into maker/edit mode without navigating back through the environment.
+
 ## 💡 Challenge
 
 You're using a Power App in play mode and realize you need to make some adjustments. Normally you'd navigate back to the environment, locate the app, and click **Edit** – a time-consuming detour that disrupts your workflow.

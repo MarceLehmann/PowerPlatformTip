@@ -22,6 +22,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Turn on Concurrency Control on a 'For each' loop to run up to 50 iterations in parallel – and offload to a child flow to scale beyond 50.
+
 ## 💡 Challenge
 
 By default, "For each" loops in Power Automate execute actions sequentially, which can be time-consuming when dealing with a large number of items.
