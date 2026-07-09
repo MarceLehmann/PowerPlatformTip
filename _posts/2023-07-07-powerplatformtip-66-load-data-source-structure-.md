@@ -21,6 +21,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use `Filter(COLLECTION, Defaults(Source))` to load a data source's empty schema into a collection so later patch operations align perfectly.
+
 ## 💡 Challenge
 
 You need to load a data source structure into a collection, especially if you plan to patch the collection back to the data source later on.

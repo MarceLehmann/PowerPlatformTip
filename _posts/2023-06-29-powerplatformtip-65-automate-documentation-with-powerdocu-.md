@@ -23,6 +23,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use the free PowerDocu tool to auto-generate Word or Markdown documentation and diagrams for your exported Flows, Canvas Apps, and Solutions in seconds.
+
 ## 💡 Challenge
 
 Spending too much time manually creating documentation for your Flows in Power Automate or Canvas Apps in Power Apps? Keeping technical documentation up to date by hand is slow and error-prone.

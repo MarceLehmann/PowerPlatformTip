@@ -21,6 +21,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Put a `Launch` to the new app's URL in the old app's `OnStart`/`OnVisible` to auto-redirect users while the old link keeps working.
+
 ## 💡 Challenge
 
 Managing multiple apps across different environments can be a daunting task. When you move users from an older app to a revamped one hosted elsewhere, you want the transition to feel seamless.

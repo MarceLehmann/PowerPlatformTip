@@ -22,6 +22,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Copy controls with CTRL+C / CTRL+V between the full Power Apps studio and Power Apps 4 Teams to combine advanced features with Teams' polished controls.
+
 ## 💡 Challenge
 
 You're building an app in Power Apps 4 Teams, drawn by its user-friendly and visually appealing controls. But it's a bit trimmed down in functionality, and you need the additional capabilities available in the regular Power Apps studio. How do you get the best of both worlds?
