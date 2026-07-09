@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Open a PowerApps for Teams app directly in the make.powerapps.com studio by swapping its environment and app IDs into a standard edit URL.
+
 Editing a PowerApps for Teams app normally means going through the Teams creation flow every time.
 With a small URL trick you can open the same app directly in edit mode in the Power Apps studio at make.powerapps.com — by swapping the environment and app IDs into a known edit URL.
 
@@ -57,8 +59,6 @@ You jump straight into editing your Teams app in the familiar Power Apps studio,
 🔸 **Familiar environment:** work in the full Power Apps studio.
 
 🔸 **Quick edits:** make small changes without navigating through Teams.
-
----
 
 ## 🎥 Video Tutorial
 {% include video id="FuzWFysCg5g" provider="youtube" %}

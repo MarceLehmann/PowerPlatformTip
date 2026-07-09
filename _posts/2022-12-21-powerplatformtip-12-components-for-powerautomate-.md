@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Group reusable actions in a Scope, use 'Copy to my clipboard', then paste them into any flow via My Clipboard.
+
 Recreating the same set of actions in flow after flow wastes time and invites errors.
 Power Automate has no formal "component" for cloud flows, but you can get the same effect: group your reusable actions in a **Scope**, copy it to **My Clipboard**, and paste it into any flow.
 

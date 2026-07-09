@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use Matthew Devaney's free PowerApps Collections Cookbook for copy-and-paste Power Fx recipes to handle advanced collection tasks.
+
 Manipulating collections in advanced ways — numbering rows, counting distinct values, grouping — often goes beyond the built-in functions you reach for first.
 Matthew Devaney's **PowerApps Collections Cookbook** is a free library of ready-to-use recipes for exactly these tasks.
 

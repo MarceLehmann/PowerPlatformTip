@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Go beyond Set and UpdateContext—use `With` for scoped record contexts and `Param` to read inbound app parameters.
+
 ## 💡 Challenge
 Finding yourself limited to `Set` and `UpdateContext` variables in PowerApps? It's like trying to paint a masterpiece with only two colors – you can do it, but why limit yourself?
 

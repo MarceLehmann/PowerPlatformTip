@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Wrap your flow in Try, Catch and Finally Scope actions and use 'Configure run after' so Catch runs on failure and Finally always runs cleanup.
+
 Flows that fail silently are painful to troubleshoot.
 Borrow the **try-catch-finally** pattern from programming: run your main logic in a Try scope, handle failures in a Catch scope, and always run cleanup in a Finally scope — driven by each scope's **Configure run after** settings.
 

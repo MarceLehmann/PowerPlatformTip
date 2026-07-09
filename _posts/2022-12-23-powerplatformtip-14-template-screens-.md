@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Insert a pre-built template screen (Email, Calendar, Tutorial…) from the Insert tab, then customize it instead of building from a blank screen.
+
 Building common app screens from scratch takes time you don't need to spend.
 Power Apps ships **template screens** for frequent functions — add one, customise it, and layer in your own logic.
 

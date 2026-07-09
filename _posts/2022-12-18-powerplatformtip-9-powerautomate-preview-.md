@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Run the built-in Test feature to trigger your flow manually and inspect every action's inputs and outputs before you activate it.
+
 ## 💡 Challenge
 You've created a complex flow in Power Automate and want to make sure everything works as expected—without activating it and taking risks?
 

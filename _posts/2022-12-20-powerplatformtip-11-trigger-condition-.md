@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Build your trigger condition visually with a Filter array action in advanced mode, then copy the generated expression into the trigger's Trigger Conditions setting.
+
 Trigger conditions stop a flow from running unless specific criteria are met — saving run quota and keeping your logic clean.
 Writing the raw expression by hand is error-prone. Build it visually with a **Filter array** action, then copy the generated expression into the trigger.
 
