@@ -1,7 +1,5 @@
 ---
-
-title: "#PowerPlatformTip 142 - Automate Outlook Categories"
-seo_title: "#PowerPlatformTip 142 - Automate Outlook Categories"
+title: "#PowerPlatformTip 142 – Automate Outlook Categories"
 date: 2025-08-26
 last_modified_at: 2026-07-09
 categories:
@@ -20,54 +18,82 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
-
 ---
 
 > **TL;DR:** Auto-categorize Outlook meetings with a standard Power Automate flow that PATCHes events via the Office 365 Outlook 'Send an HTTP request' action – no premium.
 
-Tired of manually categorizing your Outlook meetings? This simple tip shows how to use Power Automate to automatically set categories for calendar events. This keeps you organized with almost no effort.
+Tired of manually categorizing your Outlook meetings? This tip shows how to use Power Automate to set categories for calendar events automatically — keeping you organized with almost no effort.
 
 ## 💡 Challenge
-How can you ensure all important meetings in your Outlook calendar are consistently categorized without doing it by hand? Manually adding categories takes time and you might forget sometimes, especially when you have a busy schedule. This can lead to an unorganized calendar.
+How do you make sure all important meetings in your Outlook calendar are consistently categorized without doing it by hand? Adding categories manually takes time and is easy to forget on a busy schedule, which leaves your calendar disorganized.
 
 ## ✅ Solution
-Use a Power Automate flow with the standard Office 365 Outlook connector to find and update your calendar events automatically. This flow can be triggered on a schedule or by a button. It will loop through your meetings and apply a new category, ensuring everything is perfectly organized without you having to think about it.
+Use a Power Automate flow with the standard Office 365 Outlook connector to find and update your calendar events automatically. Trigger it on a schedule or with a button; it loops through your meetings and applies a category — keeping everything organized without you thinking about it.
 
 ## 🔧 How It's Done
-1.  Start your flow with a trigger, like a manual button or a schedule.
-2.  Use a 'Compose' action to define the new category you want to add (e.g., "NewCategory").
-3.  Add the 'Get calendar view of events (V3)' action to fetch meetings within a specific date range.
-4.  Insert a 'For each' loop to process every event found.
-5.  Inside the loop, add the 'Send an HTTP request' action from the Office 365 Outlook connector.
-6.  Set the Method to `PATCH` and the URI to:
+
+**1. Add a trigger**
+
+🔸 Start the flow with a manual button or a schedule.
+
+**2. Define the category**
+
+🔸 Use a Compose action for the new category (e.g. "NewCategory").
+
+**3. Get the events**
+
+🔸 Add "Get calendar view of events (V3)" to fetch meetings within a date range.
+
+**4. Loop the events**
+
+🔸 Insert a "For each" loop to process every event found.
+
+**5. Send the PATCH request**
+
+🔸 Inside the loop, add "Send an HTTP request" (Office 365 Outlook connector), set the Method to `PATCH` and the URI to:
+
+```
 https://graph.microsoft.com/v1.0/me/events/@{items('For_each')?['id']}
+```
 
-7.  In the Body, add the following JSON to set the category:
+🔸 In the Body, set the category:
 
-{ 
-  "categories": @{outputs('Compose_-_New_Category')} 
+```json
+{
+  "categories": @{outputs('Compose_-_New_Category')}
 }
+```
 
-8.  Save and test the flow to see your meeting categories get updated automatically.
+**6. Save and test**
+
+🔸 Run the flow and watch your meeting categories update automatically.
 
 ## 🎉 Result
-Your Power Automate flow now runs in the background, applying your designated category to all relevant meetings. Your calendar is instantly more organized and easier to filter. You can now find specific types of meetings with just a click, all without needing a premium license.
+Your flow now runs in the background, applying your category to all relevant meetings. Your calendar is instantly more organized and easier to filter — you can find specific types of meetings with a click, all without a premium license.
 
 ## 🌟 Key Advantages
-- Accessibility: This solution uses only standard connectors, so no premium Power Automate license is required.
-- Time-Saving: It frees you from the boring task of manually updating calendar entries.
-- Powerful Customization: Using the Graph API through this action allows for more advanced updates than standard actions permit.
+
+🔸 **Accessibility:** uses only standard connectors — no premium Power Automate license required.
+
+🔸 **Time-saving:** frees you from manually updating calendar entries.
+
+🔸 **Powerful customization:** the Graph API through this action allows more advanced updates than standard actions permit.
+
+---
 
 ## 🎥 Video Tutorial
 {% include video id="2Xj99XQK-5A" provider="youtube" %}
 
+---
+
 ## 🛠️ FAQ
+**1. Is this really not a premium feature?**
+Correct. While the general "HTTP" connector is premium, the "Send an HTTP request" action inside the Office 365 Outlook connector is included with standard M365 licenses and is designed to call the Microsoft Graph API for Outlook.
 
-**Is this really not a premium feature?**  
-- That's correct. While the general 'HTTP' connector is premium, the 'Send an HTTP request' action found within the Office 365 Outlook connector is included with standard M365 licenses and is designed to interact with the Microsoft Graph API for Outlook.
+**2. How can I add a category without removing existing ones?**
+Before your PATCH, add another "Send an HTTP request" (Outlook connector) with the GET method to the same URI to read the event's current categories. Then combine the existing categories with your new one and use that result in the PATCH request.
 
-**How can I add a category without removing existing ones?**  
-- Before your PATCH action, add another 'Send an HTTP request' (from the Outlook connector) with the GET method to the same URI to read the event's current categories. Then, use expressions to combine the existing categories with your new one and use that result in your PATCH request.
+**3. Can I update other details besides the category?**
+Yes. The `PATCH` method can update many event properties — for example, change the 'showAs' status (Free to Busy), modify the body, or update the subject by including those fields in the JSON body.
 
-**Can I update other details besides the category?**  
-- Yes. The `PATCH` method can update many properties of an event. For example, you could change the 'showAs' status (like from "Free" to "Busy"), modify the body, or update the subject by including those fields in the JSON body of your request.
+---
