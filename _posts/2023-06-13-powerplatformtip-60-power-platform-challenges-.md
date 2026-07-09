@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 60 – 'Power Platform Challenges'"
 date: 2023-06-13
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,49 +22,56 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Tackle Power Platform challenges with proven strategies. Explore solutions for common issues, optimize workflows, and boost productivity with expert Power Platform tips.
-
 ## 💡 Challenge
-One of the best ways to enhance your skills and knowledge in the Power Platform ecosystem is by embracing challenges.
+
+One of the best ways to enhance your skills in the Power Platform ecosystem is by embracing hands-on challenges – but where do you find well-structured ones to practice with?
 
 ## ✅ Solution
-One of the best ways to enhance your skills and knowledge in the Power Platform ecosystem is by embracing challenges. Let's talk about Miguel Verweij's monthly "[Power Platform Challenge](https://www.powerplatformchallenge.com/)"! 🎯
-These monthly challenges, expertly crafted by Miguel, serve as a fantastic opportunity to learn, experiment, and stretch your Power Platform capabilities. They cover a wide spectrum of Power Platform features, offering a holistic learning experience. 🧠
-The challenges come with a well-written guide, making them approachable for both beginners and seasoned Power Platform users. So, whether you're just starting out or looking to polish your skills, these challenges offer a wealth of learning. 📚
-Not only do you gain technical expertise, but participating in these challenges also helps you to become a part of the vibrant #PowerAddicts community, sharing experiences, and learning from peers! 🤝
-Why wait? Dive into the next Power Platform Challenge and turbocharge your learning journey! 🚀
-**Latest Power Platform Challenges**
-[Feed does not exists](http://fetchrss.com/)by FetchRSSFeed does not exists. It was deleted a long time ago. Or never existed at all.(Feed generated with FetchRSS)
+
+Join Miguel Verweij's monthly [Power Platform Challenge](https://www.powerplatformchallenge.com/). These expertly crafted challenges cover a wide spectrum of Power Platform features and give you a holistic, guided learning experience.
 
 ## 🔧 How It's Done
-1. Identify the area in your app or flow where Power Platform Challenges is needed.
-🔸 Follow established naming conventions for clarity.
-2. Configure the properties according to your business requirements.
-🔸 Test the implementation with sample data.
-3. Verify the output to ensure it matches the expected results.
+
+**1. Pick the current challenge**
+
+🔸 Visit [powerplatformchallenge.com](https://www.powerplatformchallenge.com/) and open the latest monthly challenge.
+
+🔸 Read the well-written guide – challenges are approachable for beginners and seasoned makers alike.
+
+**2. Build your solution**
+
+🔸 Work through the task to experiment with and stretch your Power Platform capabilities.
+
+🔸 Cover a broad range of features across Power Apps, Power Automate and more.
+
+**3. Share and learn with the community**
+
+🔸 Post your result in the #PowerAddicts community on LinkedIn or X.
+
+🔸 Compare approaches and learn from peers.
 
 ## 🎉 Result
-Your workflows become more robust and easier to maintain. Implementing Power Platform Challenges reduces the time spent on manual adjustments and minimizes potential for errors.
+
+You build practical expertise, broaden your Power Platform knowledge, and become part of the vibrant #PowerAddicts community – all while having fun.
 
 ## 🌟 Key Advantages
-🔸 Improved Efficiency: Faster development cycles through automation.
-🔸 Better Consistency: Standardized approach across all projects.
-🔸 Enhanced Reliability: Reduced risk of failure during execution.
 
-## 🎥 Video Tutorial
-{% include video id="noscript" provider="youtube" %}
+🔸 Structured, guided practice across many Power Platform features
 
----
+🔸 Suitable for beginners and experienced makers
+
+🔸 Community feedback and peer learning
 
 ## 🛠️ FAQ
-**1. What is the Power Platform Challenge?**  
+
+**Q: What is the Power Platform Challenge?**
+
 It's a monthly challenge by Miguel Verweij designed to help you learn and practice Power Platform skills through guided tasks.
 
-**2. Who can participate in these challenges?**  
+**Q: Who can participate in these challenges?**
+
 Anyone—from beginners to seasoned users—can join, as each challenge comes with clear instructions and resources.
 
-**3. How do I submit my solution?**  
-Typically, you share your implementation on the Power Platform Challenge website or via the #PowerAddicts community channels like Twitter or LinkedIn.
+**Q: How do I submit my solution?**
 
----
+Typically you share your implementation on the Power Platform Challenge website or via the #PowerAddicts community channels like LinkedIn or X.

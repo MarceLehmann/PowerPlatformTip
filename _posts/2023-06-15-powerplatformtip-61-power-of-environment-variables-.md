@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 61 – 'Power of Environment Variables'"
 date: 2023-06-15
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -23,41 +24,55 @@ toc_sticky: true
 ---
 
 ## 💡 Challenge
+
 Hardcoding values in apps and flows makes them inflexible, difficult to manage, and cumbersome to migrate across environments.
 
 ## ✅ Solution
+
 Use Environment Variables in Power Apps and Power Automate to externalize configuration, enabling portability, centralized management, and flexibility without modifying app or flow code.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Portability  
-   🔸 Enables transferring solutions across environments without hardcoded values.  
-2. Manageability  
-   🔸 Provides a central location for all configuration settings.  
-3. Flexibility  
-   🔸 Allows different values per environment without modifying apps or flows.  
-4. Define and reference variables  
-   🔸 Create environment variables for your solution in the Power Platform maker portal.  
-   🔸 Reference these variables in your apps or flows and update values centrally.
+
+**1. Create the environment variables**
+
+🔸 In the Power Platform maker portal, open your **Solution** and add new **Environment Variables**.
+
+🔸 Define the name, data type, and a default value.
+
+**2. Reference them in apps and flows**
+
+🔸 Use the environment variable instead of a hardcoded value in your app or flow.
+
+🔸 The same solution now works across Dev, Test, and Prod.
+
+**3. Set values per environment**
+
+🔸 Provide a current value in each target environment during deployment.
+
+🔸 Update values centrally without touching app or flow logic.
 
 ## 🎉 Result
+
 Your apps and flows become environment-agnostic, easily configurable, and maintainable, reducing deployment errors and enhancing solution lifecycle management.
 
 ## 🌟 Key Advantages
-🔸 Improved portability: move solutions seamlessly across environments.  
-🔸 Enhanced manageability: centralize configuration for easier maintenance.  
-🔸 Greater flexibility: update settings on the fly without altering code.
 
----
+🔸 Improved portability: move solutions seamlessly across environments
+
+🔸 Enhanced manageability: centralize configuration for easier maintenance
+
+🔸 Greater flexibility: update settings on the fly without altering code
 
 ## 🛠️ FAQ
-**1. What are Environment Variables in Power Platform?**  
+
+**Q: What are Environment Variables in Power Platform?**
+
 Environment Variables store configuration data outside your apps and flows, enabling centralized and environment-specific values.
 
-**2. How do I create Environment Variables?**  
+**Q: How do I create Environment Variables?**
+
 In the Power Platform maker portal, go to Solutions, select Environment Variables, then define the name, type, and default value before saving.
 
-**3. Can I update Environment Variable values without changing my app?**  
-Yes, modify the variable values in the target environment, and your apps and flows will automatically use the new values without code changes.
+**Q: Can I update Environment Variable values without changing my app?**
 
----
+Yes. Modify the variable values in the target environment, and your apps and flows will automatically use the new values without code changes.

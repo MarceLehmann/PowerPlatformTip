@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 59 – 'Handle Dynamic Content'"
 date: 2023-06-08
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -22,43 +23,56 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Handle dynamic content in Power Automate with confidence. Learn best practices for managing unpredictable data, parsing values, and building robust, error-resistant flows.
-
 ## 💡 Challenge
-When working with Power Automate and dealing with objects or arrays, you may often come across dynamic content and expressions like item()['id'].
+
+When working with Power Automate and dealing with objects or arrays, you often come across expressions like `item()['id']`. But what if `id` is not always present in each item? A missing property makes your flow throw an error and fail.
 
 ## ✅ Solution
-When working with Power Automate and dealing with objects or arrays, you may often come across dynamic content and expressions like item()['id']. But what if the 'id' is not always present in each item? This is where item()?['id'] comes in handy.👇
-The ? is called the 'safe navigation operator.' It ensures that even if 'id' is not present in some items, your flow won't crash. Instead of returning an error, it will return a null. This is a lifesaver when dealing with data that might not always be consistent.💡
-So, instead of item()['id'], try using item()?['id'] for safer navigation in your Power Automate flows!🛠️🌐
+
+Use the safe navigation operator `?` – for example `item()?['id']`. It ensures that even if `id` is missing in some items, your flow won't crash. Instead of an error, it returns `null`, which is a lifesaver when your data isn't always consistent.
 
 ## 🔧 How It's Done
-1. Identify the area in your app or flow where Handle Dynamic Content is needed.
-🔸 Follow established naming conventions for clarity.
-2. Configure the properties according to your business requirements.
-🔸 Test the implementation with sample data.
-3. Verify the output to ensure it matches the expected results.
+
+**1. Spot the risky reference**
+
+🔸 Find expressions such as `item()['id']`, `body('Action')['value']` or `triggerBody()['field']` that assume a property always exists.
+
+**2. Add the safe navigation operator**
+
+🔸 Insert `?` before the bracket: `item()?['id']`.
+
+🔸 The expression now returns `null` instead of failing when the property is missing.
+
+**3. Handle the null case**
+
+🔸 Use `coalesce(item()?['id'], 'default')` or a Condition to react to missing values gracefully.
 
 ## 🎉 Result
-Your workflows become more robust and easier to maintain. Implementing Handle Dynamic Content reduces the time spent on manual adjustments and minimizes potential for errors.
+
+Your flows keep running even when incoming data is inconsistent, returning `null` instead of throwing errors – far more robust and easier to maintain.
 
 ## 🌟 Key Advantages
-🔸 Improved Efficiency: Faster development cycles through automation.
-🔸 Better Consistency: Standardized approach across all projects.
-🔸 Enhanced Reliability: Reduced risk of failure during execution.
+
+🔸 Prevents runtime errors from missing properties
+
+🔸 Returns a predictable `null` you can handle explicitly
+
+🔸 Minimal effort – just one character per reference
 
 ## 🎥 Video Tutorial
+
 {% include video id="_SYxaR_6RW0" provider="youtube" %}
 
----
-
 ## 🛠️ FAQ
-**1. What is the safe navigation operator (?) in Power Automate?**  
+
+**Q: What is the safe navigation operator (?) in Power Automate?**
+
 The safe navigation operator (`?`) prevents runtime errors when accessing properties that may not exist on an object or array element, returning `null` instead of throwing an error.
 
-**2. When should I use `item()?['property']` instead of `item()['property']`?**  
-Use `item()?['property']` whenever a property might be missing or undefined to ensure your flow doesn’t fail and handles missing values gracefully.
+**Q: When should I use `item()?['property']` instead of `item()['property']`?**
 
-**3. Will using the safe navigation operator affect performance?**  
-No, the safe navigation operator has minimal performance impact and greatly improves the stability of your flows by avoiding unnecessary errors.
+Use `item()?['property']` whenever a property might be missing or undefined, so your flow doesn't fail and handles missing values gracefully.
+
+**Q: Will using the safe navigation operator affect performance?**
+
+No. It has minimal performance impact and greatly improves the stability of your flows by avoiding unnecessary errors.
