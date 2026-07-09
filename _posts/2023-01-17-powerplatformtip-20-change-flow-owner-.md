@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Make a cloud flow solution-aware, then reassign its owner in place via Details → Edit → Owner, keeping connections and run history intact.
+
 You can't change the owner of a plain (non-solution) cloud flow in place — the owner is part of the flow's identity, so you'd normally have to export and re-import.
 The clean way is to make the flow **solution-aware**, then reassign the owner directly from its **Details**.
 

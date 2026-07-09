@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Download files in a flow with 'Upload file from URL' for public files, or an authenticated HTTP request plus 'Create file' for protected ones.
+
 Downloading files in a flow works differently depending on whether the file is openly accessible or behind authentication.
 Use the right action for each case: a simple URL action for public files, and an authenticated HTTP request for protected ones.
 

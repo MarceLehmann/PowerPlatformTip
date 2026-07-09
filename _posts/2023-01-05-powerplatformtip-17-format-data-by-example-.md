@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Let Power Automate write the formatting expression for you — give an example (or describe it to the Copilot expression assistant) and it generates the syntax for dates, strings and numbers.
+
 Writing expressions to format dates, strings and numbers by hand is fiddly and error-prone.
 Power Automate can generate the expression for you from an example of the output you want — no need to know the exact functions or syntax.
 

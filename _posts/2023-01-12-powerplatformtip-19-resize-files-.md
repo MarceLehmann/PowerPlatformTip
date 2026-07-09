@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Resize an image for free by storing it on SharePoint and using the 'Upload file from URL' action's thumbnail output — no image editor needed.
+
 Need a smaller version of an image inside a flow — without a premium image-processing connector or external editor?
 SharePoint automatically generates **thumbnails** for images stored in a library. Combine the **Upload file from URL** action with that thumbnail output to get a resized copy.
 
