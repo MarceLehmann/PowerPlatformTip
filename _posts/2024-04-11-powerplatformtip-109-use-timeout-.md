@@ -7,11 +7,11 @@ categories:
   - PowerPlatformTip
 tags:
   - PowerAutomate
-  - Flow
   - Timeout
   - Approval
   - ErrorHandling
   - LongRunningTasks
+  - PowerPlatformTip
 excerpt: "Extend action timeouts and add error handling to ensure long-running Power Automate tasks complete without disruption."
 header:
   overlay_color: "#2dd4bf"
@@ -23,37 +23,39 @@ toc_sticky: true
 > **TL;DR:** Raise an action's Timeout (ISO 8601, e.g. `P2W`) and add 'Configure run after' handling so long approvals finish without failing the flow.
 
 ## 💡 Challenge
-Approvals or other long-running tasks may take more time than your flow's default timeout period, risking interruptions and unintended cancellations.
+Approvals and other long-running tasks can take longer than an action's default timeout, risking interruptions and unintended cancellations.
 
 ## ✅ Solution
-Adjusting the timeout settings for specific actions, like approvals, allows these tasks more room to complete. Plus, incorporating error handling ensures that even if a timeout occurs, your flow can continue gracefully, possibly triggering alternative processes.
+Raise the timeout on the specific action so it has room to finish, and add error handling so the flow continues gracefully even if a timeout does occur.
 
 ## 🔧 How It's Done
-* **Adjust the Timeout Setting:** In the settings of your approval action (or any long-running action), set the "Timeout" duration to a value that accommodates expected delays
 
-**P2W** stands for two weeks
+**1. Raise the action's Timeout.**
 
-* **P1D** represents one day
+🔸 In the settings of your approval (or any long-running action), set **Timeout** to an ISO 8601 duration that covers the expected delay:
 
-* **PT2H** denotes two hours
+🔸 `P2W` = two weeks · `P1D` = one day · `PT2H` = two hours · `PT30M` = 30 minutes · `PT45S` = 45 seconds
 
-* **PT30M** for thirty minutes
+**2. Add error handling.**
 
-* **PT45S** represents forty-five seconds
+🔸 Use **Configure run after** to define what happens if the action times out — e.g. start an alternative branch, send a notification, or kick off a new approval.
 
-* **Implement Error Handling:** Use the "Configure run after" feature to manage actions that should occur if the previous action times out. This might involve starting an alternative flow, sending a notification, or initiating a new approval process.
+**3. Test and refine.**
 
-* **Test and Refine:** Testing your flow under various conditions will help fine-tune your timeout settings and error-handling logic, ensuring they meet real-world needs.
+🔸 Run the flow under different conditions to fine-tune the timeout and the run-after logic.
 
 ## 🎉 Result
-Your flows remain operational and adaptable, effectively managing long-running tasks without falling victim to unnecessary timeouts or disruptions.
+Your flows stay operational and adaptable, handling long-running tasks without falling victim to unnecessary timeouts or disruptions.
 
 ## 🌟 Key Advantages
-* **Reliability:** Ensures that your flows can handle tasks that take longer than expected without crashing or stopping.
 
-* **Flexibility:** Provides options for how to proceed if a long-running task does indeed timeout.
+🔸 **Reliability:** flows survive tasks that take longer than expected.
 
-* **Efficiency:** Keeps your automation process moving forward by automatically addressing potential hiccups.
+🔸 **Flexibility:** choose how to proceed if a long-running task times out.
+
+🔸 **Efficiency:** automation keeps moving by handling hiccups automatically.
+
+---
 
 ## 🎥 Video Tutorial
 {% include video id="VKWl_LJfLTE" provider="youtube" %}
@@ -61,13 +63,13 @@ Your flows remain operational and adaptable, effectively managing long-running t
 ---
 
 ## 🛠️ FAQ
-**1. How do I specify custom timeout values in Power Automate?**  
-Use ISO 8601 duration format (e.g., P2W, P1D, PT2H, PT30M, PT45S) in the Timeout field of the action's settings.
+**1. How do I specify custom timeout values in Power Automate?**
+Use ISO 8601 duration format (e.g. P2W, P1D, PT2H, PT30M, PT45S) in the **Timeout** field of the action's settings.
 
-**2. Will my flow still fail if an action times out?**  
-If you don’t configure error handling, a timeout will fail the run. Use "Configure run after" to catch timeouts and continue handling.
+**2. Will my flow still fail if an action times out?**
+If you don't configure error handling, a timeout fails the run. Use **Configure run after** to catch timeouts and continue.
 
-**3. Can I use timeouts with all actions in Power Automate?**  
-Most built-in actions allow timeout configuration. For unsupported actions, consider wrapping them in scopes or alternative logic.
+**3. Can I use timeouts with all actions in Power Automate?**
+Most built-in actions allow timeout configuration. For unsupported actions, wrap them in scopes or alternative logic.
 
 ---

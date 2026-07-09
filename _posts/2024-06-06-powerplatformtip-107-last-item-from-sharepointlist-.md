@@ -8,12 +8,10 @@ categories:
 tags:
   - PowerApps
   - SharePoint
-  - Data Retrieval
   - Delegation
-  - List Sorting
-  - Latest Item
-  - PowerPlatform
-  - Marcel Lehmann
+  - SortByColumns
+  - PowerFx
+  - PowerPlatformTip
 excerpt: "Efficiently retrieve the latest item from a SharePoint list in PowerApps using delegable sorting and the First function for reliable, scalable data access."
 header:
   overlay_color: "#2dd4bf"
@@ -25,25 +23,33 @@ toc_sticky: true
 > **TL;DR:** Get the newest SharePoint item in Power Apps with `First(SortByColumns(List, "ID", Descending))` – delegable, unlike `Last()`.
 
 ## 💡 Challenge
-You need the latest entry from a SharePoint list in PowerApps, but the direct approach seems out of reach.
+You need the latest entry from a SharePoint list in PowerApps, but `Last()` isn't delegable, so the direct approach seems out of reach on larger lists.
 
 ## ✅ Solution
-Employ SortByColumns to sort the SharePoint list by the ID column in descending order, then pluck out the first item with the First function.
+Sort the SharePoint list by the **ID** column in descending order, then take the top row with **First()**. Both are delegable to SharePoint, so it scales.
 
 ## 🔧 How It's Done
-* Utilize SortByColumns on the SharePoint data source, targeting the ID column with a descending sort order. This method arranges the items such that the latest entry is at the top.
 
-* Apply the First function around the SortByColumns to grab now top-most item, effectively retrieving the last entry in your list.
+🔸 Sort the data source by the **ID** column in descending order so the newest item is on top:
+
+🔸 `SortByColumns('Your List', "ID", Descending)`
+
+🔸 Wrap it in **First()** to grab that top item — the latest entry:
+
+🔸 `First(SortByColumns('Your List', "ID", Descending))`
 
 ## 🎉 Result
-This method ensures you access the most recent item from your SharePoint list in PowerApps, bypassing the limitation with the Last function elegantly.
+You reliably access the most recent item from your SharePoint list in PowerApps, sidestepping the delegation limitation of `Last()`.
 
 ## 🌟 Key Advantages
-* **Simplicity and Efficiency**: A straightforward approach to accessing the most recent list entries.
 
-* **Versatility**: Can be adapted to sort by other columns for different scenarios.
+🔸 **Simple & efficient:** a straightforward way to get the most recent entry.
 
-* **PowerApps Integration**: Seamlessly integrates within your PowerApps logic, enhancing functionality without complex workarounds.
+🔸 **Versatile:** sort by other columns (Created, Modified…) for different scenarios.
+
+🔸 **Delegable:** works on large lists because sorting happens on the server.
+
+---
 
 ## 🎥 Video Tutorial
 {% include video id="8fIiREiIBNM" provider="youtube" %}
@@ -51,13 +57,13 @@ This method ensures you access the most recent item from your SharePoint list in
 ---
 
 ## 🛠️ FAQ
-**Q: Why can't I use the Last function directly on SharePoint lists?**
-The Last function is not delegable for SharePoint data sources in PowerApps, which means it can only work with the first 500 records. Using SortByColumns with First ensures you get the actual latest item regardless of list size.
+**1. Why can't I use the Last function directly on SharePoint lists?**
+`Last()` is not delegable for SharePoint in PowerApps, so it only works on the first 500 (or up to 2000) records. `First(SortByColumns(...))` returns the actual latest item regardless of list size.
 
-**Q: Can I use this approach with columns other than ID for sorting?**
-Yes, you can sort by any column that supports ordering, such as Created, Modified, or custom date/number fields. For example: `First(SortByColumns(YourList, "Created", Descending))`.
+**2. Can I sort by columns other than ID?**
+Yes — sort by any orderable column such as Created, Modified, or a custom date/number field, e.g. `First(SortByColumns(YourList, "Created", Descending))`.
 
-**Q: Will this method work with large SharePoint lists?**
-Yes, this approach is delegable to SharePoint, meaning it will work efficiently even with lists containing thousands of items, as the sorting and filtering happen on the SharePoint server.
+**3. Will this method work with large SharePoint lists?**
+Yes. The approach is delegable, so it works efficiently even on lists with thousands of items because sorting and filtering happen on the SharePoint server.
 
 ---

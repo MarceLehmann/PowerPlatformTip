@@ -6,15 +6,13 @@ categories:
   - Article
   - PowerPlatformTip
 tags:
-  - Marcel Lehmann
   - PowerAutomate
-  - PowerPlatform
-  - PowerPlatformTip
-  - QuickParts
   - Word
+  - QuickParts
   - DocumentAutomation
   - SharePoint
-excerpt: "The assumption that document automation in Word requires a premium subscription can deter users, especially when integrating external data."
+  - PowerPlatformTip
+excerpt: "Automate Word documents for free using Quick Parts placeholders filled by a standard Power Automate flow — no premium license needed."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -25,25 +23,35 @@ toc_sticky: true
 > **TL;DR:** Automate Word documents for free using Quick Parts placeholders filled by a standard Power Automate flow – no premium license needed.
 
 ## 💡 Challenge
-The assumption that document automation in Word necessitates a premium subscription can deter users, particularly when it involves integrating external data, like from SharePoint.
+Many assume that document automation in Word needs a premium subscription — especially when the document has to pull in external data, for example from a SharePoint list.
 
 ## ✅ Solution
-Utilizing Power Automate in conjunction with Quick Parts within Microsoft Word enables complex document automation tasks to be accomplished without requiring a premium subscription.
+Combine **Quick Parts** in Microsoft Word with a standard **Power Automate** flow. This lets you build fully automated documents without a premium subscription.
 
 ## 🔧 How It's Done
-🔸In Microsoft Word, go to the "Insert" tab, select "Quick Parts," then "Document Property" to set up placeholders for data integration.
-🔸Create a flow in Power Automate to fetch data from your chosen data source, such as a SharePoint list.
-🔸In Power Automate, use the specific action to populate the Quick Parts in your Word document with data, replacing the placeholders with dynamic content from your data source.
-🔸Set up the automation to save or send the document automatically, finalizing the process.
+
+🔸 In Microsoft Word, open the **Insert** tab and choose **Quick Parts → Document Property** to add placeholders for the data you want to fill.
+
+🔸 Build a Power Automate flow that fetches the data from your source, such as a SharePoint list.
+
+🔸 In the flow, replace the Quick Parts placeholders with the dynamic content from your data source.
+
+🔸 Save or send the finished document automatically to complete the process.
 
 ## 🎉 Result
-The end result is an automatically generated document that is dynamically filled with the latest data from your selected source, all without incurring additional premium service fees.
+An automatically generated document, dynamically filled with the latest data from your chosen source — without any premium service fees.
 
 ## 🌟 Key Advantages
-🔸Eliminates the need for premium subscriptions for advanced document automation.
-🔸Saves time and increases efficiency by automating manual document preparation tasks.
-🔸Reduces errors by minimizing manual data entry.
-🔸Offers greater flexibility and customization in the creation of documents.
+
+🔸 No premium subscription needed for advanced document automation.
+
+🔸 Saves time by automating manual document preparation.
+
+🔸 Reduces errors by minimizing manual data entry.
+
+🔸 Greater flexibility and customization when creating documents.
+
+---
 
 ## 🎥 Video Tutorial
 {% include video id="87AnDOHxmsI" provider="youtube" %}
@@ -51,13 +59,13 @@ The end result is an automatically generated document that is dynamically filled
 ---
 
 ## 🛠️ FAQ
-**1. Can I use Quick Parts with other data sources besides SharePoint?**  
-Yes—any data source accessible via Power Automate (e.g., SQL, Excel, Dataverse) can be used to populate Quick Parts.
+**1. Can I use Quick Parts with other data sources besides SharePoint?**
+Yes — any data source accessible via Power Automate (e.g. SQL, Excel, Dataverse) can populate Quick Parts.
 
-**2. Do I need a premium Power Automate license for this?**  
-No—this method uses standard connectors and Quick Parts, so no premium license is required.
+**2. Do I need a premium Power Automate license for this?**
+No — this method uses standard connectors and Quick Parts, so no premium license is required.
 
-**3. What happens if the data changes after the document is generated?**  
-You can re-run the flow at any time to generate a new document with updated data.
+**3. What happens if the data changes after the document is generated?**
+Re-run the flow at any time to generate a new document with the updated data.
 
 ---
