@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 149 – 'Approvals to a Shared Mailbox'"
 date: 2026-01-15
+last_modified_at: 2026-07-09
 categories:
     - Article
     - PowerPlatformTip
@@ -18,6 +19,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Send Power Automate approvals to a shared mailbox with 'Send email with options' so any delegated member can respond via `SelectedOption`.
 
 **The trap**: You assign a *Start and wait for an approval* action to a shared mailbox so the whole team can decide.
 The email arrives, everyone sees it – but when a delegated user clicks **Approve**, nothing sticks.

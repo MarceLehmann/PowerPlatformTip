@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 147 – Dummy Patch After Complex Flows"
 date: 2025-12-18
+last_modified_at: 2026-07-09
 categories:
     - Article
     - PowerPlatformTip
@@ -18,6 +19,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Force a single-record cache refresh in Power Apps after a complex flow by dummy-patching a hidden RefreshHack column on the selected record.
 
 **When direct Patch fails**: Use Power Automate for advanced scenarios – conditional data, external API calls, error fallbacks, multi-record lookups, tracking.  
 Flow finishes → Respond to PowerApps → but your Gallery or EditForm still shows *pre-Flow* data.  

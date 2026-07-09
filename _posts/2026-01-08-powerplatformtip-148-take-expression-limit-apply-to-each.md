@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 148 – 'Limit Apply to Each with take()'"
 date: 2026-01-08
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -17,6 +18,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Limit an 'Apply to each' loop to the first X items during testing with `take(array, X)` – swap it in and out, no restructuring.
 
 When building flows with large SharePoint lists or Dataverse tables, testing an "Apply to each" loop on the full dataset wastes run quota and time.
 The `take()` expression is a one-line fix that limits the loop to exactly the records you need for a confident test.
