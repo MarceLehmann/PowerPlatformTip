@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 80 – 'Rapid Dynamic Forms with AI'"
 date: 2023-10-03
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,8 +22,10 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Render forms dynamically by binding a Power Apps gallery to a JSON array—let AI generate the schema so fields adapt on the fly without static form controls.
+
 ## 💡 Challenge
-Creating dynamic forms in Power Apps can be time-consuming, especially when Microsoft Forms doesn’t meet your needs due to its limitations on dynamic content. Additionally, using a Form Control for manual static data like a JSON array is not feasible, as it comes with a predefined structure and fields.
+Creating dynamic forms in Power Apps can be time-consuming, especially when Microsoft Forms doesn't meet your needs due to its limitations on dynamic content. Additionally, using a Form Control for manual static data like a JSON array is not feasible, as it comes with a predefined structure and fields.
 
 ## ✅ Solution
 Use a Power Apps gallery bound to a JSON array to dynamically render input controls on the fly, leveraging AI to quickly generate the form schema.
@@ -50,19 +53,18 @@ You get a fully dynamic form that can adapt to various needs and scenarios, far 
 🔸 Data Flexibility: easily save form output as JSON or process with Power Automate.  
 🔸 No Premium Required: uses only standard Power Apps and Power Automate features.
 
----
-
 ## 🎥 Video Tutorial
 {% include video id="5Ow_2-orIOo" provider="youtube" %}
 
----
-
 ## 🛠️ FAQ
-**1. How do I quickly generate the JSON schema for the form?**  
+**1. How do I quickly generate the JSON schema for the form?**
+
 You can use AI tools like ChatGPT to draft a JSON array schema based on your form requirements, then refine it as needed.
 
-**2. Can I include custom control types in the gallery?**  
-Yes. Define each control’s type in the JSON (e.g., dropdown, date picker) and add the corresponding input template to your gallery.
+**2. Can I include custom control types in the gallery?**
 
-**3. Do I need any premium connectors or licenses?**  
+Yes. Define each control's type in the JSON (e.g., dropdown, date picker) and add the corresponding input template to your gallery.
+
+**3. Do I need any premium connectors or licenses?**
+
 No. This method uses built-in Power Apps galleries, JSON handling, and standard Power Automate flows without requiring premium connectors.

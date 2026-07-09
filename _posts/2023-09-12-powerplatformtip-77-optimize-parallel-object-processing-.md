@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 77 – 'Optimize Parallel Object Processing'"
 date: 2023-09-12
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,8 +22,10 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Break past the 50-item concurrency limit of "Apply to each" by offloading each item to a child flow or a database-triggered flow for true parallel processing.
+
 ## 💡 Challenge
-Managing a large number of items in Power Automate’s “Apply to Each” action, especially when dealing with time-intensive actions such as approvals, can significantly slow down the process. The default concurrency limit is 50, meaning the 51st item will only start once one of the previous actions is completed.
+Managing a large number of items in Power Automate's "Apply to Each" action, especially when dealing with time-intensive actions such as approvals, can significantly slow down the process. The default concurrency limit is 50, meaning the 51st item will only start once one of the previous actions is completed.
 
 ## ✅ Solution
 Trigger a child flow or write the data to a database to enable parallel execution and avoid the 50-item concurrency limit.
@@ -35,30 +38,29 @@ Here's how to do it:
    🔸 Loop through items in the main flow, triggering the child flow for each.  
 2. Write data to a database  
    🔸 Advantage: Ensures data integrity and structured processing.  
-   🔸 Write data to a database within the “Apply to Each” action.  
+   🔸 Write data to a database within the "Apply to Each" action.  
    🔸 Configure another flow to trigger on database entries and process them individually.  
 
 ## 🎉 Result
-You achieve a more efficient and faster processing of a large number of items, avoiding the bottleneck of the 50-item concurrency limit in the “Apply to Each” action.
+You achieve a more efficient and faster processing of a large number of items, avoiding the bottleneck of the 50-item concurrency limit in the "Apply to Each" action.
 
 ## 🌟 Key Advantages
 🔸 Speed: Significantly reduces processing time for large item sets.  
 🔸 Efficiency: Enables parallel execution beyond the default 50-item concurrency limit.  
 🔸 Flexibility: Provides structured and controlled processing using database triggers or child flows.  
 
----
-
 ## 🎥 Video Tutorial
 {% include video id="c6Xs6a6_oMs" provider="youtube" %}
 
----
-
 ## 🛠️ FAQ
-**1. How do I manage errors in a child flow?**  
+**1. How do I manage errors in a child flow?**
+
 You can add error-handling steps in your child flow, such as using scopes with run-after configurations or try/catch patterns to capture, log, and handle failures gracefully.
 
-**2. Can’t I simply increase the concurrency limit in “Apply to Each”?**  
-The maximum UI limit for concurrency in “Apply to Each” is 50. To process more items concurrently, you need to use approaches like triggering child flows or writing to a database.
+**2. Can't I simply increase the concurrency limit in "Apply to Each"?**
 
-**3. When should I use a database instead of a child flow?**  
+The maximum UI limit for concurrency in "Apply to Each" is 50. To process more items concurrently, you need to use approaches like triggering child flows or writing to a database.
+
+**3. When should I use a database instead of a child flow?**
+
 Use a database approach when you need structured storage, auditing, or deferred processing. Choose child flows for real-time parallel execution without intermediate storage.

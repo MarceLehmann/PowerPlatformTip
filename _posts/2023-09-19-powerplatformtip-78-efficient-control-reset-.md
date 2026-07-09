@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 78 – 'Efficient Control Reset'"
 date: 2023-09-19
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,61 +21,53 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Reset all Power Apps controls at once using a single context variable—streamline your code, improve app efficiency, and simplify UI management for better user experience.
+> **TL;DR:** Reset every Power Apps control at once by binding their Reset property to a single context variable and toggling it with `UpdateContext({ResetVar: !ResetVar})`.
 
 ## 💡 Challenge
-If you don't want to miss out on any future #PowerPlatformTip posts, be sure to subscribe to my newsletter – you'll be the first to know whenever I publish a new tip!
-								Type your email…							
-								Subscribe							
-💡 **The Challenge:** In Power Apps, resetting multiple controls to their default state can be a tedious task if you are resetting each control individually using the Reset function.
+In Power Apps, resetting multiple controls to their default state is tedious if you reset each control individually with the Reset function. It makes the app less efficient and clutters your code with repetitive statements.
 
 ## ✅ Solution
-If you don't want to miss out on any future #PowerPlatformTip posts, be sure to subscribe to my newsletter – you'll be the first to know whenever I publish a new tip!
-								Type your email…							
-								Subscribe							
-💡 **The Challenge:** In Power Apps, resetting multiple controls to their default state can be a tedious task if you are resetting each control individually using the Reset function. It not only makes the app less efficient but also clutters the code with repetitive statements.
-✅ **The Solution:** To streamline the process and maintain a clean code structure, you can reset all controls at once using a single variable. This approach allows you to reset all controls globally, saving time and reducing the complexity of your app.
-🔧 **How It's Done:**
-* **Create a Context Variable:** Initialize a context variable, say ResetVar, at the app's onset or screen's OnVisible property.
-* **Link to Controls:** Link all the controls you wish to reset to this variable by setting their Reset property to ResetVar.
-* **Trigger Reset:** Whenever you want to reset all linked controls, simply toggle the ResetVar variable. You can do this in a button's OnSelect property using the formula: UpdateContext({ResetVar: !ResetVar}).
-🎉 **Result:** You now have a mechanism that allows you to reset all linked controls globally with a single action, making your app more efficient and your code cleaner.
-⚠️ **Important Note:** Ensure to test the reset functionality thoroughly to confirm that all controls reset correctly and maintain their default values as expected.
-**Key Advantages:**
-* **Efficiency:** Reset all controls globally with a single action, reducing the time and effort needed in coding individual reset functions.
-* **Cleaner Code:** Avoid cluttering your code with repetitive reset functions, leading to a cleaner and more maintainable app structure.
-* **User Experience:** Enhance the user experience by ensuring a quick and seamless reset functionality, fostering user satisfaction and app usability.
+Reset all controls at once using a single context variable. Link every control's Reset property to that variable, then toggle the variable to reset them globally—saving time and keeping your code clean.
 
 ## 🔧 How It's Done
-* **Create a Context Variable:** Initialize a context variable, say ResetVar, at the app's onset or screen's OnVisible property.
-* **Link to Controls:** Link all the controls you wish to reset to this variable by setting their Reset property to ResetVar.
-* **Trigger Reset:** Whenever you want to reset all linked controls, simply toggle the ResetVar variable. You can do this in a button's OnSelect property using the formula: UpdateContext({ResetVar: !ResetVar}).
+Here's how to do it:
+
+**1. Create a context variable**
+
+🔸 Initialize a context variable, e.g. `ResetVar`, in the app's `OnStart` or the screen's `OnVisible` property.
+
+**2. Link your controls**
+
+🔸 Set the **Reset** property of every control you want to reset to `ResetVar`.
+
+**3. Trigger the reset**
+
+🔸 Toggle the variable from a button's `OnSelect`: `UpdateContext({ResetVar: !ResetVar})`.
 
 ## 🎉 Result
-You now have a mechanism that allows you to reset all linked controls globally with a single action, making your app more efficient and your code cleaner.
-⚠️ **Important Note:** Ensure to test the reset functionality thoroughly to confirm that all controls reset correctly and maintain their default values as expected.
-**Key Advantages:**
-* **Efficiency:** Reset all controls globally with a single action, reducing the time and effort needed in coding individual reset functions.
-* **Cleaner Code:** Avoid cluttering your code with repetitive reset functions, leading to a cleaner and more maintainable app structure.
-* **User Experience:** Enhance the user experience by ensuring a quick and seamless reset functionality, fostering user satisfaction and app usability.
+You can reset all linked controls globally with a single action, making your app more efficient and your code cleaner.
+
+⚠️ **Important Note:** Test the reset thoroughly to confirm all controls return to their expected default values.
 
 ## 🌟 Key Advantages
-🔸 Improved Efficiency: Faster development cycles through automation.
-🔸 Better Consistency: Standardized approach across all projects.
-🔸 Enhanced Reliability: Reduced risk of failure during execution.
+🔸 **Efficiency:** Reset all controls with one action instead of coding individual reset functions.
+
+🔸 **Cleaner Code:** Avoid repetitive reset statements for a more maintainable app.
+
+🔸 **User Experience:** Deliver a quick, seamless reset for better usability.
 
 ## 🎥 Video Tutorial
 {% include video id="68ASa3OQIpU" provider="youtube" %}
 
----
-
 ## 🛠️ FAQ
-**1. How do I initialize the ResetVar?**  
-Set it in a screen’s `OnVisible` property or the app’s `OnStart` using `UpdateContext` or `Set`.
+**1. How do I initialize the ResetVar?**
 
-**2. Can I reset only a subset of controls?**  
+Set it in a screen's `OnVisible` property or the app's `OnStart` using `UpdateContext` or `Set`.
+
+**2. Can I reset only a subset of controls?**
+
 Yes. Link only the controls you want to reset by setting their **Reset** property to `ResetVar`.
 
-**3. What if a control doesn’t reset as expected?**  
-Ensure its **Reset** property is correctly bound to `ResetVar` and that you’re toggling the variable in your action’s `OnSelect`.
+**3. What if a control doesn't reset as expected?**
+
+Ensure its **Reset** property is correctly bound to `ResetVar` and that you're toggling the variable in your action's `OnSelect`.

@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 76 – 'PowerApps Sharing with Guests'"
 date: 2023-09-05
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,6 +21,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Share Power Apps with external guests through a Microsoft Teams Group so members and guests get unified, centrally managed access to the app and its SharePoint/Dataverse backend.
 
 ## 💡 Challenge
 Navigating the complexities of sharing PowerApps with guests, while ensuring seamless access to backend resources and maintaining efficient management of all users.
@@ -53,19 +56,18 @@ This methodology offers a highly efficient and streamlined process for sharing P
 🔸 Unified app sharing with both members and guests.  
 🔸 Robust backend support using SharePoint permissions.
 
----
-
 ## 🎥 Video Tutorial
 {% include video id="UnMKjrhddzc" provider="youtube" %}
 
----
-
 ## 🛠️ FAQ
-**1. Can I share a PowerApp with guests without using Teams Groups?**  
+**1. Can I share a PowerApp with guests without using Teams Groups?**
+
 Yes, but managing individual guest permissions can be complex. Teams Groups centralize access control, making sharing and maintenance easier.
 
-**2. How do I add or remove guests from a Teams Group?**  
-You can manage guests directly in the Teams app under the group’s Members settings or automate it using Microsoft Graph API calls.
+**2. How do I add or remove guests from a Teams Group?**
 
-**3. What if guests cannot access the SharePoint backend?**  
+You can manage guests directly in the Teams app under the group's Members settings or automate it using Microsoft Graph API calls.
+
+**3. What if guests cannot access the SharePoint backend?**
+
 Ensure that the Teams Group has proper SharePoint permissions. If issues persist, verify site permissions in SharePoint and adjust group settings accordingly.

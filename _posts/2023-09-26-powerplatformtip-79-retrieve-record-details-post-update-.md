@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 79 – 'Retrieve Record Details Post-Update'"
 date: 2023-09-26
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -19,6 +20,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Capture a just-created or updated record's details (like its ID) by wrapping Patch in `Set()` or reading `Form.LastSubmit` right after submitting.
 
 ## 💡 Challenge
 When working with Power Apps, you often need to retrieve details of a record that has just been created or updated. This information might include the ID of the new/updated record, which is essential for further processes or user notifications.
@@ -45,19 +48,18 @@ You have a straightforward method to retrieve essential details of records right
 🔸 Enhanced User Experience: Provide users with instant feedback or next steps by leveraging the retrieved record details.  
 🔸 Error Handling: Allows validating the success of record creation or update before proceeding, improving reliability.
 
----
-
 ## 🎥 Video Tutorial
 {% include video id="nRE4IR19-cE" provider="youtube" %}
 
----
-
 ## 🛠️ FAQ
-**1. How do I retrieve the ID of a newly created record using Patch?**  
+**1. How do I retrieve the ID of a newly created record using Patch?**
+
 Use a Set variable around your Patch function, for example: `Set(NewRecord, Patch(Table, Defaults(Table), {...}))`, then use `NewRecord.ID`.
 
-**2. Can I use Form.LastSubmit with any form control?**  
+**2. Can I use Form.LastSubmit with any form control?**
+
 Yes, as long as the form is linked to a data source and you use `SubmitForm(FormName)`, you can access `FormName.LastSubmit`.
 
-**3. What if record creation fails?**  
+**3. What if record creation fails?**
+
 Implement error handling by checking if the Patch returns a valid record or use `IfError` and `Notify` functions to inform users of failures.
