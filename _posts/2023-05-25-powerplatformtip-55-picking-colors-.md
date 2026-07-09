@@ -22,6 +22,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Grab a website's full color palette instantly with Microsoft Edge DevTools' CSS Overview to match your Power App to your brand.
+
 ## 💡 Challenge
 
 Maintaining a consistent corporate design—especially colors—in Power Apps can be tedious. How can you quickly grab all the colors used on a webpage?

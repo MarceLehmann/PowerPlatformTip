@@ -23,6 +23,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use the Launch function to open URLs, emails, phone calls, Teams/OneNote/SharePoint deep links, and role-based dashboards straight from your Power App.
+
 ## 💡 Challenge
 
 In Power Apps, guiding users to external websites, emails, phone calls, collaborations, or personalized dashboards can require custom connectors or manual prompts.

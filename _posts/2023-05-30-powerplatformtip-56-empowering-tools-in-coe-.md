@@ -23,6 +23,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use the CoE Kit's Set Flow/Apps Permissions tools and orphan detection to see who has access and auto-handle ownerless flows and apps.
+
 ## 💡 Challenge
 
 Managing permissions and ownership in the Center of Excellence (CoE) Kit can be difficult. It's hard to know who has access to flows and apps, and orphaned resources get left behind when people leave the company.

@@ -23,6 +23,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Build data-driven menus from a single Gallery template instead of individual buttons for consistent styling and one-place maintenance.
+
 ## 💡 Challenge
 
 Designing menus in Power Apps with individual buttons leads to inconsistent layouts, tedious styling, and manual updates for each item.
