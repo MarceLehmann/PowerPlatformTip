@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Bulk-delete old apps and flows by gathering them in a solution, exporting as managed, reimporting, then deleting the managed solution.
+
 ## 💡 Challenge
 A workspace cluttered with outdated test apps and flows is hard to manage. Deleting them one by one is slow and error-prone.
 

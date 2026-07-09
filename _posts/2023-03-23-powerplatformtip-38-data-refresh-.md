@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Control gallery updates with a Boolean variable so you Refresh only when needed instead of reloading all data every time.
+
 ## 💡 Challenge
 Maintaining up-to-date data in PowerApps galleries is crucial for user experience. However, relying solely on the Refresh function reloads all data and can impact performance.
 

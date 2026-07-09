@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Build advanced Dataverse/Dynamics 365 queries with FetchXML — generate it in FetchXML Builder or Advanced Find, then use it in flows and plugins.
+
 ## 💡 Challenge
 Do you need to retrieve complex data from Dataverse or Dynamics 365, but find the standard query options too limited?
 

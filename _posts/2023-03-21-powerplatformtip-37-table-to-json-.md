@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Convert a two-column Name/Value table to a JSON record and run it through Parse JSON so you can access each entry directly.
+
 ## 💡 Challenge
 Working with two-column tables – specifically 'Name' and 'Value' pairs – in Power Automate can be tedious when trying to access individual entries efficiently.
 
