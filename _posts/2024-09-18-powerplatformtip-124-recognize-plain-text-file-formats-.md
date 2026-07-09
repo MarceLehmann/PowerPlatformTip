@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 124 – 'Recognize Plain Text File Formats'"
 date: 2024-09-18
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,6 +21,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Skip Base64 decoding in Power Automate – plain-text formats like JSON, CSV, XML and Markdown return content directly from 'Get File Content'.
 
 ## 💡 Challenge
 Using the “Get File Content” action in Power Automate often results in file contents being displayed as Base64, complicating further processing. However, some file formats display content directly as plain text, making things much simpler!

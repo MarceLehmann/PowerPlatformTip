@@ -3,6 +3,7 @@
 title: "#PowerPlatformTip 123 – 'Get Lowest / Highest SharePoint ID & TotalCount'"
 seo_title: "#PowerPlatformTip 123 – 'Get Lowest / Highest SharePoint ID"
 date: 2024-09-11
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,6 +22,8 @@ toc: true
 toc_sticky: true
 
 ---
+
+> **TL;DR:** Get the lowest ID, highest ID and total count of a SharePoint list in Power Automate with three simple `$orderby`/`ItemCount` REST calls.
 
 ## 💡 Challenge
 Need to fetch the highest, lowest, and total count of IDs in a SharePoint list to manage your data more efficiently?

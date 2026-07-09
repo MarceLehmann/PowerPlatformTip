@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 122 – 'Track Flow Progress in PowerApps'"
 date: 2024-08-28
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,8 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Monitor Power Automate flow progress in PowerApps by creating a StateLog and using a timer to fetch real-time updates.
+> **TL;DR:** Track a running Power Automate flow inside Power Apps by logging status to a StateLog table and polling it with a timer.
 
 ## 💡 Challenge
 You want to monitor the progress of a flow (Power Automate) that you started from a PowerApp.

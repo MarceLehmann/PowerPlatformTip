@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 126 – 'User Context for Automated Tasks'"
 date: 2024-10-08
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,6 +21,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Run user-context tasks like Outlook auto-replies from one central Power App + scheduled flow instead of per-user flows.
 
 ## 💡 Challenge
 You want to automate tasks like setting an out-of-office reply in Outlook or sending Teams notifications, but these need to run in the user’s own context. At the same time, users should be able to customize information—such as modifying the auto-reply text—before the flow is triggered. Ideally, this process runs on a schedule and uses a single centrally managed flow rather than one per user.

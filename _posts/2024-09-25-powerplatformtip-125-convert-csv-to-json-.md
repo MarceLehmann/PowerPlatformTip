@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 125 – 'Convert CSV to JSON'"
 date: 2024-09-25
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,8 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Convert CSV data into JSON in Power Automate using only standard actions without premium connectors or external services.
+> **TL;DR:** Convert CSV to JSON in Power Automate with only standard actions – split, Select and Parse JSON, no premium connector.
 
 ## 💡 Challenge
 Need to convert CSV data into JSON in Power Automate without using premium connectors or external services?
