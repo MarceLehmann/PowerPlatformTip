@@ -1,16 +1,17 @@
 ---
-title: "#PowerPlatformTip 9 – 'PowerAutomate – Preview'"
+title: "#PowerPlatformTip 9 – 'Test Your Flow Before Activation'"
 date: 2022-12-18
 last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
 tags:
-  - powerautomate
-  - preview
-  - testing
+  - PowerAutomate
+  - Test
+  - Testing
   - error-prevention
   - productivity
+  - PowerPlatformTip
 excerpt: "Test Power Automate flows before activation: Use the built-in Test feature to catch errors early, improve reliability, and streamline flow development."
 header:
   overlay_color: "#2dd4bf"
