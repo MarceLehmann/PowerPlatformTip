@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Turn off 'Allow Chunking' in the SharePoint Create File action's settings to unlock the hidden Overwrite toggle.
+
 ## 💡 Challenge
 You want to overwrite existing files in SharePoint using Power Automate's **Create File** action – but the **Overwrite** toggle is missing or greyed out!
 

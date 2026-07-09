@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Join a free Microsoft Cloud Skills Challenge to complete gamified Microsoft Learn modules with leaderboards and often exam-voucher rewards.
+
 ## 💡 Challenge
 Staying current with Power Platform skills takes consistent learning, but self-paced study is easy to postpone without structure or motivation.
 

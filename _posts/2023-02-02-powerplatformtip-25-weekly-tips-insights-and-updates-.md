@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Subscribe to the free Power Platform Dev Weekly and Power Platform Weekly newsletters to get curated tips and updates in your inbox.
+
 ## 💡 Challenge
 Keeping up with the latest developments, tips, and updates across the Power Platform can be time-consuming and scattered.
 

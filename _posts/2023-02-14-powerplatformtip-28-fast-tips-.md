@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Append .de to your maker URLs (e.g. make.powerapps.com.de) to jump straight to a curated Power Platform tips blog.
+
 ## 💡 Challenge
 Finding quick, reliable Power Platform tips means scouring bookmarks and search results – it takes time to land on a curated resource.
 
