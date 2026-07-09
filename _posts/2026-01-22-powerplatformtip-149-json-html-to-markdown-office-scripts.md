@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 149 – 'JSON & HTML to Markdown with Office Scripts'"
+title: "#PowerPlatformTip 150 – 'JSON & HTML to Markdown with Office Scripts'"
 date: 2026-01-22
 categories:
   - Article
