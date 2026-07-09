@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use the PowerApps V2 trigger for typed inputs, a service-user connection and flexible use as a child flow or direct PowerApps trigger.
+
 ## 💡 Challenge
 Creating secure, manageable, and flexible flows in Power Automate can be challenging, especially when integrating with PowerApps and requiring precise control over flow inputs and execution context.
 

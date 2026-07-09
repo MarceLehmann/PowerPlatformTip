@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Enable Static Result on an action to return a predefined output without actually running it — great for fast, safe flow testing.
+
 ## 💡 Challenge
 Testing Power Automate flows often requires running actions that can modify data or consume significant time, which isn't always desirable or efficient.
 

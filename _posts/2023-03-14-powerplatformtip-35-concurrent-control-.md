@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Turn on Concurrency Control and set the degree of parallelism to 1 so flow instances run one at a time, preventing duplicates and conflicts.
+
 ## 💡 Challenge
 Managing multiple instances of a Power Automate flow can lead to data duplication and conflicts, especially when flows run in parallel and manipulate the same data set.
 

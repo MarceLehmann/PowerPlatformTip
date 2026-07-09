@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Replace nested If checks for blank values with Coalesce, which returns the first non-blank value from a list of parameters.
+
 ## 💡 Challenge
 In PowerApps and Power Automate, managing multiple potential blank values often results in complex, nested If statements. This complexity hinders readability and efficiency.
 
