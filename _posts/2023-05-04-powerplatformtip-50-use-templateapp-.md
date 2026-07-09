@@ -23,6 +23,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Jumpstart canvas apps with the PnP PowerApps Material Design template — 16+ ready components, docs and 5000+ SVG icons.
+
 ## 💡 Challenge
 Starting a new canvas app often results in inconsistent styling and missing UI components, slowing down development.
 

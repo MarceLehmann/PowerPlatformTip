@@ -24,6 +24,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use Dataverse for Teams instead of SharePoint for a free, relational data platform with better performance and an upgrade path to full Dataverse.
+
 ## 💡 Challenge
 
 When building Power Apps and Power Automate solutions, choosing the right data storage is crucial. If you want to avoid premium licensing costs but still need a robust, relational option, SharePoint quickly reaches its limits.

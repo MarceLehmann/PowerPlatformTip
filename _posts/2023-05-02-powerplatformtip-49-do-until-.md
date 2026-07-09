@@ -24,6 +24,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Put the failure-prone action directly in a Do Until loop's condition to retry until it succeeds — no extra boolean variable needed.
+
 ## 💡 Challenge
 In Power Automate, using a boolean variable to control a "Do Until" loop adds extra overhead and complexity when handling transient failures like locked or unavailable files.
 

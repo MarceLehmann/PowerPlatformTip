@@ -24,6 +24,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Map parent-child flow dependencies automatically with Serge Luca's 'Which flow calls which flow' PowerShell utility for safe deployment ordering.
+
 ## 💡 Challenge
 
 Managing and deploying Microsoft Power Automate solutions with numerous parent–child flow relationships is complex. You need to know which flows call others to activate them in the correct order and assess the impact of any changes.
