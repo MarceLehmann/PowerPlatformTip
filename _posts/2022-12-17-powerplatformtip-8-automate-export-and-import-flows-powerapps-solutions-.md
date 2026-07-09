@@ -20,6 +20,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Automate scheduled solution exports (.zip) to SharePoint/OneDrive/Azure Blob so you always have a backup to import and restore flows, apps, and solutions.
+
 Delete or break a flow and there's no built-in "undo" — Power Automate has no one-click restore.
 The fix is to treat backups like any other workflow: automate the **export and import** of your flows, apps and solutions on a schedule, so a clean copy is always ready to restore from.
 

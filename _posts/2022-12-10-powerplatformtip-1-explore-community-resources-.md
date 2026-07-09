@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Tap the Microsoft Power Platform Community (community.powerplatform.com) for expert answers and ready-made sample apps to speed up your projects.
+
 ## 💡 Challenge
 Have you ever found yourself stuck on a Power Apps problem, desperately searching for a solution? Or maybe you're looking for that perfect sample app to kickstart your project? It can be frustrating when you don't know where to turn for expert advice and ready-to-use examples.
 

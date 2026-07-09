@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Turn on Advanced Mode in the Filter Array action to write custom expressions and handle complex filtering in a single step.
+
 ## 💡 Challenge
 At first glance, the 'Filter Array' action in Power Automate seems limited to basic filtering, making complex scenarios difficult to address. Users often find themselves chaining multiple actions or writing lengthy workarounds to achieve precise results.
 

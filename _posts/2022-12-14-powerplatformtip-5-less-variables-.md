@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Hold static parameters in Parse JSON or Compose instead of Initialize Variable to keep flows readable and preserve loop concurrency.
+
 ## 💡 Challenge
 In many Power Automate flows, you might find yourself using the 'Initialize Variable' action to store a parameter that never changes throughout the flow. It's like carrying a heavy toolbox when all you need is a single screwdriver!
 

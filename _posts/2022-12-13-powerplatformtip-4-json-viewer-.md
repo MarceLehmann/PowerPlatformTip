@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use a browser JSON Viewer extension (or Edge's built-in formatting) to turn raw Power Automate JSON into readable, structured data.
+
 ## 💡 Challenge
 Navigating through unformatted JSON data in Power Automate, especially from actions like 'List Rows' or 'Get Items', is cumbersome and difficult to decipher.
 

@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Format dates directly with `utcNow('your-format')` instead of wrapping it in a separate `formatDateTime` call.
+
 ## 💡 Challenge
 Working with dates and times often requires using formatDateTime with utcNow to format values, adding unnecessary complexity and extra steps in your flow.
 

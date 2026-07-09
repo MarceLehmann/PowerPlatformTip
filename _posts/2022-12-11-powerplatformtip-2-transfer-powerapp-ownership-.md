@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Reassign a departed maker's Power Apps via the CoE Starter Kit admin apps or the `Set-AdminPowerAppOwner` PowerShell cmdlet for clean, bulk ownership transfer.
+
 ## 💡 Challenge
 When a maker leaves the company, the apps they own can become orphaned – and reassigning ownership through the maker UI one by one is slow and easy to miss. You need a reliable, admin-friendly way to hand over Power Apps ownership.
 

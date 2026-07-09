@@ -19,6 +19,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Merge and deduplicate arrays with `union()` (pass the same array twice for DISTINCT), then narrow results with the Filter Array action.
+
 ## 💡 Challenge
 Data manipulation is a cornerstone of Power Automate, and you often need to merge or filter data sets for various workflows—which quickly gets messy with basic actions alone.
 
