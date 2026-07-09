@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 94 – 'Extract Text from DOCX'"
 date: 2023-12-13
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,11 +21,13 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Extract text from a DOCX in Power Automate by treating it as a ZIP archive, extracting it, and parsing `word/document.xml`—no third-party tools.
+
 ## 💡 Challenge
 Extracting text from a Microsoft Word (DOCX) file using Power Automate can be challenging, especially when avoiding third-party tools.
 
 ## ✅ Solution
-Leverage Power Automate to extract text directly from a DOCX file, understanding that it’s essentially a ZIP archive containing various XML files.
+Leverage Power Automate to extract text directly from a DOCX file, understanding that it's essentially a ZIP archive containing various XML files.
 
 ## 🔧 How It's Done
 Here's how to do it:
@@ -46,19 +49,18 @@ A streamlined method to extract text from Word documents using standard Power Au
 🔸 Utilizes native Power Automate actions.  
 🔸 Directly parses XML for accurate text extraction.
 
----
-
 ## 🎥 Video Tutorial
 {% include video id="uH4JAagKKd4" provider="youtube" %}
 
----
-
 ## 🛠️ FAQ
-**1. Do I need premium connectors to extract the DOCX archive?**  
+**1. Do I need premium connectors to extract the DOCX archive?**
+
 No, the archive extraction actions are available with standard OneDrive or SharePoint connectors.
 
-**2. How can I automate this for multiple files?**  
+**2. How can I automate this for multiple files?**
+
 Use an "Apply to each" loop over the list of DOCX files, then repeat the extraction steps for each file.
 
-**3. How do I strip XML tags to get only plain text?**  
+**3. How do I strip XML tags to get only plain text?**
+
 After parsing the XML, use the "Html to text" action or string expressions in "Compose" to remove any residual markup.

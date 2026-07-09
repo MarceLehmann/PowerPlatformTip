@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 92 – 'Free PDF Tools in PowerAutomate'"
 date: 2023-12-08
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -22,8 +23,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Discover the best free PDF tools for Power Automate—compare features, integrations, and value to automate document workflows without extra cost.
+> **TL;DR:** Compare the free tiers of PDF connectors—Adobe PDF Services, Encodian, Muhimbi, and Cloudmersive—to automate PDF tasks in Power Automate at no cost.
 
 ## 💡 Challenge
 Navigating through the maze of free PDF tool offerings can be daunting.
@@ -32,38 +32,39 @@ Navigating through the maze of free PDF tool offerings can be daunting.
 Zeroing in on the complimentary plans of various third-party PDF tools can shed light on their potential without financial commitment.
 
 ## 🔧 How It's Done
-1. Adobe PDF Services API:
-🔸 Enjoy up to 500 free document transactions each month.
-🔸 Features include creation, conversion, content extraction, and OCR capabilities for PDFs.
-2. Encodian:
-🔸 Post a 30-day trial, users are transitioned to a 'Free' license.
-🔸 The specifics of the free tier’s offerings remain under wraps in public documentation.
-3. Muhimbi PDF:
-🔸 Offers a fully free subscription tier.
-🔸 Comprehensive details on the free tier’s features are somewhat elusive.
-4. Cloudmersive PDF:
-🔸 The free tier supports up to 800 calls monthly.
-🔸 Exact details of the features provided in the free tier are not thoroughly outlined.
+Here's how to do it:
+1. Adobe PDF Services API  
+   🔸 Offers a free tier of document transactions each month.  
+   🔸 Features include creation, conversion, content extraction, and OCR capabilities for PDFs.
+2. Encodian  
+   🔸 After a 30-day trial, users are transitioned to a 'Free' license.  
+   🔸 The specifics of the free tier's offerings remain limited in public documentation.
+3. Muhimbi PDF  
+   🔸 Offers a free subscription tier.  
+   🔸 Comprehensive details on the free tier's features are somewhat elusive.
+4. Cloudmersive PDF  
+   🔸 Provides a free tier with a monthly call allowance.  
+   🔸 Exact details of the features provided in the free tier are not thoroughly outlined.
+
+⚠️ **Important Note:** Free-tier limits (monthly transactions or API calls) change over time. Always confirm the current allowance on each provider's pricing page before relying on it.
 
 ## 🎉 Result
 The free tiers of these tools provide a variety of functionalities, making them suitable for basic or sporadic PDF handling needs.
 
 ## 🌟 Key Advantages
-– Cost-efficient options for PDF management.
-– Diverse features to cater to different requirements.
-– Perfectly suited for individual or small business use.
-
-## 🎥 Video Tutorial
-{% include video id="noscript" provider="youtube" %}
-
----
+🔸 Cost-efficient options for PDF management.  
+🔸 Diverse features to cater to different requirements.  
+🔸 Perfectly suited for individual or small business use.
 
 ## 🛠️ FAQ
-**1. Which PDF tool offers the highest number of free transactions in Power Automate?**  
-The Adobe PDF Services API provides up to 500 free document transactions per month, the highest among the listed options.
+**1. Which PDF tool offers the most free transactions in Power Automate?**
 
-**2. Is there a time limit on Encodian's free license after the trial?**  
-After the initial 30-day trial period, Encodian transitions users to a free license; however, the exact feature limits aren't publicly detailed.
+This varies as providers adjust their plans. Historically, the Adobe PDF Services API has offered one of the more generous free document-transaction allowances—check its current pricing page to confirm.
 
-**3. How many API calls does Cloudmersive allow in its free tier?**  
-Cloudmersive PDF's free tier supports up to 800 API calls per month, making it a good option for moderate usage.
+**2. Is there a time limit on Encodian's free license after the trial?**
+
+After the initial 30-day trial period, Encodian transitions users to a free license; the exact feature limits aren't publicly detailed.
+
+**3. Do these free tiers require premium connectors?**
+
+Most of these are premium connectors in Power Automate, so a premium license may be required even when the third-party service itself has a free tier.
