@@ -1,0 +1,256 @@
+/* ==========================================================================
+   PowerPlatformTip – custom UX styles
+   (home topic tiles, posts live-filter, topic landing pages)
+   ========================================================================== */
+
+$ppt-teal: #38c9c3;
+$ppt-teal-dark: #2fb3ad;
+
+/* --- Home layout grid (replaces inline attribute selector) --- */
+.ppt-home-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__main {
+    flex: 2 1 600px;
+    min-width: 0;
+  }
+}
+
+.ppt-section-title {
+  color: $ppt-teal;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Prominent search call-to-action --- */
+.ppt-search-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 2rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, $ppt-teal 0%, $ppt-teal-dark 100%);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(56, 201, 195, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 201, 195, 0.4);
+    color: #fff;
+  }
+}
+
+/* --- "Browse by topic" tiles --- */
+.ppt-topic-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 3rem;
+}
+
+.ppt-topic-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #fff;
+  border: 2px solid $ppt-teal;
+  border-radius: 14px;
+  color: $ppt-teal-dark;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(56, 201, 195, 0.1);
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, $ppt-teal 0%, $ppt-teal-dark 100%);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(56, 201, 195, 0.3);
+  }
+
+  &__icon {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  &__count {
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+}
+
+/* --- Posts live filter --- */
+.ppt-filter {
+  margin: 1.5rem 0 2rem;
+
+  &__search {
+    width: 100%;
+    padding: 0.85rem 1.1rem;
+    font-size: 1rem;
+    border: 2px solid $ppt-teal;
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(56, 201, 195, 0.25);
+    }
+  }
+
+  &__topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__count {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.75;
+  }
+}
+
+.ppt-filter-btn {
+  padding: 0.4rem 1rem;
+  background: #fff;
+  border: 2px solid $ppt-teal;
+  border-radius: 20px;
+  color: $ppt-teal-dark;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(56, 201, 195, 0.12);
+  }
+
+  &.is-active {
+    background: linear-gradient(135deg, $ppt-teal 0%, $ppt-teal-dark 100%);
+    color: #fff;
+  }
+}
+
+.ppt-no-results {
+  display: none;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+/* --- Topic landing page intro --- */
+.ppt-topic-intro {
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e8f4f3 100%);
+  border-left: 4px solid $ppt-teal;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.ppt-topic-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .ppt-home-grid {
+    flex-direction: column;
+    gap: 0;
+
+    &__main {
+      max-width: 100%;
+    }
+  }
+}
+
+/* --- Home: latest post list --- */
+.post-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    background: #f8fafc;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(56, 201, 195, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(56, 201, 195, 0.15);
+    }
+  }
+
+  h2 { margin-top: 0; }
+}
+
+/* --- Home: tag cloud --- */
+.tag-cloud-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e8f4f3 100%);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 20px rgba(56, 201, 195, 0.1);
+}
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.tag-cloud-item {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: #fff;
+  border: 2px solid $ppt-teal;
+  border-radius: 25px;
+  color: $ppt-teal-dark;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(56, 201, 195, 0.1);
+
+  &:hover {
+    background: linear-gradient(135deg, $ppt-teal 0%, $ppt-teal-dark 100%);
+    color: #fff;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(56, 201, 195, 0.3);
+    border-color: $ppt-teal-dark;
+  }
+
+  &::before {
+    content: "#";
+    opacity: 0.6;
+    margin-right: 0.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .tag-cloud-section { padding: 2rem 1rem; }
+  .tag-cloud { gap: 0.75rem; }
+  .tag-cloud-item {
+    font-size: 0.85rem !important;
+    padding: 0.4rem 1rem;
+  }
+}
