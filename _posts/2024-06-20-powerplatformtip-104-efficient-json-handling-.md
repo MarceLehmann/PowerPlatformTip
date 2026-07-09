@@ -6,14 +6,12 @@ categories:
   - Article
   - PowerPlatformTip
 tags:
-  - Power Automate
+  - PowerAutomate
   - JSON
-  - Data Validation
   - Schema
-  - Automation
-  - Workflow Optimization
-  - PowerPlatform
-  - Marcel Lehmann
+  - DataValidation
+  - ParseJSON
+  - PowerPlatformTip
 excerpt: "Master JSON structure and schema validation in Power Automate to ensure robust data processing, minimize errors, and optimize automation workflows."
 header:
   overlay_color: "#2dd4bf"
@@ -25,150 +23,122 @@ toc_sticky: true
 > **TL;DR:** Define JSON schemas with types, required fields, constraints and format validation in Power Automate to keep your data clean and your flows reliable.
 
 ## 💡 Challenge
-Effectively managing JSON structures in Power Automate can seem daunting without a solid grasp of JSON structures and schemas.
+Managing JSON structures in Power Automate feels daunting without a solid grasp of how JSON objects, arrays and schemas fit together — and weak validation lets bad data slip into your flows.
 
 ## ✅ Solution
-Master basic and advanced JSON handling techniques to streamline your Power Automate flows for better efficiency.
+Learn the building blocks of JSON and JSON Schema, then use them in your Parse JSON steps to validate structure, types and constraints so your flows process data predictably.
 
 ## 🔧 How It's Done
-**1. Basic Structure**:
 
-* Use **objects** {} to define key-value pairs, where the key is a unique identifier, and the value can contain data of various types.
+**1. Basic structure**
 
-**Example**:
+Use **objects** `{}` for key–value pairs and **arrays** `[]` for ordered lists.
 
+```json
 {
-
   "name": "John Doe",
-
   "age": 30
-
 }
+```
 
-* Use **arrays** [] to create an ordered list of values, ideal for storing multiple items of the same type.
-
-**Example**:
-
+```json
 ["Apple", "Banana", "Cherry"]
+```
 
-**2. Type Restrictions**:
+**2. Type restrictions**
 
-* Specify a specific data type for each field in your JSON schema. This ensures that data is correctly formatted and interpreted. Types can also include null or an array of types, allowing for more flexibility.
+Give each field a type so data is interpreted correctly. A type can also be a list (e.g. allow `null`).
 
-**Example**:
-
+```json
 {
-"type": "object",
-
-"properties": 
-{
-"name": { "type": "string" },
-
-"age": { "type": "number" },
-
-"verified": { "type": "boolean" },
-
-"nickname": { "type": ["string", "null"] }
-}
-
-}
-
-**3. Detailed Specifications**:
-
-* Define **properties** for objects to specify expected data fields and their types.
-
-**Example** for properties:
-
-"properties": 
-{
-
-  "name":{ "type": "string" },
-"hobbies": {
-
-    "type": "array","items": { "type": "string" }
-
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "age": { "type": "number" },
+    "verified": { "type": "boolean" },
+    "nickname": { "type": ["string", "null"] }
   }
-
 }
+```
 
-* Specify **items** in arrays to determine the type of included elements.
+**3. Detailed specifications**
 
-**Example** for items:
+Define **properties** for objects and **items** for arrays.
 
-"hobbies": 
-{
-
-  "type": "array",
-"items": { "type": "string" }
-
+```json
+"properties": {
+  "name": { "type": "string" },
+  "hobbies": {
+    "type": "array",
+    "items": { "type": "string" }
+  }
 }
+```
 
-**4. Required Fields**:
+**4. Required fields**
 
-* Use the required attribute to mark essential fields in an object.
+Use `required` to mark essential fields.
 
-**Example**:
-
+```json
 {
-"type": "object",
-
-"properties": 
-{
-
-"name": { "type": "string" },
-
-"age": { "type": "number" }
-
-},
-"required": ["name"]
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "age": { "type": "number" }
+  },
+  "required": ["name"]
 }
+```
 
-**5. Constraints**:
+**5. Constraints**
 
-* Define limits for string lengths or numerical value ranges.
+Limit string lengths or numeric ranges.
 
-**Example** for constraints:
-
+```json
 "name": { "type": "string", "minLength": 2, "maxLength": 100 },
 "age": { "type": "number", "minimum": 0, "maximum": 120 }
+```
 
-**6. Format Validation**:
+**6. Format validation**
 
-* Use the format attribute to validate specific data types like email addresses or date values.
+Use `format` to validate values like email addresses or dates.
 
-**Example** for format validation:
-
+```json
 "email": { "type": "string", "format": "email" },
 "birthday": { "type": "string", "format": "date" }
+```
 
-**7. Add extra informations**:
+**7. Add extra information**
 
-* Add "title" and "description" within each type specification to provide context and detailed descriptions within your JSON schema.
+Add `title` and `description` to document each field.
 
-**Example** for type specification with title and description:
-
+```json
 "name": {
-"type": "string",
-"title": "User's Name",
-"description": "The full name of the user"
+  "type": "string",
+  "title": "User's Name",
+  "description": "The full name of the user"
 },
 "age": {
-"type": "number",
-"title": "User's Age",
-"description": "The age of the user in years"
+  "type": "number",
+  "title": "User's Age",
+  "description": "The age of the user in years"
 }
+```
 
 ## 🎉 Result
-By applying these structuring and validation techniques in your Power Automate flows, you can enhance data integrity, reduce errors, and improve the efficiency of your automation processes.
+By applying these structuring and validation techniques in your Power Automate flows, you improve data integrity, reduce errors, and make your automation more efficient.
 
 ## 🌟 Key Advantages
-* **Clearly defined data structures** improve readability and maintainability.
 
-* **Strict data type validation** minimizes errors and ensures consistent data processing.
+🔸 **Clear data structures** improve readability and maintainability.
 
-* **Customizable validation rules** allow for flexible data checking and manipulation.
+🔸 **Strict type validation** minimizes errors and keeps processing consistent.
 
-Special thanks to Paul Murana for his great sneak peek.
+🔸 **Customizable rules** allow flexible data checking and manipulation.
+
+Special thanks to Paul Murana for the great sneak peek.
+
+---
 
 ## 🎥 Video Tutorial
 {% include video id="4SHjPjbdB58" provider="youtube" %}
@@ -176,13 +146,13 @@ Special thanks to Paul Murana for his great sneak peek.
 ---
 
 ## 🛠️ FAQ
-**1. What is the difference between JSON objects and arrays?**  
-Objects use curly braces to define key-value pairs, while arrays use square brackets to store ordered lists of values.
+**1. What is the difference between JSON objects and arrays?**
+Objects use curly braces to define key–value pairs, while arrays use square brackets to store ordered lists of values.
 
-**2. How do type restrictions improve JSON validation in Power Automate?**  
+**2. How do type restrictions improve JSON validation in Power Automate?**
 Type restrictions ensure each field matches an expected data type, reducing errors and improving flow reliability.
 
-**3. Can I include multiple formats like email and date validations in one schema?**  
+**3. Can I include multiple formats like email and date validations in one schema?**
 Yes, you can use the `format` attribute on different properties to enforce email, date, URI, and other standard validations.
 
 ---
