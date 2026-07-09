@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 113 – 'Combine Multiple Data Sources'"
 date: 2024-05-10
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -22,6 +23,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Merge static and dynamic data in Power Apps into one flat table using the `Ungroup` function.
 
 ## 💡 Challenge
 Combining multiple data sources, including static data, into a single Power Apps project can be challenging. Merging multiple data sources with static data in Power Apps can create complexity in your app’s data management.

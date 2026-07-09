@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 112 – 'Consistent Data Formats'"
 date: 2024-05-01
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,8 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Data comes in various shapes and sizes, and when it’s time to compare or validate this data, format inconsistencies can derail your workflow, causing errors that are tricky to debug.
+> **TL;DR:** Normalize data before comparing – use `Trim`/`Lower` in Power Apps and `trim`/`toLower` in Power Automate to avoid format-mismatch errors.
 
 ## 💡 Challenge
 Data comes in various shapes and sizes, and when it’s time to compare or validate this data, format inconsistencies can derail your workflow, causing errors that are tricky to debug.

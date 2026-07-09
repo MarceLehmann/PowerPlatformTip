@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 114 – 'Send Approvals to External Recipients'"
 date: 2024-05-17
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -18,6 +19,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Send Power Automate approvals to external recipients via 'Send email with options' or Adaptive Cards in Outlook.
 
 ## 💡 Challenge
 The standard approval process in Power Automate doesn’t support external recipients out-of-the-box.

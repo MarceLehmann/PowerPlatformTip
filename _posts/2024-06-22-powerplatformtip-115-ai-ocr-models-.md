@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 115 – 'AI OCR Models'"
 date: 2024-06-22
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,8 +22,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Automating document processing efficiently is crucial for handling various types of documents.
+> **TL;DR:** Choose Azure Document Intelligence over AI Builder for OCR – same prebuilt models at ~1¢/page and ~40% cheaper.
 
 ## 💡 Challenge
 Automating document processing efficiently is crucial for handling various types of documents. Choosing the right AI OCR tool within Power Platform can make a significant difference.

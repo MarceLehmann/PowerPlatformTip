@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 111 – 'Adaptive Cards for Dynamic Approvals'"
 date: 2024-04-24
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,8 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-In many workflows, Power Automate's standard approval function is limited as it doesn't allow for the dynamic selection of the next approver after an approval.
+> **TL;DR:** Replace static Power Automate approvals with Adaptive Cards + Office 365 User Search so each approver picks the next one dynamically.
 
 ## 💡 Challenge
 In many workflows, Power Automate's standard approval function is limited as it doesn't allow for the dynamic selection of the next approver after an approval. Users are looking for a solution that makes it possible to manage approvals more flexibly, choosing the next approver individually after each approval.
