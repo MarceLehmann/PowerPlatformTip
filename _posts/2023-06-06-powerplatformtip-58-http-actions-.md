@@ -24,6 +24,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use Power Automate's built-in HTTP actions to call any REST API – including Microsoft Graph – when standard connectors fall short.
+
 ## 💡 Challenge
 
 You need to integrate and automate tasks across various web services and APIs within Power Automate, but standard connectors don't cover all scenarios.

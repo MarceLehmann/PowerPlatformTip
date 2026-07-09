@@ -23,6 +23,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Patch an entire collection in a single call instead of looping record-by-record for faster, cleaner bulk updates in Power Apps.
+
 ## 💡 Challenge
 
 We often use the Patch function to modify individual records, but updating each row one by one can be slow, error-prone, and adds complexity to your app's code.

@@ -22,6 +22,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Sharpen your Power Platform skills with Miguel Verweij's guided monthly Power Platform Challenge and share your solution with the #PowerAddicts community.
+
 ## 💡 Challenge
 
 One of the best ways to enhance your skills in the Power Platform ecosystem is by embracing hands-on challenges – but where do you find well-structured ones to practice with?

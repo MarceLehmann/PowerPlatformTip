@@ -23,6 +23,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Add the safe navigation operator `?` (e.g. `item()?['id']`) so missing properties return null instead of crashing your flow.
+
 ## 💡 Challenge
 
 When working with Power Automate and dealing with objects or arrays, you often come across expressions like `item()['id']`. But what if `id` is not always present in each item? A missing property makes your flow throw an error and fail.
