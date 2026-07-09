@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 51 – 'Which Flow Calls Which Flow'"
 date: 2023-05-09
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -24,40 +25,55 @@ toc_sticky: true
 ---
 
 ## 💡 Challenge
+
 Managing and deploying Microsoft Power Automate solutions with numerous parent–child flow relationships is complex. You need to know which flows call others to activate them in the correct order and assess the impact of any changes.
 
 ## ✅ Solution
-Use the “Which Flow Calls Which Flow” utility to automatically analyze and map parent and child flows, ensuring correct activation order and clear visibility into dependencies.
+
+Use the "Which Flow Calls Which Flow" utility to automatically analyze and map parent and child flows, ensuring correct activation order and clear visibility into dependencies.
 
 ## 🔧 How It's Done
-Here's how to do it:
-1. Access the GitHub repository.  
-   🔸 Visit https://github.com/sergeluca/PowerPlatform-Which-flow-calls-which-flow  
-   🔸 Clone or download the utility to your local machine.
-2. Run the analysis script.  
-   🔸 Execute the provided PowerShell or script against your solution folder.  
-   🔸 The tool scans flow definitions to identify caller and callee relationships.
-3. Review the generated mapping.  
-   🔸 Open the output (CSV or console report) to see parent–child flow links.  
-   🔸 Plan deployment by activating child flows before their parents.
+
+**1. Access the GitHub repository**
+
+🔸 Visit https://github.com/sergeluca/PowerPlatform-Which-flow-calls-which-flow
+
+🔸 Clone or download the utility to your local machine.
+
+**2. Run the analysis script**
+
+🔸 Execute the provided PowerShell script against your solution folder.
+
+🔸 The tool scans flow definitions to identify caller and callee relationships.
+
+**3. Review the generated mapping**
+
+🔸 Open the output (CSV or console report) to see parent–child flow links.
+
+🔸 Plan deployment by activating child flows before their parents.
 
 ## 🎉 Result
+
 You get a clear, comprehensive map of all flow dependencies, enabling error-free deployments, faster impact analysis, and better governance of complex Power Automate solutions.
 
 ## 🌟 Key Advantages
-🔸 Visualize parent–child flow relationships instantly  
-🔸 Avoid deployment errors by following the correct activation order  
+
+🔸 Visualize parent–child flow relationships instantly
+
+🔸 Avoid deployment errors by following the correct activation order
+
 🔸 Speed up impact analysis when modifying or refactoring flows
 
 ## 🛠️ FAQ
 
-**Q: Does this utility work with flows across different environments?**  
-A: The utility analyzes flows within solution files or specific environments. For cross-environment analysis, you'll need to export solutions from each environment and run the analysis separately, then correlate the results manually.
+**Q: Does this utility work with flows across different environments?**
 
-**Q: What happens if I have circular dependencies between flows?**  
-A: The utility will identify circular dependencies in its output, highlighting these as potential issues. Circular dependencies should be resolved by redesigning the flow architecture to eliminate loops and create a proper hierarchical structure.
+The utility analyzes flows within solution files or specific environments. For cross-environment analysis, export solutions from each environment and run the analysis separately, then correlate the results.
 
-**Q: Can this tool help me identify unused or orphaned flows?**  
-A: Yes, flows that don't appear as either callers or callees in the mapping are likely standalone flows. Those that only appear as callees but never as callers might be leaf flows, while those with no references at all could be orphaned flows ready for cleanup.
+**Q: What happens if I have circular dependencies between flows?**
 
----
+The utility identifies circular dependencies in its output, highlighting these as potential issues. Resolve them by redesigning the flow architecture into a proper hierarchical structure.
+
+**Q: Can this tool help me identify unused or orphaned flows?**
+
+Yes. Flows that don't appear as either callers or callees are likely standalone. Those appearing only as callees might be leaf flows, while those with no references at all could be orphaned flows ready for cleanup.
