@@ -21,6 +21,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Manage PowerApps4Teams environments via powerautomate.com and a quick URL swap to `Home` to open them directly in make.powerapps.com.
+
 ## 💡 Challenge
 
 You're trying to manage your Teams environment using PowerApps4Teams or Dataverse4Teams via powerapps.com, but you're hitting a wall. You need a more effective way to manage these environments.

@@ -22,6 +22,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Reference `App.Width`/`App.Height` instead of `Parent.Width`/`Parent.Height` for fullscreen layouts so dimensions are available instantly and apps load faster.
+
 ## 💡 Challenge
 
 In a world where every second counts, speeding up your Power Apps loading process can be a real game-changer. You're looking for ways to make your apps load faster.

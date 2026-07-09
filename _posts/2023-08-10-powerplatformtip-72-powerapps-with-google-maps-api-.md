@@ -22,6 +22,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Combine PowerApps' `Location()` function with a Google Maps API key to embed interactive maps and GPS services – no premium Power Platform license needed.
+
 ## 💡 Challenge
 
 Integrating Google Maps into PowerApps is a great way to enhance apps with dynamic map functionality. The challenge is doing it efficiently—without premium licenses—while providing accurate GPS location services.

@@ -22,6 +22,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Turn an array into an object in Power Automate by combining a Select action with nested Replace expressions – no loops required.
+
 ## 💡 Challenge
 
 You're dealing with data that arrives as an array, but you need it in an object format. How can you efficiently transform this data?
