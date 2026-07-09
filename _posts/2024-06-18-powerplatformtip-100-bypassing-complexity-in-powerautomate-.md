@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 100 – 'Bypassing Complexity in PowerAutomate'"
 date: 2024-06-18
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,8 +22,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Streamline Power Automate flows by replacing complex Switch and Condition actions with dynamic JSON objects and formulas for faster, more maintainable automation.
+> **TL;DR:** Replace Switch/Condition sprawl by storing options in a JSON object in a Compose action and fetching values dynamically with `outputs('Compose')?[key]`.
 
 ## 💡 Challenge
 Standard use of Switch or Condition in Power Automate can often be bypassed for more streamlined processes.
@@ -36,6 +36,7 @@ Here's how to do it:
    🔸 Use a JSON object with keys "A", "B" and "C".  
    🔸 Example:
 
+```json
 {
   "A": {
     "Title": "Ok",
@@ -50,9 +51,10 @@ Here's how to do it:
     "Description": "Rejected"
   }
 }
+```
 
 2. Use a dynamic formula to retrieve the desired value.  
-   🔸 To get the Title: `outputs('Compose')?[InputValue]?['Title']`
+   🔸 To get the Title: `outputs('Compose')?[InputValue]?['Title']`  
    🔸 To get the Description: `outputs('Compose')?[InputValue]?['Description']`
 
 ## 🎉 Result
@@ -61,23 +63,20 @@ This method allows fetching specific data ('Title' or 'Description') for differe
 ## 🌟 Key Advantages
 🔸 Streamlines data retrieval  
 🔸 Reduces workflow complexity  
-🔸 Enhances performance  
-
----
+🔸 Enhances performance
 
 ## 🎥 Video Tutorial
 {% include video id="RXQuxgn6xAY" provider="youtube" %}
 
----
-
 ## 🛠️ FAQ
-**1. What are the benefits of using a structured JSON object instead of Switch or Condition?**  
+**1. What are the benefits of using a structured JSON object instead of Switch or Condition?**
+
 Using structured JSON avoids multiple branches, simplifies maintenance, and speeds up data retrieval.
 
-**2. Can this approach handle more than three cases?**  
+**2. Can this approach handle more than three cases?**
+
 Yes, you can add as many keys and values to the JSON object as needed.
 
-**3. How do I handle missing or invalid input values?**  
-Implement default values or wrap the expression with error handling, e.g. using `coalesce` or condition checks before accessing the value.
+**3. How do I handle missing or invalid input values?**
 
----
+Implement default values or wrap the expression with error handling, e.g. using `coalesce` or condition checks before accessing the value.
