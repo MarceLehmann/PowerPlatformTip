@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 154 – 'Preserve Author, Editor & Dates on Copied SharePoint Files'"
 date: 2026-03-19
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -32,69 +33,91 @@ Read these values from the source item before deleting it, then write them onto 
 
 ## 🔧 How it's done
 
-1) **Capture the original metadata** before deleting the source.
-   🔸 From *Get files (properties)* / *Get item* keep: `Author` (Claims/Email), `Editor`, `Created`, `Modified`.
+**1. Capture the original metadata** before deleting the source.
 
-2) **Resolve the user to a numeric ID.** `AuthorId`/`EditorId` need the site user ID, not the email.
-   🔸 *Send an HTTP request to SharePoint* → Method `POST`, Uri:
-   ```
-   _api/web/ensureuser
-   ```
-   Header `Content-Type: application/json;odata=verbose`, Body:
-   ```json
-   { "logonName": "i:0#.f|membership|jane.doe@contoso.com" }
-   ```
-   🔸 Read the returned `Id` (e.g. `body('Ensure_Author')?['d']?['Id']`). Repeat for the editor.
+🔸 From *Get files (properties)* / *Get item* keep: `Author` (Claims/Email), `Editor`, `Created`, `Modified`.
 
-3) **Get the target library's entity type** once:
-   ```
-   _api/web/lists/getbytitle('Documents')?$select=ListItemEntityTypeFullName
-   ```
-   🔸 e.g. `SP.Data.DocumentsItem`.
+**2. Resolve the user to a numeric ID.** `AuthorId`/`EditorId` need the site user ID, not the email.
 
-4) **Add the MERGE request** on the new item.
-   🔸 Method `POST`, Uri `_api/web/lists/getbytitle('Documents')/items(ID)`
-   🔸 Headers:
-   ```
-   Accept: application/json;odata=verbose
-   Content-Type: application/json;odata=verbose
-   IF-MATCH: *
-   X-HTTP-Method: MERGE
-   ```
-   🔸 Body — dates in ISO 8601 UTC:
-   ```json
-   {
-     "__metadata": { "type": "SP.Data.DocumentsItem" },
-     "AuthorId": 12,
-     "EditorId": 15,
-     "Created": "2022-03-14T08:15:00Z",
-     "Modified": "2022-06-01T10:42:00Z"
-   }
-   ```
+🔸 *Send an HTTP request to SharePoint* → Method `POST`, Uri:
 
-5) **Run this MERGE last.** Any later write to the item resets `Modified`/`Editor` to now.
-   🔸 A `204 No Content` response means the metadata was applied. Verify in the library's *Created* / *Modified* columns.
+```
+_api/web/ensureuser
+```
+
+Header `Content-Type: application/json;odata=verbose`, Body:
+
+```json
+{ "logonName": "i:0#.f|membership|jane.doe@contoso.com" }
+```
+
+🔸 Read the returned `Id` (e.g. `body('Ensure_Author')?['d']?['Id']`). Repeat for the editor.
+
+**3. Get the target library's entity type** once:
+
+```
+_api/web/lists/getbytitle('Documents')?$select=ListItemEntityTypeFullName
+```
+
+🔸 e.g. `SP.Data.DocumentsItem`.
+
+**4. Add the MERGE request** on the new item.
+
+🔸 Method `POST`, Uri `_api/web/lists/getbytitle('Documents')/items(ID)`
+
+🔸 Headers:
+
+```
+Accept: application/json;odata=verbose
+Content-Type: application/json;odata=verbose
+IF-MATCH: *
+X-HTTP-Method: MERGE
+```
+
+🔸 Body — dates in ISO 8601 UTC:
+
+```json
+{
+  "__metadata": { "type": "SP.Data.DocumentsItem" },
+  "AuthorId": 12,
+  "EditorId": 15,
+  "Created": "2022-03-14T08:15:00Z",
+  "Modified": "2022-06-01T10:42:00Z"
+}
+```
+
+**5. Run this MERGE last.** Any later write to the item resets `Modified`/`Editor` to now.
+
+🔸 A `204 No Content` response means the metadata was applied. Verify in the library's *Created* / *Modified* columns.
 
 ## 🎉 Result
 The recreated file shows the **original** Created By, Modified By, Created and Modified — exactly like the source. Audit trails stay intact, chronological sorting is correct, and compliance views remain trustworthy, even though the file was rebuilt via create-and-delete.
 
 ## 🌟 Key Advantages
+
 🔸 **Faithful migration:** original author, editor and timestamps are preserved.
+
 🔸 **Standard action only:** *Send an HTTP request to SharePoint* — no premium connector.
+
 🔸 **Selective by design:** `MERGE` writes only the four metadata fields, leaving everything else untouched.
 
 ## 🛠️ FAQ
-Q1: Why `AuthorId` instead of `Author`?
-A: `Author` and `Editor` are person/lookup fields. Via REST you set them with the numeric site user ID on the `AuthorId` / `EditorId` columns, which you get from `_api/web/ensureuser`.
 
-Q2: What date format do `Created` and `Modified` expect?
-A: ISO 8601 in UTC, e.g. `2022-03-14T08:15:00Z`. Convert your source values with `formatDateTime(..., 'yyyy-MM-ddTHH:mm:ssZ')` if needed.
+**Q1: Why `AuthorId` instead of `Author`?**
 
-Q3: My Modified date keeps resetting to today — why?
-A: Any subsequent update to the item overwrites `Modified` and `Editor`. Make this MERGE the **last** write to the item so your values stick.
+`Author` and `Editor` are person/lookup fields. Via REST you set them with the numeric site user ID on the `AuthorId` / `EditorId` columns, which you get from `_api/web/ensureuser`.
 
-Q4: Does this need special permissions?
-A: The connection must have permission to write to the library. Setting `Author`/`Editor` requires the account to be able to update those fields (site member/owner-level access).
+**Q2: What date format do `Created` and `Modified` expect?**
+
+ISO 8601 in UTC, e.g. `2022-03-14T08:15:00Z`. Convert your source values with `formatDateTime(..., 'yyyy-MM-ddTHH:mm:ssZ')` if needed.
+
+**Q3: My Modified date keeps resetting to today — why?**
+
+Any subsequent update to the item overwrites `Modified` and `Editor`. Make this MERGE the **last** write to the item so your values stick.
+
+**Q4: Does this need special permissions?**
+
+The connection must have permission to write to the library. Setting `Author`/`Editor` requires the account to be able to update those fields (site member/owner-level access).
 
 ## 🔗 Related Tips
 - [#PowerPlatformTip 153 – Rename a SharePoint File with Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-153-rename-sharepoint-file-power-automate/) — the companion rename trick using `FileLeafRef`.

@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 152 – 'Build a Time Picker with One Line using Sequence()'"
 date: 2026-02-19
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -38,30 +39,39 @@ ForAll(Sequence(96), Time(0, Value * 15 - 15, 0))
 
 ## 🔧 How it's done
 
-1) **Add a Dropdown control** to your screen.
-   🔸 Insert → Input → Drop down.
+**1. Add a Dropdown control** to your screen.
 
-2) **Set the Items property** to the one-liner:
-   ```powerapps
-   ForAll(Sequence(96), Time(0, Value * 15 - 15, 0))
-   ```
-   🔸 `Sequence(96)` yields 1…96. `Value * 15 - 15` maps those to 0, 15, 30 … 1425 minutes — exactly 00:00 through 23:45.
+🔸 Insert → Input → Drop down.
 
-3) **Format the display** so users see a clean time.
-   🔸 If the values show as full date/times, wrap them: `ForAll(Sequence(96), Text(Time(0, Value * 15 - 15, 0), "hh:mm"))`.
+**2. Set the Items property** to the one-liner:
 
-4) **Read the selected value** with `Dropdown1.Selected.Value`.
-   🔸 Use it directly in a `Patch()`, a variable, or combine it with a date via `DateAdd`.
+```powerapps
+ForAll(Sequence(96), Time(0, Value * 15 - 15, 0))
+```
+
+🔸 `Sequence(96)` yields 1…96. `Value * 15 - 15` maps those to 0, 15, 30 … 1425 minutes — exactly 00:00 through 23:45.
+
+**3. Format the display** so users see a clean time.
+
+🔸 If the values show as full date/times, wrap them: `ForAll(Sequence(96), Text(Time(0, Value * 15 - 15, 0), "hh:mm"))`.
+
+**4. Read the selected value** with `Dropdown1.Selected.Value`.
+
+🔸 Use it directly in a `Patch()`, a variable, or combine it with a date via `DateAdd`.
 
 ## 🎉 Result
 A fully working, scrollable time picker in 15-minute increments — built from a single formula, with no static data table to maintain. Change the interval by editing one number, and you're done.
 
 ## 🌟 Key Advantages
+
 🔸 **One line, zero data:** no hardcoded list, no extra collection to maintain.
+
 🔸 **Instantly adjustable:** want 30-minute steps? Use `Sequence(48)` and `Value * 30 - 30`.
+
 🔸 **Reusable pattern:** the same `Sequence()` + `ForAll()` combo generates far more than times (see below).
 
 ### Bonus: more creative `Sequence()` uses
+
 ```powerapps
 // Next 7 days (Microsoft Learn's recommended pattern)
 ForAll(Sequence(7), DateAdd(Today(), Value, Days))
@@ -83,17 +93,22 @@ ForAll(Sequence(12), Text(Date(Year(Today()), Value, 1), "mmmm"))
 ```
 
 ## 🛠️ FAQ
-Q1: How many records can `Sequence()` generate?
-A: Between 0 and 50,000. Values are rounded down to the nearest whole number, and 0 returns an empty table.
 
-Q2: What is the column called in the generated table?
-A: `Value`. That's why the formulas reference `Value` inside `ForAll()`.
+**Q1: How many records can `Sequence()` generate?**
 
-Q3: Why `Value * 15 - 15` instead of `Value * 15`?
-A: `Sequence(96)` starts at 1, so without the `- 15` the first slot would be 00:15 and you'd miss 00:00. Subtracting one step shifts the list to start at midnight. (Alternatively, `Sequence(96, 0)` starts at 0 and you can drop the `- 15`.)
+Between 0 and 50,000. Values are rounded down to the nearest whole number, and 0 returns an empty table.
 
-Q4: Can I change the step size?
-A: Yes. `Sequence(Records, Start, Step)` accepts a `Step` argument, and it can be negative to count down. For times, just adjust both the record count and the minute multiplier.
+**Q2: What is the column called in the generated table?**
+
+`Value`. That's why the formulas reference `Value` inside `ForAll()`.
+
+**Q3: Why `Value * 15 - 15` instead of `Value * 15`?**
+
+`Sequence(96)` starts at 1, so without the `- 15` the first slot would be 00:15 and you'd miss 00:00. Subtracting one step shifts the list to start at midnight. (Alternatively, `Sequence(96, 0)` starts at 0 and you can drop the `- 15`.)
+
+**Q4: Can I change the step size?**
+
+Yes. `Sequence(Records, Start, Step)` accepts a `Step` argument, and it can be negative to count down. For times, just adjust both the record count and the minute multiplier.
 
 ## 🔗 Related Tips
 - [#PowerPlatformTip 84 – Tabbing in Dynamic Forms](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-84-tabbing-in-dynamic-forms/) — using `Sequence()` for reliable gallery binding.
