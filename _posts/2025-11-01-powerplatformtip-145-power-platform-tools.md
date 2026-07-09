@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 145 – 'Power Platform Tools'"
 date: 2025-11-25
+last_modified_at: 2026-07-09
 categories:
     - Article
     - PowerPlatformTip
@@ -17,6 +18,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Speed up Power Platform dev with tools.powerplatformtip.com – a browser suite for trigger conditions, Power FX translation and more.
 
 ## 💡 Challenge
 

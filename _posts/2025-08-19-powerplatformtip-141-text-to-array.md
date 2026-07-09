@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 141 - Text to Array"
 date: 2025-08-19
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -18,6 +19,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Turn a multiline text block into a loopable array in Power Automate with `split(text, separator)`.
 
 ## 💡 Challenge
 How do you process a copied multiline text block (each line representing a record — e.g., IDs, email addresses, URLs) in a Power Automate flow without manual splitting? Manual steps do not scale and are error-prone.

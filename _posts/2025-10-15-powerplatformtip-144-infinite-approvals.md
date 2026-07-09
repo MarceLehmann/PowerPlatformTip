@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 144 - Infinite Approvals beyond 30 days"
 date: 2025-10-15
+last_modified_at: 2026-07-09
 categories:
     - Article
     - PowerPlatformTip
@@ -17,6 +18,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Beat the 30-day Power Automate approval timeout by having the flow restart itself via a SharePoint TriggerFlow flag – new or same approval.
 
 ## 💡 Challenge
 
