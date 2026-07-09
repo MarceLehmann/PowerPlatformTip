@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 121 – 'Filtering SharePoint File Fields with OData'"
 date: 2024-08-21
+last_modified_at: 2026-07-09
 modified: 2025-10-15
 categories:
   - Article
@@ -21,8 +22,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Quickly and efficiently filter SharePoint files in Power Automate by using FileLeafRef (file name), FileRef (full path), and FileDirRef (folder) fields with simple OData filter expressions – even if you don’t know how these fields work yet.
+> **TL;DR:** Filter SharePoint files in Power Automate with the FileLeafRef, FileRef and FileDirRef fields via simple OData queries.
 
 ## 💡 Challenge
 Managing complex workflows in Power Platform can be difficult without the right approach to Filtering SharePoint File Fields with OData. Many developers find themselves struggling with efficiency and manual configuration.

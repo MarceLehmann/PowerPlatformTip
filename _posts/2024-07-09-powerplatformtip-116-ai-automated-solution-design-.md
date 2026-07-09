@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 116 – 'AI Automated Solution Design'"
 date: 2024-07-09
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,8 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-How to quickly get an overview of a Solution Design for PowerApps and Power Automate projects.
+> **TL;DR:** Turn a voice-to-text description into a full Power Platform Solution Design with ChatGPT, then visualize it with Diagram-GPT.
 
 ## 💡 Challenge
 How to quickly get an overview of a Solution Design for PowerApps and Power Automate projects.

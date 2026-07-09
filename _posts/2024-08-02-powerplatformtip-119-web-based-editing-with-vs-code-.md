@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 119 – 'Web-Based Editing with VS Code'"
 date: 2024-08-02
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -18,6 +19,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Use vscode.dev in your browser as a roomy editor for Power Fx, JSON and expressions – no install needed.
 
 ## 💡 Challenge
 We’ve all been there: working with Power Platform components like Power Apps and Power Automate often involves dealing with various code snippets, formulas, and expressions. The default editors sometimes lack the flexibility or space needed for more complex manipulations or text operations.

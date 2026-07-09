@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 117 – 'Optimize Parallel Object Processing'"
 date: 2024-07-16
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,6 +22,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Break past the 50-item Apply to Each limit in Power Automate using child flows or database triggers for true parallel processing.
 
 ## 💡 Challenge
 Managing a large number of items in Power Automate’s “Apply to Each” action can be slow. By default, items are processed sequentially (up to 50 in parallel), causing delays as subsequent items wait for slots to free up.

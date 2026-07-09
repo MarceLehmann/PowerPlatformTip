@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 120 – 'PowerAutomate – Text Processing 2.0'"
 date: 2024-08-13
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,8 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Use PowerTools for advanced text extraction and manipulation directly within Power Automate flows.
+> **TL;DR:** Extend Power Automate with Paul Murana's PowerTools connector for advanced in-tenant text extraction and manipulation.
 
 ## 💡 Challenge
 Are you searching for efficient ways to extract and manipulate text in your Power Automate flows, but find the standard tools lacking? Or do you need advanced capabilities to automate text processing in your workflows?
@@ -60,6 +60,3 @@ No. PowerTools runs entirely within your tenant or on-premises environment, and 
 
 **3. How do I get the discount?**  
 Use the code “LEHMANN” at checkout on Paul Murana’s website to receive $15 off the one-time purchase.
-
-
-Filename: 2024-08-13-powerplatformtip-120-powerautomate-text-processing-2-0.md
