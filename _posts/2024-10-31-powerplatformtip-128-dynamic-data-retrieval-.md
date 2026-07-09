@@ -7,12 +7,10 @@ categories:
   - PowerPlatformTip
 tags:
   - PowerAutomate
-  - PowerPlatform
   - JSON
   - ParseJSON
   - DynamicDataRetrieval
   - PowerPlatformTip
-  - Marcel Lehmann
 excerpt: "Use Parse JSON with dynamic keys in Power Automate to flexibly retrieve data without complex conditions."
 header:
   overlay_color: "#2dd4bf"
@@ -24,30 +22,41 @@ toc_sticky: true
 > **TL;DR:** Pull values from JSON dynamically in Power Automate using Parse JSON with variable keys – no Switch or If cascades.
 
 ## 💡 Challenge
-We often face the challenge of handling dynamic data in Power Automate without resorting to complex conditional structures like Switch or If statements.
+Handling dynamic data in Power Automate often pushes you toward sprawling Switch or If structures — one branch per language, user role or message type. That gets hard to maintain fast.
 
 ## ✅ Solution
-We often face the challenge of handling dynamic data in Power Automate without resorting to complex conditional structures like Switch or If statements. Whether it's language variations, user roles, or specific message types, a flexible and scalable solution is needed.
-Using the **Parse JSON** action and dynamic keys, you can retrieve various information directly from a JSON structure. This allows you to pull different content (like greetings, settings, or user data) based on need, without additional effort.
-Instead of complex conditions, you now have an agile, scalable solution that dynamically retrieves and processes data in real-time.
-🔸 No need for complex conditions
-🔸 Quick adjustments for new data variations
-🔸 Flexible for multiple applications
+Use the **Parse JSON** action together with a dynamic key expression to pull values straight from a JSON structure. You reference the property by a variable instead of hardcoding it, so the same expression returns different content (greetings, settings, user data) based on need.
 
 ## 🔧 How It's Done
-1. Identify the area in your app or flow where Dynamic Data Retrieval is needed.
-🔸 Follow established naming conventions for clarity.
-2. Configure the properties according to your business requirements.
-🔸 Test the implementation with sample data.
-3. Verify the output to ensure it matches the expected results.
+
+**1. Parse your JSON**
+
+🔸 Add a Parse JSON action and generate the schema from a sample payload.
+
+**2. Reference a value by dynamic key**
+
+🔸 Instead of hardcoding, build the property path from a variable, e.g. `body('Parse_JSON')?[variables('key')]`.
+
+**3. Drive the key from context**
+
+🔸 Set the key from the language, user role or message type so one expression returns the right content.
+
+**4. Handle missing keys**
+
+🔸 Wrap it with `coalesce(body('Parse_JSON')?[variables('key')], 'default')` to fall back gracefully.
 
 ## 🎉 Result
-Your workflows become more robust and easier to maintain. Implementing Dynamic Data Retrieval reduces the time spent on manual adjustments and minimizes potential for errors.
+You get an agile, scalable flow that retrieves and processes data in real time — no cascade of conditions to maintain as new data variations appear.
 
 ## 🌟 Key Advantages
-🔸 Improved Efficiency: Faster development cycles through automation.
-🔸 Better Consistency: Standardized approach across all projects.
-🔸 Enhanced Reliability: Reduced risk of failure during execution.
+
+🔸 No complex Switch/If conditions
+
+🔸 Quick to adapt for new data variations
+
+🔸 Flexible across many use cases
+
+---
 
 ## 🎥 Video Tutorial
 {% include video id="NuFd6myyUio" provider="youtube" %}
@@ -55,11 +64,13 @@ Your workflows become more robust and easier to maintain. Implementing Dynamic D
 ---
 
 ## 🛠️ FAQ
-**1. How do I generate the JSON schema for the Parse JSON action?**  
-You can copy a sample JSON payload and use the "Use sample payload to generate schema" button in the action to automatically create the schema.
+**1. How do I generate the JSON schema for the Parse JSON action?**
+Copy a sample JSON payload and use the "Use sample payload to generate schema" button in the action to create the schema automatically.
 
-**2. What happens if a key doesn't exist in the JSON?**  
-The Parse JSON action will still run but return null for missing keys. Use expressions like `coalesce()` or conditional steps to provide default values.
+**2. What happens if a key doesn't exist in the JSON?**
+The Parse JSON action still runs but returns null for missing keys. Use expressions like `coalesce()` or conditional steps to provide default values.
 
-**3. Can I use this approach for nested JSON objects?**  
-Yes, dynamic queries can access nested objects by chaining property names, for example `body('Parse_JSON')?['data']?['key']`.
+**3. Can I use this approach for nested JSON objects?**
+Yes. Access nested objects by chaining property names, for example `body('Parse_JSON')?['data']?['key']`.
+
+---
