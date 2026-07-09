@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 146 – Encode & Decode Functions"
 date: 2025-12-04
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -19,6 +20,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Encode special characters in Power Platform – `EncodeUrl`/`EncodeHTML` in Power Apps, `encodeUriComponent`/`decodeUriComponent` in flows, and double apostrophes for OData filters.
 
 ## 💡 Challenge
 
