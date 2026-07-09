@@ -23,6 +23,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Replace hardcoded values with environment variables so the same solution moves across Dev, Test, and Prod without editing app or flow logic.
+
 ## 💡 Challenge
 
 Hardcoding values in apps and flows makes them inflexible, difficult to manage, and cumbersome to migrate across environments.

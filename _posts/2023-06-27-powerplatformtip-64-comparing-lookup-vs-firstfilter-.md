@@ -23,6 +23,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** `Lookup()` and `First(Filter())` behave identically with no performance difference – pick one pattern and use it consistently for readability.
+
 ## 💡 Challenge
 
 In Power Apps, when you need to retrieve the first record that meets certain criteria, you have two functions—`Lookup()` and `First(Filter())`—which can cause confusion over which to use.

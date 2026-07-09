@@ -21,6 +21,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use `Lookup(Source, Condition, COLUMN)` to return just the column value instead of `Lookup(...).COLUMN`, which fetches the whole record first.
+
 ## 💡 Challenge
 
 Understanding the difference between `Lookup(Source, Condition, COLUMN)` and `Lookup(Source, Condition).COLUMN` – and optimizing your formulas for better performance.

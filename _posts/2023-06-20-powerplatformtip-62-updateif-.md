@@ -22,6 +22,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Use UpdateIf to update every record matching a condition in one call – no manual loops needed in Power Apps.
+
 ## 💡 Challenge
 
 Updating specific records in a collection often requires looping through each record, which can be inefficient and cumbersome in Power Apps.
