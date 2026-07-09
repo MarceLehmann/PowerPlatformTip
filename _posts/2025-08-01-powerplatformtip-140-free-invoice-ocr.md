@@ -3,6 +3,7 @@
 title: "#PowerPlatformTip 140 – Free Invoice OCR (Process 500 PDFs/Month for €0)"
 seo_title: "#PowerPlatformTip 140 – Free Invoice OCR (Process 500"
 date: 2025-08-01
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -22,6 +23,8 @@ toc: true
 toc_sticky: true
 
 ---
+
+> **TL;DR:** Read and summarize up to 500 PDF invoices/month for free with a free-tier OCR connector plus Azure AI Language summarization.
 
 ## 💡 Challenge
 Accounts-payable still receives hundreds of PDF invoices, reminders, and receipts every month.  

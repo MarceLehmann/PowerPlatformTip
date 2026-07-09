@@ -3,6 +3,7 @@
 title: "#PowerPlatformTip 133 – 'SharePoint Updates with Power Automate – No Required Fields Needed'"
 seo_title: "#PowerPlatformTip 133 – 'SharePoint Updates with Power"
 date: 2025-01-22
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -24,6 +25,8 @@ toc: true
 toc_sticky: true
 
 ---
+
+> **TL;DR:** Update only specific SharePoint fields in Power Automate by passing a JSON variable to 'Update item' – no HTTP, no required-field hassle.
 
 ## 💡 Challenge
 Updating only specific fields in SharePoint items can be tricky. Often, it feels like you’re forced to manage unnecessary required fields or rely on HTTP requests. Wouldn’t it be easier to simply update the fields you need?

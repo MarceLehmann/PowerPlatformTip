@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 132 – 'Office Files Viewer in PowerApps'"
 date: 2025-01-16
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,6 +22,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Show PDFs, Word and Excel files straight from SharePoint inside Power Apps with the Office Files Viewer component – no Power Automate.
 
 ## 💡 Challenge
 Viewing Office files directly in PowerApps is often a hassle. You might end up using complex integrations or additional tools like Power Automate, which can be time-consuming and unnecessary.

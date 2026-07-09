@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 136 – Patch Coalesce Upsert"
 date: 2025-04-15
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -19,6 +20,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Do upsert in Power Apps with one `Patch(Source, Coalesce(LookUp(...), Defaults(Source)), {...})` – update or create in a single call.
 
 ## 💡 Challenge
 In Power Apps, maintaining separate logic branches for “Create” and “Update” can bloat your formulas and introduce bugs. How can you streamline this into a single operation?

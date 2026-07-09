@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 134 – 'Optimize Canvas Apps with YAML'"
 date: 2025-03-13
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -17,6 +18,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Copy your Canvas App's YAML into ChatGPT to get AI-driven performance and best-practice optimization suggestions.
 
 ## 💡 Challenge
 Have you ever wondered how to optimize your Canvas Apps and you haven't a buddy that could help you? Now that you can access the YAML code directly from Canvas Apps, it's easier than ever to get insights. But here's the catch: while AI tools like ChatGPT can analyze the code, they often can't generate fully functional YAML until now (unless customized models are in use).
