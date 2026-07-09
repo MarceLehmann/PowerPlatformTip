@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 90 – 'Power Platform Community Developer Plan'"
 date: 2023-12-04
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,52 +22,53 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Leverage the Power Platform Community Developer Plan for a free, robust environment to build, test, and share Power Apps and Power Automate solutions—ideal for learning, prototyping, and innovation.
+> **TL;DR:** Use the free Power Platform Developer Plan to build, test, and share Power Apps and Power Automate solutions in your own Dataverse environments—ideal for learning and prototyping.
 
 ## 💡 Challenge
 As developers or Power Platform enthusiasts, finding a cost-free space for developing and testing Power Apps and Power Automate flows can be challenging.
 
 ## ✅ Solution
-As developers or Power Platform enthusiasts, finding a cost-free space for developing and testing Power Apps and Power Automate flows can be challenging.
+Use the free Power Platform Developer Plan (formerly the Community Plan). It gives you your own Dataverse-enabled environments to build, test, and share Power Apps and Power Automate solutions at no cost—perfect for learning, prototyping, and innovation.
 
 ## 🔧 How It's Done
-* Cost-Efficient: Free for development and testing.
-* Developer-Friendly: Supports a wide range of data sources and tools, including Azure and Dynamics 365.
-* Inclusive of Dataverse: Streamline app development with a managed, scalable data platform.
-* **Capacity Limits:** Includes 750 flow runs/month and 2 GB database size.
-* **Transferring Resources:** You can export resources from this environment to others.
-* **Subscription Expiry:** Active use maintains your free plan; inactive environments may be deleted after 90 days of inactivity.
-* **Multiple Environments:** Up to three environments are allowed for more comprehensive development and testing.
-* **AI Builder & RPA:** These are not included but can be trialed separately.
+Here's how to do it:
+1. Sign up for the plan.  
+   🔸 Register on the Power Apps Developer Plan website or through Visual Studio Dev Essentials, using a Microsoft-backed work or school email address: [https://powerapps.microsoft.com/en-us/developerplan/](https://powerapps.microsoft.com/en-us/developerplan/)
+2. Know what's included.  
+   🔸 Free, dedicated environments for development and testing.  
+   🔸 Dataverse included, plus a wide range of data sources and tools such as Azure and Dynamics 365.  
+   🔸 Up to three developer environments for more comprehensive testing.
+3. Understand the limits.  
+   🔸 Capacity limits apply (e.g. flow runs per month and Dataverse database size).  
+   🔸 Inactive environments may be deleted after a period of inactivity, so use them regularly.  
+   🔸 AI Builder and RPA are not included but can be trialed separately.
+4. Transfer resources when ready.  
+   🔸 Export your apps and flows from the developer environment to other environments for wider use.
 
 ## 🎉 Result
-Sign up on the Power Apps Developer Plan website or through Visual Studio Dev Essentials. This plan is for anyone with a Microsoft-backed work or school email address. Follow this link: [https://powerapps.microsoft.com/en-us/developerplan/](https://powerapps.microsoft.com/en-us/developerplan/)
+You get a robust, flexible, and free environment for your app and flow development, fostering innovation and collaboration.
 
-Enjoy a robust, flexible, and free environment for your app and flow development, fostering innovation and collaboration.
-
-⚠️ **Important Note:** The Developer Plan is intended for development and testing, not for production use. If you hit capacity limits or need production deployment, consider Power Apps' paid plans.
-
-📈 **Key Advantages:**
-
-🔍 **FAQ:**
+⚠️ **Important Note:** The Developer Plan is intended for development and testing, not production use. If you hit capacity limits or need production deployment, consider Power Apps' paid plans.
 
 ## 🌟 Key Advantages
-🔸 Improved Efficiency: Faster development cycles through automation.
-🔸 Better Consistency: Standardized approach across all projects.
-🔸 Enhanced Reliability: Reduced risk of failure during execution.
+🔸 **Cost-Efficient:** Completely free for development and testing.
+
+🔸 **Developer-Friendly:** Supports a wide range of data sources and tools, including Azure and Dynamics 365.
+
+🔸 **Dataverse Included:** Build on a managed, scalable data platform with up to three environments.
 
 ## 🎥 Video Tutorial
 {% include video id="CK3fZp-GL-A" provider="youtube" %}
 
----
-
 ## 🛠️ FAQ
-**1. What are the capacity limits of the Developer Plan?**  
-The plan includes 750 flow runs per month and 2 GB database size.
+**1. Who can sign up for the Developer Plan?**
 
-**2. Can I transfer my apps and flows to other environments?**  
+Anyone with a Microsoft-backed work or school email address can register for the free Power Platform Developer Plan.
+
+**2. Can I transfer my apps and flows to other environments?**
+
 Yes, you can export resources from the Developer Plan environment to other environments.
 
-**3. Does the subscription expire if unused?**  
-Inactive environments are deleted after 90 days of inactivity, but active use maintains your free plan.
+**3. Does the subscription expire if unused?**
+
+Inactive environments are deleted after a period of inactivity, but active use keeps your free plan alive.
