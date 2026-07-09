@@ -60,6 +60,8 @@ You jump straight into editing your Teams app in the familiar Power Apps studio,
 
 🔸 **Quick edits:** make small changes without navigating through Teams.
 
+---
+
 ## 🎥 Video Tutorial
 {% include video id="FuzWFysCg5g" provider="youtube" %}
 
