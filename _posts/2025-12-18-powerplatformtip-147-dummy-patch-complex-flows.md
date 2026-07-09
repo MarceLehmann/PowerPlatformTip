@@ -3,15 +3,15 @@ title: "#PowerPlatformTip 147 – Dummy Patch After Complex Flows"
 date: 2025-12-18
 last_modified_at: 2026-07-09
 categories:
-    - Article
-    - PowerPlatformTip
+  - Article
+  - PowerPlatformTip
 tags:
-    - PowerApps
-    - PowerAutomate
-    - Dataverse
-    - SharePoint
-    - Performance
-    - PowerPlatformTip
+  - PowerApps
+  - PowerAutomate
+  - Dataverse
+  - SharePoint
+  - Performance
+  - PowerPlatformTip
 excerpt: "Complex Flows with approvals/fallbacks updating lists? Use Dummy Patch on GalleryExample.selected + RefreshHack column for precise single-record refresh – skips Refresh bulk loads."
 header:
   overlay_color: "#2dd4bf"
@@ -22,66 +22,82 @@ toc_sticky: true
 
 > **TL;DR:** Force a single-record cache refresh in Power Apps after a complex flow by dummy-patching a hidden RefreshHack column on the selected record.
 
-**When direct Patch fails**: Use Power Automate for advanced scenarios – conditional data, external API calls, error fallbacks, multi-record lookups, tracking.  
-Flow finishes → Respond to PowerApps → but your Gallery or EditForm still shows *pre-Flow* data.  
-Why not use Refresh? Downloads 500-2000 records (delegation limit), wasting bandwidth even if filtered.
-
-**The fix**: Add *RefreshHack* column → Dummy Patch on `GalleryExample.selected` → single-record cache refresh.
+Some scenarios need Power Automate for advanced logic – conditional data, external API calls, error fallbacks, multi-record lookups, tracking. The flow finishes and responds to Power Apps, but your Gallery or EditForm still shows *pre-flow* data. A full `Refresh` would download 500-2000 records (delegation limit), wasting bandwidth even when filtered. The fix: a hidden *RefreshHack* column plus a Dummy Patch on the selected record for a single-record cache refresh.
 
 ## 💡 Challenge
-Canvas Patch handles simple updates automatically. Complex logic requires Flows.  
-Real scenario: User submits form → Flow validates/approves → updates SharePoint → App cache blind = stale display in Gallery.
+Canvas `Patch` handles simple updates automatically, but complex logic needs flows. Real scenario: user submits a form → flow validates/approves → updates SharePoint → the app's cache is blind, so the Gallery shows stale data.
 
 ## ✅ Solution
-Create RefreshHack (hidden Single line of text column). Patch it with Blank() on the selected record post-Flow.
+Create a hidden `RefreshHack` (single line of text) column and `Patch` it with `Blank()` on the selected record right after the flow completes.
 
-## 🔧 How it’s done
+## 🔧 How It's Done
 
-1) **Setup RefreshHack column**:  
-   - In SharePoint/Dataverse list: New column "RefreshHack" (Single line of text).  
-   - Hide from all views/forms (no user impact).  
-   - Purpose: Safe dummy field for cache invalidation (never used in formulas).
+**1. Set up the RefreshHack column**
 
-2) **App flow**: Gallery → EditForm/Button OnSelect.
+🔸 In your SharePoint/Dataverse list, add a new "RefreshHack" column (single line of text).
 
-- a) Trigger complex Flow  
-  Set(varFlowID, ComplexFlow.Run(GalleryExample.selected.ID));
+🔸 Hide it from all views and forms (no user impact).
 
-- b) Wait for success + Dummy Patch  
-  If(
+🔸 It's a safe dummy field for cache invalidation — never used in formulas.
+
+**2. Trigger the flow, then dummy-patch**
+
+🔸 On your Gallery → EditForm/Button OnSelect, run the complex flow:
+
+```powerapps
+Set(varFlowID, ComplexFlow.Run(GalleryExample.Selected.ID))
+```
+
+🔸 On success, patch the hidden column on the selected record:
+
+```powerapps
+If(
     varFlowID.Success,
     Patch(
-      MySharePointList,
-      GalleryExample.Selected,
-      { RefreshHack: Blank() }
+        MySharePointList,
+        GalleryExample.Selected,
+        { RefreshHack: Blank() }
     );
     Notify("Update complete!", NotificationType.Success)
-  )
+)
+```
 
-3) **What happens**:  
-   - Flow runs full logic (Switch conditions, HTTP fallback, etc.).  
-   - Patch signals "this record changed" → PowerApps invalidates *only* that cache entry.  
-   - Gallery/Form reloads fresh data from source.  
-   *Test*: Browser F12 > Network – see ~1KB payload vs Refresh's 50KB+.
+**3. What happens**
+
+🔸 The flow runs its full logic (Switch conditions, HTTP fallback, etc.).
+
+🔸 The Patch signals "this record changed" → Power Apps invalidates *only* that cache entry.
+
+🔸 The Gallery/Form reloads fresh data for that record. Check F12 > Network: ~1KB payload vs. Refresh's 50KB+.
 
 ## 🎉 Result
-Complex enterprise Flows → precise, instant sync without app slowdown or delegation warnings. Scales to 50k+ lists.
+Complex enterprise flows get precise, instant sync without app slowdown or delegation warnings — and it scales to 50k+ lists.
 
 ## 🌟 Key Advantages
-🔸 **Precise targeting**: GalleryExample.selected ensures right record.  
-🔸 **No bulk data**: Beats Refresh performance by 500x on large lists.  
-🔸 **Delegation-proof**: Single Patch, no warnings.  
-🔸 **Mobile-friendly**: Low bandwidth critical for field users.
+
+🔸 **Precise targeting:** `GalleryExample.Selected` hits the right record.
+
+🔸 **No bulk data:** beats Refresh performance dramatically on large lists.
+
+🔸 **Delegation-proof:** a single Patch, no warnings.
+
+🔸 **Mobile-friendly:** low bandwidth, critical for field users.
+
+---
 
 ## 🎥 Video Tutorial
 {% include video id="Rj6Q_oF7jLw" provider="youtube" %}
 
+---
+
 ## 🛠️ FAQ
-Q1: Why RefreshHack column specifically?  
-A: Single-line text = lightweight. Blank() forces revalidation without business impact.
+**1. Why the RefreshHack column specifically?**
+A single-line text column is lightweight. Patching it with `Blank()` forces revalidation without any business impact.
 
-Q2: Direct Patch enough for simple cases?  
-A: Yes – auto-caches. Flows only for complex/enterprise logic.
+**2. Is direct Patch enough for simple cases?**
+Yes — it auto-caches. Use flows only for complex/enterprise logic.
 
-Q3: Does it work mid-Gallery scroll?  
-A: Yes – selected record refreshes in place.
+**3. Does it work mid-Gallery scroll?**
+Yes — the selected record refreshes in place.
+
+---
