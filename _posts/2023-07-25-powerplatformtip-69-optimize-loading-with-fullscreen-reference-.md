@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 69 – 'Optimize Loading with Fullscreen Reference'"
 date: 2023-07-25
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -21,57 +22,50 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Speed up Power Apps loading by using App.width and App.height for fullscreen dimensions—improve performance, user experience, and deliver faster app startup times.
-
 ## 💡 Challenge
-If you don't want to miss out on any future #PowerPlatformTip posts, be sure to subscribe to my newsletter – you'll be the first to know whenever I publish a new tip!
-								Type your email…							
-								Subscribe							
-💡 **The Challenge:** In a world where every second counts, speeding up your Power Apps loading process can be a real game-changer.
+
+In a world where every second counts, speeding up your Power Apps loading process can be a real game-changer. You're looking for ways to make your apps load faster.
 
 ## ✅ Solution
-If you don't want to miss out on any future #PowerPlatformTip posts, be sure to subscribe to my newsletter – you'll be the first to know whenever I publish a new tip!
-								Type your email…							
-								Subscribe							
-💡 **The Challenge:** In a world where every second counts, speeding up your Power Apps loading process can be a real game-changer. You're looking for ways to make your Power Apps load faster.
-✅ **The Solution:** When building your Power Apps, make sure to reference App.width and App.height for fullscreen dimensions rather than using Parent.width and Parent.height. Why? Because 'App' loads immediately, whereas 'Parent' follows a sequential loading process. By referencing 'App', you're ensuring that your app's dimensions are available right away, leading to a faster loading time.
-🔧 **How It's Done:**
-1️⃣ **Use 'App':** Instead of 'Parent', use 'App' to reference dimensions. This ensures immediate loading and faster app performance.
-2️⃣ **Optimize Loading Time:** By ensuring your app's dimensions are available right away, you significantly reduce your Power App's loading time.
-🎉 **Result:** You've significantly reduced your Power App's loading time, delivering a seamless and efficient user experience!
-**Key Advantages:**
-1️⃣ **Performance Boost:** By using 'App' to reference dimensions, you can improve your app's performance and reduce loading time.
-2️⃣ **User Experience:** Faster loading times lead to a smoother and more efficient user experience.
-3️⃣ **Efficiency:** This simple change can make a big difference in your app's efficiency, saving valuable time for your users.
+
+When building fullscreen layouts, reference `App.Width` and `App.Height` instead of `Parent.Width` and `Parent.Height`. `App` loads immediately, whereas `Parent` follows a sequential loading process – so referencing `App` makes your dimensions available right away and speeds up loading.
 
 ## 🔧 How It's Done
-1️⃣ **Use 'App':** Instead of 'Parent', use 'App' to reference dimensions. This ensures immediate loading and faster app performance.
-2️⃣ **Optimize Loading Time:** By ensuring your app's dimensions are available right away, you significantly reduce your Power App's loading time.
+
+**1. Use App instead of Parent**
+
+🔸 Replace `Parent.Width` / `Parent.Height` with `App.Width` / `App.Height` for fullscreen dimensions.
+
+🔸 This ensures the dimensions are available immediately on load.
+
+**2. Apply it to your root containers**
+
+🔸 Set the Width/Height of your top-level screen containers to the `App` references.
+
+🔸 Child controls sized relative to those containers benefit automatically.
 
 ## 🎉 Result
-You've significantly reduced your Power App's loading time, delivering a seamless and efficient user experience!
-**Key Advantages:**
-1️⃣ **Performance Boost:** By using 'App' to reference dimensions, you can improve your app's performance and reduce loading time.
-2️⃣ **User Experience:** Faster loading times lead to a smoother and more efficient user experience.
-3️⃣ **Efficiency:** This simple change can make a big difference in your app's efficiency, saving valuable time for your users.
+
+You've reduced your Power App's loading time, delivering a smoother and more efficient user experience – with the same layout, just faster.
 
 ## 🌟 Key Advantages
-🔸 Improved Efficiency: Faster development cycles through automation.
-🔸 Better Consistency: Standardized approach across all projects.
-🔸 Enhanced Reliability: Reduced risk of failure during execution.
 
-## 🎥 Video Tutorial
-{% include video id="noscript" provider="youtube" %}
+🔸 Performance Boost: `App` dimensions are available immediately
 
----
+🔸 Better User Experience: Faster, smoother startup
+
+🔸 Simple Change: A tiny formula tweak with a real impact
 
 ## 🛠️ FAQ
-**1. Why should I use App.width and App.height instead of Parent.width and Parent.height?**  
-Because 'App' loads immediately, making dimensions available faster, whereas 'Parent' relies on a sequential loading process.
 
-**2. Will this change affect my existing app layouts?**  
-No, switching the reference to 'App' only changes how dimensions are retrieved; your layout remains the same but loads faster.
+**Q: Why should I use App.Width and App.Height instead of Parent.Width and Parent.Height?**
 
-**3. Can I use this optimization for other components in Power Apps?**  
-Yes, referencing 'App' properties can be applied whenever you need immediate global app context to improve performance.
+Because `App` loads immediately, making dimensions available faster, whereas `Parent` relies on a sequential loading process.
+
+**Q: Will this change affect my existing app layouts?**
+
+No. Switching the reference to `App` only changes how dimensions are retrieved; your layout stays the same but loads faster.
+
+**Q: Can I use this optimization for other components in Power Apps?**
+
+Yes. Referencing `App` properties helps whenever you need immediate global app context to improve performance.
