@@ -6,11 +6,10 @@ categories:
   - Article
   - PowerPlatformTip
 tags:
-  - Marcel Lehmann
-  - power-platform
   - PowerApps
   - PowerAutomate
-  - PowerPlatform
+  - VSCode
+  - PowerFx
   - PowerPlatformTip
 excerpt: "Use VS Code in the browser to provide a flexible, spacious editor for complex Power Platform scripts, formulas, and expressions."
 header:
@@ -23,36 +22,46 @@ toc_sticky: true
 > **TL;DR:** Use vscode.dev in your browser as a roomy editor for Power Fx, JSON and expressions – no install needed.
 
 ## 💡 Challenge
-We’ve all been there: working with Power Platform components like Power Apps and Power Automate often involves dealing with various code snippets, formulas, and expressions. The default editors sometimes lack the flexibility or space needed for more complex manipulations or text operations.
+Working with Power Apps and Power Automate often means wrangling code snippets, formulas and expressions. The built-in editors sometimes lack the space and flexibility you need for more complex text operations.
 
 ## ✅ Solution
-Use web-based Visual Studio Code (via vscode.dev) to leverage a versatile and spacious environment for managing your Power Platform tasks, offering advanced editing, search/replace, and syntax highlighting.
+Use web-based Visual Studio Code (vscode.dev) as a spacious, full-featured environment for Power Platform tasks — with advanced editing, find & replace, and syntax highlighting.
 
 ## 🔧 How It's Done
-Here's how to do it:  
-1. Access VS Code  
-   🔸 Navigate to http://www.vscode.dev in your browser.  
-2. Log In to VS Code  
-   🔸 Use your Microsoft account for a personalized experience with synchronized settings and extensions.  
-3. Editing and Manipulation  
-   🔸 Take advantage of multi-line editing, find and replace, and syntax highlighting to handle JSON configurations, compose HTTP requests, or refine Power FX formulas.
+
+**1. Open VS Code for the web**
+
+🔸 Go to [https://vscode.dev](https://vscode.dev) in your browser.
+
+**2. Sign in (optional)**
+
+🔸 Use your Microsoft account for synced settings and extensions.
+
+**3. Edit and manipulate**
+
+🔸 Use multi-line editing, find & replace, and syntax highlighting to handle JSON, compose HTTP requests, or refine Power Fx formulas.
 
 ## 🎉 Result
-By utilizing VS Code in the browser, Power Platform developers can enjoy a streamlined, efficient coding experience. The web-based editor’s extensive feature set helps in quickly editing and organizing scripts and formulas, leading to better productivity and ease of management.
+Power Platform makers get a streamlined, efficient editing experience. The web editor's rich feature set makes it quick to edit and organize scripts and formulas — better productivity, easier management.
 
 ## 🌟 Key Advantages
-🔸 Enhanced Space: More room for editing complex scripts compared to default editors.  
-🔸 Versatility: Handles various types of code and text, including Power FX, JSON, and more.  
-🔸 Convenience: Accessible from any device with a browser, no installation needed.
+
+🔸 **More space:** room for editing complex scripts compared to the default editors.
+
+🔸 **Versatile:** handles many types of code and text, including Power Fx, JSON, and more.
+
+🔸 **Convenient:** available from any device with a browser — no installation.
 
 ---
 
 ## 🛠️ FAQ
-**1. What is vscode.dev and why use it for Power Platform?**  
-vscode.dev is the web-based version of Visual Studio Code that runs entirely in your browser. It provides a full-featured code editor without any local installation, perfect for editing Power Platform scripts and formulas on the go.
+**1. What is vscode.dev and why use it for Power Platform?**
+vscode.dev is the browser-based version of Visual Studio Code. It gives you a full-featured code editor with no local install — perfect for editing Power Platform scripts and formulas on the go.
 
-**2. Do I need to install any extensions to edit Power Platform files?**  
-No installation is required. vscode.dev supports many built-in features like syntax highlighting and may automatically load popular extensions if you sign in with your Microsoft or GitHub account.
+**2. Do I need to install any extensions to edit Power Platform files?**
+No install is required. vscode.dev supports built-in features like syntax highlighting and can load popular extensions when you sign in with your Microsoft or GitHub account.
 
-**3. Can I handle JSON and Power FX formulas in the browser editor?**  
-Yes. You can open, edit, and save JSON configurations, Power FX formulas, and other script files directly in vscode.dev with full editor features such as find/replace, multi-cursor editing, and error highlighting.
+**3. Can I handle JSON and Power Fx formulas in the browser editor?**
+Yes. Open, edit, and save JSON, Power Fx formulas, and other script files directly in vscode.dev with full editor features such as find/replace, multi-cursor editing, and error highlighting.
+
+---

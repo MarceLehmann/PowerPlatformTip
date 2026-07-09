@@ -6,13 +6,12 @@ categories:
   - Article
   - PowerPlatformTip
 tags:
-  - Marcel Lehmann
   - PowerApps
   - PowerAutomate
-  - PowerPlatform
   - ChatGPT
-  - Voice-to-Text
-  - Diagram-GPT
+  - SolutionDesign
+  - AI
+  - PowerPlatformTip
 excerpt: "Quickly overview a comprehensive Solution Design for PowerApps and Power Automate using ChatGPT, Voice-to-Text, and Diagram-GPT."
 header:
   overlay_color: "#2dd4bf"
@@ -24,47 +23,49 @@ toc_sticky: true
 > **TL;DR:** Turn a voice-to-text description into a full Power Platform Solution Design with ChatGPT, then visualize it with Diagram-GPT.
 
 ## 💡 Challenge
-How to quickly get an overview of a Solution Design for PowerApps and Power Automate projects.
+You want a quick, structured overview of a Solution Design for a Power Apps and Power Automate project — without spending hours writing it from scratch.
 
 ## ✅ Solution
-Use ChatGPT and Voice-to-Text to describe the entire process to be transformed. Upload any relevant files if you can. Then let ChatGPT draft a Solution Design in Markdown format. Use Diagram-GPT to generate comprehensive solution diagrams, including flowcharts.
+Describe the process by voice-to-text, let ChatGPT draft a Solution Design in Markdown, then turn it into diagrams with Diagram-GPT.
 
 ## 🔧 How It's Done
-* **ChatGPT for Process Description**:
 
-Request ChatGPT to draft a PowerPlatform Solution Design in Markdown, detailing steps for PowerApps and Power Automate. Start a chat with this prompt:
+**1. Describe the process with voice-to-text.**
 
-You are a powerplatform solution architect with 10 years of experiance. Based on the transcription provided, draft a detailed Solution Design for a PowerPlatform project that includes both PowerApps and Power Automate components. The design output should be in Markdown format and cover the following sections: -Introduction -Objectives -Process Overview -Detailed Steps for PowerApps Implementation -Detailed Steps for Power Automate Implementation -Integration Points- Security Considerations -Assumptions -Constraints-Conclusion. Ensure the design is comprehensive, clear, and actionable. Just say OK if you understand me.
+🔸 Narrate the process you want to automate using a voice-to-text tool.
 
-* Input the voice-to-text transcription into ChatGPT.
+🔸 Keep the description clear and cover all the necessary steps.
 
-Use a voice-to-text tool to narrate the process that needs to be automated.
+**2. Draft the Solution Design in ChatGPT.**
 
-* Ensure the description is clear and covers all necessary steps.
+🔸 Paste the transcription and ask ChatGPT to produce a Markdown Solution Design. Example prompt:
 
-* **File Uploads**:
+```text
+You are a Power Platform solution architect with 10 years of experience. Based on the transcription provided, draft a detailed Solution Design for a Power Platform project that includes both Power Apps and Power Automate components. The output should be in Markdown and cover: Introduction, Objectives, Process Overview, Detailed Steps for Power Apps Implementation, Detailed Steps for Power Automate Implementation, Integration Points, Security Considerations, Assumptions, Constraints, Conclusion. Make it comprehensive, clear, and actionable. Just say OK if you understand.
+```
 
-If there are existing documents, diagrams, or data files, upload these to ChatGPT to provide additional context.
+**3. Add context with file uploads (optional).**
 
-* Ask ChatGPT to incorporate these files into the Solution Design.
+🔸 Upload existing documents, diagrams or data files and ask ChatGPT to incorporate them.
 
-* **Generated Markdown**:
+**4. Save the generated Markdown.**
 
-Once the Solution Design is drafted, save the Markdown.
+**5. Visualize with Diagram-GPT.**
 
-* **Use Diagram-GPT**:
-
-Input the Markdown into [Diagram-GPT](https://www.eraser.io/diagramgpt).
-
-* Generate visual representations, such as flowcharts and diagrams, to map out the entire solution.
+🔸 Paste the Markdown into [Diagram-GPT](https://www.eraser.io/diagramgpt) to generate flowcharts and diagrams of the whole solution.
 
 ## 🎉 Result
-A comprehensive, visually structured Solution Design document that includes both descriptive and visual elements, providing a clear and actionable overview.
+A comprehensive, visually structured Solution Design that combines descriptive text and diagrams — a clear, actionable overview in minutes.
 
 ## 🌟 Key Advantages
-🔸 Streamlines the initial design phase. 
-🔸 Combines text and visual aids for better understanding. 
-🔸 Saves time and ensures consistency in design documentation.
+
+🔸 Streamlines the initial design phase.
+
+🔸 Combines text and visual aids for better understanding.
+
+🔸 Saves time and keeps design documentation consistent.
+
+---
 
 ## 🎥 Video Tutorial
 {% include video id="eObVqOkfU9w" provider="youtube" %}
@@ -72,13 +73,13 @@ A comprehensive, visually structured Solution Design document that includes both
 ---
 
 ## 🛠️ FAQ
-**1. What tools do I need to use for this process?**  
-You need access to ChatGPT with file upload capability, a voice-to-text transcription tool, and Diagram-GPT for generating diagrams.
+**1. What tools do I need for this process?**
+ChatGPT with file-upload capability, a voice-to-text transcription tool, and Diagram-GPT for generating diagrams.
 
-**2. Can I customize the ChatGPT prompt for different project types?**  
-Yes, adapt the prompt sections (Introduction, Objectives, etc.) and provide relevant context or files to suit your specific project requirements.
+**2. Can I customize the ChatGPT prompt for different project types?**
+Yes — adapt the prompt sections (Introduction, Objectives, etc.) and add relevant context or files to fit your project.
 
-**3. How do I handle large files if ChatGPT has upload limits?**  
-Break large files into smaller parts, summarize key elements in text, or provide excerpts so ChatGPT can process the information effectively.
+**3. How do I handle large files if ChatGPT has upload limits?**
+Split large files into smaller parts, summarize key elements in text, or provide excerpts so ChatGPT can process them effectively.
 
 ---
