@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 42 – 'Dataverse Views'"
 date: 2023-04-06
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -18,33 +19,33 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Use Dataverse Views for targeted filtering and improved performance in PowerApps. Push filters to the server for faster, more efficient apps.
-
 ## 💡 Challenge
-🔍 Use DataVerse Views for targeted filtering and better performance! ⚡️📈
-In your #PowerApps Canvas App and #PowerAppsForTeams, combine Views with #Dataverse to filter data effectively & boost performance.
+Filtering large Dataverse tables directly in a Canvas App can hurt performance and run into delegation limits, especially in PowerApps and PowerApps for Teams.
 
 ## ✅ Solution
-🔍 Use DataVerse Views for targeted filtering and better performance! ⚡️📈
-In your #PowerApps Canvas App and #PowerAppsForTeams, combine Views with #Dataverse to filter data effectively & boost performance. 🚀 You could use "CurrentUser" or an existing "Date is older then X" for optimal filtering. 👤
-🌟 Example: In an app, you want to display tasks created by the current user only. Create a View containing these tasks & use "CurrentUser" as a filter. 🔧
-Achieve ideal filtering of Dataverse data with Views in PowerApps and PowerApps for Teams, improving your app's performance & user experience! 🚀💪
+Use Dataverse Views to define your filtering on the server side, then bind your gallery or control to the view. This pushes the filter work to Dataverse for faster, more efficient apps. For example, to show only tasks created by the current user, create a view filtered on "Current User."
 
 ## 🔧 How It's Done
-1. Identify the area in your app or flow where Dataverse Views is needed.
-🔸 Follow established naming conventions for clarity.
-2. Configure the properties according to your business requirements.
-🔸 Test the implementation with sample data.
-3. Verify the output to ensure it matches the expected results.
+
+1. Create a view on your Dataverse table.
+   🔸 In the table designer, add a new view and define its columns.
+
+2. Define the filter criteria on the view.
+   🔸 Use criteria like "Current User" or a relative date such as "older than X days" for optimal, server-side filtering.
+
+3. Bind the view in your app.
+   🔸 Set your gallery's Items to the Dataverse table and select the view, or reference it in your filter logic.
+   🔸 Verify the results match the expected filtered data.
 
 ## 🎉 Result
-Your workflows become more robust and easier to maintain. Implementing Dataverse Views reduces the time spent on manual adjustments and minimizes potential for errors.
+Your app filters Dataverse data efficiently on the server, improving performance and user experience in PowerApps and PowerApps for Teams.
 
 ## 🌟 Key Advantages
-🔸 Improved Efficiency: Faster development cycles through automation.
-🔸 Better Consistency: Standardized approach across all projects.
-🔸 Enhanced Reliability: Reduced risk of failure during execution.
+🔸 Better performance through server-side filtering.
+
+🔸 Reusable, consistent filter definitions across apps.
+
+🔸 Easier to maintain than complex in-app filter formulas.
 
 ## 🎥 Video Tutorial
 {% include video id="m5k2a9UJI7s" provider="youtube" %}
@@ -52,13 +53,16 @@ Your workflows become more robust and easier to maintain. Implementing Dataverse
 ---
 
 ## 🛠️ FAQ
-**1. Can I create multiple custom views for the same Dataverse table?**  
+**1. Can I create multiple custom views for the same Dataverse table?**
+
 Yes, you can create multiple views with different filters and sorting options to serve various app scenarios and user needs.
 
-**2. Do custom views affect the underlying data in Dataverse?**  
+**2. Do custom views affect the underlying data in Dataverse?**
+
 No, views only define how data is displayed and filtered. They don't modify or delete the actual data in your tables.
 
-**3. Can I share custom views with other users or environments?**  
+**3. Can I share custom views with other users or environments?**
+
 Yes, custom views are part of the solution and can be exported and imported to other environments along with your apps.
 
 ---

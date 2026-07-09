@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 39 – 'Mastering FetchXML'"
 date: 2023-03-28
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -26,33 +27,38 @@ FetchXML is a powerful XML-based query language that allows you to perform advan
 
 ## 🔧 How It's Done
 Here's how to use FetchXML:
+
 1. Open the Power Platform or Dynamics 365 environment.
 2. Use the FetchXML Builder (XrmToolBox) or the built-in Advanced Find to create your query.
 3. Copy the generated FetchXML code.
 4. Use it in your Power Automate flows, custom connectors, or plugins.
 
-## 🎬 Video
-
-Watch the video for this tip:
-
-{% include video id="dfdQXxsy_IQ" provider="youtube" %}
-
 ## 🎉 Result
 With FetchXML, you can retrieve exactly the data you need, including complex joins, filters, and aggregations.
 
 ## 🌟 Key Advantages
-- Advanced querying capabilities
-- Support for joins and aggregations
-- Usable in Power Automate, plugins, and custom connectors
+🔸 Advanced querying capabilities.
+
+🔸 Support for joins and aggregations.
+
+🔸 Usable in Power Automate, plugins, and custom connectors.
+
+## 🎥 Video Tutorial
+{% include video id="dfdQXxsy_IQ" provider="youtube" %}
 
 ---
 
 ## 🛠️ FAQ
-**1. Where can I learn FetchXML syntax?**  
-Microsoft Docs and the FetchXML Builder tool provide great resources and examples.
+**1. Where can I learn FetchXML syntax?**
 
-**2. Can I use FetchXML in Power Automate?**  
+Microsoft Learn and the FetchXML Builder tool provide great resources and examples.
+
+**2. Can I use FetchXML in Power Automate?**
+
 Yes, you can use FetchXML in Dataverse actions within Power Automate.
 
-**3. Are there limitations to FetchXML?**  
+**3. Are there limitations to FetchXML?**
+
 Some advanced SQL features are not supported, but most business scenarios are covered.
+
+---

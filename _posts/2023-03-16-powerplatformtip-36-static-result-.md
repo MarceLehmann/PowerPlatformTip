@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 36 – 'Static Result'"
 date: 2023-03-16
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -18,31 +19,28 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Testing Power Automate flows often requires running actions that can modify data or consume significant time, which might not always be desirable or efficient.
-
 ## 💡 Challenge
-Testing Power Automate flows often requires running actions that can modify data or consume significant time, which might not always be desirable or efficient.
+Testing Power Automate flows often requires running actions that can modify data or consume significant time, which isn't always desirable or efficient.
 
 ## ✅ Solution
-Utilize the "Static Result" feature in Power Automate to simulate the outcome of actions without actually executing them, ensuring data remains unchanged and saving valuable time during testing phases.
+Use the "Static Result" feature to simulate the outcome of actions without actually executing them, keeping data unchanged and saving time during testing.
 
 ## 🔧 How It's Done
-* **Enable Static Results:** In your flow, identify the action you wish to test without execution. Configure it to return a predefined static result instead of running the action.
+* **Enable Static Results:** Identify the action you want to test without execution and configure it to return a predefined static result instead of running.
 
-* **Configure Test Conditions:** Define the output you would expect from the action under normal circumstances. This ensures your flow can proceed with testing subsequent steps as if the action was executed.
+* **Configure Test Conditions:** Define the output you'd expect from the action so your flow can continue testing subsequent steps as if it had executed.
 
-* **Iterate and Optimize:** Use static results to quickly iterate through your flow's logic, optimizing and debugging without the overhead of actual execution time or the risk of altering live data.
+* **Iterate and Optimize:** Use static results to quickly iterate through your flow's logic, debugging without the overhead of actual execution time or the risk of altering live data.
 
 ## 🎉 Result
-A more efficient and controlled testing environment within Power Automate, allowing for rapid development and iteration of flows without compromising data integrity or consuming unnecessary resources.
+A more efficient, controlled testing environment that allows rapid development and iteration of flows without compromising data integrity or consuming unnecessary resources.
 
 ## 🌟 Key Advantages
-🔸 **Time Efficiency:** Dramatically reduce the time spent waiting for actions to complete during testing. 
-🔸 **Data Integrity:** Safeguard your data by avoiding unnecessary modifications during the testing process. 
-🔸 **Testing Flexibility:** Easily test various scenarios and outcomes without needing to manipulate real-world data or conditions.
+🔸 **Time Efficiency:** Dramatically reduce the time spent waiting for actions during testing.
 
-The "Static Result" feature is an invaluable asset for Power Automate users looking to enhance their testing workflows, offering a blend of efficiency, safety, and precision in flow development.
+🔸 **Data Integrity:** Avoid unnecessary modifications during the testing process.
+
+🔸 **Testing Flexibility:** Test various scenarios without manipulating real-world data.
 
 ## 🎥 Video Tutorial
 {% include video id="IE-TjiXoqEo" provider="youtube" %}
@@ -50,13 +48,16 @@ The "Static Result" feature is an invaluable asset for Power Automate users look
 ---
 
 ## 🛠️ FAQ
-**1. Can I use static results with all types of actions in Power Automate?**  
+**1. Can I use static results with all types of actions in Power Automate?**
+
 Static results work with most actions, but some system-level or security-sensitive actions may not support this feature.
 
-**2. How do I know when static results are enabled in my flow?**  
-When static results are active, you'll see a banner notification in the flow designer indicating that test data is being used.
+**2. How do I know when static results are enabled in my flow?**
 
-**3. Do static results affect the flow's run history?**  
-Yes, runs using static results appear in the run history but are clearly marked as test runs with simulated data.
+When static results are active, you'll see an indicator in the flow designer showing that test data is being used.
+
+**3. Do static results affect the flow's run history?**
+
+Yes, runs using static results appear in the run history but are marked as using simulated data.
 
 ---

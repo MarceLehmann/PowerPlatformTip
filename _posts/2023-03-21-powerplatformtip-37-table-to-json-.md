@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 37 – 'Table to JSON'"
 date: 2023-03-21
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -18,29 +19,27 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Working with two-column tables, specifically 'Name' and 'Value' pairs, in Power Automate can be tedious when trying to access individual entries efficiently.
-
 ## 💡 Challenge
-Working with two-column tables, specifically 'Name' and 'Value' pairs, in Power Automate can be tedious when trying to access individual entries efficiently.
+Working with two-column tables – specifically 'Name' and 'Value' pairs – in Power Automate can be tedious when trying to access individual entries efficiently.
 
 ## ✅ Solution
-A simple method to streamline the selection of individual entries within such tables by converting the data into a JSON record and utilizing the "Parse JSON" action.
+Streamline the selection of individual entries by converting the table into a JSON record and using the "Parse JSON" action.
 
 ## 🔧 How It's Done
-* **Step 1:** Convert your 'Name' and 'Value' table into a JSON record. This transformation allows for more flexible data manipulation.
 
-* **Step 2:** Use the "Parse JSON" action in Power Automate. By doing so, you effectively structure your data, enabling straightforward access to any entry within your flow.
+1. Convert your 'Name' and 'Value' table into a JSON record. This transformation allows more flexible data manipulation.
+
+2. Use the "Parse JSON" action in Power Automate to structure the data, enabling straightforward access to any entry within your flow.
 
 ## 🎉 Result
-An enhanced Power Automate experience where accessing and selecting data from two-column tables becomes seamless, saving time and reducing complexity.
+Accessing and selecting data from two-column tables becomes seamless, saving time and reducing complexity.
 
 ## 🌟 Key Advantages
-🔸 **Efficiency:** Quickly convert tabular data into a manipulable format. 
-🔸 **Simplicity:** Access individual data points easily without complex expressions. 
-🔸 **Flexibility:** Adapt and extend this method for various data structures beyond simple name-value pairs.
+🔸 **Efficiency:** Quickly convert tabular data into a manipulable format.
 
-This approach not only optimizes your workflow but also unlocks new possibilities for data processing within Power Automate, making your automation tasks more manageable and efficient.
+🔸 **Simplicity:** Access individual data points without complex expressions.
+
+🔸 **Flexibility:** Adapt the method for various data structures beyond simple name-value pairs.
 
 ## 🎥 Video Tutorial
 {% include video id="Oxf1mnN6k0M" provider="youtube" %}
@@ -48,13 +47,16 @@ This approach not only optimizes your workflow but also unlocks new possibilitie
 ---
 
 ## 🛠️ FAQ
-**1. Can this method handle tables with multiple columns beyond name-value pairs?**  
+**1. Can this method handle tables with multiple columns beyond name-value pairs?**
+
 Yes, but you'll need to modify the JSON structure to accommodate additional columns, creating more complex object structures.
 
-**2. What happens if my table contains special characters or spaces in the names?**  
+**2. What happens if my table contains special characters or spaces in the names?**
+
 Special characters may need escaping in JSON. Consider using the replace() function to sanitize field names before conversion.
 
-**3. Is there a size limit for tables when converting to JSON?**  
+**3. Is there a size limit for tables when converting to JSON?**
+
 While there's no strict limit, very large tables may impact flow performance. Consider batch processing for tables with thousands of rows.
 
 ---

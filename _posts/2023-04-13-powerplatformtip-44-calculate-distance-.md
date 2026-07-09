@@ -1,7 +1,7 @@
 ---
-title: "PowerPlatformTip 44 – Calculate the Distance"
+title: "#PowerPlatformTip 44 – 'Calculate the Distance'"
 date: 2023-04-13
-modified: 2025-11-21
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -30,7 +30,7 @@ How do you provide accurate, real-time location-based distance calculations insi
 ## ✅ Solution
 
 You can use the Haversine formula – a proven geospatial calculation mechanism.
-- There’s a ready-to-use code snippet available:  
+- There’s a ready-to-use code snippet available:
   [CalculateDistance.json @ GitHub – Marcel Lehmann](https://github.com/MarceLehmann/CodeSnippets/blob/main/CalculateDistance.json)
 - Just copy the JSON logic and paste into your Power Platform workflow (typically as an inline calculation or custom connector).
 - Replace the latitude and longitude values for locations A and B with your own values.
@@ -40,6 +40,7 @@ You can use the Haversine formula – a proven geospatial calculation mechanism.
 1. Obtain coordinates:
    - Manually input latitude and longitude for each location, or use the PowerApps location function to fetch the user/device position (`Location.Latitude`, `Location.Longitude`).
 2. Drop the values into the shared script or formula:
+
    ```
    // Example for PowerApps
    With(
@@ -62,6 +63,7 @@ You can use the Haversine formula – a proven geospatial calculation mechanism.
      )
    )
    ```
+
 3. For JSON users, import the code from the referenced snippet and wire up your variables according to context.
 4. The result is your distance in meters, output instantly in your app or flow.
 
@@ -77,11 +79,14 @@ Enjoy accurate, fast, and cost-effective distance calculations for any business 
 
 ## 🛠️ FAQ
 
-Q1: What is the Haversine formula?  
-A1: A mathematical function for calculating the shortest distance between two points on the Earth, given their latitude and longitude.
+**Q1: What is the Haversine formula?**
 
-Q2: How do I get my coordinates in PowerApps?  
-A2: Use built-in location functions or user input fields to collect latitude and longitude.
+A mathematical function for calculating the shortest distance between two points on the Earth, given their latitude and longitude.
 
-Q3: Can I use this in Power Automate as well?  
-A3: Yes, simply adapt the code for use in expressions, custom connectors, or flow steps.
+**Q2: How do I get my coordinates in PowerApps?**
+
+Use built-in location functions or user input fields to collect latitude and longitude.
+
+**Q3: Can I use this in Power Automate as well?**
+
+Yes, simply adapt the code for use in expressions, custom connectors, or flow steps.

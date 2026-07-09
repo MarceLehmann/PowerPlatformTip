@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 32 – 'Optimize with GroupBy'"
 date: 2023-03-02
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -18,33 +19,29 @@ toc: true
 toc_sticky: true
 ---
 
-## 📝 TL;DR
-Ever feel like your app is on a treadmill, constantly reloading the same data source for different filters like categories and subcategories in dropdowns or comboboxes? This not only wears out the virtual sneakers of your app but can seriously lag your performance.
-
 ## 💡 Challenge
-Ever feel like your app is on a treadmill, constantly reloading the same data source for different filters like categories and subcategories in dropdowns or comboboxes? This not only wears out the virtual sneakers of your app but can seriously lag your performance.
+Reloading the same data source repeatedly for different dependent filters – like categories and subcategories in dropdowns or combo boxes – hurts your app's performance.
 
 ## ✅ Solution
-Jump off that treadmill with the power of GroupBy. This function allows you to load all your data just once, then smartly organize it for each dependent filter. It's like having all your groceries sorted and put away neatly, so you know exactly where to find them without running back to the store.
+Use the GroupBy function to load all your data once, then organize it for each dependent filter in memory instead of querying the source again.
 
 ## 🔧 How It's Done
-* **Step 1:** Gather all your data—categories, subcategories, you name it—in one go.
 
-* **Step 2:** Use GroupBy to categorize this data based on your filtering needs. Imagine it as sorting your laundry into lights and darks to make life easier.
+1. Load all your data – categories, subcategories, and so on – in a single operation.
+
+2. Use GroupBy to organize that data according to your filtering needs, so each dependent filter reads from the grouped collection.
 
 ## 🎉 Result
-Your app suddenly feels like it's running on a high-performance sports drink instead of slogging through molasses. Less data loading means quicker responses, smoother interactions, and a happier you.
+Your app responds faster: less repeated data loading means quicker responses and smoother interactions.
 
 ## 🌟 Key Advantages
-* **Say Goodbye to Deja Vu:** No more reloading the same data over and over. It's efficient, like batch cooking your meals for the week.
+🔸 **No repeated loads:** Load once, reuse for every dependent filter.
 
-* **Filtering on Fleek:** Managing dependent filters becomes a breeze. It's like having a well-organized file system where everything is at your fingertips.
+🔸 **Simpler dependent filters:** Managing dependent dropdowns becomes straightforward.
 
-* **Simplify Your Data Dance:** Your application's data structure becomes more streamlined, like organizing your bookshelf by genre and author.
+🔸 **Cleaner data structure:** Your app's data handling stays streamlined and organized.
 
-Just a heads up, though—GroupBy is the cool kid that doesn't always play well with delegation. So, plan your party accordingly to keep your app running smoothly on all devices.
-
-Embrace GroupBy and watch your app's performance leap from sluggish to lightning-fast. It's not just a tip; it's your app's new best friend.
+> ℹ️ Note: GroupBy doesn't delegate to most data sources, so plan for delegation limits when working with very large datasets.
 
 ## 🎥 Video Tutorial
 {% include video id="pRI657NjPXQ" provider="youtube" %}
@@ -52,13 +49,16 @@ Embrace GroupBy and watch your app's performance leap from sluggish to lightning
 ---
 
 ## 🛠️ FAQ
-**1. Can GroupBy handle large datasets efficiently?**  
+**1. Can GroupBy handle large datasets efficiently?**
+
 Yes, GroupBy is designed to handle large datasets efficiently, but consider data source limitations and delegation when working with very large collections.
 
-**2. What happens if my grouping field has null or empty values?**  
+**2. What happens if my grouping field has null or empty values?**
+
 Items with null or empty grouping values will be grouped together under a single group, typically shown as a blank group.
 
-**3. Can I group by multiple fields simultaneously?**  
+**3. Can I group by multiple fields simultaneously?**
+
 You can concatenate multiple fields or use nested GroupBy operations, though single-field grouping is more performant and easier to manage.
 
 ---
