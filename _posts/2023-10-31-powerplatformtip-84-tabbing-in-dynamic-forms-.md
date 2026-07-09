@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 84 – 'Tabbing in Dynamic Forms'"
 date: 2023-10-31
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,6 +21,8 @@ header:
 toc: true
 toc_sticky: true
 ---
+
+> **TL;DR:** Fix Tab-key flickering in gallery-based dynamic forms by binding the gallery to `Sequence(CountRows(...))` instead of the collection directly.
 
 ## 💡 Challenge
 When creating a dynamic form using a gallery in Power Apps, you may encounter issues with the Tab key causing flickering or not functioning correctly. This often happens when the gallery is directly bound to a collection.
@@ -47,19 +50,18 @@ A more functional and user-friendly dynamic form in Power Apps, eliminating flic
 🔸 No flickering: Eliminates distracting flicker, making the form more stable  
 🔸 Data integrity: Ensures accurate data handling while improving functionality
 
----
-
 ## 🎥 Video Tutorial
 {% include video id="y1Zy-tckjV8" provider="youtube" %}
 
----
-
 ## 🛠️ FAQ
-**1. Why does directly binding a gallery to a collection cause tabbing issues?**  
+**1. Why does directly binding a gallery to a collection cause tabbing issues?**
+
 Direct binding resets the gallery context on each keystroke, leading to loss of focus and flickering.
 
-**2. How do I determine the correct sequence length?**  
+**2. How do I determine the correct sequence length?**
+
 Use `Sequence(CountRows(YourOriginalCollection))` to generate a list that matches the number of records in your collection.
 
-**3. When should I use the UpdateIf method?**  
+**3. When should I use the UpdateIf method?**
+
 Use `UpdateIf` when you need to patch specific items without rebuilding the entire record set, offering more granular control.

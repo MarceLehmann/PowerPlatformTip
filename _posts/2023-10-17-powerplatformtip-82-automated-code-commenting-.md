@@ -1,6 +1,7 @@
 ---
 title: "#PowerPlatformTip 82 – 'Automated Code Commenting'"
 date: 2023-10-17
+last_modified_at: 2026-07-09
 categories:
   - Article
   - PowerPlatformTip
@@ -20,6 +21,8 @@ toc: true
 toc_sticky: true
 ---
 
+> **TL;DR:** Let ChatGPT add clear comments to your Power Apps formulas—paste the formula, ask it to comment without changing the code, then review and apply.
+
 ## 💡 Challenge
 Writing code comments in your Power Apps formula can be time-consuming and sometimes overlooked, yet it's crucial for maintainability and collaboration.
 
@@ -38,26 +41,25 @@ Here's how to do it:
    🔸 Incorporate the comments into your Power Apps formula.
 
 ## 🎉 Result
-You’ll have a well-commented Power Apps formula that is easier to understand, maintain, and collaborate on.
+You'll have a well-commented Power Apps formula that is easier to understand, maintain, and collaborate on.
 
 ## 🌟 Key Advantages
 🔸 Efficiency: Save time by automating the commenting process.  
 🔸 Clarity: AI-generated comments can provide insights you might have missed.  
 🔸 Collaboration: Well-commented code is easier for team members to understand and work on.
 
----
-
 ## 🎥 Video Tutorial
 {% include video id="TadJVg7X4es" provider="youtube" %}
 
----
-
 ## 🛠️ FAQ
-**1. What versions of ChatGPT work best for code commenting?**  
+**1. What versions of ChatGPT work best for code commenting?**
+
 GPT-4 or code-capable models deliver more accurate comments, but GPT-3.5 can also be effective for simpler formulas.
 
-**2. How do I ensure the generated comments accurately reflect my logic?**  
-Always review and validate AI-generated comments before implementation to confirm they match your formula’s intent.
+**2. How do I ensure the generated comments accurately reflect my logic?**
 
-**3. Can I automate commenting for multiple formulas at once?**  
+Always review and validate AI-generated comments before implementation to confirm they match your formula's intent.
+
+**3. Can I automate commenting for multiple formulas at once?**
+
 Yes, you can batch multiple formulas in one request to ChatGPT to streamline the process, but monitor response size and clarity.
