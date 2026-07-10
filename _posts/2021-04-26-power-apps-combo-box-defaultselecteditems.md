@@ -1,5 +1,6 @@
-﻿---
+---
 title: "Power Apps Combo Box DefaultSelectedItems from Shane Young"
+seo_title: "Power Apps ComboBox DefaultSelectedItems Guide"
 date: 2021-04-26
 permalink: "/article/powerplatform/2021/04/26/power-apps-combo-box-defaultselecteditems/"
 updated: 2025-06-26
@@ -7,6 +8,7 @@ categories:
   - Article
   - PowerPlatform
 excerpt: "Learn how to properly set DefaultSelectedItems in PowerApps ComboBox controls using tables, lookups, and manually-created records. A comprehensive guide by Shane Young."
+description: "Set DefaultSelectedItems in a Power Apps ComboBox the right way — using tables, lookups, or manual records. Fix type mismatches and default your multi-select values."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -41,7 +43,7 @@ ComboBox controls in PowerApps offer powerful multi-select capabilities, but set
 - **Lookup complexities** when working with related data
 - **Performance issues** with large datasets
 
-## ðŸŽ¯ Shane's Comprehensive Approach
+## 🎯 Shane's Comprehensive Approach
 
 ### Three Key Methods Covered
 
@@ -60,7 +62,7 @@ ComboBox controls in PowerApps offer powerful multi-select capabilities, but set
 - Static default configurations
 - Flexible data structures
 
-## ðŸ’¡ Understanding DefaultSelectedItems Property
+## 💡 Understanding DefaultSelectedItems Property
 
 ### Data Type Requirements
 The DefaultSelectedItems property expects:
@@ -72,7 +74,7 @@ The DefaultSelectedItems property expects:
 ]
 
 // NOT a simple text list
-["Option 1", "Option 2"]  // âŒ Wrong format
+["Option 1", "Option 2"]  // ❌ Wrong format
 ```
 
 ### Common Patterns
@@ -101,7 +103,7 @@ Table(
 )
 ```
 
-## ðŸ”§ Implementation Strategies
+## 🔧 Implementation Strategies
 
 ### Strategy 1: Dynamic Defaults Based on User Context
 
@@ -133,7 +135,7 @@ ForAll(
 )
 ```
 
-## ðŸš€ Advanced Techniques
+## 🚀 Advanced Techniques
 
 ### Performance Optimization
 
@@ -171,7 +173,7 @@ IfError(
 )
 ```
 
-## ðŸ“Š Real-World Use Cases
+## 📊 Real-World Use Cases
 
 ### Business Applications
 
@@ -202,7 +204,7 @@ IfError(
 - Allow easy modification of selections
 - Maintain selection state across sessions
 
-## ðŸŽ¯ Best Practices from Shane's Tutorial
+## 🎯 Best Practices from Shane's Tutorial
 
 ### Development Guidelines
 
@@ -219,7 +221,7 @@ IfError(
 - **Avoid complex lookups** in DefaultSelectedItems when possible
 - **Cache frequently used** default configurations
 
-## ðŸ”„ Troubleshooting Common Issues
+## 🔄 Troubleshooting Common Issues
 
 ### Issue 1: Type Mismatch Errors
 **Solution**: Ensure DefaultSelectedItems returns the same record structure as ComboBox Items
@@ -233,7 +235,7 @@ IfError(
 ### Issue 4: Delegation Warnings
 **Solution**: Move complex logic to collections created on app start
 
-## ðŸ’¼ Enterprise Implementation
+## 💼 Enterprise Implementation
 
 ### Scaling Considerations
 - **Centralized default logic** in component libraries
@@ -247,7 +249,7 @@ IfError(
 - **Data governance** compliance
 - **Privacy considerations** for user defaults
 
-## ðŸŽ–ï¸ About Shane Young
+## 🎖️ About Shane Young
 
 Shane Young continues to demonstrate expertise in:
 - **Practical PowerApps development** techniques
@@ -257,7 +259,7 @@ Shane Young continues to demonstrate expertise in:
 
 This DefaultSelectedItems tutorial showcases Shane's ability to break down complex concepts into actionable, implementable solutions.
 
-## ðŸŽ¯ Key Takeaways
+## 🎯 Key Takeaways
 
 - **Understand data type requirements** for DefaultSelectedItems
 - **Use appropriate patterns** based on your data structure
@@ -271,5 +273,3 @@ This comprehensive guide ensures developers can confidently implement DefaultSel
 ---
 
 *You can see this video here on my blog because I have rated this video with 5 stars in my YouTube video library. This video was automatically posted using PowerAutomate.*
-
-
