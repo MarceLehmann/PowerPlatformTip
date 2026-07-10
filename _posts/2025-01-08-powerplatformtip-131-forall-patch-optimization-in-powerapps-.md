@@ -97,4 +97,6 @@ Moving `ForAll` inside `Patch` batches all record updates into a single call, re
 **3. How can I prevent unintended record creation during `Patch`?**
 Filter your items to only include IDs already in the target data source (e.g. `Filter(GalleryName.AllItems, ID in SharePointList.ID)`) so `Patch` updates existing records only.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 57 – Mastering Patch](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-57-mastering-patch/) — the fundamentals behind bulk Patch operations.
+- [#PowerPlatformTip 81 – Fast DataSource Updates](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-81-fast-datasource-updates/) — more ways to speed up data writes.

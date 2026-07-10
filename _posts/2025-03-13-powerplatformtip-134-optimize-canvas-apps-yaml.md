@@ -74,4 +74,6 @@ Not entirely. AI can suggest optimizations and spot improvements, but it current
 **3. Is it safe to share my Canvas App's YAML code with AI tools?**
 Be cautious. Avoid sharing sensitive or confidential data. If unsure, anonymize the data and focus on sharing code structure rather than user-specific information.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 130 – Build Apps Faster with YAML](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-130-build-apps-faster-with-yaml/) — paste ready-made YAML components into your app.
+- [#PowerPlatformTip 30 – PowerApps Code Review](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-30-powerapps-code-review/) — structured ways to review app quality.

@@ -85,4 +85,6 @@ Required fields not included remain unchanged; the flow won't prompt for them wh
 **3. Can this approach be used for other data sources?**
 While designed for SharePoint, the dynamic-JSON update concept can be adapted to other connectors that accept JSON payloads.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 153 – Rename a SharePoint File with Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-153-rename-sharepoint-file-power-automate/) — targeted field updates via REST.
+- [#PowerPlatformTip 154 – Preserve Author, Editor & Dates on Copied SharePoint Files](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-154-preserve-author-created-metadata-power-automate/) — write specific metadata fields with MERGE.

@@ -83,4 +83,6 @@ The free tier processes only the **first two pages**. Split longer invoices or u
 **3. How do I avoid hitting Azure AI token limits?**
 F0 allows 16,384 characters per request — trim or chunk OCR text for very long invoices.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 115 – AI OCR Models](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-115-ai-ocr-models/) — OCR options for reading documents.
+- [#PowerPlatformTip 143 – Reduce AI Costs with Thumbnail-First Document Processing](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-143-reduce-ai-costs/) — cut AI spend on document pipelines.

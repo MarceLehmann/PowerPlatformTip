@@ -78,4 +78,6 @@ No. The Office Files Viewer component works natively in Power Apps — no extern
 **3. How do I update file URLs after setup?**
 Update the SharePoint hyperlink/image column with new URLs, or adjust the component's data source settings in Power Apps.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 92 – Free PDF Tools in Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-92-free-pdf-tools-in-powerautomate/) — generate and manipulate PDFs for viewing.
+- [#PowerPlatformTip 18 – Download and Save Files](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-18-download-and-save-files/) — handle file downloads in your apps.

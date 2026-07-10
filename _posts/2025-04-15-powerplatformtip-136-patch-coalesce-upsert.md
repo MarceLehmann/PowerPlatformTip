@@ -88,4 +88,6 @@ Yes. Both `Patch()` and `Coalesce()` behave identically in Dataverse. Just repla
 **3. What if `LookUp()` returns more than one record?**
 Make your lookup criteria unique (for example, a primary key or unique field). Otherwise `LookUp()` returns the first match and may lead to unexpected updates.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 131 – ForAll & Patch Optimization in PowerApps](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-131-forall-patch-optimization-in-powerapps/) — batch bulk updates efficiently.
+- [#PowerPlatformTip 57 – Mastering Patch](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-57-mastering-patch/) — the core Patch patterns.

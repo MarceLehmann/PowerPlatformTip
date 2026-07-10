@@ -80,4 +80,6 @@ Yes. Pass a multiline text input from Power Apps into the flow; the split logic 
 **3. How do I handle empty lines from accidental extra newlines?**
 Add a condition inside the loop to check that `trim(Current item)` is not empty before processing.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 120 – PowerAutomate Text Processing 2.0](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-120-powerautomate-text-processing-2-0/) — advanced text manipulation actions.
+- [#PowerPlatformTip 24 – Merge Arrays or Tables](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-24-merge-arrays-or-tables/) — combine arrays after splitting.
