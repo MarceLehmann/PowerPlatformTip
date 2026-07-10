@@ -21,6 +21,19 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+faq:
+  - question: "How do I apply these OData filters in Power Automate?"
+    answer: "In the 'Get files (properties only)' action, enter your OData filter expression into the Filter Query field to limit results based on FileLeafRef, FileRef, or FileDirRef."
+  - question: "Can I combine multiple OData filter conditions?"
+    answer: "Yes. Use logical operators like and or or in your filter query, for example: FileLeafRef eq 'document.pdf' and startswith(FileDirRef, '/sites/demo/Shared Documents')."
+  - question: "Are these fields supported in SharePoint on-premises?"
+    answer: "OData filtering with FileLeafRef, FileRef, and FileDirRef works in SharePoint Online and on-premises (2013+). Ensure your environment and connector version support OData queries."
+  - question: "What does FileLeafRef mean?"
+    answer: "It's the file name itself – for example, 'Invoice.pdf'."
+  - question: "What does FileRef mean?"
+    answer: "It's the full path of a file, including folders – for example, '/sites/demo/Shared Documents/Invoice.pdf'."
+  - question: "What does FileDirRef mean?"
+    answer: "It refers to a folder path only – for example, '/sites/demo/Shared Documents/'."
 ---
 
 > **TL;DR:** Filter SharePoint files in Power Automate with the FileLeafRef, FileRef and FileDirRef fields via simple OData queries.

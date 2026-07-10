@@ -40,10 +40,12 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
-        {% include schema-techarticle.html %}
         {% include schema-faq.html %}
         {% include schema-howto.html %}
         {{ content }}
+        {% if page.id %}
+          {% include topic-hub-links.html %}
+        {% endif %}
         {% comment %}<!-- Smart related posts - show directly below content -->{% endcomment %}
         {% if page.id %}
           {% include related-posts-smart.html %}

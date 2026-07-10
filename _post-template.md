@@ -1,6 +1,8 @@
 ---
 title: "#PowerPlatformTip [NUMBER] – '[TITLE]'"
+seo_title: "[50-60 CHAR KEYWORD-RICH TITLE FOR SEARCH]"
 date: 2025-05-27  # Insert current date
+last_modified_at: 2025-05-27  # Update whenever you revise the post (freshness signal)
 categories:
   - Article
   - PowerPlatformTip
@@ -12,6 +14,7 @@ tags:
   - Technology
   - Marcel Lehmann
 excerpt: "[SHORT DESCRIPTION OF THE TIP]"
+description: "[140-160 CHAR META DESCRIPTION WITH THE MAIN KEYWORD]"
 header:
   overlay_color: "#2dd4bf"  # Mint color
   overlay_filter: "0.5"
@@ -41,6 +44,8 @@ toc_sticky: true  # Fix table of contents when scrolling
 #     - text: "Do that ..."
 # -----------------------------------------------------------------------------
 ---
+
+> **TL;DR:** [ONE-SENTENCE DIRECT ANSWER — the fastest way to solve the problem. Search engines and AI assistants pull this first.]
 
 ## 💡 Challenge
 [DESCRIPTION OF THE PROBLEM/CHALLENGE]
@@ -90,6 +95,10 @@ Here's how to do it:
 
 **3. [QUESTION 3]**  
 [ANSWER 3]
+
+## 🔗 Related Tips
+- [#PowerPlatformTip [N] – [TITLE]](https://www.powerplatformtip.com/article/powerplatformtip/[slug]/) — [why it's related].
+- [#PowerPlatformTip [N] – [TITLE]](https://www.powerplatformtip.com/article/powerplatformtip/[slug]/) — [why it's related].
 
 ---
 
