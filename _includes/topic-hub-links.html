@@ -1,0 +1,28 @@
+{%- comment -%}
+  Renders links to the relevant /topics/ hub(s) based on the post's tags.
+  Builds topical authority (internal linking) automatically on every post.
+  Requires the /topics/ hub pages (from the UX improvements PR).
+{%- endcomment -%}
+{%- assign has_powerapps = false -%}
+{%- assign has_powerautomate = false -%}
+{%- assign has_sharepoint = false -%}
+{%- assign has_dataverse = false -%}
+{%- assign has_ai = false -%}
+{%- for tag in page.tags -%}
+  {%- assign nt = tag | downcase | replace: ' ', '' | replace: '-', '' | replace: '_', '' -%}
+  {%- if nt == 'powerapps' or nt == 'canvasapps' or nt == 'modeldrivenapps' or nt == 'pcf' or nt == 'powerappscomponentframework' -%}{%- assign has_powerapps = true -%}{%- endif -%}
+  {%- if nt == 'powerautomate' or nt == 'flow' or nt == 'cloudflow' or nt == 'desktopflow' -%}{%- assign has_powerautomate = true -%}{%- endif -%}
+  {%- if nt == 'sharepoint' -%}{%- assign has_sharepoint = true -%}{%- endif -%}
+  {%- if nt == 'dataverse' or nt == 'dataverseforteams' or nt == 'dv4t' or nt == 'fetchxml' -%}{%- assign has_dataverse = true -%}{%- endif -%}
+  {%- if nt == 'ai' or nt == 'aibuilder' or nt == 'aiocr' or nt == 'copilot' or nt == 'copilotstudio' or nt == 'powervirtualagents' or nt == 'azuredocumentintelligence' or nt == 'documentprocessing' -%}{%- assign has_ai = true -%}{%- endif -%}
+{%- endfor -%}
+{%- if has_powerapps or has_powerautomate or has_sharepoint or has_dataverse or has_ai -%}
+<aside class="ppt-hub-links" aria-label="Explore related topics">
+  <strong>📚 Explore more tips:</strong>
+  {% if has_powerapps %}<a href="/topics/power-apps/">Power Apps</a>{% endif %}
+  {% if has_powerautomate %}<a href="/topics/power-automate/">Power Automate</a>{% endif %}
+  {% if has_sharepoint %}<a href="/topics/sharepoint/">SharePoint</a>{% endif %}
+  {% if has_dataverse %}<a href="/topics/dataverse/">Dataverse</a>{% endif %}
+  {% if has_ai %}<a href="/topics/ai-copilot/">AI &amp; Copilot</a>{% endif %}
+</aside>
+{%- endif -%}
