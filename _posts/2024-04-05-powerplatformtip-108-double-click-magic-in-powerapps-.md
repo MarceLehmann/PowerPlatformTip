@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 108 – 'Double-Click Magic in PowerApps'"
+title: "#PowerPlatformTip 108: 'Double-Click Magic in PowerApps'"
 date: 2024-04-05
 last_modified_at: 2026-07-09
 categories:
@@ -67,7 +67,7 @@ UpdateContext({locPopUp: 0})
 ```
 
 ## 🎉 Result
-The app cleanly distinguishes single from double clicks and runs contextually relevant actions based on interaction speed — mimicking familiar desktop behavior and improving the user experience.
+The app cleanly distinguishes single from double clicks and runs contextually relevant actions based on interaction speed, mimicking familiar desktop behavior and improving the user experience.
 
 ## 🌟 Key Advantages
 

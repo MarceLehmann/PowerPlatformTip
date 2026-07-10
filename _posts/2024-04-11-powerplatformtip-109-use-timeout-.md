@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 109 – 'Use TimeOut'"
+title: "#PowerPlatformTip 109: 'Use TimeOut'"
 seo_title: "Power Automate Timeout: Extend Action Limits"
 date: 2024-04-11
 last_modified_at: 2026-07-10
@@ -33,7 +33,7 @@ howto:
     - name: "Raise the action's Timeout"
       text: "In the settings of your approval (or any long-running action), set Timeout to an ISO 8601 duration that covers the expected delay (e.g. P2W = two weeks, P1D = one day, PT2H = two hours, PT30M = 30 minutes, PT45S = 45 seconds)."
     - name: "Add error handling"
-      text: "Use Configure run after to define what happens if the action times out — e.g. start an alternative branch, send a notification, or kick off a new approval."
+      text: "Use Configure run after to define what happens if the action times out, e.g. start an alternative branch, send a notification, or kick off a new approval."
     - name: "Test and refine"
       text: "Run the flow under different conditions to fine-tune the timeout and the run-after logic."
 ---
@@ -56,7 +56,7 @@ Raise the timeout on the specific action so it has room to finish, and add error
 
 **2. Add error handling.**
 
-🔸 Use **Configure run after** to define what happens if the action times out — e.g. start an alternative branch, send a notification, or kick off a new approval.
+🔸 Use **Configure run after** to define what happens if the action times out, e.g. start an alternative branch, send a notification, or kick off a new approval.
 
 **3. Test and refine.**
 
@@ -91,5 +91,5 @@ If you don't configure error handling, a timeout fails the run. Use **Configure 
 Most built-in actions allow timeout configuration. For unsupported actions, wrap them in scopes or alternative logic.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 144 – Infinite Approvals beyond 30 days](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-144-infinite-approvals/) — keep approvals alive past the 30-day limit.
-- [#PowerPlatformTip 98 – Secure Inputs & Secure Outputs](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-98-secure-inputs-secure-outputs/) — more action-setting tricks in flows.
+- [#PowerPlatformTip 144: Infinite Approvals beyond 30 days](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-144-infinite-approvals/), keep approvals alive past the 30-day limit.
+- [#PowerPlatformTip 98: Secure Inputs & Secure Outputs](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-98-secure-inputs-secure-outputs/), more action-setting tricks in flows.

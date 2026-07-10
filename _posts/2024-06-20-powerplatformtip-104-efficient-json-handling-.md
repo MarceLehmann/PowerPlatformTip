@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 104 – 'Efficient JSON Handling'"
+title: "#PowerPlatformTip 104: 'Efficient JSON Handling'"
 date: 2024-06-20
 last_modified_at: 2026-07-09
 categories:
@@ -23,7 +23,7 @@ toc_sticky: true
 > **TL;DR:** Define JSON schemas with types, required fields, constraints and format validation in Power Automate to keep your data clean and your flows reliable.
 
 ## 💡 Challenge
-Managing JSON structures in Power Automate feels daunting without a solid grasp of how JSON objects, arrays and schemas fit together — and weak validation lets bad data slip into your flows.
+Managing JSON structures in Power Automate feels daunting without a solid grasp of how JSON objects, arrays and schemas fit together, and weak validation lets bad data slip into your flows.
 
 ## ✅ Solution
 Learn the building blocks of JSON and JSON Schema, then use them in your Parse JSON steps to validate structure, types and constraints so your flows process data predictably.
@@ -32,7 +32,7 @@ Learn the building blocks of JSON and JSON Schema, then use them in your Parse J
 
 **1. Basic structure**
 
-Use **objects** `{}` for key–value pairs and **arrays** `[]` for ordered lists.
+Use **objects** `{}` for key-value pairs and **arrays** `[]` for ordered lists.
 
 ```json
 {
@@ -147,7 +147,7 @@ Special thanks to Paul Murana for the great sneak peek.
 
 ## 🛠️ FAQ
 **1. What is the difference between JSON objects and arrays?**
-Objects use curly braces to define key–value pairs, while arrays use square brackets to store ordered lists of values.
+Objects use curly braces to define key-value pairs, while arrays use square brackets to store ordered lists of values.
 
 **2. How do type restrictions improve JSON validation in Power Automate?**
 Type restrictions ensure each field matches an expected data type, reducing errors and improving flow reliability.

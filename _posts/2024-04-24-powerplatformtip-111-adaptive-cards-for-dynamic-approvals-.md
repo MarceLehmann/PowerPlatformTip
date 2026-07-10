@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 111 – 'Adaptive Cards for Dynamic Approvals'"
+title: "#PowerPlatformTip 111: 'Adaptive Cards for Dynamic Approvals'"
 date: 2024-04-24
 last_modified_at: 2026-07-09
 categories:
@@ -65,7 +65,7 @@ A versatile, dynamic approval process that goes beyond the standard approval act
 Add a people-picker input to the Adaptive Card JSON schema. It connects to Microsoft Entra ID and lets approvers search and select users dynamically.
 
 **2. What happens if an approver doesn't respond to the Adaptive Card?**
-Configure timeouts or parallel branches in your flow to handle non-responses — escalate to a fallback approver or send automatic reminders.
+Configure timeouts or parallel branches in your flow to handle non-responses, escalate to a fallback approver or send automatic reminders.
 
 **3. Can I include conditional logic within the approval flow?**
 Yes. Use conditional actions in Power Automate based on the approver's selection or other variables to build branching approval scenarios.

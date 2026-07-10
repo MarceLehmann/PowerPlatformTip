@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 107 – 'Last Item from SharePointList'"
+title: "#PowerPlatformTip 107: 'Last Item from SharePointList'"
 date: 2024-06-06
 last_modified_at: 2026-07-09
 categories:
@@ -20,7 +20,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Get the newest SharePoint item in Power Apps with `First(SortByColumns(List, "ID", Descending))` – delegable, unlike `Last()`.
+> **TL;DR:** Get the newest SharePoint item in Power Apps with `First(SortByColumns(List, "ID", Descending))`, delegable, unlike `Last()`.
 
 ## 💡 Challenge
 You need the latest entry from a SharePoint list in PowerApps, but `Last()` isn't delegable, so the direct approach seems out of reach on larger lists.
@@ -34,7 +34,7 @@ Sort the SharePoint list by the **ID** column in descending order, then take the
 
 🔸 `SortByColumns('Your List', "ID", Descending)`
 
-🔸 Wrap it in **First()** to grab that top item — the latest entry:
+🔸 Wrap it in **First()** to grab that top item, the latest entry:
 
 🔸 `First(SortByColumns('Your List', "ID", Descending))`
 
@@ -61,7 +61,7 @@ You reliably access the most recent item from your SharePoint list in PowerApps,
 `Last()` is not delegable for SharePoint in PowerApps, so it only works on the first 500 (or up to 2000) records. `First(SortByColumns(...))` returns the actual latest item regardless of list size.
 
 **2. Can I sort by columns other than ID?**
-Yes — sort by any orderable column such as Created, Modified, or a custom date/number field, e.g. `First(SortByColumns(YourList, "Created", Descending))`.
+Yes, sort by any orderable column such as Created, Modified, or a custom date/number field, e.g. `First(SortByColumns(YourList, "Created", Descending))`.
 
 **3. Will this method work with large SharePoint lists?**
 Yes. The approach is delegable, so it works efficiently even on lists with thousands of items because sorting and filtering happen on the SharePoint server.

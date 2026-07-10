@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 112 – 'Consistent Data Formats'"
+title: "#PowerPlatformTip 112: 'Consistent Data Formats'"
 date: 2024-05-01
 last_modified_at: 2026-07-09
 categories:
@@ -20,10 +20,10 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Normalize data before comparing – use `Trim`/`Lower` in Power Apps and `trim`/`toLower` in Power Automate to avoid format-mismatch errors.
+> **TL;DR:** Normalize data before comparing, use `Trim`/`Lower` in Power Apps and `trim`/`toLower` in Power Automate to avoid format-mismatch errors.
 
 ## 💡 Challenge
-Data arrives in many shapes and sizes. When it's time to compare or validate it, small format inconsistencies — stray spaces, mixed case, mismatched types — derail your workflow with errors that are tricky to debug.
+Data arrives in many shapes and sizes. When it's time to compare or validate it, small format inconsistencies, stray spaces, mixed case, mismatched types, derail your workflow with errors that are tricky to debug.
 
 ## ✅ Solution
 Normalize your data before comparing or validating: trim extra spaces, convert text to a uniform case, and make sure data types match on both sides.
@@ -34,9 +34,9 @@ Normalize your data before comparing or validating: trim extra spaces, convert t
 
 🔸 **Standardize the format** with cleanup functions before comparing:
 
-🔸 In **Power Apps**: `Lower(Trim(TextInput.Text))` — trims spaces and lowercases the text.
+🔸 In **Power Apps**: `Lower(Trim(TextInput.Text))`, trims spaces and lowercases the text.
 
-🔸 In **Power Automate**: `toLower(trim(triggerOutputs()?['headers']['x-ms-file-last-modified']))` — the same idea in an expression.
+🔸 In **Power Automate**: `toLower(trim(triggerOutputs()?['headers']['x-ms-file-last-modified']))`, the same idea in an expression.
 
 📌 **Tips:**
 
@@ -45,7 +45,7 @@ Normalize your data before comparing or validating: trim extra spaces, convert t
 🔸 Lean on `Trim`/`Lower` in Power Apps and `trim`/`toLower` in Power Automate to keep values aligned.
 
 ## 🎉 Result
-Consistent, normalized data makes comparisons and validation in Power Apps and Power Automate reliable — far fewer format-related surprises to debug.
+Consistent, normalized data makes comparisons and validation in Power Apps and Power Automate reliable, far fewer format-related surprises to debug.
 
 ## 🌟 Key Advantages
 

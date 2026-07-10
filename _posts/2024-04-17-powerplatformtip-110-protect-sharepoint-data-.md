@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 110 – 'Protect SharePoint Data'"
+title: "#PowerPlatformTip 110: 'Protect SharePoint Data'"
 date: 2024-04-17
 last_modified_at: 2026-07-09
 categories:
@@ -35,7 +35,7 @@ Create a custom SharePoint permission level that removes **View Application Page
 
 🔸 Open the **Contribute** level and click **Copy Permission Level**.
 
-🔸 Name it “Power Apps – Custom Permission” and add a description.
+🔸 Name it “Power Apps - Custom Permission” and add a description.
 
 🔸 Under **List Permissions**, uncheck **View Application Pages**.
 
@@ -54,7 +54,7 @@ Create a custom SharePoint permission level that removes **View Application Page
 🔸 Add users to the “Power App Users” group. They now work with the data through your Power App, without direct GUI access to the SharePoint lists or application pages.
 
 ## 🎉 Result
-Power Apps users' access is deliberately limited: interactions are routed through the app, and users can't open SharePoint lists via the GUI — aligning with best practices for data integrity and security.
+Power Apps users' access is deliberately limited: interactions are routed through the app, and users can't open SharePoint lists via the GUI, aligning with best practices for data integrity and security.
 
 ## 🌟 Key Advantages
 
@@ -73,12 +73,12 @@ Power Apps users' access is deliberately limited: interactions are routed throug
 
 ## 🛠️ FAQ
 **1. How do I remove or modify the custom permission level?**
-Go to **Site Permissions → Permission Levels**, select “Power Apps – Custom Permission,” and edit or delete it as needed.
+Go to **Site Permissions → Permission Levels**, select “Power Apps - Custom Permission,” and edit or delete it as needed.
 
 **2. Will this affect other users' access to application pages?**
 Only users in the custom group lose the **View Application Pages** right. Users with default or elevated permissions are unaffected.
 
 **3. Can this approach be applied to document libraries and other list types?**
-Yes — assign the custom permission level to any SharePoint list or library to extend the same protection.
+Yes, assign the custom permission level to any SharePoint list or library to extend the same protection.
 
 ---

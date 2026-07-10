@@ -1,6 +1,6 @@
 ---
-title: "#PowerPlatformTip 105 – 'PowerApps – EnvironmentVariables Without Premium'"
-seo_title: "#PowerPlatformTip 105 – EnvironmentVariables Without Premium"
+title: "#PowerPlatformTip 105: 'PowerApps, EnvironmentVariables Without Premium'"
+seo_title: "#PowerPlatformTip 105: EnvironmentVariables Without Premium"
 date: 2024-06-04
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Solutions
   - NoPremium
   - PowerPlatformTip
-excerpt: "Access environment variables in PowerApps without a premium license by leveraging Power Automate flows—enable cost-effective, centralized configuration for all your apps."
+excerpt: "Access environment variables in PowerApps without a premium license by leveraging Power Automate flows, enable cost-effective, centralized configuration for all your apps."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -24,14 +24,14 @@ toc_sticky: true
 > **TL;DR:** Fetch environment variables in PowerApps without premium by calling a solution-based Power Automate flow on OnStart and storing the value locally.
 
 ## 💡 Challenge
-Environment variables are free in Power Automate, but reading them in PowerApps normally requires a premium license — which contradicts the whole point of a single, cross-platform configuration value.
+Environment variables are free in Power Automate, but reading them in PowerApps normally requires a premium license, which contradicts the whole point of a single, cross-platform configuration value.
 
 ## ✅ Solution
-Add a small solution-based Power Automate flow that returns the environment variable, and call it from the app's `OnStart` to load the value into a local variable — no premium needed.
+Add a small solution-based Power Automate flow that returns the environment variable, and call it from the app's `OnStart` to load the value into a local variable, no premium needed.
 
 ## 🔧 How It's Done
 
-**1. Create a flow inside a solution** to access the environment variable — it only needs a trigger and a response.
+**1. Create a flow inside a solution** to access the environment variable, it only needs a trigger and a response.
 
 🔸 Use the **Power Apps** trigger.
 
