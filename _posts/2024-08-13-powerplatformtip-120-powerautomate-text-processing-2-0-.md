@@ -68,6 +68,8 @@ PowerTools is a connector for Power Automate by Paul Murana, offering advanced t
 No. PowerTools runs entirely within your tenant or on-premises environment, and no data is sent to third parties.
 
 **3. How do I get the discount?**
-Use the code “LEHMANN” at checkout on Paul Murana's website to receive $15 off the one-time purchase.
+Use the code "LEHMANN" at checkout on Paul Murana's website to receive $15 off the one-time purchase.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 141 – Text to Array](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-141-text-to-array/) — split multiline text into a loopable array with standard actions.
+- [#PowerPlatformTip 94 – Extract Text from DOCX](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-94-extract-text-from-docx/) — pull text out of Word files for further processing.

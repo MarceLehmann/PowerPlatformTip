@@ -13,7 +13,7 @@ tags:
   - FileRef
   - FileDirRef
   - PowerPlatformTip
-excerpt: "Quickly and efficiently filter SharePoint files in Power Automate by using FileLeafRef (file name), FileRef (full path), and FileDirRef (folder) fields with simple OData filter expressions – even if you don’t know how these fields work yet."
+excerpt: "Quickly and efficiently filter SharePoint files in Power Automate by using FileLeafRef (file name), FileRef (full path), and FileDirRef (folder) fields with simple OData filter expressions – even if you don't know how these fields work yet."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -79,4 +79,6 @@ It's the full path of a file, including folders – for example, '/sites/demo/Sh
 **6. What does FileDirRef mean?**
 It refers to a folder path only – for example, '/sites/demo/Shared Documents/'.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 95 – Optimized SharePoint Queries](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-95-optimized-sharepoint-queries/) — design efficient, delegable OData queries.
+- [#PowerPlatformTip 153 – Rename a SharePoint File with Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-153-rename-sharepoint-file-power-automate/) — work with FileLeafRef to rename files in place.

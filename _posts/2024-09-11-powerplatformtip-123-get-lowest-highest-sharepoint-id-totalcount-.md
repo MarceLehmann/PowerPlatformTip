@@ -79,4 +79,6 @@ Yes. Retrieving the lowest or highest ID with `$top=1` is efficient, but be awar
 **3. How can I adapt this to retrieve other columns or values?**
 Adjust the `$select` and `$orderby` query parameters to include the desired fields (e.g., `Title`) and order by those columns as needed.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 97 – Enhanced Pagination](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-97-enhanced-pagination/) — handle large SharePoint result sets efficiently.
+- [#PowerPlatformTip 95 – Optimized SharePoint Queries](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-95-optimized-sharepoint-queries/) — build fast, delegable list queries.

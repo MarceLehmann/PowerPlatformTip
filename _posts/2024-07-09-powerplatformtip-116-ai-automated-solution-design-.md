@@ -82,4 +82,6 @@ Yes — adapt the prompt sections (Introduction, Objectives, etc.) and add relev
 **3. How do I handle large files if ChatGPT has upload limits?**
 Split large files into smaller parts, summarize key elements in text, or provide excerpts so ChatGPT can process them effectively.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 99 – Timesaver Toolkits: ChatGPT and Flow](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-99-timesaver-toolkits-chatgpt-and-flow/) — more ways to combine ChatGPT with Power Platform.
+- [#PowerPlatformTip 134 – Optimize Canvas Apps with YAML](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-134-optimize-canvas-apps-yaml/) — let AI review and improve your app code.

@@ -69,4 +69,6 @@ A 1–5 second interval strikes a good balance between real-time feedback and pe
 **3. Can I monitor multiple flows concurrently?**
 Yes. Include a unique FlowID in each StateLog entry and filter your Power Apps controls by FlowID to track multiple flows in parallel.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 79 – Retrieve Record Details Post-Update](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-79-retrieve-record-details-post-update/) — read back data right after a flow writes it.
+- [#PowerPlatformTip 109 – Use Timeout](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-109-use-timeout/) — control timing in long-running flows.

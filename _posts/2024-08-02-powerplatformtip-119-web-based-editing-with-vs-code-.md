@@ -64,4 +64,6 @@ No install is required. vscode.dev supports built-in features like syntax highli
 **3. Can I handle JSON and Power Fx formulas in the browser editor?**
 Yes. Open, edit, and save JSON, Power Fx formulas, and other script files directly in vscode.dev with full editor features such as find/replace, multi-cursor editing, and error highlighting.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 89 – Code View / Peak Code](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-89-code-view-peak-code/) — inspect control code fast inside Studio.
+- [#PowerPlatformTip 145 – Power Platform Tools](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-145-power-platform-tools/) — more browser-based helpers for formulas and expressions.
