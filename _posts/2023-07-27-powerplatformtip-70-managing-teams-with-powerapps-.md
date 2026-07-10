@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 70 – 'Managing Teams with PowerApps!'"
+title: "#PowerPlatformTip 70: 'Managing Teams with PowerApps!'"
 date: 2023-07-27
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Environment Management
   - Power Platform
   - PowerApps4Teams
-excerpt: "Manage Teams environments more effectively by switching to powerautomate.com and using a simple URL trick to open PowerApps4Teams in make.powerapps.com—streamline environment management and boost productivity."
+excerpt: "Manage Teams environments more effectively by switching to powerautomate.com and using a simple URL trick to open PowerApps4Teams in make.powerapps.com, streamline environment management and boost productivity."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

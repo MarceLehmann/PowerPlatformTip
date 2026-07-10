@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 66 – 'Load Data Source Structure'"
+title: "#PowerPlatformTip 66: 'Load Data Source Structure'"
 date: 2023-07-07
 last_modified_at: 2026-07-09
 categories:

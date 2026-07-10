@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 65 – 'Automate Documentation with PowerDocu'"
+title: "#PowerPlatformTip 65: 'Automate Documentation with PowerDocu'"
 date: 2023-06-29
 last_modified_at: 2026-07-09
 categories:
@@ -31,7 +31,7 @@ Spending too much time manually creating documentation for your Flows in Power A
 
 ## ✅ Solution
 
-Make your life easier with [PowerDocu](https://github.com/modery/PowerDocu) – a Windows GUI tool that automatically generates technical documentation for exported Flow packages, Canvas Apps, or Solution packages.
+Make your life easier with [PowerDocu](https://github.com/modery/PowerDocu), a Windows GUI tool that automatically generates technical documentation for exported Flow packages, Canvas Apps, or Solution packages.
 
 **Key features:**
 
@@ -51,7 +51,7 @@ Make your life easier with [PowerDocu](https://github.com/modery/PowerDocu) – 
 
 🔸 Grab the latest release from the [PowerDocu GitHub page](https://github.com/modery/PowerDocu).
 
-🔸 Unzip the package – no installation required.
+🔸 Unzip the package, no installation required.
 
 **2. Export your app or flow**
 
@@ -65,7 +65,7 @@ Make your life easier with [PowerDocu](https://github.com/modery/PowerDocu) – 
 
 ## 🎉 Result
 
-You get consistent, up-to-date documentation for your apps and flows in seconds instead of hours – improving governance and saving valuable time.
+You get consistent, up-to-date documentation for your apps and flows in seconds instead of hours, improving governance and saving valuable time.
 
 ## 🌟 Key Advantages
 
@@ -85,7 +85,7 @@ Watch the demo from the Microsoft 365 Community call to see PowerDocu in action:
 
 **Q: How do I install PowerDocu?**
 
-Download the latest release from the PowerDocu GitHub repository, unzip the package, and run `PowerDocu.exe`—no additional installation is required.
+Download the latest release from the PowerDocu GitHub repository, unzip the package, and run `PowerDocu.exe`, no additional installation is required.
 
 **Q: What output formats are supported?**
 

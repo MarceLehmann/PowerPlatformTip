@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 72 – 'PowerApps with Google Maps API'"
+title: "#PowerPlatformTip 72: 'PowerApps with Google Maps API'"
 date: 2023-08-10
 last_modified_at: 2026-07-09
 categories:
@@ -14,7 +14,7 @@ tags:
   - GIS
   - Power Platform
   - No Premium License
-excerpt: "Integrate Google Maps with PowerApps to deliver interactive mapping, real-time GPS, and location services—no premium license required. Learn how to embed maps and enhance user experience."
+excerpt: "Integrate Google Maps with PowerApps to deliver interactive mapping, real-time GPS, and location services, no premium license required. Learn how to embed maps and enhance user experience."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -22,11 +22,11 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Combine PowerApps' `Location()` function with a Google Maps API key to embed interactive maps and GPS services – no premium Power Platform license needed.
+> **TL;DR:** Combine PowerApps' `Location()` function with a Google Maps API key to embed interactive maps and GPS services, no premium Power Platform license needed.
 
 ## 💡 Challenge
 
-Integrating Google Maps into PowerApps is a great way to enhance apps with dynamic map functionality. The challenge is doing it efficiently—without premium licenses—while providing accurate GPS location services.
+Integrating Google Maps into PowerApps is a great way to enhance apps with dynamic map functionality. The challenge is doing it efficiently, without premium licenses, while providing accurate GPS location services.
 
 ## ✅ Solution
 

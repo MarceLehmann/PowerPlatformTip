@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 67 – 'App-to-App Redirection'"
+title: "#PowerPlatformTip 67: 'App-to-App Redirection'"
 date: 2023-07-11
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Migration
   - App Transition
   - Power Platform
-excerpt: "Seamlessly redirect users from old to new Power Apps using the Launch function—improve user experience, manage migrations, and ensure smooth app transitions across environments."
+excerpt: "Seamlessly redirect users from old to new Power Apps using the Launch function, improve user experience, manage migrations, and ensure smooth app transitions across environments."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

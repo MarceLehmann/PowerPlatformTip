@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 73 – 'Quick Switch to Maker Mode'"
+title: "#PowerPlatformTip 73: 'Quick Switch to Maker Mode'"
 date: 2023-08-15
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - App Editing
   - Low Code
   - Power Platform
-excerpt: "Instantly switch from play mode to maker mode in Power Apps using a bookmarklet—speed up app editing, boost productivity, and streamline your development workflow."
+excerpt: "Instantly switch from play mode to maker mode in Power Apps using a bookmarklet, speed up app editing, boost productivity, and streamline your development workflow."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -25,7 +25,7 @@ toc_sticky: true
 
 ## 💡 Challenge
 
-You're using a Power App in play mode and realize you need to make some adjustments. Normally you'd navigate back to the environment, locate the app, and click **Edit** – a time-consuming detour that disrupts your workflow.
+You're using a Power App in play mode and realize you need to make some adjustments. Normally you'd navigate back to the environment, locate the app, and click **Edit**, a time-consuming detour that disrupts your workflow.
 
 ## ✅ Solution
 

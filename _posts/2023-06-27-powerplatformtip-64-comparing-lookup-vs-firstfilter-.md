@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 64 – 'Comparing Lookup vs. First(Filter)'"
+title: "#PowerPlatformTip 64: 'Comparing Lookup vs. First(Filter)'"
 date: 2023-06-27
 last_modified_at: 2026-07-09
 categories:
@@ -23,11 +23,11 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** `Lookup()` and `First(Filter())` behave identically with no performance difference – pick one pattern and use it consistently for readability.
+> **TL;DR:** `Lookup()` and `First(Filter())` behave identically with no performance difference, pick one pattern and use it consistently for readability.
 
 ## 💡 Challenge
 
-In Power Apps, when you need to retrieve the first record that meets certain criteria, you have two functions—`Lookup()` and `First(Filter())`—which can cause confusion over which to use.
+In Power Apps, when you need to retrieve the first record that meets certain criteria, you have two functions, `Lookup()` and `First(Filter())`, which can cause confusion over which to use.
 
 ## ✅ Solution
 
@@ -59,7 +59,7 @@ First( Filter( Source, Condition ) )
 
 ## 🎉 Result
 
-You now have a uniform approach to fetching the first matching record, making your Power Apps formulas more consistent and easier to read—without any performance penalty.
+You now have a uniform approach to fetching the first matching record, making your Power Apps formulas more consistent and easier to read, without any performance penalty.
 
 ## 🌟 Key Advantages
 
@@ -81,7 +81,7 @@ There is no functional or performance difference; both issue the same query. Usi
 
 **Q: When might I still use Lookup()?**
 
-You can use `Lookup()` interchangeably, but for consistency—and to leverage complex filtering scenarios—`First(Filter())` is preferred.
+You can use `Lookup()` interchangeably, but for consistency, and to leverage complex filtering scenarios, `First(Filter())` is preferred.
 
 **Q: Does switching to First(Filter()) impact performance?**
 

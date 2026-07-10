@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 71 – 'Array to Object'"
+title: "#PowerPlatformTip 71: 'Array to Object'"
 date: 2023-08-08
 last_modified_at: 2026-07-09
 categories:
@@ -22,7 +22,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Turn an array into an object in Power Automate by combining a Select action with nested Replace expressions – no loops required.
+> **TL;DR:** Turn an array into an object in Power Automate by combining a Select action with nested Replace expressions, no loops required.
 
 ## 💡 Challenge
 
