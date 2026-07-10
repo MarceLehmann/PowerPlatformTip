@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 55 – 'Picking colors'"
+title: "#PowerPlatformTip 55: 'Picking colors'"
 date: 2023-05-25
 last_modified_at: 2026-07-09
 categories:
@@ -26,7 +26,7 @@ toc_sticky: true
 
 ## 💡 Challenge
 
-Maintaining a consistent corporate design—especially colors—in Power Apps can be tedious. How can you quickly grab all the colors used on a webpage?
+Maintaining a consistent corporate design, especially colors, in Power Apps can be tedious. How can you quickly grab all the colors used on a webpage?
 
 ## ✅ Solution
 
@@ -60,7 +60,7 @@ Copy the listed color values and paste them into your Power Apps template (as sh
 
 🔸 Ensure uniform branding across web and app
 
-🔸 No extra extensions needed—built into Edge DevTools
+🔸 No extra extensions needed, built into Edge DevTools
 
 ## 🎥 Video Tutorial
 
@@ -70,7 +70,7 @@ Copy the listed color values and paste them into your Power Apps template (as sh
 
 **Q: What is CSS Overview in Edge?**
 
-CSS Overview is a feature in Microsoft Edge DevTools that analyzes a page's CSS and summarizes key data—colors, fonts, media queries, and more.
+CSS Overview is a feature in Microsoft Edge DevTools that analyzes a page's CSS and summarizes key data, colors, fonts, media queries, and more.
 
 **Q: Can I use this on any website?**
 
@@ -78,4 +78,4 @@ Yes. As long as the page is accessible in Edge, CSS Overview will scan and list 
 
 **Q: Do I need any browser extensions or add-ons?**
 
-No – CSS Overview is built into Edge's developer tools; no additional installations are required.
+No, CSS Overview is built into Edge's developer tools; no additional installations are required.

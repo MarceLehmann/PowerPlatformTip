@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 57 – 'Mastering PATCH'"
+title: "#PowerPlatformTip 57: 'Mastering PATCH'"
 date: 2023-06-01
 last_modified_at: 2026-07-09
 categories:

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 53 – 'Launch function'"
+title: "#PowerPlatformTip 53: 'Launch function'"
 date: 2023-05-16
 last_modified_at: 2026-07-09
 categories:

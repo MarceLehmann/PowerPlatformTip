@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 54 – 'Use Galleries'"
+title: "#PowerPlatformTip 54: 'Use Galleries'"
 date: 2023-05-23
 last_modified_at: 2026-07-09
 categories:
@@ -99,4 +99,4 @@ Yes. Add image controls inside the gallery template and set their `Image` or `Ic
 
 **Q: Does using a Gallery affect performance?**
 
-Galleries support virtualization for large data sets. For typical menu sizes (5–10 items), performance is excellent and simplifies your app's logic.
+Galleries support virtualization for large data sets. For typical menu sizes (5-10 items), performance is excellent and simplifies your app's logic.

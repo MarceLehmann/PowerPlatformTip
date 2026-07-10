@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 58 – 'HTTP Actions'"
+title: "#PowerPlatformTip 58: 'HTTP Actions'"
 date: 2023-06-06
 last_modified_at: 2026-07-09
 categories:
@@ -24,7 +24,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Use Power Automate's built-in HTTP actions to call any REST API – including Microsoft Graph – when standard connectors fall short.
+> **TL;DR:** Use Power Automate's built-in HTTP actions to call any REST API, including Microsoft Graph, when standard connectors fall short.
 
 ## 💡 Challenge
 
@@ -51,18 +51,18 @@ Leverage the built-in HTTP actions in Power Automate to send and receive HTTP re
 | Action                              | Description                                           | Type           | ActionType |
 |-------------------------------------|-------------------------------------------------------|----------------|------------|
 | HTTP to SharePoint                  | Manage SharePoint list items and files                | Standard 🌟    | Action     |
-| HTTP – Office 365 Outlook           | Send emails, schedule events, manage contacts         | Standard 🌟    | Action     |
-| HTTP – Office 365 Users             | Manage user profiles, group memberships               | Standard 🌟    | Action     |
-| HTTP – Office 365 Groups            | Create groups, manage members and settings            | Standard 🌟    | Action     |
-| HTTP – Office 365 Groups Mail       | Send group emails, manage group mail settings         | Standard 🌟    | Action     |
-| HTTP – Teams                        | –                                                     | Standard 🌟    | Action     |
+| HTTP - Office 365 Outlook           | Send emails, schedule events, manage contacts         | Standard 🌟    | Action     |
+| HTTP - Office 365 Users             | Manage user profiles, group memberships               | Standard 🌟    | Action     |
+| HTTP - Office 365 Groups            | Create groups, manage members and settings            | Standard 🌟    | Action     |
+| HTTP - Office 365 Groups Mail       | Send group emails, manage group mail settings         | Standard 🌟    | Action     |
+| HTTP - Teams                        | Post messages and manage Teams                        | Standard 🌟    | Action     |
 | HTTP + Swagger                      | Interact with any web API supporting HTTP             | Premium 💎     | Action     |
 | HTTP Webhook                        | Create event-driven workflows                         | Premium 💎     | Action     |
 | HTTP Response                       | Send a response to an HTTP request                    | Premium 💎     | Action     |
 | HTTP with Azure AD                  | Interact with web services using Azure AD authentication | Premium 💎  | Action     |
-| HTTP – PREMIUM                      | Execute high-performing HTTP requests                 | Premium 💎     | Trigger    |
-| HTTP Webhook – PREMIUM              | Create premium event-driven workflows                 | Premium 💎     | Trigger    |
-| HTTP + Swagger – PREMIUM            | Interact with premium APIs supporting HTTP            | Premium 💎     | Trigger    |
+| HTTP - PREMIUM                      | Execute high-performing HTTP requests                 | Premium 💎     | Trigger    |
+| HTTP Webhook - PREMIUM              | Create premium event-driven workflows                 | Premium 💎     | Trigger    |
+| HTTP + Swagger - PREMIUM            | Interact with premium APIs supporting HTTP            | Premium 💎     | Trigger    |
 | When an HTTP request is received    | Trigger your flow with an HTTP request                | Premium 💎     | Trigger    |
 
 **3. Configure the request details**

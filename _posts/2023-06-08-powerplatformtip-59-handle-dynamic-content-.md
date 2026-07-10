@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 59 – 'Handle Dynamic Content'"
+title: "#PowerPlatformTip 59: 'Handle Dynamic Content'"
 date: 2023-06-08
 last_modified_at: 2026-07-09
 categories:
@@ -31,7 +31,7 @@ When working with Power Automate and dealing with objects or arrays, you often c
 
 ## ✅ Solution
 
-Use the safe navigation operator `?` – for example `item()?['id']`. It ensures that even if `id` is missing in some items, your flow won't crash. Instead of an error, it returns `null`, which is a lifesaver when your data isn't always consistent.
+Use the safe navigation operator `?`, for example `item()?['id']`. It ensures that even if `id` is missing in some items, your flow won't crash. Instead of an error, it returns `null`, which is a lifesaver when your data isn't always consistent.
 
 ## 🔧 How It's Done
 
@@ -51,7 +51,7 @@ Use the safe navigation operator `?` – for example `item()?['id']`. It ensures
 
 ## 🎉 Result
 
-Your flows keep running even when incoming data is inconsistent, returning `null` instead of throwing errors – far more robust and easier to maintain.
+Your flows keep running even when incoming data is inconsistent, returning `null` instead of throwing errors, far more robust and easier to maintain.
 
 ## 🌟 Key Advantages
 
@@ -59,7 +59,7 @@ Your flows keep running even when incoming data is inconsistent, returning `null
 
 🔸 Returns a predictable `null` you can handle explicitly
 
-🔸 Minimal effort – just one character per reference
+🔸 Minimal effort, just one character per reference
 
 ## 🎥 Video Tutorial
 

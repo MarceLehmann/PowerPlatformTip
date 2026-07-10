@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 61 – 'Power of Environment Variables'"
+title: "#PowerPlatformTip 61: 'Power of Environment Variables'"
 date: 2023-06-15
 last_modified_at: 2026-07-09
 categories:

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 56 – 'Empowering Tools in CoE'"
+title: "#PowerPlatformTip 56: 'Empowering Tools in CoE'"
 date: 2023-05-30
 last_modified_at: 2026-07-09
 categories:
@@ -31,7 +31,7 @@ Managing permissions and ownership in the Center of Excellence (CoE) Kit can be 
 
 ## ✅ Solution
 
-Leverage the CoE Kit's built-in tools—'Set Flow Permissions', 'Set Apps Permissions' and the orphan detection flow—to gain clear visibility, manage access, and automatically handle orphaned flows and apps.
+Leverage the CoE Kit's built-in tools, 'Set Flow Permissions', 'Set Apps Permissions' and the orphan detection flow, to gain clear visibility, manage access, and automatically handle orphaned flows and apps.
 
 ## 🔧 How It's Done
 
@@ -55,7 +55,7 @@ Leverage the CoE Kit's built-in tools—'Set Flow Permissions', 'Set Apps Permis
 
 ## 🎉 Result
 
-You gain comprehensive visibility into who can access your resources, streamline permission management, and ensure no flow or app remains orphaned—improving security and operational efficiency.
+You gain comprehensive visibility into who can access your resources, streamline permission management, and ensure no flow or app remains orphaned, improving security and operational efficiency.
 
 ## 🌟 Key Advantages
 

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 62 – 'UpdateIf'"
+title: "#PowerPlatformTip 62: 'UpdateIf'"
 date: 2023-06-20
 last_modified_at: 2026-07-09
 categories:
@@ -22,7 +22,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Use UpdateIf to update every record matching a condition in one call – no manual loops needed in Power Apps.
+> **TL;DR:** Use UpdateIf to update every record matching a condition in one call, no manual loops needed in Power Apps.
 
 ## 💡 Challenge
 
