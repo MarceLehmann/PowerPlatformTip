@@ -1,6 +1,8 @@
 {%- comment -%}
 Enhanced Schema.org structured data for PowerPlatformTip
-Supports: Organization, Person, Article, BreadcrumbList
+Supports: Organization, Person, Article
+Note: BreadcrumbList is emitted by breadcrumbs-enhanced.html (visible breadcrumb)
+to keep a single, category-based source of truth.
 {%- endcomment -%}
 
 {%- if page.url == '/' or page.layout == 'home' -%}
@@ -107,43 +109,4 @@ Supports: Organization, Person, Article, BreadcrumbList
   "url": "{{ page.url | absolute_url }}"
 }
 </script>
-{%- endif -%}
-
-{%- if page.breadcrumbs != false and site.breadcrumbs -%}
-{%- comment -%} BreadcrumbList Schema {%- endcomment -%}
-{%- unless page.url == '/' -%}
-{%- assign crumbs = page.url | split: '/' -%}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "{{ site.url }}"
-    }
-    {%- assign crumb_count = 1 -%}
-    {%- for crumb in crumbs offset: 1 -%}
-      {%- if crumb != '' -%}
-        {%- assign crumb_count = crumb_count | plus: 1 -%}
-        {%- assign crumb_path = '' -%}
-        {%- for c in crumbs offset: 1 limit: crumb_count -%}
-          {%- if c != '' -%}
-            {%- assign crumb_path = crumb_path | append: '/' | append: c -%}
-          {%- endif -%}
-        {%- endfor -%}
-    ,{
-      "@type": "ListItem",
-      "position": {{ crumb_count }},
-      "name": "{{ crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize }}",
-      "item": "{{ site.url }}{{ crumb_path }}"
-    }
-      {%- endif -%}
-    {%- endfor -%}
-  ]
-}
-</script>
-{%- endunless -%}
 {%- endif -%}

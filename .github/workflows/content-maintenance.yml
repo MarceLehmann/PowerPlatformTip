@@ -1,0 +1,71 @@
+name: Content Maintenance
+
+# Manual, on-demand cleanup for historical posts:
+#   * fix-legacy-post-encoding.py  - strip the UTF-8 BOM and repair double-encoded emoji
+#   * backfill-faq-frontmatter.py  - add FAQPage `faq:` front matter from visible FAQ blocks
+#
+# A dry run always prints a report. Enable "apply" to write the changes; the
+# result is pushed to a new review branch (never directly to master), so it can
+# be reviewed and merged via a pull request. The live site is untouched until
+# that branch is merged, because deployment only runs on push to master.
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Write changes and push a review branch (leave off for a dry-run report)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Dry-run report
+        run: |
+          echo "::group::Legacy encoding (BOM + mojibake)"
+          python3 _tools/fix-legacy-post-encoding.py _posts
+          echo "::endgroup::"
+          echo "::group::FAQ front-matter backfill"
+          python3 _tools/backfill-faq-frontmatter.py _posts
+          echo "::endgroup::"
+
+      - name: Apply changes and push review branch
+        if: ${{ inputs.apply }}
+        run: |
+          python3 _tools/fix-legacy-post-encoding.py _posts --write
+          python3 _tools/backfill-faq-frontmatter.py _posts --write
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          BRANCH="content-maintenance/run-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add -A
+          git commit -m "chore(content): fix legacy encoding and backfill FAQ schema
+
+Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+          git push origin "$BRANCH"
+          {
+            echo "### Content maintenance applied"
+            echo ""
+            echo "Pushed review branch: \`$BRANCH\`"
+            echo ""
+            echo "Open a PR: https://github.com/${{ github.repository }}/compare/master...$BRANCH?expand=1"
+          } >> "$GITHUB_STEP_SUMMARY"
