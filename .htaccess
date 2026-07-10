@@ -125,6 +125,15 @@ FileETag None
   # Redirect www to non-www
   RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
   RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+  # Canonicalize: add a trailing slash to directory-style URLs.
+  # Prevents duplicate "with slash" vs "without slash" URLs that appeared as
+  # "Crawled - currently not indexed" in Google Search Console.
+  # Skips real files (-f) and any path that already has a file extension or slash.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,6})$
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [R=301,L]
 </IfModule>
 
 # ========================================================================
