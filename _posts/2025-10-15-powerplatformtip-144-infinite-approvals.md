@@ -77,4 +77,6 @@ Splitting the actions exposes the Approval ID, which is stored in SharePoint and
 **3. How does TriggerFlow prevent endless retriggering?**
 The trigger condition only fires when TriggerFlow is Yes, and the first Update item immediately sets it to No — so only the dedicated timeout branch that sets TriggerFlow back to Yes can start a new run.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 114 – Send Approvals to External Recipients](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-114-send-approvals-to-external-recipients/) — extend approvals beyond your tenant.
+- [#PowerPlatformTip 149 – Approvals to a Shared Mailbox](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-149-approvals-to-a-shared-mailbox/) — route approval tasks to shared inboxes.

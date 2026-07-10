@@ -150,3 +150,7 @@ Use the replace() expression to double apostrophes: `replace(varTitle,'''','''''
 **Q3: What's the difference between encodeUriComponent() for URLs vs. JSON escaping for request bodies?**
 
 Use encodeUriComponent() only for URL parameters and query strings - it converts characters to %XX format. For JSON in HTTP request bodies, use replace() with backslash escaping: `replace(text, '"', '\"')`. URL encoding and JSON escaping serve different purposes and are not interchangeable.
+
+## 🔗 Related Tips
+- [#PowerPlatformTip 58 – HTTP Actions](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-58-http-actions/) — where proper encoding keeps requests valid.
+- [#PowerPlatformTip 121 – Filtering SharePoint File Fields with OData](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-121-filtering-sharepoint-file-fields-with-odata/) — apply apostrophe escaping in real filters.

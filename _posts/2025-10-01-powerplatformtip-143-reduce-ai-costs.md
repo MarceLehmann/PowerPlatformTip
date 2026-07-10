@@ -119,4 +119,6 @@ SharePoint generates three sizes automatically: Small (96x96px, basic OCR), Medi
 **Q3: How do I handle different document sources (Power Apps, email, manual upload) in one flow?**
 Create a child flow that handles the thumbnail-processing logic, then call it from multiple parent flows. Each parent handles its specific trigger (Power Apps button, email arrival, manual trigger), saves the document to SharePoint, and calls the child flow with the file ID. This modular approach keeps intake methods consistent while maintaining separation of concerns.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 140 – Free Invoice OCR](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-140-free-invoice-ocr/) — build the OCR pipeline this optimizes.
+- [#PowerPlatformTip 115 – AI OCR Models](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-115-ai-ocr-models/) — choose the right OCR model for your documents.

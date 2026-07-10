@@ -68,4 +68,6 @@ The tools run client-side in your browser, but always avoid pasting sensitive pr
 **3. Does the SVG Colorizer handle complex images?**
 It's optimized for standard icons and UI elements, generating the exact code string needed for Power Apps Image controls.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 11 – Trigger Condition](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-11-trigger-condition/) — the concept behind the Trigger Condition Builder.
+- [#PowerPlatformTip 119 – Web-based Editing with VS Code](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-119-web-based-editing-with-vs-code/) — another browser-based developer workflow.

@@ -100,4 +100,6 @@ Yes — it auto-caches. Use flows only for complex/enterprise logic.
 **3. Does it work mid-Gallery scroll?**
 Yes — the selected record refreshes in place.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 38 – Data Refresh](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-38-data-refresh/) — the standard refresh patterns this improves on.
+- [#PowerPlatformTip 57 – Mastering Patch](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-57-mastering-patch/) — core Patch techniques.

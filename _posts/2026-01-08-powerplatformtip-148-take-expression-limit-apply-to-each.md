@@ -82,4 +82,6 @@ Yes. Any array-type output works. Use `take(body('Filter_Array'), 5)` or the equ
 **3. Is there a risk of accidentally leaving take() in a production flow?**
 Yes — always double-check before promoting to production. A good practice is to add a flow note or a comment action as a visible reminder that `take()` is active.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 36 – Static Result](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-36-static-result/) — another way to test flows without full runs.
+- [#PowerPlatformTip 117 – Optimize Parallel Object Processing](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-117-optimize-parallel-object-processing/) — speed up loops once testing is done.

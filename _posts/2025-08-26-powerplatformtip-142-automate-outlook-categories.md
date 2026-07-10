@@ -96,4 +96,6 @@ Before your PATCH, add another "Send an HTTP request" (Outlook connector) with t
 **3. Can I update other details besides the category?**
 Yes. The `PATCH` method can update many event properties — for example, change the 'showAs' status (Free to Busy), modify the body, or update the subject by including those fields in the JSON body.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 138 – Graph API via HTTP](https://www.powerplatformtip.com/article/powerplatformtip/PowerPlatformTip-138-Graph-API-HTTP/) — more Graph calls from standard connectors.
+- [#PowerPlatformTip 58 – HTTP Actions](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-58-http-actions/) — fundamentals of calling REST APIs in flows.
