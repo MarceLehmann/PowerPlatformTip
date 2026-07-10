@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 79 – 'Retrieve Record Details Post-Update'"
+title: "#PowerPlatformTip 79: 'Retrieve Record Details Post-Update'"
 date: 2023-09-26
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Workflow Automation
   - Canvas Apps
   - Data Integration
-excerpt: "Retrieve details of newly created or updated records in Power Apps using Patch or Form.LastSubmit—access record IDs instantly for seamless workflow automation and data integration."
+excerpt: "Retrieve details of newly created or updated records in Power Apps using Patch or Form.LastSubmit, access record IDs instantly for seamless workflow automation and data integration."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

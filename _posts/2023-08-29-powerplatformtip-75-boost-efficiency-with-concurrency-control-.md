@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 75 – 'Boost Efficiency with Concurrency Control'"
+title: "#PowerPlatformTip 75: 'Boost Efficiency with Concurrency Control'"
 date: 2023-08-29
 last_modified_at: 2026-07-09
 categories:
@@ -22,7 +22,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Turn on Concurrency Control on a 'For each' loop to run up to 50 iterations in parallel – and offload to a child flow to scale beyond 50.
+> **TL;DR:** Turn on Concurrency Control on a 'For each' loop to run up to 50 iterations in parallel, and offload to a child flow to scale beyond 50.
 
 ## 💡 Challenge
 

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 78 – 'Efficient Control Reset'"
+title: "#PowerPlatformTip 78: 'Efficient Control Reset'"
 date: 2023-09-19
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Context Variables
   - Productivity
   - Power Platform
-excerpt: "Reset all Power Apps controls at once using a single context variable—streamline your code, improve app efficiency, and simplify UI management for better user experience."
+excerpt: "Reset all Power Apps controls at once using a single context variable, streamline your code, improve app efficiency, and simplify UI management for better user experience."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -27,7 +27,7 @@ toc_sticky: true
 In Power Apps, resetting multiple controls to their default state is tedious if you reset each control individually with the Reset function. It makes the app less efficient and clutters your code with repetitive statements.
 
 ## ✅ Solution
-Reset all controls at once using a single context variable. Link every control's Reset property to that variable, then toggle the variable to reset them globally—saving time and keeping your code clean.
+Reset all controls at once using a single context variable. Link every control's Reset property to that variable, then toggle the variable to reset them globally, saving time and keeping your code clean.
 
 ## 🔧 How It's Done
 Here's how to do it:

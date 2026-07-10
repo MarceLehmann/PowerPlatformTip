@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 80 – 'Rapid Dynamic Forms with AI'"
+title: "#PowerPlatformTip 80: 'Rapid Dynamic Forms with AI'"
 date: 2023-10-03
 last_modified_at: 2026-07-09
 categories:
@@ -14,7 +14,7 @@ tags:
   - Automation
   - Power Platform
   - Low Code
-excerpt: "Create dynamic forms in Power Apps using AI and JSON—leverage galleries for flexible input, automate schema generation, and streamline data collection without static form controls."
+excerpt: "Create dynamic forms in Power Apps using AI and JSON, leverage galleries for flexible input, automate schema generation, and streamline data collection without static form controls."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -22,7 +22,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Render forms dynamically by binding a Power Apps gallery to a JSON array—let AI generate the schema so fields adapt on the fly without static form controls.
+> **TL;DR:** Render forms dynamically by binding a Power Apps gallery to a JSON array, let AI generate the schema so fields adapt on the fly without static form controls.
 
 ## 💡 Challenge
 Creating dynamic forms in Power Apps can be time-consuming, especially when Microsoft Forms doesn't meet your needs due to its limitations on dynamic content. Additionally, using a Form Control for manual static data like a JSON array is not feasible, as it comes with a predefined structure and fields.

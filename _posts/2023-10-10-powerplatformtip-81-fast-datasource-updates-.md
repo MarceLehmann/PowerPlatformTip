@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 81 – 'Fast DataSource Updates'"
+title: "#PowerPlatformTip 81: 'Fast DataSource Updates'"
 date: 2023-10-10
 last_modified_at: 2026-07-09
 categories:
@@ -46,9 +46,9 @@ Here's how to do it:
 You can efficiently update a large number of items in any data source without hitting performance bottlenecks.
 
 ## 🌟 Key Advantages
-🔸 Speed – faster than using UpdateIf directly on the data source.  
-🔸 Flexibility – perform complex updates on the local collection before patching.  
-🔸 Scalability – handle large data sets efficiently, especially when extending item limits.
+🔸 Speed, faster than using UpdateIf directly on the data source.  
+🔸 Flexibility, perform complex updates on the local collection before patching.  
+🔸 Scalability, handle large data sets efficiently, especially when extending item limits.
 
 ## 🎥 Video Tutorial
 {% include video id="vxDPFM2gFM4" provider="youtube" %}
@@ -62,6 +62,6 @@ ClearCollect creates a local collection of records from your data source, allowi
 
 Using UpdateIf on the server-side data source is slower and can hit performance limits when processing large data sets.
 
-**3. How can I work around the default item limit of 500–2000 records?**
+**3. How can I work around the default item limit of 500-2000 records?**
 
 You can use ForAll in combination with Collect to fetch and process records in batches, circumventing the default delegation limit.

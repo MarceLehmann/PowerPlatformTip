@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 82 – 'Automated Code Commenting'"
+title: "#PowerPlatformTip 82: 'Automated Code Commenting'"
 date: 2023-10-17
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Maintainability
   - Collaboration
   - Productivity
-excerpt: "Use AI and ChatGPT to automatically generate code comments for Power Apps formulas—improve maintainability, collaboration, and productivity with clear, insightful documentation."
+excerpt: "Use AI and ChatGPT to automatically generate code comments for Power Apps formulas, improve maintainability, collaboration, and productivity with clear, insightful documentation."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -21,7 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Let ChatGPT add clear comments to your Power Apps formulas—paste the formula, ask it to comment without changing the code, then review and apply.
+> **TL;DR:** Let ChatGPT add clear comments to your Power Apps formulas, paste the formula, ask it to comment without changing the code, then review and apply.
 
 ## 💡 Challenge
 Writing code comments in your Power Apps formula can be time-consuming and sometimes overlooked, yet it's crucial for maintainability and collaboration.

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 74 – 'Elevated Permissions'"
+title: "#PowerPlatformTip 74: 'Elevated Permissions'"
 date: 2023-08-22
 last_modified_at: 2026-07-09
 categories:
@@ -14,7 +14,7 @@ tags:
   - Data Connections
   - SharePoint
   - Flow
-excerpt: "Run PowerApps data connections with elevated permissions using Power Automate flows—enable secure actions beyond user rights, leveraging impersonation and advanced security."
+excerpt: "Run PowerApps data connections with elevated permissions using Power Automate flows, enable secure actions beyond user rights, leveraging impersonation and advanced security."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -22,11 +22,11 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Call a Power Automate flow with 'Run-only users' set to a service account to let limited users perform elevated actions – like writing to a read-only SharePoint list.
+> **TL;DR:** Call a Power Automate flow with 'Run-only users' set to a service account to let limited users perform elevated actions, like writing to a read-only SharePoint list.
 
 ## 💡 Challenge
 
-You want to run data connections in PowerApps with elevated permissions, allowing users with limited access to perform actions they normally couldn't—like creating items in a SharePoint list they only have read access to.
+You want to run data connections in PowerApps with elevated permissions, allowing users with limited access to perform actions they normally couldn't, like creating items in a SharePoint list they only have read access to.
 
 ## ✅ Solution
 
@@ -54,7 +54,7 @@ Use Power Automate flows to run data connections with elevated permissions. This
 
 ## 🎉 Result
 
-You've set up PowerApps to run data connections with elevated permissions, allowing users to perform actions beyond their normal permissions—securely and in a controlled way.
+You've set up PowerApps to run data connections with elevated permissions, allowing users to perform actions beyond their normal permissions, securely and in a controlled way.
 
 ## 🌟 Key Advantages
 

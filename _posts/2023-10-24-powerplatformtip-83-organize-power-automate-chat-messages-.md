@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 83 – 'Organize Power Automate Chat Messages'"
+title: "#PowerPlatformTip 83: 'Organize Power Automate Chat Messages'"
 date: 2023-10-24
 last_modified_at: 2026-07-09
 categories:
@@ -14,7 +14,7 @@ tags:
   - Microsoft Teams
   - Notification Management
   - Collaboration
-excerpt: "Organize Power Automate notifications in Microsoft Teams by routing messages to topic-specific group chats—reduce clutter, improve collaboration, and streamline workflow communication."
+excerpt: "Organize Power Automate notifications in Microsoft Teams by routing messages to topic-specific group chats, reduce clutter, improve collaboration, and streamline workflow communication."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

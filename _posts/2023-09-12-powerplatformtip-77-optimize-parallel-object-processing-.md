@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 77 – 'Optimize Parallel Object Processing'"
+title: "#PowerPlatformTip 77: 'Optimize Parallel Object Processing'"
 date: 2023-09-12
 last_modified_at: 2026-07-09
 categories:
@@ -14,7 +14,7 @@ tags:
   - Database Trigger
   - Automation
   - Error Handling
-excerpt: "Boost Power Automate performance by enabling parallel object processing—use child flows or database triggers to overcome concurrency limits and accelerate large-scale automation."
+excerpt: "Boost Power Automate performance by enabling parallel object processing, use child flows or database triggers to overcome concurrency limits and accelerate large-scale automation."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

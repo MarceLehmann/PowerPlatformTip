@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 76 – 'PowerApps Sharing with Guests'"
+title: "#PowerPlatformTip 76: 'PowerApps Sharing with Guests'"
 date: 2023-09-05
 last_modified_at: 2026-07-09
 categories:
