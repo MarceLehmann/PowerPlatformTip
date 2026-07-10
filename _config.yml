@@ -182,6 +182,17 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  # Internal working folders / reports - must NOT be published (were "Crawled - currently not indexed" in GSC)
+  - CONTENT
+  - DOCS
+  - SOCIALMEDIA
+  - GOOGLESEARCHCONSOLE
+  - NEWOPTIMIZEDPOSTS
+  - "SEO-OPTIMIZATION-REPORT*"
+  - "SEO-CONTENT-AUDIT-CHECKLIST*"
+  - "FINALE-ZUSAMMENFASSUNG*"
+  - "VERIFICATION_REPORT*"
+  - "*.ps1"
 keep_files:
   - .git
   - .svn
