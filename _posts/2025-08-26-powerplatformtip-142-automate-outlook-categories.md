@@ -1,7 +1,8 @@
 ---
 title: "#PowerPlatformTip 142 – Automate Outlook Categories"
+seo_title: "Auto-Categorize Outlook Meetings in Power Automate"
 date: 2025-08-26
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatformTip
@@ -13,6 +14,7 @@ tags:
   - Productivity
   - PowerPlatformTip
 excerpt: "Learn how to automatically set categories for Outlook meetings using a standard, non-premium Power Automate action. Save time and stay organized with this simple tip."
+description: "Automatically set categories on Outlook meetings with Power Automate — no premium. PATCH events via the Office 365 Outlook 'Send an HTTP request' action."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

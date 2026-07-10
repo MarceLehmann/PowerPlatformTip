@@ -1,7 +1,8 @@
 ---
 title: "#PowerPlatformTip 138 – 'Graph API via HTTP with Microsoft Entra ID'"
+seo_title: "Microsoft Graph API in Power Automate via HTTP"
 date: 2025-06-25
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatformTip
@@ -12,6 +13,7 @@ tags:
   - MicrosoftEntraID
   - PowerPlatformTip
 excerpt: "Use the preauthorized 'HTTP with Microsoft Entra ID' connector in Power Automate to call Microsoft Graph without a custom app registration."
+description: "Call Microsoft Graph in Power Automate without app registrations or secrets — use the preauthorized 'HTTP with Microsoft Entra ID' action. No OAuth setup."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

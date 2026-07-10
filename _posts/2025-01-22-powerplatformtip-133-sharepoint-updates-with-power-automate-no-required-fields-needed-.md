@@ -1,8 +1,8 @@
 ---
 title: "#PowerPlatformTip 133 – 'SharePoint Updates with Power Automate – No Required Fields Needed'"
-seo_title: "#PowerPlatformTip 133 – SharePoint Updates without Required Fields"
+seo_title: "Update SharePoint Fields in Power Automate"
 date: 2025-01-22
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatformTip
@@ -14,6 +14,7 @@ tags:
   - FieldMapping
   - PowerPlatformTip
 excerpt: "Update specific SharePoint fields in Power Automate without HTTP requests or required fields."
+description: "Update specific SharePoint fields in Power Automate without HTTP requests or filling required fields — pass a JSON object to the 'Update item' action."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
