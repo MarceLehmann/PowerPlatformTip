@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 91 – 'IF Function in Formulas'"
+title: "#PowerPlatformTip 91: 'IF Function in Formulas'"
 date: 2023-12-06
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Performance
   - App Development
   - Power Platform
-excerpt: "Streamline Power Apps formulas by using direct conditions instead of the IF function—write cleaner, more efficient code and boost app performance with best practices for boolean logic."
+excerpt: "Streamline Power Apps formulas by using direct conditions instead of the IF function, write cleaner, more efficient code and boost app performance with best practices for boolean logic."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -21,7 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Skip redundant `If(condition, true, false)`—a condition already returns a boolean, so just write the condition directly for cleaner, faster formulas.
+> **TL;DR:** Skip redundant `If(condition, true, false)`, a condition already returns a boolean, so just write the condition directly for cleaner, faster formulas.
 
 ## 💡 Challenge
 In Power Apps and similar platforms, developers often use the IF function with redundant additional elements, like in expressions such as `If(1+1=2, true, false)` or `If(varAdmin="name@mail.com", true, false)`. This approach unnecessarily lengthens and complicates the formula without adding any real benefit.

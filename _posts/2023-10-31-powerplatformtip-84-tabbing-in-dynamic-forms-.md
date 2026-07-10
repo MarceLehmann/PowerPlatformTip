@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 84 – 'Tabbing in Dynamic Forms'"
+title: "#PowerPlatformTip 84: 'Tabbing in Dynamic Forms'"
 date: 2023-10-31
 last_modified_at: 2026-07-09
 categories:
@@ -14,7 +14,7 @@ tags:
   - UI/UX
   - Sequence Function
   - App Usability
-excerpt: "Solve Tab key issues in Power Apps dynamic forms by using the Sequence function for gallery binding—improve accessibility, usability, and user experience in your apps."
+excerpt: "Solve Tab key issues in Power Apps dynamic forms by using the Sequence function for gallery binding, improve accessibility, usability, and user experience in your apps."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

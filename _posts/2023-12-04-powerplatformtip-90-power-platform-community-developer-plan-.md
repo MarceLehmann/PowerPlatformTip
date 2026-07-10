@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 90 – 'Power Platform Community Developer Plan'"
+title: "#PowerPlatformTip 90: 'Power Platform Community Developer Plan'"
 date: 2023-12-04
 last_modified_at: 2026-07-09
 categories:
@@ -14,7 +14,7 @@ tags:
   - Community Plan
   - PowerApps
   - PowerAutomate
-excerpt: "Leverage the Power Platform Community Developer Plan for a free, robust environment to build, test, and share Power Apps and Power Automate solutions—ideal for learning, prototyping, and innovation."
+excerpt: "Leverage the Power Platform Community Developer Plan for a free, robust environment to build, test, and share Power Apps and Power Automate solutions, ideal for learning, prototyping, and innovation."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -22,13 +22,13 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Use the free Power Platform Developer Plan to build, test, and share Power Apps and Power Automate solutions in your own Dataverse environments—ideal for learning and prototyping.
+> **TL;DR:** Use the free Power Platform Developer Plan to build, test, and share Power Apps and Power Automate solutions in your own Dataverse environments, ideal for learning and prototyping.
 
 ## 💡 Challenge
 As developers or Power Platform enthusiasts, finding a cost-free space for developing and testing Power Apps and Power Automate flows can be challenging.
 
 ## ✅ Solution
-Use the free Power Platform Developer Plan (formerly the Community Plan). It gives you your own Dataverse-enabled environments to build, test, and share Power Apps and Power Automate solutions at no cost—perfect for learning, prototyping, and innovation.
+Use the free Power Platform Developer Plan (formerly the Community Plan). It gives you your own Dataverse-enabled environments to build, test, and share Power Apps and Power Automate solutions at no cost, perfect for learning, prototyping, and innovation.
 
 ## 🔧 How It's Done
 Here's how to do it:

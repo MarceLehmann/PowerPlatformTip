@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 87 – 'Licensing – Sharing Canvas Apps with Guests'"
+title: "#PowerPlatformTip 87: 'Licensing, Sharing Canvas Apps with Guests'"
 date: 2023-11-21
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Collaboration
   - Microsoft 365
   - Dataverse
-excerpt: "Understand PowerApps licensing for sharing Canvas Apps with external guests—ensure compliance, seamless collaboration, and the right licenses for Dataverse and non-Dataverse scenarios."
+excerpt: "Understand PowerApps licensing for sharing Canvas Apps with external guests, ensure compliance, seamless collaboration, and the right licenses for Dataverse and non-Dataverse scenarios."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -21,7 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Guests need a Power Apps license matching the app—assigned by either tenant for non-Dataverse apps, or by the hosting tenant for Dataverse apps.
+> **TL;DR:** Guests need a Power Apps license matching the app, assigned by either tenant for non-Dataverse apps, or by the hosting tenant for Dataverse apps.
 
 ## 💡 Challenge
 Understanding how to share a Canvas App with external users is not enough; you must also grasp the licensing requirements to ensure guests can access the app.

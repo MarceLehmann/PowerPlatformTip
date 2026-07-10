@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 89 – 'Code View (Peek Code)'"
+title: "#PowerPlatformTip 89: 'Code View (Peek Code)'"
 date: 2023-11-30
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Flow Logic
   - Troubleshooting
   - Productivity
-excerpt: "Use Code View in Power Automate to inspect action expressions in a read-only format—gain insight, debug flows, and understand logic for more effective troubleshooting."
+excerpt: "Use Code View in Power Automate to inspect action expressions in a read-only format, gain insight, debug flows, and understand logic for more effective troubleshooting."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 86 – 'Free Power Apps Icons'"
+title: "#PowerPlatformTip 86: 'Free Power Apps Icons'"
 date: 2023-11-16
 last_modified_at: 2026-07-09
 categories:
@@ -14,7 +14,7 @@ tags:
   - SVGRepo
   - Customization
   - App Branding
-excerpt: "Enhance Power Apps with free, customizable SVG icons from Matthew Devaney and SVGRepo—improve UI design, user experience, and app branding with easy integration."
+excerpt: "Enhance Power Apps with free, customizable SVG icons from Matthew Devaney and SVGRepo, improve UI design, user experience, and app branding with easy integration."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

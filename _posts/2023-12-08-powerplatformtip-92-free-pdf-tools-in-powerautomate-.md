@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 92 – 'Free PDF Tools in PowerAutomate'"
+title: "#PowerPlatformTip 92: 'Free PDF Tools in PowerAutomate'"
 date: 2023-12-08
 last_modified_at: 2026-07-09
 categories:
@@ -15,7 +15,7 @@ tags:
   - Encodian
   - Muhimbi
   - Cloudmersive
-excerpt: "Discover the best free PDF tools for Power Automate—compare features, integrations, and value to automate document workflows without extra cost."
+excerpt: "Discover the best free PDF tools for Power Automate, compare features, integrations, and value to automate document workflows without extra cost."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -23,7 +23,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Compare the free tiers of PDF connectors—Adobe PDF Services, Encodian, Muhimbi, and Cloudmersive—to automate PDF tasks in Power Automate at no cost.
+> **TL;DR:** Compare the free tiers of PDF connectors, Adobe PDF Services, Encodian, Muhimbi, and Cloudmersive, to automate PDF tasks in Power Automate at no cost.
 
 ## 💡 Challenge
 Navigating through the maze of free PDF tool offerings can be daunting.
@@ -59,7 +59,7 @@ The free tiers of these tools provide a variety of functionalities, making them 
 ## 🛠️ FAQ
 **1. Which PDF tool offers the most free transactions in Power Automate?**
 
-This varies as providers adjust their plans. Historically, the Adobe PDF Services API has offered one of the more generous free document-transaction allowances—check its current pricing page to confirm.
+This varies as providers adjust their plans. Historically, the Adobe PDF Services API has offered one of the more generous free document-transaction allowances, check its current pricing page to confirm.
 
 **2. Is there a time limit on Encodian's free license after the trial?**
 

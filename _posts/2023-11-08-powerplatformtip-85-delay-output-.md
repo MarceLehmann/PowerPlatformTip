@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 85 – 'Delay Output'"
+title: "#PowerPlatformTip 85: 'Delay Output'"
 date: 2023-11-08
 last_modified_at: 2026-07-09
 categories:
@@ -14,7 +14,7 @@ tags:
   - User Experience
   - Optimization
   - Power Platform
-excerpt: "Improve Power Apps performance and reduce data traffic by enabling Delay Output in TextInput fields—optimize updates, enhance user experience, and streamline app responsiveness."
+excerpt: "Improve Power Apps performance and reduce data traffic by enabling Delay Output in TextInput fields, optimize updates, enhance user experience, and streamline app responsiveness."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -22,7 +22,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Enable Delay Output on TextInput controls so updates fire only after the user stops typing—cutting data traffic and boosting app responsiveness.
+> **TL;DR:** Enable Delay Output on TextInput controls so updates fire only after the user stops typing, cutting data traffic and boosting app responsiveness.
 
 ## 💡 Challenge
 Immediate data updates with every user input can slow down your app and overload your data sources.

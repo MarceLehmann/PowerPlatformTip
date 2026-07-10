@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 93 – 'Add RowNumbers'"
+title: "#PowerPlatformTip 93: 'Add RowNumbers'"
 date: 2023-12-11
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - User Experience
   - Canvas Apps
   - Power Platform
-excerpt: "Enhance PowerApps galleries and data sets with dynamic row numbering—improve user experience, data management, and navigation using simple, real-time techniques."
+excerpt: "Enhance PowerApps galleries and data sets with dynamic row numbering, improve user experience, data management, and navigation using simple, real-time techniques."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -21,7 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Add dynamic row numbers to any Power Apps gallery with a `With`/`ForAll`/`Sequence` formula that indexes each record in-app—no delegation issues.
+> **TL;DR:** Add dynamic row numbers to any Power Apps gallery with a `With`/`ForAll`/`Sequence` formula that indexes each record in-app, no delegation issues.
 
 ## 💡 Challenge
 Incorporating a row number feature in PowerApps galleries and other elements can significantly enhance user interaction and data management. However, understanding how and where this operation is executed is vital.
