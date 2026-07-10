@@ -21,6 +21,22 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+faq:
+  - question: "Why did my Power App become slow when updating multiple records?"
+    answer: "When you wrap Patch inside ForAll, each iteration triggers a separate API call. Many records means many calls, which slows performance."
+  - question: "How does swapping ForAll and Patch improve performance?"
+    answer: "Moving ForAll inside Patch batches all record updates into a single call, reducing the total number of API calls and speeding up execution."
+  - question: "How can I prevent unintended record creation during Patch?"
+    answer: "Filter your items to only include IDs already in the target data source (e.g. Filter(GalleryName.AllItems, ID in SharePointList.ID)) so Patch updates existing records only."
+howto:
+  name: "How to optimize bulk updates with ForAll and Patch in Power Apps"
+  steps:
+    - name: "Review the original formula"
+      text: "ForAll wrapped around Patch — one call per record."
+    - name: "Rearrange for batch updates"
+      text: "Put ForAll inside a single Patch."
+    - name: "Handle missing IDs"
+      text: "Patch creates new records if IDs don't exist. Filter out invalid IDs before running Patch if you want to avoid unintended creations."
 ---
 
 > **TL;DR:** Speed up bulk updates in Power Apps by putting `ForAll` inside `Patch` so records update in one batched call.

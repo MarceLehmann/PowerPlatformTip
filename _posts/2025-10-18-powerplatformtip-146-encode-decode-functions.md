@@ -21,6 +21,19 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+faq:
+  - question: >-
+      Why do my HTTP requests fail with "invalid JSON" even though the JSON looks correct?
+    answer: >-
+      The issue is often unescaped double quotes in dynamic values that break JSON syntax. For URL parameters, use encodeUriComponent(). For JSON request bodies, use replace() to escape quotes: `replace(variables('text'), '"', '\"')`. Remember: quotes have special meaning in both JSON and Power Automate expressions.
+  - question: >-
+      How do I handle text with apostrophes in Power Automate OData filter queries?
+    answer: >-
+      Use the replace() expression to double apostrophes: `replace(varTitle,'''','''''')`. This escapes the apostrophe so `'Tom's Diner'` becomes `'Tom''s Diner'` in the query. Two apostrophes together are interpreted as a single apostrophe in the data. NEVER use encodeUriComponent() for OData filters as it encodes the filter syntax itself and breaks the query.
+  - question: >-
+      What's the difference between encodeUriComponent() for URLs vs. JSON escaping for request bodies?
+    answer: >-
+      Use encodeUriComponent() only for URL parameters and query strings - it converts characters to %XX format. For JSON in HTTP request bodies, use replace() with backslash escaping: `replace(text, '"', '\"')`. URL encoding and JSON escaping serve different purposes and are not interchangeable.
 ---
 
 > **TL;DR:** Encode special characters in Power Platform – `EncodeUrl`/`EncodeHTML` in Power Apps, `encodeUriComponent`/`decodeUriComponent` in flows, and double apostrophes for OData filters.

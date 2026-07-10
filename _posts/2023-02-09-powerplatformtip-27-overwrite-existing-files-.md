@@ -20,6 +20,23 @@ header:
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+faq:
+  - question: "Why is the Overwrite option hidden by default?"
+    answer: "Microsoft enables chunking by default to support large file uploads. Since chunked uploads can't overwrite, the toggle is hidden until you disable chunking."
+  - question: "What happens if my file is too large with chunking off?"
+    answer: "The flow can fail with a size limit error. For large files, keep chunking enabled and use a delete-then-create pattern instead."
+  - question: "Does overwriting preserve sharing permissions?"
+    answer: "Yes, overwriting maintains existing sharing links, permissions, and metadata. The file ID stays the same."
+  - question: "Can I use this for OneDrive too?"
+    answer: "OneDrive for Business has the Overwrite toggle available by default – no settings hack needed there!"
+howto:
+  name: "How to overwrite existing files in SharePoint with Power Automate"
+  steps:
+    - text: "Open your Create File action in Power Automate."
+    - text: "Click Settings (top right of the action)."
+    - text: "Scroll to the Content Transfer section."
+    - text: "Set Allow Chunking to Off."
+    - text: "Close Settings – the Overwrite toggle now appears in your action!"
 ---
 
 > **TL;DR:** Turn off 'Allow Chunking' in the SharePoint Create File action's settings to unlock the hidden Overwrite toggle.
