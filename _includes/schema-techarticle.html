@@ -50,32 +50,23 @@
     "Power Apps Formula Language"
   ],
   "softwareApplication": [
-    {% if page.tags contains 'Power Apps' or page.tags contains 'powerapps' %}
+    {%- assign _apps = "" -%}
+    {%- if page.tags contains 'Power Apps' or page.tags contains 'powerapps' -%}{%- assign _apps = _apps | append: '||Microsoft Power Apps' -%}{%- endif -%}
+    {%- if page.tags contains 'Power Automate' or page.tags contains 'powerautomate' -%}{%- assign _apps = _apps | append: '||Microsoft Power Automate' -%}{%- endif -%}
+    {%- if page.tags contains 'Copilot Studio' or page.tags contains 'copilotstudio' -%}{%- assign _apps = _apps | append: '||Microsoft Copilot Studio' -%}{%- endif -%}
+    {%- assign _apps = _apps | remove_first: '||' | split: '||' -%}
+    {%- for _a in _apps -%}
     {
       "@type": "SoftwareApplication",
-      "name": "Microsoft Power Apps",
+      "name": "{{ _a }}",
       "applicationCategory": "BusinessApplication"
-    },
-    {% endif %}
-    {% if page.tags contains 'Power Automate' or page.tags contains 'powerautomate' %}
-    {
-      "@type": "SoftwareApplication",
-      "name": "Microsoft Power Automate",
-      "applicationCategory": "BusinessApplication"
-    },
-    {% endif %}
-    {% if page.tags contains 'Copilot Studio' or page.tags contains 'copilotstudio' %}
-    {
-      "@type": "SoftwareApplication",
-      "name": "Microsoft Copilot Studio",
-      "applicationCategory": "BusinessApplication"
-    }
-    {% endif %}
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
   ],
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": "https://schema.org/ReadAction",
-    "userInteractionCount": "{{ page.views | default: 0 }}"
+    "userInteractionCount": {{ page.views | default: 0 }}
   }
 }
 </script>

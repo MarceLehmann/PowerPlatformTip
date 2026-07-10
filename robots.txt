@@ -13,11 +13,11 @@ Disallow: /404
 Disallow: /page*/
 Disallow: /page/
 Disallow: /assets/js/
-Disallow: /CONTENT/
-Disallow: /DOCS/
-Disallow: /SOCIALMEDIA/
-Disallow: /GOOGLESEARCHCONSOLE/
-Disallow: /NEWOPTIMIZEDPOSTS/
+
+# NOTE: Internal working folders (CONTENT, DOCS, SOCIALMEDIA, GOOGLESEARCHCONSOLE,
+# NEWOPTIMIZEDPOSTS, SEO reports) are no longer published (excluded in _config.yml)
+# and now return 404. They are intentionally NOT disallowed here so Googlebot can
+# re-crawl, see the 404, and drop them from the index ("Crawled - currently not indexed").
 
 # Block utility pages (keine eigenständigen Inhalte)
 Disallow: /categories/
