@@ -1,7 +1,7 @@
 ---
 title: "#PowerPlatformTip 145 – 'Power Platform Tools'"
-date: 2025-11-25
-last_modified_at: 2026-07-09
+date: 2025-11-01
+last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatformTip
