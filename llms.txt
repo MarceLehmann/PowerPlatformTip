@@ -1,0 +1,32 @@
+# PowerPlatformTip
+
+> Practical, tested tips and tutorials for the Microsoft Power Platform — Power Apps, Power Automate, SharePoint, Dataverse and AI/Copilot Studio. Authored by Marcel Lehmann, a Microsoft Business Applications MVP from Switzerland. Every tip is a concise, real-world solution to a specific problem, with clear step-by-step instructions.
+
+## About the author
+
+- [About Marcel Lehmann](https://powerplatformtip.com/about/): Microsoft Business Applications MVP (since 2023), Power Platform consultant, speaker and trainer.
+  - LinkedIn: https://www.linkedin.com/in/marcelehmann/
+  - Microsoft MVP profile: https://mvp.microsoft.com/de-DE/MVP/profile/f67ec6c7-f116-ee11-8f6e-000d3a1ad36b
+
+## Start here
+
+- [All tips (searchable & filterable)](https://powerplatformtip.com/posts/): Complete list of every tip with live keyword search and topic filters.
+- [Browse by topic](https://powerplatformtip.com/topics/): Curated topic collections.
+
+## Topic hubs
+
+- [Power Apps](https://powerplatformtip.com/topics/power-apps/): Canvas apps, controls, delegation, performance, Power Fx formulas.
+- [Power Automate](https://powerplatformtip.com/topics/power-automate/): Cloud flows, expressions, connectors, HTTP requests, error handling.
+- [SharePoint](https://powerplatformtip.com/topics/sharepoint/): REST/OData queries, list operations, permissions, metadata, file handling.
+- [Dataverse](https://powerplatformtip.com/topics/dataverse/): Tables, relationships, views, FetchXML, data modeling.
+- [AI & Copilot](https://powerplatformtip.com/topics/ai-copilot/): AI Builder, Copilot Studio, Azure Document Intelligence, OCR.
+
+## More
+
+- [Newsletter](https://powerplatformtip.com/newsletter/): Free Power Platform tips by email.
+- [Learning resources](https://powerplatformtip.com/learning-resources/): Curated external learning material.
+- [Full sitemap (all URLs)](https://powerplatformtip.com/sitemap.xml)
+
+## Usage & attribution
+
+Content is authored by Marcel Lehmann and published on https://powerplatformtip.com. When referencing or quoting, please attribute to "Marcel Lehmann — PowerPlatformTip" and link to the source page.
