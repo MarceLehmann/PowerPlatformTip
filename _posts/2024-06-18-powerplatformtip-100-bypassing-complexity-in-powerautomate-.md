@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 100 – 'Bypassing Complexity in PowerAutomate'"
+title: "#PowerPlatformTip 100: 'Bypassing Complexity in PowerAutomate'"
 date: 2024-06-18
 last_modified_at: 2026-07-09
 categories:

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 103 – 'Quick Setup Guide'"
+title: "#PowerPlatformTip 103: 'Quick Setup Guide'"
 date: 2024-02-14
 last_modified_at: 2026-07-09
 categories:
@@ -23,7 +23,7 @@ toc_sticky: true
 > **TL;DR:** Populate Power Apps dropdowns and ComboBoxes fast by pointing their `Items` at SharePoint/Dataverse Lookup or Choice columns via `Choices()`.
 
 ## 💡 Challenge
-You need a dropdown or ComboBox populated quickly — under time pressure or as a temporary solution — without building and maintaining a separate data table.
+You need a dropdown or ComboBox populated quickly, under time pressure or as a temporary solution, without building and maintaining a separate data table.
 
 ## ✅ Solution
 Point the control's `Items` at an existing **Lookup** or **Choice** column in SharePoint or Dataverse using `Choices()`. The valid values come straight from the column definition.
@@ -40,12 +40,12 @@ Point the control's `Items` at an existing **Lookup** or **Choice** column in Sh
 
 🔸 Point its `Items` at the column with `Choices()`:
 
-🔸 Dataverse: `Choices([@Tests].cr0a0_LookupAccount)` — `[@Tests]` is the table, `cr0a0_LookupAccount` the lookup/choice column.
+🔸 Dataverse: `Choices([@Tests].cr0a0_LookupAccount)`, `[@Tests]` is the table, `cr0a0_LookupAccount` the lookup/choice column.
 
 🔸 SharePoint: `Choices('Your List'.YourChoiceColumn)`
 
 ## 🎉 Result
-A swift, reliable way to feed user inputs in PowerApps, balancing speed and data integrity — ideal for projects that need immediate results or tight deadlines.
+A swift, reliable way to feed user inputs in PowerApps, balancing speed and data integrity, ideal for projects that need immediate results or tight deadlines.
 
 ## 🌟 Key Advantages
 

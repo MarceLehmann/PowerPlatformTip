@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 99 – 'Timesaver Toolkits – ChatGPT and Flow'"
+title: "#PowerPlatformTip 99: 'Timesaver Toolkits, ChatGPT and Flow'"
 date: 2024-01-08
 last_modified_at: 2026-07-09
 categories:
@@ -14,7 +14,7 @@ tags:
   - Voice Input
   - URL Encoding
   - Flow
-excerpt: "Boost productivity by combining ChatGPT and Power Automate—dictate ideas, automate task structuring, and streamline workflows with AI-powered toolkits and flows."
+excerpt: "Boost productivity by combining ChatGPT and Power Automate, dictate ideas, automate task structuring, and streamline workflows with AI-powered toolkits and flows."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -33,7 +33,7 @@ Combining your preferred AI tool (here, ChatGPT) with Power Automate allows for 
 ## 🔧 How It's Done
 Here's how to do it:
 1. Initiate with AI Chat  
-   🔸 Use a prompt in ChatGPT to structure and URL-encode information into three sections—Title, Type (Task, Mail), and Main Text—then append it to your flow trigger URL.  
+   🔸 Use a prompt in ChatGPT to structure and URL-encode information into three sections, Title, Type (Task, Mail), and Main Text, then append it to your flow trigger URL.  
    🔸 URL placeholder: `<YOUR FLOWTRIGGER URL>`
 2. Customize  
    🔸 Adjust the prompt to fit your language and specific trigger URL.  

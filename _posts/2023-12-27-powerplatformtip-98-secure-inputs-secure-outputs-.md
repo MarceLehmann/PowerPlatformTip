@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 98 – 'Secure Inputs / Secure Outputs'"
+title: "#PowerPlatformTip 98: 'Secure Inputs / Secure Outputs'"
 date: 2023-12-27
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Compliance
   - Workflow Security
   - Flow Logs
-excerpt: "Protect sensitive data in Power Automate by enabling Secure Inputs and Secure Outputs—mask confidential information in flow logs, enhance compliance, and secure workflows."
+excerpt: "Protect sensitive data in Power Automate by enabling Secure Inputs and Secure Outputs, mask confidential information in flow logs, enhance compliance, and secure workflows."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -24,7 +24,7 @@ toc_sticky: true
 > **TL;DR:** Toggle Secure Inputs and Secure Outputs in an action's settings to mask sensitive data in Power Automate run history and logs.
 
 ## 💡 Challenge
-By default, the data processed by an action—passwords, tokens, or personal details—appears in plain text in the flow's run history. Anyone who can open the run can see this confidential information.
+By default, the data processed by an action, passwords, tokens, or personal details, appears in plain text in the flow's run history. Anyone who can open the run can see this confidential information.
 
 ## ✅ Solution
 Enable **Secure Inputs** and/or **Secure Outputs** on the relevant action. This masks the action's data in the run history so it is no longer visible to anyone reviewing the logs.

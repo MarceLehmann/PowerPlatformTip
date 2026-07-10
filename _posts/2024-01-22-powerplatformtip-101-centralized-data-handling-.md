@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 101 – 'Centralized Data Handling'"
+title: "#PowerPlatformTip 101: 'Centralized Data Handling'"
 date: 2024-01-22
 last_modified_at: 2026-07-09
 categories:
@@ -22,7 +22,7 @@ toc_sticky: true
 > **TL;DR:** Centralize Power Apps logic with global variables and Named Formulas so you maintain it in one place instead of duplicating it across buttons and screens.
 
 ## 💡 Challenge
-You need the same piece of logic — say, resolving a supervisor's email from the current user — in several places across your app. Embedding it in every button and screen leads to duplication that's hard to keep in sync.
+You need the same piece of logic, say, resolving a supervisor's email from the current user, in several places across your app. Embedding it in every button and screen leads to duplication that's hard to keep in sync.
 
 ## ✅ Solution
 Store the input once in a global variable and derive everything else with **Named Formulas**. The logic lives in a single place and recalculates automatically, so buttons and screens simply reference the result.
@@ -31,7 +31,7 @@ Store the input once in a global variable and derive everything else with **Name
 
 **1. Store the input centrally** in a global variable:
 
-🔸 `Set(gvUserEmail, User().Email)` — e.g. in `App.OnStart`.
+🔸 `Set(gvUserEmail, User().Email)`, e.g. in `App.OnStart`.
 
 **2. Derive dependent values with a Named Formula** (App → Formulas):
 
@@ -71,6 +71,6 @@ Named Formulas let you define reusable expressions in your app's global scope, s
 Global variables (`Set()`) persist across screens, centralizing logic, whereas context variables (`UpdateContext()`) are local to a single screen.
 
 **3. Can I apply this centralized approach to other scenarios?**
-Yes — data filtering, calculations, formatting and more, avoiding duplication across controls and screens.
+Yes, data filtering, calculations, formatting and more, avoiding duplication across controls and screens.
 
 ---

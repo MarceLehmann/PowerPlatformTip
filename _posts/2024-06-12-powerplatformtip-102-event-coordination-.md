@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 102 – 'Event Coordination'"
+title: "#PowerPlatformTip 102: 'Event Coordination'"
 date: 2024-06-12
 last_modified_at: 2026-07-09
 categories:
@@ -11,7 +11,7 @@ tags:
   - EventManagement
   - Calendar
   - PowerPlatformTip
-excerpt: "Silently manage event attendees in Power Automate using Microsoft Graph API—add guests without notifications and keep attendee lists private for secure event coordination."
+excerpt: "Silently manage event attendees in Power Automate using Microsoft Graph API, add guests without notifications and keep attendee lists private for secure event coordination."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -22,7 +22,7 @@ toc_sticky: true
 > **TL;DR:** Use the Microsoft Graph Update Event call with `hideAttendees: true` to add event attendees silently and keep the guest list private.
 
 ## 💡 Challenge
-When you manage event attendees from Power Automate, the standard approach notifies everyone on every change — and by default all attendees can see the full guest list. That's noisy and, for sensitive events, a privacy problem.
+When you manage event attendees from Power Automate, the standard approach notifies everyone on every change, and by default all attendees can see the full guest list. That's noisy and, for sensitive events, a privacy problem.
 
 ## ✅ Solution
 Update the event directly through the Microsoft Graph API. Setting the event's `hideAttendees` property to `true` keeps the guest list private, and writing the merged `attendees` array via a PATCH lets you add people without the usual notification flood.
@@ -54,7 +54,7 @@ Update the event directly through the Microsoft Graph API. Setting the event's `
 🔸 [EventCoordination.json](https://github.com/MarceLehmann/CodeSnippets/blob/main/EventCoordination.json)
 
 ## 🎉 Result
-Attendees are added or updated quietly, keeping notification noise to a minimum, and the guest list stays private — participants only see their own RSVP.
+Attendees are added or updated quietly, keeping notification noise to a minimum, and the guest list stays private, participants only see their own RSVP.
 
 ## 🌟 Key Advantages
 

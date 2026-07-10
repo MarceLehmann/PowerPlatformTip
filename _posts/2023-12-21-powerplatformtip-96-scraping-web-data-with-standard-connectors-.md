@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 96 – 'Scraping Web Data with Standard Connectors'"
+title: "#PowerPlatformTip 96: 'Scraping Web Data with Standard Connectors'"
 date: 2023-12-21
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Integration
   - Data Extraction
   - No Premium Connectors
-excerpt: "Scrape and store website content in Power Automate using the OneDrive connector—fetch HTML data cost-effectively, automate extraction, and avoid premium connectors."
+excerpt: "Scrape and store website content in Power Automate using the OneDrive connector, fetch HTML data cost-effectively, automate extraction, and avoid premium connectors."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -21,7 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Fetch and store website content in Power Automate with OneDrive's "Upload from URL" action—no premium connectors needed.
+> **TL;DR:** Fetch and store website content in Power Automate with OneDrive's "Upload from URL" action, no premium connectors needed.
 
 ## 💡 Challenge
 Fetching data from specific websites and storing it in Power Automate without premium connectors can be challenging. How to do this cost-effectively?

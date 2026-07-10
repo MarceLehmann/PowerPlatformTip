@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 97 – 'Enhanced Pagination'"
+title: "#PowerPlatformTip 97: 'Enhanced Pagination'"
 date: 2023-12-22
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Data Retrieval
   - Performance
   - Integration
-excerpt: "Overcome default item limits in Power Automate by enabling enhanced pagination for Excel and SharePoint—retrieve more data, improve performance, and streamline integrations."
+excerpt: "Overcome default item limits in Power Automate by enabling enhanced pagination for Excel and SharePoint, retrieve more data, improve performance, and streamline integrations."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 95 – 'Optimized SharePoint Queries'"
+title: "#PowerPlatformTip 95: 'Optimized SharePoint Queries'"
 date: 2023-12-19
 last_modified_at: 2026-07-09
 categories:
@@ -13,7 +13,7 @@ tags:
   - Data Filtering
   - Workflow Automation
   - Power Platform
-excerpt: "Optimize SharePoint queries in Power Automate using OData filter options—improve data filtering, workflow efficiency, and minimize processing for large lists."
+excerpt: "Optimize SharePoint queries in Power Automate using OData filter options, improve data filtering, workflow efficiency, and minimize processing for large lists."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
