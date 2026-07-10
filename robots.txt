@@ -19,10 +19,10 @@ Disallow: /assets/js/
 # and now return 404. They are intentionally NOT disallowed here so Googlebot can
 # re-crawl, see the 404, and drop them from the index ("Crawled - currently not indexed").
 
-# Block utility pages (keine eigenständigen Inhalte)
-Disallow: /categories/
-Disallow: /tags/
-Disallow: /thank-you/
+# NOTE: /categories/, /tags/ and /thank-you/ are set to "noindex, follow" in their
+# front matter and are excluded from the sitemap. They are intentionally NOT
+# disallowed here so Googlebot can crawl them and honor the noindex directive
+# (a disallowed page's noindex is never seen, so it lingers in the index).
 
 # Allow valuable resources
 Allow: /assets/css/
