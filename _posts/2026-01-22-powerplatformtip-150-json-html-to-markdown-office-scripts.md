@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 150 – 'JSON & HTML to Markdown with Office Scripts'"
+title: "#PowerPlatformTip 150: 'JSON & HTML to Markdown with Office Scripts'"
 date: 2026-01-22
 last_modified_at: 2026-07-09
 categories:
@@ -12,7 +12,7 @@ tags:
   - HTML
   - Markdown
   - PowerPlatformTip
-excerpt: "Turn JSON arrays and HTML into clean Markdown right inside a flow — with pure code, no AI. Two small Office Scripts do the formatting, Power Automate passes the data in and writes the Markdown to SharePoint, Teams or a file."
+excerpt: "Turn JSON arrays and HTML into clean Markdown right inside a flow, with pure code, no AI. Two small Office Scripts do the formatting, Power Automate passes the data in and writes the Markdown to SharePoint, Teams or a file."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -20,23 +20,23 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Convert JSON arrays and HTML into clean Markdown inside a flow with two deterministic Office Scripts — pure code, no AI and no premium capacity.
+> **TL;DR:** Convert JSON arrays and HTML into clean Markdown inside a flow with two deterministic Office Scripts, pure code, no AI and no premium capacity.
 
 You get structured JSON from an API or SharePoint, or raw HTML from an email or web source, and you need clean Markdown for documentation, a Teams post or a wiki page.
 No need for AI Builder or Copilot: two small Office Scripts convert both formats deterministically, every single time.
 Power Automate stays the orchestrator; the scripts do the formatting.
 
 ## 💡 Challenge
-Building Markdown inside a flow usually means nested `Apply to each` loops and fragile string concatenation — for JSON tables and even more so for HTML, where you'd otherwise reach for an AI action that is non-deterministic and can cost premium capacity.
+Building Markdown inside a flow usually means nested `Apply to each` loops and fragile string concatenation, for JSON tables and even more so for HTML, where you'd otherwise reach for an AI action that is non-deterministic and can cost premium capacity.
 You want reusable steps that take JSON or HTML in and return valid Markdown out, with predictable results.
 
 ## ✅ Solution
 Use Office Scripts as pure formatting engines. One script turns a JSON array into a Markdown table; a second turns HTML into Markdown using deterministic string processing.
-Power Automate passes the input via the **Run script** action and receives the Markdown as the dynamic content named `result` — no AI involved.
+Power Automate passes the input via the **Run script** action and receives the Markdown as the dynamic content named `result`, no AI involved.
 
 ## 🔧 How it's done
 
-1) **Create Script A – JSON to Markdown table**
+1) **Create Script A, JSON to Markdown table**
    - In Excel on the web, open **Automate > New Script**, paste the code below and save it as `JsonToMarkdown`.
    🔸 The `object[]` parameter makes the JSON show up as an input in Power Automate.
    🔸 The `: string` return type surfaces the Markdown as the `result` dynamic content.
@@ -64,7 +64,7 @@ Power Automate passes the input via the **Run script** action and receives the M
    }
    ```
 
-2) **Create Script B – HTML to Markdown**
+2) **Create Script B, HTML to Markdown**
    - Add a second script, paste the code below and save it as `HtmlToMarkdown`.
    🔸 This is a deterministic string converter (Office Scripts have no DOM parser). It handles headings, bold/italic, links, images, lists, code, blockquotes and paragraphs.
 
@@ -141,22 +141,22 @@ Power Automate passes the input via the **Run script** action and receives the M
    🔸 Write it to a `.md` file (Create file), post it to a **Teams** channel, or add it to a SharePoint page.
 
 ## 🎉 Result
-JSON arrays and HTML both become clean, valid Markdown in a single reusable flow step — deterministically, with no AI action and no premium capacity.
+JSON arrays and HTML both become clean, valid Markdown in a single reusable flow step, deterministically, with no AI action and no premium capacity.
 Run it a hundred times and you get the exact same output every time.
 
 ## 🌟 Key Advantages
 
-🔸 **No AI, fully deterministic**: pure TypeScript, identical output on every run — nothing to review or hallucinate.
+🔸 **No AI, fully deterministic**: pure TypeScript, identical output on every run, nothing to review or hallucinate.
 
 🔸 **Two formats, one pattern**: JSON tables and HTML content handled by the same Run script mechanism.
 
-🔸 **No premium**: standard Excel Online (Business) connector — no AI Builder, no Copilot licence.
+🔸 **No premium**: standard Excel Online (Business) connector, no AI Builder, no Copilot licence.
 
 🔸 **Reusable**: drop the scripts into any flow for docs, Teams posts or wiki pages.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 37 – Table to JSON](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-37-table-to-json/) — the reverse direction: turn a two-column table into a JSON record before you format it.
-- [#PowerPlatformTip 124 – Recognize Plain Text File Formats](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-124-recognize-plain-text-file-formats/) — read `.md` and `.json` files directly with Get File Content, without Base64 decoding.
+- [#PowerPlatformTip 37: Table to JSON](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-37-table-to-json/), the reverse direction: turn a two-column table into a JSON record before you format it.
+- [#PowerPlatformTip 124: Recognize Plain Text File Formats](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-124-recognize-plain-text-file-formats/), read `.md` and `.json` files directly with Get File Content, without Base64 decoding.
 
 ## 🛠️ FAQ
 

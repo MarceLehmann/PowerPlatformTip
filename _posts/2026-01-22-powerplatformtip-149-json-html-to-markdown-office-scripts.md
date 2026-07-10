@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 150 – moved"
+title: "#PowerPlatformTip 150: moved"
 date: 2026-01-22
 categories:
   - Article
@@ -9,4 +9,4 @@ redirect_to:
 sitemap: false
 ---
 
-This tip has moved to [#PowerPlatformTip 150 – JSON & HTML to Markdown with Office Scripts](/article/powerplatformtip/powerplatformtip-150-json-html-to-markdown-office-scripts/).
+This tip has moved to [#PowerPlatformTip 150: JSON & HTML to Markdown with Office Scripts](/article/powerplatformtip/powerplatformtip-150-json-html-to-markdown-office-scripts/).

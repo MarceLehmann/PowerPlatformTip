@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 149 – 'Approvals to a Shared Mailbox'"
+title: "#PowerPlatformTip 149: 'Approvals to a Shared Mailbox'"
 date: 2026-01-15
 last_modified_at: 2026-07-09
 categories:
@@ -12,7 +12,7 @@ tags:
   - SharedMailbox
   - UserContext
   - PowerPlatformTip
-excerpt: "Sending a Power Automate approval to a shared mailbox looks fine – until someone clicks. The 'Start and wait for an approval' task is bound to a single identity, so a delegated user tries to complete it in their own context and it fails. The fix: use 'Send email with options' so any member of the shared mailbox can respond."
+excerpt: "Sending a Power Automate approval to a shared mailbox looks fine, until someone clicks. The 'Start and wait for an approval' task is bound to a single identity, so a delegated user tries to complete it in their own context and it fails. The fix: use 'Send email with options' so any member of the shared mailbox can respond."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -22,15 +22,15 @@ toc_sticky: true
 
 > **TL;DR:** Send Power Automate approvals to a shared mailbox with 'Send email with options' so any delegated member can respond via `SelectedOption`.
 
-**The trap:** You assign a *Start and wait for an approval* action to a shared mailbox so the whole team can decide. The email arrives, everyone sees it – but when a delegated user clicks **Approve**, nothing sticks. The approval task belongs to one identity and the clicking user isn't the assigned approver, so the action tries to complete in the wrong context.
+**The trap:** You assign a *Start and wait for an approval* action to a shared mailbox so the whole team can decide. The email arrives, everyone sees it, but when a delegated user clicks **Approve**, nothing sticks. The approval task belongs to one identity and the clicking user isn't the assigned approver, so the action tries to complete in the wrong context.
 
-**The fix:** Replace the standard approval with the **Send email with options** action from Office 365 Outlook. The actionable email lands in the shared mailbox and any member can respond – you capture the answer with the `SelectedOption` token.
+**The fix:** Replace the standard approval with the **Send email with options** action from Office 365 Outlook. The actionable email lands in the shared mailbox and any member can respond, you capture the answer with the `SelectedOption` token.
 
 ## 💡 Challenge
-The standard **Start and wait for an approval** action creates an approval task bound to the identity in the **Assigned to** field, surfacing in that identity's Approvals center and Outlook actionable card. Assign it to a shared mailbox and the task ties to the mailbox identity – but the people who work the mailbox are *delegated* users with their own accounts. When one clicks **Approve** or **Reject**, the response is attempted in their personal context, which was never the assigned approver, so the decision doesn't register. Reassigning is possible, but only manually from the Approvals center and per task – not something a shared mailbox can do cleanly at scale.
+The standard **Start and wait for an approval** action creates an approval task bound to the identity in the **Assigned to** field, surfacing in that identity's Approvals center and Outlook actionable card. Assign it to a shared mailbox and the task ties to the mailbox identity, but the people who work the mailbox are *delegated* users with their own accounts. When one clicks **Approve** or **Reject**, the response is attempted in their personal context, which was never the assigned approver, so the decision doesn't register. Reassigning is possible, but only manually from the Approvals center and per task, not something a shared mailbox can do cleanly at scale.
 
 ## ✅ Solution
-Swap the Approvals action for the **Send email with options** action (Office 365 Outlook). It sends a normal actionable email with voting buttons defined in the **User Options** field (for example `Approve, Reject`) straight into the shared mailbox. Any team member with access can click a button, and the flow reads the answer from the **SelectedOption** dynamic value – no identity-bound approval task, no user-context mismatch.
+Swap the Approvals action for the **Send email with options** action (Office 365 Outlook). It sends a normal actionable email with voting buttons defined in the **User Options** field (for example `Approve, Reject`) straight into the shared mailbox. Any team member with access can click a button, and the flow reads the answer from the **SelectedOption** dynamic value, no identity-bound approval task, no user-context mismatch.
 
 ## 🔧 How It's Done
 
@@ -40,7 +40,7 @@ Swap the Approvals action for the **Send email with options** action (Office 365
 
 **2. Add the "Send email with options" action**
 
-🔸 In the **Add an action** search box type `send email` and pick **Office 365 Outlook – Send email with options**.
+🔸 In the **Add an action** search box type `send email` and pick **Office 365 Outlook, Send email with options**.
 
 **3. Fill in the fields**
 
@@ -56,7 +56,7 @@ Swap the Approvals action for the **Send email with options** action (Office 365
 
 **5. Build the branches**
 
-🔸 In **If yes / If no**, add your follow-up logic (update SharePoint, notify the requester, etc.). The clicked answer lives in **SelectedOption** – always persist or act on it, otherwise the decision is lost.
+🔸 In **If yes / If no**, add your follow-up logic (update SharePoint, notify the requester, etc.). The clicked answer lives in **SelectedOption**, always persist or act on it, otherwise the decision is lost.
 
 **6. (Optional) Log who responded**
 
@@ -67,7 +67,7 @@ The decision request reaches the whole team through the shared mailbox, and **an
 
 ## 🌟 Key Advantages
 
-🔸 **Context-proof:** no approval task tied to one identity – every delegated mailbox user can respond.
+🔸 **Context-proof:** no approval task tied to one identity, every delegated mailbox user can respond.
 
 🔸 **Team-friendly:** perfect for support, finance, or dispatch mailboxes where whoever is available decides.
 
@@ -83,10 +83,10 @@ The *Start and wait for an approval* task is bound to the identity in the **Assi
 The action returns the clicked value in the **SelectedOption** dynamic token. Add a Condition (or Switch) on **SelectedOption** to branch your flow, and always store or act on the value.
 
 **3. Do I lose the Approvals center history with this approach?**
-Yes – Send email with options doesn't create an entry in the Approvals center. If you need a tracked decision log, write the responder and outcome to a SharePoint list or Dataverse table yourself.
+Yes, Send email with options doesn't create an entry in the Approvals center. If you need a tracked decision log, write the responder and outcome to a SharePoint list or Dataverse table yourself.
 
 ---
 
 ## 🔗 Related Tips
 
-🔸 [#PowerPlatformTip 114 – Send Approvals to External Recipients](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-114-send-approvals-to-external-recipients/)
+🔸 [#PowerPlatformTip 114: Send Approvals to External Recipients](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-114-send-approvals-to-external-recipients/)

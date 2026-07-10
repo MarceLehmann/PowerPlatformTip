@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 152 – 'Build a Time Picker with One Line using Sequence()'"
+title: "#PowerPlatformTip 152: 'Build a Time Picker with One Line using Sequence()'"
 date: 2026-02-19
 last_modified_at: 2026-07-09
 categories:
@@ -11,7 +11,7 @@ tags:
   - Sequence
   - TimePicker
   - PowerPlatformTip
-excerpt: "Need a time picker in Power Apps? Skip the clunky hour/minute controls. A single Sequence() line fills a dropdown with every 15-minute slot from 00:00 to 23:45 — and the same trick powers alphabets, date ranges, color palettes and more."
+excerpt: "Need a time picker in Power Apps? Skip the clunky hour/minute controls. A single Sequence() line fills a dropdown with every 15-minute slot from 00:00 to 23:45, and the same trick powers alphabets, date ranges, color palettes and more."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -19,14 +19,14 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Fill a Power Apps dropdown with every 15-minute time slot using one `Sequence()` + `ForAll()` line — no static data table to maintain.
+> **TL;DR:** Fill a Power Apps dropdown with every 15-minute time slot using one `Sequence()` + `ForAll()` line, no static data table to maintain.
 
 Building a time picker in Power Apps usually means stacking hour and minute dropdowns or fiddling with input masks.
-There's a much cleaner way: the **`Sequence()`** function generates a table of numbers you can transform into anything — including a full list of time slots — in a single line of Power Fx.
+There's a much cleaner way: the **`Sequence()`** function generates a table of numbers you can transform into anything, including a full list of time slots, in a single line of Power Fx.
 Credit for the neat time-picker one-liner goes to Matthew Devaney, who popularised this pattern.
 
 ## 💡 Challenge
-You want users to pick a time in 15-minute steps. The usual approaches — two linked dropdowns for hours and minutes, or a free-text field with validation — are clunky, error-prone, and take real effort to build and maintain.
+You want users to pick a time in 15-minute steps. The usual approaches, two linked dropdowns for hours and minutes, or a free-text field with validation, are clunky, error-prone, and take real effort to build and maintain.
 
 ## ✅ Solution
 Feed a **Dropdown** with a `Sequence()`-generated table. `Sequence(Records, Start, Step)` returns a single-column table (column name **Value**) of sequential numbers. Wrap it in `ForAll()` to turn each number into a `Time` value, and you get every quarter-hour of the day with zero manual data.
@@ -51,7 +51,7 @@ ForAll(Sequence(96), Time(0, Value * 15 - 15, 0))
 ForAll(Sequence(96), Time(0, Value * 15 - 15, 0))
 ```
 
-🔸 `Sequence(96)` yields 1–96. `Value * 15 - 15` maps those to 0, 15, 30 … 1425 minutes — exactly 00:00 through 23:45.
+🔸 `Sequence(96)` yields 1-96. `Value * 15 - 15` maps those to 0, 15, 30 … 1425 minutes, exactly 00:00 through 23:45.
 
 **3. Format the display** so users see a clean time.
 
@@ -62,7 +62,7 @@ ForAll(Sequence(96), Time(0, Value * 15 - 15, 0))
 🔸 Use it directly in a `Patch()`, a variable, or combine it with a date via `DateAdd`.
 
 ## 🎉 Result
-A fully working, scrollable time picker in 15-minute increments — built from a single formula, with no static data table to maintain. Change the interval by editing one number, and you're done.
+A fully working, scrollable time picker in 15-minute increments, built from a single formula, with no static data table to maintain. Change the interval by editing one number, and you're done.
 
 ## 🌟 Key Advantages
 
@@ -113,5 +113,5 @@ Between 0 and 50,000. Values are rounded down to the nearest whole number, and 0
 Yes. `Sequence(Records, Start, Step)` accepts a `Step` argument, and it can be negative to count down. For times, just adjust both the record count and the minute multiplier.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 84 – Tabbing in Dynamic Forms](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-84-tabbing-in-dynamic-forms/) — using `Sequence()` for reliable gallery binding.
-- [#PowerPlatformTip 93 – Add RowNumbers](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-93-add-rownumbers/) — dynamic row numbering with `Sequence()`.
+- [#PowerPlatformTip 84: Tabbing in Dynamic Forms](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-84-tabbing-in-dynamic-forms/), using `Sequence()` for reliable gallery binding.
+- [#PowerPlatformTip 93: Add RowNumbers](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-93-add-rownumbers/), dynamic row numbering with `Sequence()`.

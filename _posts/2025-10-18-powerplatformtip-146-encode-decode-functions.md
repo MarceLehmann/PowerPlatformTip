@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 146 – Encode & Decode Functions"
+title: "#PowerPlatformTip 146: Encode & Decode Functions"
 seo_title: "Encode & Decode in Power Apps & Power Automate"
 date: 2025-12-04
 last_modified_at: 2026-07-10
@@ -15,7 +15,7 @@ tags:
   - ODataFilters
   - PowerPlatformTip
 excerpt: "Passing URLs, JSON data, or text with special characters between systems? Encoding prevents quotes, apostrophes, and special characters from breaking your flows and apps by ensuring they're treated as data, not code."
-description: "Stop special characters breaking your flows. Use EncodeUrl, EncodeHTML, encodeUriComponent & decodeUriComponent — plus OData apostrophe escaping — the right way."
+description: "Stop special characters breaking your flows. Use EncodeUrl, EncodeHTML, encodeUriComponent & decodeUriComponent, plus OData apostrophe escaping, the right way."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -36,7 +36,7 @@ faq:
       Use encodeUriComponent() only for URL parameters and query strings - it converts characters to %XX format. For JSON in HTTP request bodies, use replace() with backslash escaping: `replace(text, '"', '\"')`. URL encoding and JSON escaping serve different purposes and are not interchangeable.
 ---
 
-> **TL;DR:** Encode special characters in Power Platform – `EncodeUrl`/`EncodeHTML` in Power Apps, `encodeUriComponent`/`decodeUriComponent` in flows, and double apostrophes for OData filters.
+> **TL;DR:** Encode special characters in Power Platform, `EncodeUrl`/`EncodeHTML` in Power Apps, `encodeUriComponent`/`decodeUriComponent` in flows, and double apostrophes for OData filters.
 
 ## 💡 Challenge
 
@@ -50,7 +50,7 @@ Use native encode/decode functions to convert special characters into safe escap
 
 ### Power Apps Functions
 
-**1. EncodeUrl() – encode URLs and query parameters safely**
+**1. EncodeUrl(), encode URLs and query parameters safely**
 
 🔸 Expression: `EncodeUrl("https://example.com/search?q=hello world")`
 
@@ -60,7 +60,7 @@ Use native encode/decode functions to convert special characters into safe escap
 
 🔸 Use case: `Launch(EncodeUrl("https://wa.me/?text=Check O'Neill's offer!"))`
 
-**2. EncodeHTML() – prevent HTML injection and display issues**
+**2. EncodeHTML(), prevent HTML injection and display issues**
 
 🔸 Expression: `EncodeHTML("<script>alert('test')</script>")`
 
@@ -70,7 +70,7 @@ Use native encode/decode functions to convert special characters into safe escap
 
 🔸 Use case: Display user comments safely in HTML Text controls without XSS vulnerability
 
-**3. PlainText() – strip HTML tags and decode entities**
+**3. PlainText(), strip HTML tags and decode entities**
 
 🔸 Expression: `PlainText("<p>Hello &nbsp; &quot;World&quot;</p>")`
 
@@ -88,7 +88,7 @@ Use native encode/decode functions to convert special characters into safe escap
 
 ### Power Automate Expressions
 
-**5. encodeUriComponent() – critical for URL parameters**
+**5. encodeUriComponent(), critical for URL parameters**
 
 🔸 Expression: `encodeUriComponent('How are you?')`
 
@@ -100,7 +100,7 @@ Use native encode/decode functions to convert special characters into safe escap
 
 🔸 Use case 2: Prepare query string parameters for HTTP GET requests
 
-**6. decodeUriComponent() – convert encoded data back to readable format**
+**6. decodeUriComponent(), convert encoded data back to readable format**
 
 🔸 Expression: `decodeUriComponent('https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dhello%20world')`
 
@@ -167,5 +167,5 @@ Use the replace() expression to double apostrophes: `replace(varTitle,'''','''''
 Use encodeUriComponent() only for URL parameters and query strings - it converts characters to %XX format. For JSON in HTTP request bodies, use replace() with backslash escaping: `replace(text, '"', '\"')`. URL encoding and JSON escaping serve different purposes and are not interchangeable.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 58 – HTTP Actions](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-58-http-actions/) — where proper encoding keeps requests valid.
-- [#PowerPlatformTip 121 – Filtering SharePoint File Fields with OData](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-121-filtering-sharepoint-file-fields-with-odata/) — apply apostrophe escaping in real filters.
+- [#PowerPlatformTip 58: HTTP Actions](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-58-http-actions/), where proper encoding keeps requests valid.
+- [#PowerPlatformTip 121: Filtering SharePoint File Fields with OData](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-121-filtering-sharepoint-file-fields-with-odata/), apply apostrophe escaping in real filters.

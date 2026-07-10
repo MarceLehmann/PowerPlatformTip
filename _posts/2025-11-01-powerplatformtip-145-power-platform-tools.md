@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 145 – 'Power Platform Tools'"
+title: "#PowerPlatformTip 145: 'Power Platform Tools'"
 date: 2025-11-01
 last_modified_at: 2026-07-10
 categories:
@@ -19,19 +19,19 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Speed up Power Platform dev with tools.powerplatformtip.com – a browser suite for trigger conditions, Power Fx translation and more.
+> **TL;DR:** Speed up Power Platform dev with tools.powerplatformtip.com, a browser suite for trigger conditions, Power Fx translation and more.
 
 ## 💡 Challenge
 Power Platform developers often waste valuable time wrestling with syntax errors, locale-specific formula translations, and manual JSON formatting. Switching between disparate tools or hand-crafting complex expressions like OData trigger conditions is error-prone and disrupts flow.
 
 ## ✅ Solution
-Use **Power Platform Tools** (`tools.powerplatformtip.com`) as your dedicated utility belt. It consolidates 10+ specialized tools — including a Trigger Condition Builder and SVG Colorizer — into a single interface, so you generate valid code and assets instantly without leaving your browser.
+Use **Power Platform Tools** (`tools.powerplatformtip.com`) as your dedicated utility belt. It consolidates 10+ specialized tools, including a Trigger Condition Builder and SVG Colorizer, into a single interface, so you generate valid code and assets instantly without leaving your browser.
 
 ## 🔧 How It's Done
 
 **1. Open the tools**
 
-🔸 Navigate to [tools.powerplatformtip.com](https://tools.powerplatformtip.com) and select a utility, such as the **Trigger Condition Builder** — no login or installation required.
+🔸 Navigate to [tools.powerplatformtip.com](https://tools.powerplatformtip.com) and select a utility, such as the **Trigger Condition Builder**, no login or installation required.
 
 **2. Build your logic**
 
@@ -69,5 +69,5 @@ The tools run client-side in your browser, but always avoid pasting sensitive pr
 It's optimized for standard icons and UI elements, generating the exact code string needed for Power Apps Image controls.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 11 – Trigger Condition](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-11-trigger-condition/) — the concept behind the Trigger Condition Builder.
-- [#PowerPlatformTip 119 – Web-based Editing with VS Code](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-119-web-based-editing-with-vs-code/) — another browser-based developer workflow.
+- [#PowerPlatformTip 11: Trigger Condition](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-11-trigger-condition/), the concept behind the Trigger Condition Builder.
+- [#PowerPlatformTip 119: Web-based Editing with VS Code](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-119-web-based-editing-with-vs-code/), another browser-based developer workflow.
