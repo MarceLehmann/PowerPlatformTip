@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 45 – 'Use Scopes'"
+title: "#PowerPlatformTip 45: 'Use Scopes'"
 date: 2023-04-18
 last_modified_at: 2026-07-09
 categories:

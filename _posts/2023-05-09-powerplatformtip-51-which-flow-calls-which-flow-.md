@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 51 – 'Which Flow Calls Which Flow'"
+title: "#PowerPlatformTip 51: 'Which Flow Calls Which Flow'"
 date: 2023-05-09
 last_modified_at: 2026-07-09
 categories:
@@ -28,7 +28,7 @@ toc_sticky: true
 
 ## 💡 Challenge
 
-Managing and deploying Microsoft Power Automate solutions with numerous parent–child flow relationships is complex. You need to know which flows call others to activate them in the correct order and assess the impact of any changes.
+Managing and deploying Microsoft Power Automate solutions with numerous parent-child flow relationships is complex. You need to know which flows call others to activate them in the correct order and assess the impact of any changes.
 
 ## ✅ Solution
 
@@ -50,7 +50,7 @@ Use the "Which Flow Calls Which Flow" utility to automatically analyze and map p
 
 **3. Review the generated mapping**
 
-🔸 Open the output (CSV or console report) to see parent–child flow links.
+🔸 Open the output (CSV or console report) to see parent-child flow links.
 
 🔸 Plan deployment by activating child flows before their parents.
 
@@ -60,7 +60,7 @@ You get a clear, comprehensive map of all flow dependencies, enabling error-free
 
 ## 🌟 Key Advantages
 
-🔸 Visualize parent–child flow relationships instantly
+🔸 Visualize parent-child flow relationships instantly
 
 🔸 Avoid deployment errors by following the correct activation order
 

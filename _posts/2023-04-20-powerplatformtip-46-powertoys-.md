@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 46 – 'PowerToys'"
+title: "#PowerPlatformTip 46: 'PowerToys'"
 date: 2023-04-20
 last_modified_at: 2026-07-09
 categories:
@@ -23,7 +23,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Speed up Power Platform work on Windows with Microsoft PowerToys — FancyZones, PowerToys Run, Color Picker, Text Extractor and more.
+> **TL;DR:** Speed up Power Platform work on Windows with Microsoft PowerToys: FancyZones, PowerToys Run, Color Picker, Text Extractor and more.
 
 ## 💡 Challenge
 Finding efficient tools compatible with Power Platform development.

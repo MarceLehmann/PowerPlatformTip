@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 43 – 'With function'"
+title: "#PowerPlatformTip 43: 'With function'"
 date: 2023-04-11
 last_modified_at: 2026-07-09
 categories:
@@ -29,7 +29,7 @@ The "With" function enhances code readability and maintainability. By defining m
 
 ## 🔧 How It's Done
 
-* **Step 1:** Use the "With" function to define all necessary variables for the calculation – for example the radius of Earth, the differences in latitude and longitude, and the formula terms.
+* **Step 1:** Use the "With" function to define all necessary variables for the calculation, for example the radius of Earth, the differences in latitude and longitude, and the formula terms.
 
 * **Step 2:** Refer to these variables directly within your formula, avoiding repetition and keeping the code clean.
 
@@ -49,7 +49,7 @@ A more concise, organized approach to complex formulas. The "With" function enca
 
 * **Enhanced Performance:** Can optimize your app by streamlining expressions.
 
-> ℹ️ Tip: Use With judiciously – over-abstracting can hurt readability for others unfamiliar with your logic.
+> ℹ️ Tip: Use With judiciously, over-abstracting can hurt readability for others unfamiliar with your logic.
 
 ## 🎥 Video Tutorial
 {% include video id="GlCfiZD8YQk" provider="youtube" %}

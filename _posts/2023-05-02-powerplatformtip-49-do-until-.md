@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 49 – 'Do-Until'"
+title: "#PowerPlatformTip 49: 'Do-Until'"
 date: 2023-05-02
 last_modified_at: 2026-07-09
 categories:
@@ -24,7 +24,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Put the failure-prone action directly in a Do Until loop's condition to retry until it succeeds — no extra boolean variable needed.
+> **TL;DR:** Put the failure-prone action directly in a Do Until loop's condition to retry until it succeeds, no extra boolean variable needed.
 
 ## 💡 Challenge
 In Power Automate, using a boolean variable to control a "Do Until" loop adds extra overhead and complexity when handling transient failures like locked or unavailable files.

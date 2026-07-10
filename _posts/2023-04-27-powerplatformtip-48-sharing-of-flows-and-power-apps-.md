@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 48 – 'Sharing of Flows & Power Apps'"
+title: "#PowerPlatformTip 48: 'Sharing of Flows & Power Apps'"
 date: 2023-04-27
 last_modified_at: 2026-07-09
 categories:
@@ -23,17 +23,17 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Share flows and apps reliably — direct share, export/import via make.powerapps.com, or package everything into a solution with its dependencies.
+> **TL;DR:** Share flows and apps reliably: direct share, export/import via make.powerapps.com, or package everything into a solution with its dependencies.
 
 ## 💡 Challenge
-Sharing and moving flows and Power Apps between people and environments can get messy – legacy import paths, missing dependencies, and disconnected flows all cause problems.
+Sharing and moving flows and Power Apps between people and environments can get messy, legacy import paths, missing dependencies, and disconnected flows all cause problems.
 
 ## ✅ Solution
 There are several reliable ways to share flows and apps. Pick the one that fits your scenario:
 
-1️⃣ **Export/Import:** Export flows on make.powerautomate.com. Import on that site is legacy – use the import via make.powerapps.com instead.
+1️⃣ **Export/Import:** Export flows on make.powerautomate.com. Import on that site is legacy, use the import via make.powerapps.com instead.
 2️⃣ **Automate sharing** with a flow (see [#PowerPlatformTip 8](https://www.powerplatformtip.com/)).
-3️⃣ **Package into a solution** (Power Apps, flows, connection references, tables, etc.) and export/import it. ⚠️ Watch out for dependency errors – don't miss anything.
+3️⃣ **Package into a solution** (Power Apps, flows, connection references, tables, etc.) and export/import it. ⚠️ Watch out for dependency errors, don't miss anything.
 4️⃣ **Export a Power App with all connected flows.** After import, re-enable each flow and add it back into the app.
 
 ## 🔧 How It's Done

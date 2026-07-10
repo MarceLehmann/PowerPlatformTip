@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 47 – 'Batch-Method within SharePoint'"
+title: "#PowerPlatformTip 47: 'Batch-Method within SharePoint'"
 date: 2023-04-25
 last_modified_at: 2026-07-09
 categories:

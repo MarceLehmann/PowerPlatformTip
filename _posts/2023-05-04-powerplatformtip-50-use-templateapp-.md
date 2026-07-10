@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 50 – 'Use TemplateApp'"
+title: "#PowerPlatformTip 50: 'Use TemplateApp'"
 date: 2023-05-04
 last_modified_at: 2026-07-09
 categories:
@@ -23,7 +23,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Jumpstart canvas apps with the PnP PowerApps Material Design template — 16+ ready components, docs and 5000+ SVG icons.
+> **TL;DR:** Jumpstart canvas apps with the PnP PowerApps Material Design template, 16+ ready components, docs and 5000+ SVG icons.
 
 ## 💡 Challenge
 Starting a new canvas app often results in inconsistent styling and missing UI components, slowing down development.

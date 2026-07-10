@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 44 – 'Calculate the Distance'"
+title: "#PowerPlatformTip 44: 'Calculate the Distance'"
 date: 2023-04-13
 last_modified_at: 2026-07-09
 categories:
@@ -21,7 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Calculate great-circle distance for free using the Haversine formula — copy the ready-made snippet and plug in your two lat/long pairs.
+> **TL;DR:** Calculate great-circle distance for free using the Haversine formula: copy the ready-made snippet and plug in your two lat/long pairs.
 
 Here’s a cool tip to calculate the distance between two places without relying on premium services like Google or Bing maps.
 
@@ -31,9 +31,9 @@ How do you provide accurate, real-time location-based distance calculations insi
 
 ## ✅ Solution
 
-You can use the Haversine formula – a proven geospatial calculation mechanism.
+You can use the Haversine formula, a proven geospatial calculation mechanism.
 - There’s a ready-to-use code snippet available:
-  [CalculateDistance.json @ GitHub – Marcel Lehmann](https://github.com/MarceLehmann/CodeSnippets/blob/main/CalculateDistance.json)
+  [CalculateDistance.json @ GitHub, Marcel Lehmann](https://github.com/MarceLehmann/CodeSnippets/blob/main/CalculateDistance.json)
 - Just copy the JSON logic and paste into your Power Platform workflow (typically as an inline calculation or custom connector).
 - Replace the latitude and longitude values for locations A and B with your own values.
 
@@ -71,7 +71,7 @@ You can use the Haversine formula – a proven geospatial calculation mechanism.
 
 ## 🎉 Result
 
-Enjoy accurate, fast, and cost-effective distance calculations for any business scenario – including logistics, travel, or field service.
+Enjoy accurate, fast, and cost-effective distance calculations for any business scenario, including logistics, travel, or field service.
 
 ## 🌟 Key Advantages
 
