@@ -85,18 +85,22 @@ feed:
 
 # Social Sharing
 twitter:
-  username               :
+  username               : # add your X/Twitter handle (without @) to enable Twitter Cards
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+# Open Graph/Twitter default site image (fallback for pages without a header image).
+# NOTE: replace with a dedicated 1200x630 og-image.jpg for best previews; .jfif is a fallback only.
+og_image                 : "/assets/images/bio-photo.jfif"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : Person # Person or Organization (defaults to Person)
+  name                   : "Marcel Lehmann" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://www.linkedin.com/in/marcelehmann/"
+    - "https://mvp.microsoft.com/de-DE/MVP/profile/f67ec6c7-f116-ee11-8f6e-000d3a1ad36b"
 
 # Analytics
 analytics:
