@@ -22,7 +22,7 @@ title_separator          : "-"
 subtitle                 : "Learn and find tips & tricks around the PowerPlatformTip" # site tagline that appears below site title in masthead
 name                     : "Marcel Lehmann"
 description              : "Learn and find tips & tricks around the Power Platform. Your go-to source for insights on Power Apps, Power Automate, and more, by Marcel Lehmann, BizzApps MVP."
-url: "https://powerplatformtip.com" # Fixed: removed www to match .htaccess redirect (www -> non-www)
+url: "https://www.powerplatformtip.com" # Canonical = www (matches CNAME served by GitHub Pages; non-www 301s to www)
 baseurl: ""
 repository: "MarceLehmann/PowerPlatformTip"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -114,7 +114,7 @@ analytics:
 author:
   name             : "Marcel Lehmann"
   avatar           : "/assets/images/bio-photo.jfif"
-  bio              : "BizzApps MVP from Switzerland 🇭🇨 - PowerPlatform Expert & Evangelist & MVP - Turning passion into expertise"
+  bio              : "BizzApps MVP from Switzerland 🇨🇭 - PowerPlatform Expert & Evangelist & MVP - Turning passion into expertise"
   location         : "Switzerland"
   email            : # your-email@example.com
   links:
