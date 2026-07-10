@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 128 – 'Dynamic Data Retrieval'"
+title: "#PowerPlatformTip 128: 'Dynamic Data Retrieval'"
 date: 2024-10-31
 last_modified_at: 2026-07-09
 categories:
@@ -19,10 +19,10 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Pull values from JSON dynamically in Power Automate using Parse JSON with variable keys – no Switch or If cascades.
+> **TL;DR:** Pull values from JSON dynamically in Power Automate using Parse JSON with variable keys, no Switch or If cascades.
 
 ## 💡 Challenge
-Handling dynamic data in Power Automate often pushes you toward sprawling Switch or If structures — one branch per language, user role or message type. That gets hard to maintain fast.
+Handling dynamic data in Power Automate often pushes you toward sprawling Switch or If structures, one branch per language, user role or message type. That gets hard to maintain fast.
 
 ## ✅ Solution
 Use the **Parse JSON** action together with a dynamic key expression to pull values straight from a JSON structure. You reference the property by a variable instead of hardcoding it, so the same expression returns different content (greetings, settings, user data) based on need.
@@ -46,7 +46,7 @@ Use the **Parse JSON** action together with a dynamic key expression to pull val
 🔸 Wrap it with `coalesce(body('Parse_JSON')?[variables('key')], 'default')` to fall back gracefully.
 
 ## 🎉 Result
-You get an agile, scalable flow that retrieves and processes data in real time — no cascade of conditions to maintain as new data variations appear.
+You get an agile, scalable flow that retrieves and processes data in real time, no cascade of conditions to maintain as new data variations appear.
 
 ## 🌟 Key Advantages
 
@@ -74,5 +74,5 @@ The Parse JSON action still runs but returns null for missing keys. Use expressi
 Yes. Access nested objects by chaining property names, for example `body('Parse_JSON')?['data']?['key']`.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 104 – Efficient JSON Handling](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-104-efficient-json-handling/) — more techniques for working with JSON in flows.
-- [#PowerPlatformTip 33 – Coalesce](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-33-coalesce/) — provide clean fallbacks for missing values.
+- [#PowerPlatformTip 104: Efficient JSON Handling](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-104-efficient-json-handling/), more techniques for working with JSON in flows.
+- [#PowerPlatformTip 33: Coalesce](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-33-coalesce/), provide clean fallbacks for missing values.

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 130 – 'Build Apps Faster with YAML'"
+title: "#PowerPlatformTip 130: 'Build Apps Faster with YAML'"
 date: 2024-11-26
 last_modified_at: 2026-07-09
 categories:
@@ -19,10 +19,10 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Build Power Apps faster by pasting ready-made YAML component snippets straight into the canvas – no design skills needed.
+> **TL;DR:** Build Power Apps faster by pasting ready-made YAML component snippets straight into the canvas, no design skills needed.
 
 ## 💡 Challenge
-You need to build a Power App quickly but you don't have a component library, a template app, or the design skills for UI elements like popups or navigation bars — yet you still want the app to look great and feel user-friendly.
+You need to build a Power App quickly but you don't have a component library, a template app, or the design skills for UI elements like popups or navigation bars, yet you still want the app to look great and feel user-friendly.
 
 ## ✅ Solution
 Use YAML! YAML lets you drop pre-designed components straight into your Power Apps canvas with ease.
@@ -46,7 +46,7 @@ Use YAML! YAML lets you drop pre-designed components straight into your Power Ap
 🔸 Reuse the process to build your app in a modular, efficient way.
 
 ## 🎉 Result
-You quickly create apps that look great and work well — without spending hours designing or coding from scratch.
+You quickly create apps that look great and work well, without spending hours designing or coding from scratch.
 
 ## 🌟 Key Advantages
 
@@ -74,5 +74,5 @@ Collect or download YAML snippets for common UI elements, then copy, paste, and 
 Yes. Modify styles, properties, and functionality within the YAML snippet to match your app's requirements.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 134 – Optimize Canvas Apps with YAML](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-134-optimize-canvas-apps-yaml/) — analyze and improve your YAML with AI.
-- [#PowerPlatformTip 14 – Template Screens](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-14-template-screens/) — jump-start app UI with ready-made screens.
+- [#PowerPlatformTip 134: Optimize Canvas Apps with YAML](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-134-optimize-canvas-apps-yaml/), analyze and improve your YAML with AI.
+- [#PowerPlatformTip 14: Template Screens](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-14-template-screens/), jump-start app UI with ready-made screens.

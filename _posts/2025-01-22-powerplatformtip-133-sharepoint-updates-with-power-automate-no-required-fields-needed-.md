@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 133 – 'SharePoint Updates with Power Automate – No Required Fields Needed'"
+title: "#PowerPlatformTip 133: 'SharePoint Updates with Power Automate, No Required Fields Needed'"
 seo_title: "Update SharePoint Fields in Power Automate"
 date: 2025-01-22
 last_modified_at: 2026-07-10
@@ -14,7 +14,7 @@ tags:
   - FieldMapping
   - PowerPlatformTip
 excerpt: "Update specific SharePoint fields in Power Automate without HTTP requests or required fields."
-description: "Update specific SharePoint fields in Power Automate without HTTP requests or filling required fields — pass a JSON object to the 'Update item' action."
+description: "Update specific SharePoint fields in Power Automate without HTTP requests or filling required fields, pass a JSON object to the 'Update item' action."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -22,13 +22,13 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Update only specific SharePoint fields in Power Automate by passing a JSON variable to 'Update item' – no HTTP, no required-field hassle.
+> **TL;DR:** Update only specific SharePoint fields in Power Automate by passing a JSON variable to 'Update item', no HTTP, no required-field hassle.
 
 ## 💡 Challenge
 Updating only specific fields in SharePoint items can be tricky. It often feels like you're forced to fill unnecessary required fields or fall back to raw HTTP requests. Wouldn't it be easier to just update the fields you need?
 
 ## ✅ Solution
-Use dynamic JSON from a variable to update only the necessary fields in a SharePoint item — quickly and efficiently, without extra overhead.
+Use dynamic JSON from a variable to update only the necessary fields in a SharePoint item, quickly and efficiently, without extra overhead.
 
 ## 🔧 How It's Done
 
@@ -59,7 +59,7 @@ Use dynamic JSON from a variable to update only the necessary fields in a ShareP
 🔸 Confirm that only the specified fields update and that required fields cause no issues.
 
 ## 🎉 Result
-Your flow is streamlined and flexible — it updates only the fields you need, saving time and reducing manual effort.
+Your flow is streamlined and flexible, it updates only the fields you need, saving time and reducing manual effort.
 
 ## 🌟 Key Advantages
 
@@ -87,5 +87,5 @@ Required fields not included remain unchanged; the flow won't prompt for them wh
 While designed for SharePoint, the dynamic-JSON update concept can be adapted to other connectors that accept JSON payloads.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 153 – Rename a SharePoint File with Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-153-rename-sharepoint-file-power-automate/) — targeted field updates via REST.
-- [#PowerPlatformTip 154 – Preserve Author, Editor & Dates on Copied SharePoint Files](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-154-preserve-author-created-metadata-power-automate/) — write specific metadata fields with MERGE.
+- [#PowerPlatformTip 153: Rename a SharePoint File with Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-153-rename-sharepoint-file-power-automate/), targeted field updates via REST.
+- [#PowerPlatformTip 154: Preserve Author, Editor & Dates on Copied SharePoint Files](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-154-preserve-author-created-metadata-power-automate/), write specific metadata fields with MERGE.

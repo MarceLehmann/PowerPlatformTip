@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 129 – 'Case-sensitive SharePoint Filtering'"
+title: "#PowerPlatformTip 129: 'Case-sensitive SharePoint Filtering'"
 seo_title: "Case-Sensitive SharePoint Filter in Power Automate"
 date: 2024-11-06
 last_modified_at: 2026-07-10
@@ -28,7 +28,7 @@ toc_sticky: true
 SharePoint's OData filtering doesn't distinguish between uppercase and lowercase letters, so a query for `ABC` also returns `abc`.
 
 ## ✅ Solution
-Use OData for a fast initial query, then refine the results with the "Filter array" action — which *does* distinguish uppercase from lowercase.
+Use OData for a fast initial query, then refine the results with the "Filter array" action, which *does* distinguish uppercase from lowercase.
 
 ## 🔧 How It's Done
 
@@ -38,7 +38,7 @@ Use OData for a fast initial query, then refine the results with the "Filter arr
 
 **2. Refine with "Filter array"**
 
-🔸 Add a "Filter array" action and compare the text again — this check is case-sensitive, so only exact-case matches remain.
+🔸 Add a "Filter array" action and compare the text again, this check is case-sensitive, so only exact-case matches remain.
 
 ## 🎉 Result
 You combine fast OData querying with precise, case-sensitive verification via "Filter array," so you retrieve exactly the data you're looking for.
@@ -69,5 +69,5 @@ No. SharePoint OData does not support native case-sensitive comparisons in the q
 When used after OData pre-filtering, Filter array processes a smaller set in-memory, keeping performance good.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 95 – Optimized SharePoint Queries](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-95-optimized-sharepoint-queries/) — design fast OData queries before refining.
-- [#PowerPlatformTip 3 – Advanced Filtering Array](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-3-advanced-filtering-array/) — get the most out of the Filter array action.
+- [#PowerPlatformTip 95: Optimized SharePoint Queries](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-95-optimized-sharepoint-queries/), design fast OData queries before refining.
+- [#PowerPlatformTip 3: Advanced Filtering Array](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-3-advanced-filtering-array/), get the most out of the Filter array action.

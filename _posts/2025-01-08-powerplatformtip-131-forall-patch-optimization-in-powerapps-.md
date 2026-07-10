@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 131 – 'ForAll & Patch Optimization in PowerApps'"
+title: "#PowerPlatformTip 131: 'ForAll & Patch Optimization in PowerApps'"
 seo_title: "Power Apps ForAll + Patch: Faster Bulk Updates"
 date: 2025-01-08
 last_modified_at: 2026-07-10
@@ -14,8 +14,8 @@ tags:
   - Performance
   - BatchProcessing
   - PowerPlatformTip
-excerpt: "Optimize Power Apps performance by using ForAll and Patch for bulk updates—reduce API calls, speed up batch processing, and handle missing IDs efficiently."
-description: "Speed up bulk updates in Power Apps by nesting ForAll inside Patch — cut API calls, batch record updates, and handle missing IDs. Up to 50% faster."
+excerpt: "Optimize Power Apps performance by using ForAll and Patch for bulk updates, reduce API calls, speed up batch processing, and handle missing IDs efficiently."
+description: "Speed up bulk updates in Power Apps by nesting ForAll inside Patch, cut API calls, batch record updates, and handle missing IDs. Up to 50% faster."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -32,7 +32,7 @@ howto:
   name: "How to optimize bulk updates with ForAll and Patch in Power Apps"
   steps:
     - name: "Review the original formula"
-      text: "ForAll wrapped around Patch — one call per record."
+      text: "ForAll wrapped around Patch, one call per record."
     - name: "Rearrange for batch updates"
       text: "Put ForAll inside a single Patch."
     - name: "Handle missing IDs"
@@ -51,7 +51,7 @@ Rearrange the logic: move `ForAll` *inside* `Patch` to enable a batched update. 
 
 **1. Review the original formula**
 
-🔸 `ForAll` wrapped around `Patch` — one call per record:
+🔸 `ForAll` wrapped around `Patch`, one call per record:
 
 ```powerapps
 ForAll(
@@ -91,7 +91,7 @@ Patch(
 
 🔸 **Faster:** updates are processed in a single batch.
 
-🔸 **Handles missing IDs:** update only existing records, or create new ones — your choice.
+🔸 **Handles missing IDs:** update only existing records, or create new ones, your choice.
 
 🔸 **Cleaner code:** easier to read and maintain.
 
@@ -116,5 +116,5 @@ Moving `ForAll` inside `Patch` batches all record updates into a single call, re
 Filter your items to only include IDs already in the target data source (e.g. `Filter(GalleryName.AllItems, ID in SharePointList.ID)`) so `Patch` updates existing records only.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 57 – Mastering Patch](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-57-mastering-patch/) — the fundamentals behind bulk Patch operations.
-- [#PowerPlatformTip 81 – Fast DataSource Updates](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-81-fast-datasource-updates/) — more ways to speed up data writes.
+- [#PowerPlatformTip 57: Mastering Patch](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-57-mastering-patch/), the fundamentals behind bulk Patch operations.
+- [#PowerPlatformTip 81: Fast DataSource Updates](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-81-fast-datasource-updates/), more ways to speed up data writes.

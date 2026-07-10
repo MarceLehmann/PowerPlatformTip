@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 132 – 'Office Files Viewer in PowerApps'"
+title: "#PowerPlatformTip 132: 'Office Files Viewer in PowerApps'"
 date: 2025-01-16
 last_modified_at: 2026-07-09
 categories:
@@ -21,13 +21,13 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Show PDFs, Word and Excel files straight from SharePoint inside Power Apps with the Office Files Viewer component – no Power Automate.
+> **TL;DR:** Show PDFs, Word and Excel files straight from SharePoint inside Power Apps with the Office Files Viewer component, no Power Automate.
 
 ## 💡 Challenge
-Viewing Office files directly in Power Apps is often a hassle — you end up wiring in complex integrations or extra tools like Power Automate, which is time-consuming and usually unnecessary.
+Viewing Office files directly in Power Apps is often a hassle, you end up wiring in complex integrations or extra tools like Power Automate, which is time-consuming and usually unnecessary.
 
 ## ✅ Solution
-Use the Office Files Viewer component to display Office files directly from SharePoint inside Power Apps — no Power Automate required.
+Use the Office Files Viewer component to display Office files directly from SharePoint inside Power Apps, no Power Automate required.
 
 ## 🔧 How It's Done
 
@@ -56,11 +56,11 @@ Use the Office Files Viewer component to display Office files directly from Shar
 🔸 Adjust the view and integration to your needs.
 
 ## 🎉 Result
-You get a user-friendly, integrated way to display Office files directly within Power Apps — no unnecessary tools, just an efficient, seamless solution.
+You get a user-friendly, integrated way to display Office files directly within Power Apps, no unnecessary tools, just an efficient, seamless solution.
 
 ## 🌟 Key Advantages
 
-🔸 **Native integration:** fully built into Power Apps — no Power Automate.
+🔸 **Native integration:** fully built into Power Apps, no Power Automate.
 
 🔸 **Multiple file types:** view PDFs, Word documents, Excel files, and more.
 
@@ -70,14 +70,14 @@ You get a user-friendly, integrated way to display Office files directly within 
 
 ## 🛠️ FAQ
 **1. Can I view other file formats besides PDF?**
-Yes — you can display PDFs, Word documents, Excel spreadsheets, images and more directly from SharePoint using the component.
+Yes, you can display PDFs, Word documents, Excel spreadsheets, images and more directly from SharePoint using the component.
 
 **2. Do I need Power Automate to get this working?**
-No. The Office Files Viewer component works natively in Power Apps — no external workflows required.
+No. The Office Files Viewer component works natively in Power Apps, no external workflows required.
 
 **3. How do I update file URLs after setup?**
 Update the SharePoint hyperlink/image column with new URLs, or adjust the component's data source settings in Power Apps.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 92 – Free PDF Tools in Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-92-free-pdf-tools-in-powerautomate/) — generate and manipulate PDFs for viewing.
-- [#PowerPlatformTip 18 – Download and Save Files](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-18-download-and-save-files/) — handle file downloads in your apps.
+- [#PowerPlatformTip 92: Free PDF Tools in Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-92-free-pdf-tools-in-powerautomate/), generate and manipulate PDFs for viewing.
+- [#PowerPlatformTip 18: Download and Save Files](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-18-download-and-save-files/), handle file downloads in your apps.
