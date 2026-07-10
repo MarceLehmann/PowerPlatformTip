@@ -73,4 +73,6 @@ Collect or download YAML snippets for common UI elements, then copy, paste, and 
 **3. Can I customize the YAML code to fit my design needs?**
 Yes. Modify styles, properties, and functionality within the YAML snippet to match your app's requirements.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 134 – Optimize Canvas Apps with YAML](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-134-optimize-canvas-apps-yaml/) — analyze and improve your YAML with AI.
+- [#PowerPlatformTip 14 – Template Screens](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-14-template-screens/) — jump-start app UI with ready-made screens.

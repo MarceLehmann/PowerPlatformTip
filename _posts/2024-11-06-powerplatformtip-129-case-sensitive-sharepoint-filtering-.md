@@ -66,4 +66,6 @@ No. SharePoint OData does not support native case-sensitive comparisons in the q
 **3. Does using Filter array impact performance?**
 When used after OData pre-filtering, Filter array processes a smaller set in-memory, keeping performance good.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 95 – Optimized SharePoint Queries](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-95-optimized-sharepoint-queries/) — design fast OData queries before refining.
+- [#PowerPlatformTip 3 – Advanced Filtering Array](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-3-advanced-filtering-array/) — get the most out of the Filter array action.

@@ -73,4 +73,6 @@ The Parse JSON action still runs but returns null for missing keys. Use expressi
 **3. Can I use this approach for nested JSON objects?**
 Yes. Access nested objects by chaining property names, for example `body('Parse_JSON')?['data']?['key']`.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 104 – Efficient JSON Handling](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-104-efficient-json-handling/) — more techniques for working with JSON in flows.
+- [#PowerPlatformTip 33 – Coalesce](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-33-coalesce/) — provide clean fallbacks for missing values.

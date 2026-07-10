@@ -83,4 +83,6 @@ Yes. You can trigger the flow via the OnStart property of the Power App to run a
 **3. How do I pre-fill user details in the Power App?**
 Use the OnStart property together with Office 365 Users or other connectors to retrieve the user's profile and defaults, populating form fields before display.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 135 – One Flow, Many Users](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-135-One-Flow-Many-Users/) — the central-app pattern for user-context flows.
+- [#PowerPlatformTip 127 – Special User-Informations in PowerApps Studio](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-127-special-user-informations-in-powerapps-studio/) — handle user identity in dev vs. production.

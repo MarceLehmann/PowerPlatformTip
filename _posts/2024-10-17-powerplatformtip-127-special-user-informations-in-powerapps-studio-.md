@@ -76,4 +76,6 @@ Yes — use the same logic to switch between development and production values f
 **3. Where should I place these formulas in my app?**
 Put them in the App.OnStart property so the variables are set when the app initializes.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 126 – User Context for Automated Tasks](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-126-user-context-for-automated-tasks/) — run tasks in each user's own context.
+- [#PowerPlatformTip 73 – Quick Switch to Maker Mode](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-73-quick-switch-to-maker-mode/) — speed up your Studio workflow.

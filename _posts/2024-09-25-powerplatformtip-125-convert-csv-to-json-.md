@@ -77,4 +77,6 @@ Adjust the `split` function to use your delimiter, for example `@split(item(), '
 **3. What if header names contain spaces or special characters?**
 Use string functions like `replace()` to sanitize header values before mapping, ensuring valid JSON property names.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 124 – Recognize Plain Text File Formats](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-124-recognize-plain-text-file-formats/) — read CSV and other text files without Base64 decoding.
+- [#PowerPlatformTip 104 – Efficient JSON Handling](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-104-efficient-json-handling/) — work with the resulting JSON efficiently.

@@ -12,7 +12,7 @@ tags:
   - PlainText
   - OneDriveForBusiness
   - PowerPlatformTip
-excerpt: "Learn how to use plain text file formats in Power Automate’s Get File Content action to simplify processing by avoiding Base64 decoding."
+excerpt: "Learn how to use plain text file formats in Power Automate's Get File Content action to simplify processing by avoiding Base64 decoding."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -82,4 +82,6 @@ Plain-text output depends on the connector and the file type. "Get File Content"
 **3. How do I handle formats that output as Base64?**
 For Base64 outputs, use a "Compose" action or the `base64ToString()` expression to decode the content before processing.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 125 – Convert CSV to JSON](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-125-convert-csv-to-json/) — turn plain-text CSV into JSON with standard actions.
+- [#PowerPlatformTip 104 – Efficient JSON Handling](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-104-efficient-json-handling/) — process JSON payloads cleanly in flows.
