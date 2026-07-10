@@ -41,6 +41,8 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {% include schema-techarticle.html %}
+        {% include schema-faq.html %}
+        {% include schema-howto.html %}
         {{ content }}
         {% comment %}<!-- Smart related posts - show directly below content -->{% endcomment %}
         {% if page.id %}

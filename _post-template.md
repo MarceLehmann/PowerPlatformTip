@@ -19,6 +19,27 @@ header:
   # teaser: /assets/images/teaser.jpg  # Optional: Small image for lists
 toc: true  # Show table of contents
 toc_sticky: true  # Fix table of contents when scrolling
+
+# --- Optional structured data for AI & search engines ------------------------
+# Fill these in to emit FAQPage / HowTo JSON-LD automatically.
+# Rule of thumb: mirror content that is ALSO visible on the page below.
+#
+# FAQ -> FAQPage schema (mirror the visible "FAQ" section):
+# faq:
+#   - question: "How do I ...?"
+#     answer: "You ..."
+#   - question: "...?"
+#     answer: "..."
+#
+# HowTo -> HowTo schema (mirror the visible "How It's Done" steps):
+# howto:
+#   name: "How to ..."        # optional, defaults to the post title
+#   total_time: "PT10M"       # optional, ISO 8601 duration
+#   steps:
+#     - name: "Step 1"         # optional short title
+#       text: "Do this ..."    # required instruction
+#     - text: "Do that ..."
+# -----------------------------------------------------------------------------
 ---
 
 ## 💡 Challenge
