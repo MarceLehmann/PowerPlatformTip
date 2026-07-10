@@ -1,6 +1,6 @@
 ---
-title: "#PowerPlatformTip 143 – Reduce AI Costs with Thumbnail-First Document Processing"
-seo_title: "#PowerPlatformTip 143 – Reduce AI Costs with Thumbnail-First Processing"
+title: "#PowerPlatformTip 143: Reduce AI Costs with Thumbnail-First Document Processing"
+seo_title: "#PowerPlatformTip 143: Reduce AI Costs with Thumbnail-First Processing"
 date: 2025-10-01
 last_modified_at: 2026-07-09
 categories:
@@ -56,7 +56,7 @@ Implement a thumbnail-first strategy in Power Automate. Whether documents arrive
 
 🔸 Available sizes: Small, Medium, Large (Large gives the best quality for AI).
 
-🔸 No Parse JSON needed — direct access to the thumbnail URL.
+🔸 No Parse JSON needed, direct access to the thumbnail URL.
 
 **4. Convert the thumbnail and send it to your AI provider**
 
@@ -93,25 +93,25 @@ Organizations processing 1,000 invoices monthly (15 pages average with T&Cs) red
 
 ## 🌟 Key Advantages
 
-🔸 **Universal intake:** works with Power Apps uploads, email attachments, or any source — just save to SharePoint first.
+🔸 **Universal intake:** works with Power Apps uploads, email attachments, or any source, just save to SharePoint first.
 
 🔸 **Cost optimization:** 70-95% reduction across all providers (Azure AI, OpenAI, Google Document AI, AI Builder).
 
 🔸 **Zero data loss:** intelligent fallback processes full documents only when thumbnail extraction is insufficient.
 
-🔸 **Simple syntax:** direct thumbnail access via `@{outputs('Get_file_properties')?['body/{Thumbnail}/Large']}` — no complex JSON parsing.
+🔸 **Simple syntax:** direct thumbnail access via `@{outputs('Get_file_properties')?['body/{Thumbnail}/Large']}`, no complex JSON parsing.
 
 🔸 **Platform agnostic:** works with any AI service accepting image input, protecting against vendor lock-in.
 
 🔸 **Performance:** 60-80% faster flow execution thanks to smaller payloads.
 
-🔸 **Standard connectors only:** no premium connectors — suitable for DLP policies and Managed Environments.
+🔸 **Standard connectors only:** no premium connectors, suitable for DLP policies and Managed Environments.
 
 ---
 
 ## 🛠️ FAQ
 **Q1: Why must I save to SharePoint first instead of processing uploads directly?**
-SharePoint generates thumbnails automatically when files are saved to document libraries. The thumbnail isn't available during upload — only after SharePoint processes and stores the file. That's why Get File Properties must run after Create File, not during the upload trigger. Power Apps uploads and email attachments both need this two-step process: save first, then access thumbnail metadata.
+SharePoint generates thumbnails automatically when files are saved to document libraries. The thumbnail isn't available during upload, only after SharePoint processes and stores the file. That's why Get File Properties must run after Create File, not during the upload trigger. Power Apps uploads and email attachments both need this two-step process: save first, then access thumbnail metadata.
 
 **Q2: What's the difference between Small, Medium, and Large thumbnail sizes for AI processing?**
 SharePoint generates three sizes automatically: Small (96x96px, basic OCR), Medium (400x400px, optimal for structured documents like invoices), Large (800x800px, best for complex documents with small fonts). Large gives the highest accuracy (95-98%) but uses slightly more bandwidth. Use `@{outputs('Get_file_properties')?['body/{Thumbnail}/Medium']}` for cost-optimized processing or Large for maximum accuracy.
@@ -120,5 +120,5 @@ SharePoint generates three sizes automatically: Small (96x96px, basic OCR), Medi
 Create a child flow that handles the thumbnail-processing logic, then call it from multiple parent flows. Each parent handles its specific trigger (Power Apps button, email arrival, manual trigger), saves the document to SharePoint, and calls the child flow with the file ID. This modular approach keeps intake methods consistent while maintaining separation of concerns.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 140 – Free Invoice OCR](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-140-free-invoice-ocr/) — build the OCR pipeline this optimizes.
-- [#PowerPlatformTip 115 – AI OCR Models](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-115-ai-ocr-models/) — choose the right OCR model for your documents.
+- [#PowerPlatformTip 140: Free Invoice OCR](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-140-free-invoice-ocr/), build the OCR pipeline this optimizes.
+- [#PowerPlatformTip 115: AI OCR Models](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-115-ai-ocr-models/), choose the right OCR model for your documents.

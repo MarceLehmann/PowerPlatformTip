@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 141 – Text to Array"
+title: "#PowerPlatformTip 141: Text to Array"
 date: 2025-08-19
 last_modified_at: 2026-07-09
 categories:
@@ -12,7 +12,7 @@ tags:
   - Array
   - DataProcessing
   - PowerPlatformTip
-excerpt: "Convert multiline text into an array in Power Automate using split() — ideal for processing lists from Excel, emails or Power Apps."
+excerpt: "Convert multiline text into an array in Power Automate using split(), ideal for processing lists from Excel, emails or Power Apps."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -23,7 +23,7 @@ toc_sticky: true
 > **TL;DR:** Turn a multiline text block into a loopable array in Power Automate with `split(text, separator)`.
 
 ## 💡 Challenge
-How do you process a copied multiline text block — each line a record (IDs, email addresses, URLs) — in a Power Automate flow without splitting it by hand? Manual steps don't scale and are error-prone.
+How do you process a copied multiline text block, each line a record (IDs, email addresses, URLs), in a Power Automate flow without splitting it by hand? Manual steps don't scale and are error-prone.
 
 ## ✅ Solution
 Use the `split()` expression to turn the multiline string into an array. With a simple separator (a line break, comma, or any character) you get an array you can loop through with "Apply to each".
@@ -51,7 +51,7 @@ split(outputs('DataInput'), outputs('Separator'))
 🔸 Inside the loop, use `Current item` to trim, validate, call an API, or create records.
 
 ## 🎉 Result
-Your flow now accepts any multiline text block and processes each line as a separate item. No more copy-paste, no manual cleanup — just reliable automation that scales.
+Your flow now accepts any multiline text block and processes each line as a separate item. No more copy-paste, no manual cleanup, just reliable automation that scales.
 
 ## 🌟 Key Advantages
 
@@ -81,5 +81,5 @@ Yes. Pass a multiline text input from Power Apps into the flow; the split logic 
 Add a condition inside the loop to check that `trim(Current item)` is not empty before processing.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 120 – PowerAutomate Text Processing 2.0](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-120-powerautomate-text-processing-2-0/) — advanced text manipulation actions.
-- [#PowerPlatformTip 24 – Merge Arrays or Tables](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-24-merge-arrays-or-tables/) — combine arrays after splitting.
+- [#PowerPlatformTip 120: PowerAutomate Text Processing 2.0](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-120-powerautomate-text-processing-2-0/), advanced text manipulation actions.
+- [#PowerPlatformTip 24: Merge Arrays or Tables](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-24-merge-arrays-or-tables/), combine arrays after splitting.

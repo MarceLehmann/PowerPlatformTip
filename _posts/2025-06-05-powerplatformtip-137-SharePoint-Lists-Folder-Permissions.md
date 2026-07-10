@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 137 – 'SharePoint Lists Folder Permissions'"
+title: "#PowerPlatformTip 137: 'SharePoint Lists Folder Permissions'"
 date: 2025-06-05
 last_modified_at: 2026-07-09
 categories:
@@ -20,10 +20,10 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Enable folders in your SharePoint list's Advanced Settings, create one folder per department, and set permissions at the folder level — every item inside inherits them automatically, with no per-item Power Automate flow needed.
+> **TL;DR:** Enable folders in your SharePoint list's Advanced Settings, create one folder per department, and set permissions at the folder level, every item inside inherits them automatically, with no per-item Power Automate flow needed.
 
 ## 💡 Challenge
-Teams often need granular, department-specific permissions on list items and end up building elaborate Power Automate flows to assign rights per item — time-consuming and hard to maintain.
+Teams often need granular, department-specific permissions on list items and end up building elaborate Power Automate flows to assign rights per item, time-consuming and hard to maintain.
 
 ## ✅ Solution
 Activate the folder feature in your list's Advanced Settings, create one folder per department, and set unique permissions at the folder level so that all contained items inherit them automatically.
@@ -51,7 +51,7 @@ Activate the folder feature in your list's Advanced Settings, create one folder 
 🔸 Remove the existing groups and grant the supervisor or department group the appropriate rights.
 
 ## 🎉 Result
-You now have a folder-based structure where each department's items automatically inherit the correct permissions — no additional flows required, saving setup and maintenance time and improving list performance.
+You now have a folder-based structure where each department's items automatically inherit the correct permissions, no additional flows required, saving setup and maintenance time and improving list performance.
 
 ## 🌟 Key Advantages
 
@@ -80,5 +80,5 @@ Yes. List items automatically inherit whatever permissions are set on their pare
 If a folder or list exceeds 100,000 items, you can't break permission inheritance for that folder.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 110 – Protect SharePoint Data](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-110-protect-sharepoint-data/) — more ways to lock down list and library access.
-- [#PowerPlatformTip 74 – Elevated Permissions](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-74-elevated-permissions/) — grant access from a flow when native inheritance isn't enough.
+- [#PowerPlatformTip 110: Protect SharePoint Data](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-110-protect-sharepoint-data/), more ways to lock down list and library access.
+- [#PowerPlatformTip 74: Elevated Permissions](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-74-elevated-permissions/), grant access from a flow when native inheritance isn't enough.

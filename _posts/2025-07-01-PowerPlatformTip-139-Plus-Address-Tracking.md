@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 139 – 'Plus Address Tracking'"
+title: "#PowerPlatformTip 139: 'Plus Address Tracking'"
 date: 2025-07-01
 last_modified_at: 2026-07-09
 categories:
@@ -19,7 +19,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Add a tag to your sender address with plus addressing (`user+tag@domain.com`) so every automated email reveals which flow or system sent it — no extra licensing or infrastructure.
+> **TL;DR:** Add a tag to your sender address with plus addressing (`user+tag@domain.com`) so every automated email reveals which flow or system sent it, no extra licensing or infrastructure.
 
 ## 💡 Challenge
 Automated notification emails often arrive with no clue which Power Automate flow or system triggered them, slowing support and audits.
@@ -75,5 +75,5 @@ Yes. Use addresses like `projectX+finance@company.com` and `projectX+it@company.
 Avoid putting sensitive information in the tag; use generic labels or numeric IDs instead.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 149 – Approvals to a Shared Mailbox](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-149-approvals-to-a-shared-mailbox/) — route automated mail through shared mailboxes cleanly.
-- [#PowerPlatformTip 142 – Automate Outlook Categories](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-142-automate-outlook-categories/) — sort and flag those tagged emails automatically.
+- [#PowerPlatformTip 149: Approvals to a Shared Mailbox](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-149-approvals-to-a-shared-mailbox/), route automated mail through shared mailboxes cleanly.
+- [#PowerPlatformTip 142: Automate Outlook Categories](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-142-automate-outlook-categories/), sort and flag those tagged emails automatically.

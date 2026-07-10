@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 136 – 'Patch Coalesce Upsert'"
+title: "#PowerPlatformTip 136: 'Patch Coalesce Upsert'"
 date: 2025-04-15
 last_modified_at: 2026-07-09
 categories:
@@ -20,7 +20,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Do upsert in Power Apps with one `Patch(Source, Coalesce(LookUp(...), Defaults(Source)), {...})` – update or create in a single call.
+> **TL;DR:** Do upsert in Power Apps with one `Patch(Source, Coalesce(LookUp(...), Defaults(Source)), {...})`, update or create in a single call.
 
 ## 💡 Challenge
 In Power Apps, keeping separate logic branches for "Create" and "Update" bloats your formulas and invites bugs. How can you fold this into a single operation?
@@ -36,7 +36,7 @@ Use a single `Patch()` call combined with `Coalesce()`. If `LookUp()` finds no r
 
 **2. Retrieve any existing record**
 
-🔸 `varRecord = LookUp(Contacts, Email = varEmail)` — returns the record if it exists, otherwise Blank.
+🔸 `varRecord = LookUp(Contacts, Email = varEmail)`, returns the record if it exists, otherwise Blank.
 
 **3. Patch with Coalesce**
 
@@ -57,7 +57,7 @@ Patch(
 )
 ```
 
-🔸 `Coalesce(varRecord, Defaults(Contacts))` uses the Defaults template when `varRecord` is Blank — creating a new record.
+🔸 `Coalesce(varRecord, Defaults(Contacts))` uses the Defaults template when `varRecord` is Blank, creating a new record.
 
 **4. Publish and test**
 
@@ -89,5 +89,5 @@ Yes. Both `Patch()` and `Coalesce()` behave identically in Dataverse. Just repla
 Make your lookup criteria unique (for example, a primary key or unique field). Otherwise `LookUp()` returns the first match and may lead to unexpected updates.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 131 – ForAll & Patch Optimization in PowerApps](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-131-forall-patch-optimization-in-powerapps/) — batch bulk updates efficiently.
-- [#PowerPlatformTip 57 – Mastering Patch](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-57-mastering-patch/) — the core Patch patterns.
+- [#PowerPlatformTip 131: ForAll & Patch Optimization in PowerApps](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-131-forall-patch-optimization-in-powerapps/), batch bulk updates efficiently.
+- [#PowerPlatformTip 57: Mastering Patch](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-57-mastering-patch/), the core Patch patterns.

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 142 – Automate Outlook Categories"
+title: "#PowerPlatformTip 142: Automate Outlook Categories"
 seo_title: "Auto-Categorize Outlook Meetings in Power Automate"
 date: 2025-08-26
 last_modified_at: 2026-07-10
@@ -14,7 +14,7 @@ tags:
   - Productivity
   - PowerPlatformTip
 excerpt: "Learn how to automatically set categories for Outlook meetings using a standard, non-premium Power Automate action. Save time and stay organized with this simple tip."
-description: "Automatically set categories on Outlook meetings with Power Automate — no premium. PATCH events via the Office 365 Outlook 'Send an HTTP request' action."
+description: "Automatically set categories on Outlook meetings with Power Automate, no premium. PATCH events via the Office 365 Outlook 'Send an HTTP request' action."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -22,15 +22,15 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Auto-categorize Outlook meetings with a standard Power Automate flow that PATCHes events via the Office 365 Outlook 'Send an HTTP request' action – no premium.
+> **TL;DR:** Auto-categorize Outlook meetings with a standard Power Automate flow that PATCHes events via the Office 365 Outlook 'Send an HTTP request' action, no premium.
 
-Tired of manually categorizing your Outlook meetings? This tip shows how to use Power Automate to set categories for calendar events automatically — keeping you organized with almost no effort.
+Tired of manually categorizing your Outlook meetings? This tip shows how to use Power Automate to set categories for calendar events automatically, keeping you organized with almost no effort.
 
 ## 💡 Challenge
 How do you make sure all important meetings in your Outlook calendar are consistently categorized without doing it by hand? Adding categories manually takes time and is easy to forget on a busy schedule, which leaves your calendar disorganized.
 
 ## ✅ Solution
-Use a Power Automate flow with the standard Office 365 Outlook connector to find and update your calendar events automatically. Trigger it on a schedule or with a button; it loops through your meetings and applies a category — keeping everything organized without you thinking about it.
+Use a Power Automate flow with the standard Office 365 Outlook connector to find and update your calendar events automatically. Trigger it on a schedule or with a button; it loops through your meetings and applies a category, keeping everything organized without you thinking about it.
 
 ## 🔧 How It's Done
 
@@ -71,11 +71,11 @@ https://graph.microsoft.com/v1.0/me/events/@{items('For_each')?['id']}
 🔸 Run the flow and watch your meeting categories update automatically.
 
 ## 🎉 Result
-Your flow now runs in the background, applying your category to all relevant meetings. Your calendar is instantly more organized and easier to filter — you can find specific types of meetings with a click, all without a premium license.
+Your flow now runs in the background, applying your category to all relevant meetings. Your calendar is instantly more organized and easier to filter, you can find specific types of meetings with a click, all without a premium license.
 
 ## 🌟 Key Advantages
 
-🔸 **Accessibility:** uses only standard connectors — no premium Power Automate license required.
+🔸 **Accessibility:** uses only standard connectors, no premium Power Automate license required.
 
 🔸 **Time-saving:** frees you from manually updating calendar entries.
 
@@ -96,8 +96,8 @@ Correct. While the general "HTTP" connector is premium, the "Send an HTTP reques
 Before your PATCH, add another "Send an HTTP request" (Outlook connector) with the GET method to the same URI to read the event's current categories. Then combine the existing categories with your new one and use that result in the PATCH request.
 
 **3. Can I update other details besides the category?**
-Yes. The `PATCH` method can update many event properties — for example, change the 'showAs' status (Free to Busy), modify the body, or update the subject by including those fields in the JSON body.
+Yes. The `PATCH` method can update many event properties, for example, change the 'showAs' status (Free to Busy), modify the body, or update the subject by including those fields in the JSON body.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 138 – Graph API via HTTP](https://www.powerplatformtip.com/article/powerplatformtip/PowerPlatformTip-138-Graph-API-HTTP/) — more Graph calls from standard connectors.
-- [#PowerPlatformTip 58 – HTTP Actions](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-58-http-actions/) — fundamentals of calling REST APIs in flows.
+- [#PowerPlatformTip 138: Graph API via HTTP](https://www.powerplatformtip.com/article/powerplatformtip/PowerPlatformTip-138-Graph-API-HTTP/), more Graph calls from standard connectors.
+- [#PowerPlatformTip 58: HTTP Actions](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-58-http-actions/), fundamentals of calling REST APIs in flows.
