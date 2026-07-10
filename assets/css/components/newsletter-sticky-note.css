@@ -1,0 +1,232 @@
+/* ==========================================================================
+   NEWSLETTER STICKY NOTE — refined design (2026)
+   --------------------------------------------------------------------------
+   Loaded AFTER custom-components.css (see _includes/head/custom.html).
+   Uses the same selectors as the original block, so source order guarantees
+   these rules win — no other component is affected. The systeme.io embed
+   (email field, Subscribe button, confirmation, badge) stays untouched;
+   we only refine the surrounding "paper" and gently harmonise any form
+   controls that are stylable from the page.
+   ========================================================================== */
+
+:root {
+  --ppt-note-paper-1: #fffdef;
+  --ppt-note-paper-2: #fdeeb0;
+  --ppt-note-ink: #4a4234;
+  --ppt-note-ink-soft: #6b6353;
+  --ppt-note-line: rgba(202, 138, 4, 0.10);
+  --ppt-note-teal: #38c9c3;
+  --ppt-note-teal-dark: #2fb3ad;
+}
+
+/* --- The note ----------------------------------------------------------- */
+.newsletter-sticky-note {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 292px;
+  padding: 1.6rem 1.35rem 1.35rem;
+  z-index: 999;
+  color: var(--ppt-note-ink);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--ppt-note-paper-1) 0%, var(--ppt-note-paper-2) 100%);
+  border-radius: 10px 12px 12px 12px;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.04),
+    0 12px 30px rgba(76, 66, 52, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  transform: rotate(-2deg);
+  transform-origin: bottom left;
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.35s ease;
+  animation: ppt-note-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.newsletter-sticky-note:hover {
+  transform: rotate(0deg) translateY(-6px) scale(1.02);
+  box-shadow:
+    0 2px 2px rgba(0, 0, 0, 0.05),
+    0 20px 42px rgba(76, 66, 52, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+/* faint notepad lines (behind the content) */
+.newsletter-sticky-note::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 27px,
+    var(--ppt-note-line) 28px
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+/* washi tape on top */
+.newsletter-sticky-note::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 98px;
+  height: 26px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: linear-gradient(135deg, rgba(56, 201, 195, 0.55), rgba(47, 179, 173, 0.42));
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+/* --- Close button ------------------------------------------------------- */
+.newsletter-sticky-note__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(74, 66, 52, 0.08);
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--ppt-note-ink-soft);
+  cursor: pointer;
+  z-index: 3;
+  transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.newsletter-sticky-note__close:hover {
+  background: rgba(74, 66, 52, 0.18);
+  color: var(--ppt-note-ink);
+  transform: rotate(90deg);
+}
+
+.newsletter-sticky-note__close:focus-visible {
+  outline: 2px solid var(--ppt-note-teal-dark);
+  outline-offset: 2px;
+}
+
+/* --- Content ------------------------------------------------------------ */
+.newsletter-sticky-note__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.newsletter-sticky-note__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 0.6rem;
+  font-size: 1.55rem;
+  line-height: 1;
+  background: radial-gradient(circle at 30% 28%, #ffffff 0%, #fdeeb0 100%);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(202, 138, 4, 0.18);
+  filter: none;
+}
+
+.newsletter-sticky-note__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: var(--ppt-note-ink);
+  text-shadow: none;
+}
+
+.newsletter-sticky-note__text {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--ppt-note-ink-soft);
+}
+
+.newsletter-sticky-note__text strong {
+  color: var(--ppt-note-teal-dark);
+  font-weight: 800;
+}
+
+/* --- Harmonise stylable form controls with the brand -------------------- */
+.newsletter-sticky-note__content input[type="email"],
+.newsletter-sticky-note__content input[type="text"],
+.newsletter-sticky-note #form-script-tag-18726789 + * input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--ppt-note-ink);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(202, 138, 4, 0.45);
+  border-radius: 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.newsletter-sticky-note__content input[type="email"]:focus,
+.newsletter-sticky-note__content input[type="text"]:focus {
+  outline: none;
+  border-color: var(--ppt-note-teal-dark);
+  box-shadow: 0 0 0 3px rgba(56, 201, 195, 0.22);
+  background: #ffffff;
+}
+
+.newsletter-sticky-note__content button,
+.newsletter-sticky-note__content input[type="submit"],
+.newsletter-sticky-note #form-script-tag-18726789 + * button,
+.newsletter-sticky-note #form-script-tag-18726789 + * input[type="submit"] {
+  width: 100%;
+  padding: 0.62rem 1rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--ppt-note-teal) 0%, var(--ppt-note-teal-dark) 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(56, 201, 195, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.newsletter-sticky-note__content button:hover,
+.newsletter-sticky-note__content input[type="submit"]:hover,
+.newsletter-sticky-note #form-script-tag-18726789 + * button:hover,
+.newsletter-sticky-note #form-script-tag-18726789 + * input[type="submit"]:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 5px 16px rgba(56, 201, 195, 0.45);
+}
+
+/* --- Motion ------------------------------------------------------------- */
+@keyframes ppt-note-in {
+  from { opacity: 0; transform: translateY(28px) rotate(-8deg); }
+  to   { opacity: 1; transform: translateY(0) rotate(-2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .newsletter-sticky-note { animation: none; }
+  .newsletter-sticky-note,
+  .newsletter-sticky-note:hover,
+  .newsletter-sticky-note__close { transition: none; }
+}
+
+/* --- Responsive / state ------------------------------------------------- */
+@media (max-width: 1024px) {
+  .newsletter-sticky-note { display: none; }
+}
+
+.newsletter-sticky-note.hidden {
+  display: none;
+}
