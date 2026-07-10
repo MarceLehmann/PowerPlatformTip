@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 63 – 'Mastering the Lookup Function'"
+title: "#PowerPlatformTip 63: 'Mastering the Lookup Function'"
 date: 2023-06-22
 last_modified_at: 2026-07-09
 categories:
@@ -25,7 +25,7 @@ toc_sticky: true
 
 ## 💡 Challenge
 
-Understanding the difference between `Lookup(Source, Condition, COLUMN)` and `Lookup(Source, Condition).COLUMN` – and optimizing your formulas for better performance.
+Understanding the difference between `Lookup(Source, Condition, COLUMN)` and `Lookup(Source, Condition).COLUMN`, and optimizing your formulas for better performance.
 
 ## ✅ Solution
 

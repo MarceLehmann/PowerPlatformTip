@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 124 – 'Recognize Plain Text File Formats'"
+title: "#PowerPlatformTip 124: 'Recognize Plain Text File Formats'"
 date: 2024-09-18
 last_modified_at: 2026-07-09
 categories:
@@ -20,10 +20,10 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Skip Base64 decoding in Power Automate – plain-text formats like JSON, CSV, XML and Markdown return content directly from 'Get File Content'.
+> **TL;DR:** Skip Base64 decoding in Power Automate, plain-text formats like JSON, CSV, XML and Markdown return content directly from 'Get File Content'.
 
 ## 💡 Challenge
-The "Get File Content" action in Power Automate often returns file contents as Base64, which complicates further processing. Yet some formats return their content directly as plain text — making things much simpler.
+The "Get File Content" action in Power Automate often returns file contents as Base64, which complicates further processing. Yet some formats return their content directly as plain text, making things much simpler.
 
 ## ✅ Solution
 Use plain-text formats such as JSON, HTML, CSV, TXT, XML, Markdown, YAML, CSS, JavaScript, and log files to get content directly, without any Base64 decoding.
@@ -59,7 +59,7 @@ Using plain-text formats saves time and cuts complexity in your automations. You
 
 ## 🌟 Key Advantages
 
-🔸 No Base64 decoding needed — immediate use of file contents
+🔸 No Base64 decoding needed, immediate use of file contents
 
 🔸 Simplifies and speeds up further processing
 
@@ -83,5 +83,5 @@ Plain-text output depends on the connector and the file type. "Get File Content"
 For Base64 outputs, use a "Compose" action or the `base64ToString()` expression to decode the content before processing.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 125 – Convert CSV to JSON](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-125-convert-csv-to-json/) — turn plain-text CSV into JSON with standard actions.
-- [#PowerPlatformTip 104 – Efficient JSON Handling](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-104-efficient-json-handling/) — process JSON payloads cleanly in flows.
+- [#PowerPlatformTip 125: Convert CSV to JSON](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-125-convert-csv-to-json/), turn plain-text CSV into JSON with standard actions.
+- [#PowerPlatformTip 104: Efficient JSON Handling](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-104-efficient-json-handling/), process JSON payloads cleanly in flows.

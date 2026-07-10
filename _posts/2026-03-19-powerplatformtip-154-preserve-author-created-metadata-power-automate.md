@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 154 – 'Preserve Author, Editor & Dates on Copied SharePoint Files'"
+title: "#PowerPlatformTip 154: 'Preserve Author, Editor & Dates on Copied SharePoint Files'"
 date: 2026-03-19
 last_modified_at: 2026-07-09
 categories:
@@ -12,7 +12,7 @@ tags:
   - Metadata
   - HTTP
   - PowerPlatformTip
-excerpt: "When you have to copy-and-delete a SharePoint file, it loses its original Created By, Modified By and timestamps. One 'Send an HTTP request to SharePoint' MERGE call restores AuthorId, EditorId, Created and Modified — so the migrated file looks exactly like the original."
+excerpt: "When you have to copy-and-delete a SharePoint file, it loses its original Created By, Modified By and timestamps. One 'Send an HTTP request to SharePoint' MERGE call restores AuthorId, EditorId, Created and Modified, so the migrated file looks exactly like the original."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -23,7 +23,7 @@ toc_sticky: true
 > **TL;DR:** After a create-and-delete copy, one `MERGE` HTTP request restores the original `AuthorId`, `EditorId`, `Created` and `Modified` so the migrated file matches the source.
 
 Sometimes a straight *Copy file* isn't possible and you have to recreate a document with *Create file* + *Delete file*. The problem: the new file gets **you** as author, **today** as the created date, and loses the original history.
-With a single REST MERGE call you can write the original **AuthorId**, **EditorId**, **Created** and **Modified** values back onto the new item — so the migrated file is indistinguishable from the source.
+With a single REST MERGE call you can write the original **AuthorId**, **EditorId**, **Created** and **Modified** values back onto the new item, so the migrated file is indistinguishable from the source.
 
 ## 💡 Challenge
 You migrate or rebuild files across libraries where *Copy file* won't work (different site, content type change, etc.), so you use *Create file* + *Delete file*.
@@ -76,7 +76,7 @@ IF-MATCH: *
 X-HTTP-Method: MERGE
 ```
 
-🔸 Body — dates in ISO 8601 UTC:
+🔸 Body, dates in ISO 8601 UTC:
 
 ```json
 {
@@ -93,13 +93,13 @@ X-HTTP-Method: MERGE
 🔸 A `204 No Content` response means the metadata was applied. Verify in the library's *Created* / *Modified* columns.
 
 ## 🎉 Result
-The recreated file shows the **original** Created By, Modified By, Created and Modified — exactly like the source. Audit trails stay intact, chronological sorting is correct, and compliance views remain trustworthy, even though the file was rebuilt via create-and-delete.
+The recreated file shows the **original** Created By, Modified By, Created and Modified, exactly like the source. Audit trails stay intact, chronological sorting is correct, and compliance views remain trustworthy, even though the file was rebuilt via create-and-delete.
 
 ## 🌟 Key Advantages
 
 🔸 **Faithful migration:** original author, editor and timestamps are preserved.
 
-🔸 **Standard action only:** *Send an HTTP request to SharePoint* — no premium connector.
+🔸 **Standard action only:** *Send an HTTP request to SharePoint*, no premium connector.
 
 🔸 **Selective by design:** `MERGE` writes only the four metadata fields, leaving everything else untouched.
 
@@ -113,7 +113,7 @@ The recreated file shows the **original** Created By, Modified By, Created and M
 
 ISO 8601 in UTC, e.g. `2022-03-14T08:15:00Z`. Convert your source values with `formatDateTime(..., 'yyyy-MM-ddTHH:mm:ssZ')` if needed.
 
-**Q3: My Modified date keeps resetting to today — why?**
+**Q3: My Modified date keeps resetting to today, why?**
 
 Any subsequent update to the item overwrites `Modified` and `Editor`. Make this MERGE the **last** write to the item so your values stick.
 
@@ -122,6 +122,6 @@ Any subsequent update to the item overwrites `Modified` and `Editor`. Make this 
 The connection must have permission to write to the library. Setting `Author`/`Editor` requires the account to be able to update those fields (site member/owner-level access).
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 153 – Rename a SharePoint File with Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-153-rename-sharepoint-file-power-automate/) — the companion rename trick using `FileLeafRef`.
-- [#PowerPlatformTip 133 – SharePoint Updates with Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-133-sharepoint-updates-with-power-automate-no-required-fields-needed/) — updating only the fields you need.
-- [#PowerPlatformTip 47 – Batch-Method within SharePoint](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-47-batch-method-within-sharepoint/) — bulk REST operations for large migrations.
+- [#PowerPlatformTip 153: Rename a SharePoint File with Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-153-rename-sharepoint-file-power-automate/), the companion rename trick using `FileLeafRef`.
+- [#PowerPlatformTip 133: SharePoint Updates with Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-133-sharepoint-updates-with-power-automate-no-required-fields-needed/), updating only the fields you need.
+- [#PowerPlatformTip 47: Batch-Method within SharePoint](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-47-batch-method-within-sharepoint/), bulk REST operations for large migrations.
