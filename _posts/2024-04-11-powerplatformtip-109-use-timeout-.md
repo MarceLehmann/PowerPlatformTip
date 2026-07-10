@@ -1,7 +1,8 @@
 ---
 title: "#PowerPlatformTip 109 – 'Use TimeOut'"
+seo_title: "Power Automate Timeout: Extend Action Limits"
 date: 2024-04-11
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatformTip
@@ -13,6 +14,7 @@ tags:
   - LongRunningTasks
   - PowerPlatformTip
 excerpt: "Extend action timeouts and add error handling to ensure long-running Power Automate tasks complete without disruption."
+description: "Long approvals timing out in Power Automate? Extend action timeouts with ISO 8601 durations (P2W, P1D) and add run-after error handling so flows never fail."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -72,4 +74,6 @@ If you don't configure error handling, a timeout fails the run. Use **Configure 
 **3. Can I use timeouts with all actions in Power Automate?**
 Most built-in actions allow timeout configuration. For unsupported actions, wrap them in scopes or alternative logic.
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 144 – Infinite Approvals beyond 30 days](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-144-infinite-approvals/) — keep approvals alive past the 30-day limit.
+- [#PowerPlatformTip 98 – Secure Inputs & Secure Outputs](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-98-secure-inputs-secure-outputs/) — more action-setting tricks in flows.

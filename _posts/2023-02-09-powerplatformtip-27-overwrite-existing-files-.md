@@ -1,7 +1,8 @@
 ---
 title: "#PowerPlatformTip 27 – 'Overwrite existing files' (The Settings Hack)"
+seo_title: "Overwrite Existing Files in Power Automate (SharePoint)"
 date: 2023-02-09
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatformTip
@@ -13,6 +14,7 @@ tags:
   - chunking
   - settings hack
 excerpt: "Enable file overwriting in SharePoint by disabling 'Allow Chunking' – a simple settings tweak that unlocks the hidden overwrite toggle in Power Automate."
+description: "Overwrite toggle missing in Power Automate's Create File action? Turn off Allow Chunking to unlock it and replace SharePoint files — no delete-and-recreate."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -72,4 +74,6 @@ Yes, overwriting maintains existing sharing links, permissions, and metadata. Th
 
 OneDrive for Business has the Overwrite toggle available by default – no settings hack needed there!
 
----
+## 🔗 Related Tips
+- [#PowerPlatformTip 121 – Filtering SharePoint File Fields with OData](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-121-filtering-sharepoint-file-fields-with-odata/) — target the exact file before you overwrite it.
+- [#PowerPlatformTip 18 – Download and Save Files](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-18-download-and-save-files/) — more file-handling patterns in flows.

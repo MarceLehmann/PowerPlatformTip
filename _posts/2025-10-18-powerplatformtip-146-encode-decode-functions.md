@@ -1,7 +1,8 @@
 ---
 title: "#PowerPlatformTip 146 – Encode & Decode Functions"
+seo_title: "Encode & Decode in Power Apps & Power Automate"
 date: 2025-12-04
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatformTip
@@ -14,6 +15,7 @@ tags:
   - ODataFilters
   - PowerPlatformTip
 excerpt: "Passing URLs, JSON data, or text with special characters between systems? Encoding prevents quotes, apostrophes, and special characters from breaking your flows and apps by ensuring they're treated as data, not code."
+description: "Stop special characters breaking your flows. Use EncodeUrl, EncodeHTML, encodeUriComponent & decodeUriComponent — plus OData apostrophe escaping — the right way."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

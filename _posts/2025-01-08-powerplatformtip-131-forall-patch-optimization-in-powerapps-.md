@@ -1,7 +1,8 @@
 ---
 title: "#PowerPlatformTip 131 – 'ForAll & Patch Optimization in PowerApps'"
+seo_title: "Power Apps ForAll + Patch: Faster Bulk Updates"
 date: 2025-01-08
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatformTip
@@ -14,6 +15,7 @@ tags:
   - BatchProcessing
   - PowerPlatformTip
 excerpt: "Optimize Power Apps performance by using ForAll and Patch for bulk updates—reduce API calls, speed up batch processing, and handle missing IDs efficiently."
+description: "Speed up bulk updates in Power Apps by nesting ForAll inside Patch — cut API calls, batch record updates, and handle missing IDs. Up to 50% faster."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

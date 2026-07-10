@@ -1,7 +1,8 @@
 ---
 title: "#PowerPlatformTip 94 – 'Extract Text from DOCX'"
+seo_title: "Extract Text from Word DOCX in Power Automate"
 date: 2023-12-13
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatformTip
@@ -14,6 +15,7 @@ tags:
   - Power Platform
   - Automation
 excerpt: "Extract text from DOCX files in Power Automate using native actions—eliminate third-party dependencies and streamline document processing and integration."
+description: "Extract text from Word DOCX files in Power Automate using only native actions — treat the DOCX as a ZIP, parse document.xml, and skip third-party connectors."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
@@ -64,3 +66,7 @@ Use an "Apply to each" loop over the list of DOCX files, then repeat the extract
 **3. How do I strip XML tags to get only plain text?**
 
 After parsing the XML, use the "Html to text" action or string expressions in "Compose" to remove any residual markup.
+
+## 🔗 Related Tips
+- [#PowerPlatformTip 92 – Free PDF Tools in Power Automate](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-92-free-pdf-tools-in-powerautomate/) — more no-cost document processing.
+- [#PowerPlatformTip 121 – Filtering SharePoint File Fields with OData](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-121-filtering-sharepoint-file-fields-with-odata/) — locate the DOCX files to process.
