@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 116 – 'AI Automated Solution Design'"
+title: "#PowerPlatformTip 116: 'AI Automated Solution Design'"
 date: 2024-07-09
 last_modified_at: 2026-07-09
 categories:
@@ -23,7 +23,7 @@ toc_sticky: true
 > **TL;DR:** Turn a voice-to-text description into a full Power Platform Solution Design with ChatGPT, then visualize it with Diagram-GPT.
 
 ## 💡 Challenge
-You want a quick, structured overview of a Solution Design for a Power Apps and Power Automate project — without spending hours writing it from scratch.
+You want a quick, structured overview of a Solution Design for a Power Apps and Power Automate project, without spending hours writing it from scratch.
 
 ## ✅ Solution
 Describe the process by voice-to-text, let ChatGPT draft a Solution Design in Markdown, then turn it into diagrams with Diagram-GPT.
@@ -55,7 +55,7 @@ You are a Power Platform solution architect with 10 years of experience. Based o
 🔸 Paste the Markdown into [Diagram-GPT](https://www.eraser.io/diagramgpt) to generate flowcharts and diagrams of the whole solution.
 
 ## 🎉 Result
-A comprehensive, visually structured Solution Design that combines descriptive text and diagrams — a clear, actionable overview in minutes.
+A comprehensive, visually structured Solution Design that combines descriptive text and diagrams, a clear, actionable overview in minutes.
 
 ## 🌟 Key Advantages
 
@@ -77,11 +77,11 @@ A comprehensive, visually structured Solution Design that combines descriptive t
 ChatGPT with file-upload capability, a voice-to-text transcription tool, and Diagram-GPT for generating diagrams.
 
 **2. Can I customize the ChatGPT prompt for different project types?**
-Yes — adapt the prompt sections (Introduction, Objectives, etc.) and add relevant context or files to fit your project.
+Yes, adapt the prompt sections (Introduction, Objectives, etc.) and add relevant context or files to fit your project.
 
 **3. How do I handle large files if ChatGPT has upload limits?**
 Split large files into smaller parts, summarize key elements in text, or provide excerpts so ChatGPT can process them effectively.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 99 – Timesaver Toolkits: ChatGPT and Flow](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-99-timesaver-toolkits-chatgpt-and-flow/) — more ways to combine ChatGPT with Power Platform.
-- [#PowerPlatformTip 134 – Optimize Canvas Apps with YAML](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-134-optimize-canvas-apps-yaml/) — let AI review and improve your app code.
+- [#PowerPlatformTip 99: Timesaver Toolkits: ChatGPT and Flow](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-99-timesaver-toolkits-chatgpt-and-flow/), more ways to combine ChatGPT with Power Platform.
+- [#PowerPlatformTip 134: Optimize Canvas Apps with YAML](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-134-optimize-canvas-apps-yaml/), let AI review and improve your app code.

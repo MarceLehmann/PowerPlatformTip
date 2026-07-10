@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 118 – 'Copy Actions in Switch/Condition'"
+title: "#PowerPlatformTip 118: 'Copy Actions in Switch/Condition'"
 date: 2024-07-23
 last_modified_at: 2026-07-09
 categories:
@@ -21,7 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Copying an action inside a Switch or Condition can break its dynamic-content references — paste it outside first, drag it into the branch, then re-point the references.
+> **TL;DR:** Copying an action inside a Switch or Condition can break its dynamic-content references, paste it outside first, drag it into the branch, then re-point the references.
 
 ## 💡 Challenge
 In Power Automate, copying actions or scopes directly within a Switch or Condition often fails, because the copied element still depends on outputs that aren't reachable inside the target branch.
@@ -37,7 +37,7 @@ Copy the action or scope to a higher level in the flow first, move it into the d
 
 **2. Copy and paste it outside the Switch/Condition**
 
-🔸 Paste the action or scope at a higher level in the flow first — somewhere its references still resolve.
+🔸 Paste the action or scope at a higher level in the flow first, somewhere its references still resolve.
 
 **3. Move it into the desired branch**
 
@@ -80,5 +80,5 @@ Yes. Group multiple actions or a scope and follow the same process: copy outside
 You'll hit save or runtime errors, because the action can't resolve references to variables or outputs in the new location.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 45 – Use Scopes](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-45-use-scopes/) — group actions into scopes to move and manage them as one block.
-- [#PowerPlatformTip 11 – Trigger Condition](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-11-trigger-condition/) — control when logic runs instead of nesting more conditions.
+- [#PowerPlatformTip 45: Use Scopes](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-45-use-scopes/), group actions into scopes to move and manage them as one block.
+- [#PowerPlatformTip 11: Trigger Condition](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-11-trigger-condition/), control when logic runs instead of nesting more conditions.

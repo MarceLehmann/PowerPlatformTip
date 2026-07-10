@@ -1,6 +1,6 @@
 ---
-title: "#PowerPlatformTip 123 – 'Get Lowest / Highest SharePoint ID & TotalCount'"
-seo_title: "#PowerPlatformTip 123 – 'Get Lowest / Highest SharePoint ID'"
+title: "#PowerPlatformTip 123: 'Get Lowest / Highest SharePoint ID & TotalCount'"
+seo_title: "#PowerPlatformTip 123: 'Get Lowest / Highest SharePoint ID'"
 date: 2024-09-11
 last_modified_at: 2026-07-09
 categories:
@@ -23,7 +23,7 @@ toc_sticky: true
 > **TL;DR:** Get the lowest ID, highest ID and total count of a SharePoint list in Power Automate with three simple `$orderby`/`ItemCount` REST calls.
 
 ## 💡 Challenge
-You need the highest, lowest, and total count of item IDs in a SharePoint list — to build reports, paginate, or manage data more efficiently — without scanning the whole list.
+You need the highest, lowest, and total count of item IDs in a SharePoint list, to build reports, paginate, or manage data more efficiently, without scanning the whole list.
 
 ## ✅ Solution
 Use three small HTTP requests against the SharePoint REST API to fetch the lowest ID, the highest ID and the total item count directly.
@@ -52,7 +52,7 @@ Use three small HTTP requests against the SharePoint REST API to fetch the lowes
 🔸 Again use GET with the same headers.
 
 ## 🎉 Result
-You get the lowest, highest, and total count of IDs in your SharePoint list in seconds – perfect for reports and data analysis.
+You get the lowest, highest, and total count of IDs in your SharePoint list in seconds, perfect for reports and data analysis.
 
 ## 🌟 Key Advantages
 
@@ -80,5 +80,5 @@ Yes. Retrieving the lowest or highest ID with `$top=1` is efficient, but be awar
 Adjust the `$select` and `$orderby` query parameters to include the desired fields (e.g., `Title`) and order by those columns as needed.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 97 – Enhanced Pagination](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-97-enhanced-pagination/) — handle large SharePoint result sets efficiently.
-- [#PowerPlatformTip 95 – Optimized SharePoint Queries](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-95-optimized-sharepoint-queries/) — build fast, delegable list queries.
+- [#PowerPlatformTip 97: Enhanced Pagination](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-97-enhanced-pagination/), handle large SharePoint result sets efficiently.
+- [#PowerPlatformTip 95: Optimized SharePoint Queries](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-95-optimized-sharepoint-queries/), build fast, delegable list queries.

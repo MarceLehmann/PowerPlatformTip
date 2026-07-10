@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 114 – 'Send Approvals to External Recipients'"
+title: "#PowerPlatformTip 114: 'Send Approvals to External Recipients'"
 date: 2024-05-17
 last_modified_at: 2026-07-09
 categories:
@@ -53,7 +53,7 @@ Use the **Send email with options** action for a quick approach, or combine **Ap
 🔸 Step-by-step walkthrough: [Approvals with Adaptive Cards in Outlook (Yash Agarwal)](https://powerplatformtip.com/Article/power-automate-tutorial-approvals-adaptive-cards-outlook-awesome-from-yash-agarwal/)
 
 ## 🎉 Result
-External stakeholders can now take part in your approval processes — either by email response or interactively via an Adaptive Card in Outlook.
+External stakeholders can now take part in your approval processes, either by email response or interactively via an Adaptive Card in Outlook.
 
 ## 🌟 Key Advantages
 

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 117 – 'Optimize Parallel Object Processing'"
+title: "#PowerPlatformTip 117: 'Optimize Parallel Object Processing'"
 date: 2024-07-16
 last_modified_at: 2026-07-09
 categories:
@@ -77,5 +77,5 @@ Child flows are separate flows invoked from a parent flow. They let you process 
 Use scopes and configure run-after settings inside the child flow. Log failures to a database or send notifications, and optionally retry or resubmit failed runs later.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 77 – Optimize Parallel Object Processing](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-77-optimize-parallel-object-processing/) — the companion piece on parallelizing item processing.
-- [#PowerPlatformTip 75 – Boost Efficiency with Concurrency Control](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-75-boost-efficiency-with-concurrency-control/) — tune the Apply to each concurrency setting.
+- [#PowerPlatformTip 77: Optimize Parallel Object Processing](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-77-optimize-parallel-object-processing/), the companion piece on parallelizing item processing.
+- [#PowerPlatformTip 75: Boost Efficiency with Concurrency Control](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-75-boost-efficiency-with-concurrency-control/), tune the Apply to each concurrency setting.
