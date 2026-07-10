@@ -1,7 +1,8 @@
 ---
 title: "#PowerPlatformTip 121 – 'Filtering SharePoint File Fields with OData'"
+seo_title: "Filter SharePoint Files by Name in Power Automate"
 date: 2024-08-21
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatformTip
@@ -14,11 +15,25 @@ tags:
   - FileDirRef
   - PowerPlatformTip
 excerpt: "Quickly and efficiently filter SharePoint files in Power Automate by using FileLeafRef (file name), FileRef (full path), and FileDirRef (folder) fields with simple OData filter expressions – even if you don't know how these fields work yet."
+description: "Filter SharePoint files in Power Automate by name, path, or folder using FileLeafRef, FileRef & FileDirRef in one OData query. No loops, no premium connector."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
 toc: true
 toc_sticky: true
+faq:
+  - question: "How do I apply these OData filters in Power Automate?"
+    answer: "In the 'Get files (properties only)' action, enter your OData filter expression into the Filter Query field to limit results based on FileLeafRef, FileRef, or FileDirRef."
+  - question: "Can I combine multiple OData filter conditions?"
+    answer: "Yes. Use logical operators like and or or in your filter query, for example: FileLeafRef eq 'document.pdf' and startswith(FileDirRef, '/sites/demo/Shared Documents')."
+  - question: "Are these fields supported in SharePoint on-premises?"
+    answer: "OData filtering with FileLeafRef, FileRef, and FileDirRef works in SharePoint Online and on-premises (2013+). Ensure your environment and connector version support OData queries."
+  - question: "What does FileLeafRef mean?"
+    answer: "It's the file name itself – for example, 'Invoice.pdf'."
+  - question: "What does FileRef mean?"
+    answer: "It's the full path of a file, including folders – for example, '/sites/demo/Shared Documents/Invoice.pdf'."
+  - question: "What does FileDirRef mean?"
+    answer: "It refers to a folder path only – for example, '/sites/demo/Shared Documents/'."
 ---
 
 > **TL;DR:** Filter SharePoint files in Power Automate with the FileLeafRef, FileRef and FileDirRef fields via simple OData queries.
