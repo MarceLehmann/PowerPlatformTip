@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 24 – 'Merge arrays or tables'"
+title: "#PowerPlatformTip 24: 'Merge arrays or tables'"
 date: 2023-01-31
 last_modified_at: 2026-07-09
 categories:
@@ -19,7 +19,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Merge two arrays and keep duplicates by joining each with a delimiter, concatenating, then splitting back — instead of union which drops duplicates.
+> **TL;DR:** Merge two arrays and keep duplicates by joining each with a delimiter, concatenating, then splitting back, instead of union which drops duplicates.
 
 ## 💡 Challenge
 You need to merge two arrays in Power Automate but keep the duplicates. The `union` function merges arrays, but it removes duplicates and returns only unique values.
@@ -33,7 +33,7 @@ Instead of `union`, concatenate the arrays with a unique delimiter and then spli
 
 2. **Concatenate** both strings, keeping the delimiter between them.
 
-3. **Split** the combined string back into an array using the same delimiter – all elements, duplicates included, are restored.
+3. **Split** the combined string back into an array using the same delimiter, all elements, duplicates included, are restored.
 
 Here's the expression:
 
@@ -49,7 +49,7 @@ split(
 ```
 
 ## 🎉 Result
-You merge both arrays while keeping all duplicate values – something the standard `union` function does not allow.
+You merge both arrays while keeping all duplicate values, something the standard `union` function does not allow.
 
 ## 🌟 Key Advantages
 🔸 Inclusivity: every element is kept, duplicates included.

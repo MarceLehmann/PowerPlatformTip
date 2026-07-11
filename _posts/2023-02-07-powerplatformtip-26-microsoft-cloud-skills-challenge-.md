@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 26 – 'Microsoft Cloud Skills Challenge'"
+title: "#PowerPlatformTip 26: 'Microsoft Cloud Skills Challenge'"
 date: 2023-02-07
 last_modified_at: 2026-07-09
 categories:
@@ -25,7 +25,7 @@ toc_sticky: true
 Staying current with Power Platform skills takes consistent learning, but self-paced study is easy to postpone without structure or motivation.
 
 ## ✅ Solution
-Join a Microsoft Cloud Skills Challenge. These free, time-boxed challenges bundle curated Microsoft Learn modules with a leaderboard, progress tracking, and often prizes or exam discounts – turning learning into a motivating, gamified sprint.
+Join a Microsoft Cloud Skills Challenge. These free, time-boxed challenges bundle curated Microsoft Learn modules with a leaderboard, progress tracking, and often prizes or exam discounts, turning learning into a motivating, gamified sprint.
 
 ## 🔧 How It's Done
 
@@ -42,7 +42,7 @@ Join a Microsoft Cloud Skills Challenge. These free, time-boxed challenges bundl
    🔸 Work through the hands-on units at your own pace and watch your progress climb the leaderboard.
 
 ## 🎉 Result
-You build Power Platform skills in a structured, motivating way – and often earn certification exam discounts or prizes along the way.
+You build Power Platform skills in a structured, motivating way, and often earn certification exam discounts or prizes along the way.
 
 ## 🌟 Key Advantages
 🔸 Free, curated learning paths straight from Microsoft Learn.

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 29 – 'ParseJSON Description'"
+title: "#PowerPlatformTip 29: 'ParseJSON Description'"
 date: 2023-02-15
 last_modified_at: 2026-07-09
 categories:

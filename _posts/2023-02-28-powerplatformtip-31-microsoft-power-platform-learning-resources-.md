@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 31 – 'Microsoft Power Platform: Learning Resources'"
+title: "#PowerPlatformTip 31: 'Microsoft Power Platform: Learning Resources'"
 date: 2023-02-28
 last_modified_at: 2026-07-09
 categories:
@@ -25,7 +25,7 @@ toc_sticky: true
 Whether you're new to the Power Platform or looking to deepen your expertise, finding comprehensive and reliable resources to enhance your skills can be daunting.
 
 ## ✅ Solution
-The "[Microsoft Power Platform: Learning Resources](https://powerapps.microsoft.com/en-gb/blog/microsoft-powerapps-learning-resources/)" website is a curated hub for both beginners and advanced users. It covers administration, development, data integration, and more – including dedicated content for SharePoint users.
+The "[Microsoft Power Platform: Learning Resources](https://powerapps.microsoft.com/en-gb/blog/microsoft-powerapps-learning-resources/)" website is a curated hub for both beginners and advanced users. It covers administration, development, data integration, and more, including dedicated content for SharePoint users.
 
 ## 🔧 How It's Done
 * **Explore Topics:** Delve into subjects from basic introductions to Power Apps, Power Automate, and Power BI, through to advanced app development and automation techniques.

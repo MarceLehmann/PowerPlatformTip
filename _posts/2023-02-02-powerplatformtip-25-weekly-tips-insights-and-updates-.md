@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 25 – 'Weekly tips, insights and updates'"
+title: "#PowerPlatformTip 25: 'Weekly tips, insights and updates'"
 date: 2023-02-02
 last_modified_at: 2026-07-09
 categories:
@@ -39,7 +39,7 @@ Here's how to do it:
    🔸 Enter your email address to subscribe.
 
 ## 🎉 Result
-You receive two weekly newsletters—Power Platform Dev Weekly and Power Platform Weekly—delivering curated tips, insights, and updates directly to your inbox.
+You receive two weekly newsletters, Power Platform Dev Weekly and Power Platform Weekly, delivering curated tips, insights, and updates directly to your inbox.
 
 ## 🌟 Key Advantages
 🔸 Stay informed about new Power Platform features and releases.

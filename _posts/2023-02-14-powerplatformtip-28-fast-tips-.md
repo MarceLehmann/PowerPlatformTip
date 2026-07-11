@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 28 – 'Fast tips'"
+title: "#PowerPlatformTip 28: 'Fast tips'"
 date: 2023-02-14
 last_modified_at: 2026-07-09
 categories:
@@ -22,7 +22,7 @@ toc_sticky: true
 > **TL;DR:** Append .de to your maker URLs (e.g. make.powerapps.com.de) to jump straight to a curated Power Platform tips blog.
 
 ## 💡 Challenge
-Finding quick, reliable Power Platform tips means scouring bookmarks and search results – it takes time to land on a curated resource.
+Finding quick, reliable Power Platform tips means scouring bookmarks and search results, it takes time to land on a curated resource.
 
 ## ✅ Solution
 Simply add `.de` to your familiar Power Platform maker URLs to jump straight to a blog full of curated Power Platform tips.
@@ -34,7 +34,7 @@ Simply add `.de` to your familiar Power Platform maker URLs to jump straight to 
   🔸 **make.powerapps.com.de**
   🔸 **make.powerautomate.com.de**
 
-* The URL redirects you directly to a blog packed with Power Platform tips – no searching required.
+* The URL redirects you directly to a blog packed with Power Platform tips, no searching required.
 
 ## 🎉 Result
 With one small change to the URL, you land directly on a curated collection of Power Platform tips, saving time on searching.
@@ -55,7 +55,7 @@ It works for the maker domains shown above, which redirect to the tips blog. Ava
 
 **2. Are the tips in German because of the '.de' domain?**
 
-No – the `.de` is just the redirect domain. The tips themselves are published in English.
+No, the `.de` is just the redirect domain. The tips themselves are published in English.
 
 **3. Can I bookmark these modified URLs for quick access?**
 

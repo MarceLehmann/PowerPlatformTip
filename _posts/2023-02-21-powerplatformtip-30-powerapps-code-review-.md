@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 30 – 'PowerApps – Code Review'"
+title: "#PowerPlatformTip 30: 'PowerApps: Code Review'"
 date: 2023-02-21
 last_modified_at: 2026-07-09
 categories:

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 32 – 'Optimize with GroupBy'"
+title: "#PowerPlatformTip 32: 'Optimize with GroupBy'"
 date: 2023-03-02
 last_modified_at: 2026-07-09
 categories:
@@ -22,14 +22,14 @@ toc_sticky: true
 > **TL;DR:** Load your data once and use GroupBy to organize it in memory for dependent filters, avoiding repeated data-source queries.
 
 ## 💡 Challenge
-Reloading the same data source repeatedly for different dependent filters – like categories and subcategories in dropdowns or combo boxes – hurts your app's performance.
+Reloading the same data source repeatedly for different dependent filters, like categories and subcategories in dropdowns or combo boxes, hurts your app's performance.
 
 ## ✅ Solution
 Use the GroupBy function to load all your data once, then organize it for each dependent filter in memory instead of querying the source again.
 
 ## 🔧 How It's Done
 
-1. Load all your data – categories, subcategories, and so on – in a single operation.
+1. Load all your data, categories, subcategories, and so on, in a single operation.
 
 2. Use GroupBy to organize that data according to your filtering needs, so each dependent filter reads from the grouped collection.
 
