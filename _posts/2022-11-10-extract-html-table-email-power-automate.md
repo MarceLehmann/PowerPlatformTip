@@ -1,5 +1,5 @@
-﻿---
-title: "Extract HTML Table from Email in Power Automate – Advanced XML Processing Techniques by Damien Bird"
+---
+title: "Extract HTML Table from Email in Power Automate: Advanced XML Processing Techniques by Damien Bird"
 date: 2022-11-10
 permalink: "/article/powerplatform/2022/11/10/extract-html-table-email-power-automate/"
 updated: 2025-06-26
@@ -52,7 +52,7 @@ Traditional text parsing methods struggle with complex HTML structures, making d
 - **Structured extraction** maintaining data relationships
 - **Reliable processing** of complex HTML tables
 
-## ðŸ”§ Technical Implementation
+## 🔧 Technical Implementation
 
 ### XML Processing Approach
 
@@ -70,7 +70,7 @@ Power Automate's XML processing actions enable sophisticated HTML parsing:
 - **Hierarchical navigation** through complex structures
 - **Flexible extraction** patterns
 
-## ðŸ› ï¸ Step-by-Step Process
+## 🛠️ Step-by-Step Process
 
 ### 1. Email Content Preparation
 
@@ -124,7 +124,7 @@ Power Automate's XML processing actions enable sophisticated HTML parsing:
 //tr[td[contains(text(), 'Widget')]]
 ```
 
-## ðŸŽ¯ Advanced XPath Techniques
+## 🎯 Advanced XPath Techniques
 
 ### Targeting Specific Tables
 
@@ -165,7 +165,7 @@ Power Automate's XML processing actions enable sophisticated HTML parsing:
 //td/text()[normalize-space(.)] | 'N/A'[not(//td/text())]
 ```
 
-## ðŸ§ª Testing with XPather.com
+## 🧪 Testing with XPather.com
 
 ### Online XPath Testing
 
@@ -184,7 +184,7 @@ Power Automate's XML processing actions enable sophisticated HTML parsing:
 5. **Refine expressions** as needed
 6. **Implement in Power Automate**
 
-## ðŸ’¡ Practical Use Cases
+## 💡 Practical Use Cases
 
 ### 1. Invoice Processing Automation
 
@@ -234,7 +234,7 @@ Power Automate's XML processing actions enable sophisticated HTML parsing:
 //table[@class='shipping-info']//tr/td[2]/text()
 ```
 
-## ðŸ—ï¸ Advanced Implementation Patterns
+## 🏗️ Advanced Implementation Patterns
 
 ### Dynamic Table Structure Handling
 
@@ -271,7 +271,7 @@ Power Automate's XML processing actions enable sophisticated HTML parsing:
 }
 ```
 
-## ðŸ”„ Integration Strategies
+## 🔄 Integration Strategies
 
 ### With SharePoint Lists
 
@@ -297,7 +297,7 @@ Power Automate's XML processing actions enable sophisticated HTML parsing:
 3. **Refresh** Power BI datasets
 4. **Update** dashboards automatically
 
-## ðŸ“Š Performance Optimization
+## 📊 Performance Optimization
 
 ### Efficient XPath Patterns
 
@@ -315,7 +315,7 @@ Power Automate's XML processing actions enable sophisticated HTML parsing:
 - **Cache results** for repeated operations
 - **Batch process** multiple extractions
 
-## âš ï¸ Important Considerations
+## ⚠️ Important Considerations
 
 ### HTML Compatibility
 
@@ -343,7 +343,7 @@ Power Automate's XML processing actions enable sophisticated HTML parsing:
 - **Monitor for** malicious HTML content
 - **Implement access controls** for sensitive data
 
-## ðŸš€ Future Enhancements
+## 🚀 Future Enhancements
 
 ### Planned Improvements
 
@@ -358,7 +358,7 @@ Power Automate's XML processing actions enable sophisticated HTML parsing:
 - **Custom Connectors** for specialized formats
 - **Machine Learning** for pattern recognition
 
-## ðŸŽ–ï¸ About Damien Bird
+## 🎖️ About Damien Bird
 
 Damien Bird is recognized for:
 - **Advanced Power Automate** techniques
@@ -368,7 +368,7 @@ Damien Bird is recognized for:
 
 This XML processing technique exemplifies Damien's expertise in pushing Power Automate beyond conventional limits.
 
-## ðŸŽ¯ Key Takeaways
+## 🎯 Key Takeaways
 
 - **XML processing** enables sophisticated HTML table extraction
 - **XPath expressions** provide precise data targeting capabilities
@@ -384,5 +384,3 @@ This breakthrough technique transforms how organizations can automate the extrac
 ---
 
 *You can see this video here on my blog because I have rated this video with 5 stars in my YouTube video library. This video was automatically posted using PowerAutomate.*
-
-
