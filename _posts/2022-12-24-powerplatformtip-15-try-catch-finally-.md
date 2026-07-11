@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 15 – 'try-catch-finally'"
+title: "#PowerPlatformTip 15: 'try-catch-finally'"
 date: 2022-12-24
 last_modified_at: 2026-07-09
 categories:
@@ -23,23 +23,23 @@ toc_sticky: true
 > **TL;DR:** Wrap your flow in Try, Catch and Finally Scope actions and use 'Configure run after' so Catch runs on failure and Finally always runs cleanup.
 
 Flows that fail silently are painful to troubleshoot.
-Borrow the **try-catch-finally** pattern from programming: run your main logic in a Try scope, handle failures in a Catch scope, and always run cleanup in a Finally scope — driven by each scope's **Configure run after** settings.
+Borrow the **try-catch-finally** pattern from programming: run your main logic in a Try scope, handle failures in a Catch scope, and always run cleanup in a Finally scope, driven by each scope's **Configure run after** settings.
 
 ## 💡 Challenge
 Without explicit error handling, flows fail silently and give you little to work with when something breaks.
 
 ## ✅ Solution
-Structure your flow into three **Scope** actions — Try, Catch and Finally — and use **Configure run after** so the Catch runs only on failure and the Finally always runs.
+Structure your flow into three **Scope** actions, Try, Catch and Finally, and use **Configure run after** so the Catch runs only on failure and the Finally always runs.
 
 ## 🔧 How it's done
 
 **1. Add a Try scope**
 
-🔸 Put your core logic inside a **Scope** named *Try* — include every critical action.
+🔸 Put your core logic inside a **Scope** named *Try*, include every critical action.
 
 **2. Add a Catch scope**
 
-🔸 Add a second scope set to **run after** the Try *has failed / timed out*. Put your error handling here — notifications and logging.
+🔸 Add a second scope set to **run after** the Try *has failed / timed out*. Put your error handling here, notifications and logging.
 
 **3. Add a Finally scope**
 
@@ -58,7 +58,7 @@ Failures surface clearly, cleanup always runs, and your flows behave predictably
 
 ## 🌟 Key Advantages
 
-🔸 **Surface failures:** no more silent errors — you know what went wrong and where.
+🔸 **Surface failures:** no more silent errors, you know what went wrong and where.
 
 🔸 **Isolated cleanup:** a dedicated Finally scope keeps post-processing tidy.
 
@@ -70,7 +70,7 @@ Failures surface clearly, cleanup always runs, and your flows behave predictably
 
 **Q1: When should I use try-catch-finally in Power Automate?**
 
-Use it for critical flows where error handling matters — external API calls, file operations, and complex business processes.
+Use it for critical flows where error handling matters, external API calls, file operations, and complex business processes.
 
 **Q2: Can I nest Try-Catch scopes?**
 

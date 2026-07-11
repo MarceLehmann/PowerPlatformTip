@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 21 – 'Use Triggeroutput'"
+title: "#PowerPlatformTip 21: 'Use Triggeroutput'"
 date: 2023-01-19
 last_modified_at: 2026-07-09
 categories:

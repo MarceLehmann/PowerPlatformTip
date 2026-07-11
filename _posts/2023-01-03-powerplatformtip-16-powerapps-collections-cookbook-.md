@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 16 – 'PowerApps – Collections Cookbook'"
+title: "#PowerPlatformTip 16: 'PowerApps: Collections Cookbook'"
 date: 2023-01-03
 last_modified_at: 2026-07-09
 categories:
@@ -22,14 +22,14 @@ toc_sticky: true
 
 > **TL;DR:** Use Matthew Devaney's free PowerApps Collections Cookbook for copy-and-paste Power Fx recipes to handle advanced collection tasks.
 
-Manipulating collections in advanced ways — numbering rows, counting distinct values, grouping — often goes beyond the built-in functions you reach for first.
+Manipulating collections in advanced ways, numbering rows, counting distinct values, grouping, often goes beyond the built-in functions you reach for first.
 Matthew Devaney's **PowerApps Collections Cookbook** is a free library of ready-to-use recipes for exactly these tasks.
 
 ## 💡 Challenge
 You need advanced collection operations that aren't obvious from the built-in functions, and writing them from scratch each time is slow.
 
 ## ✅ Solution
-Use the [PowerApps Collections Cookbook](https://www.matthewdevaney.com/powerapps-collections-cookbook/) — a website full of copy-and-paste Power Fx recipes for common collection tasks.
+Use the [PowerApps Collections Cookbook](https://www.matthewdevaney.com/powerapps-collections-cookbook/), a website full of copy-and-paste Power Fx recipes for common collection tasks.
 
 ## 🔧 How it's done
 
@@ -39,14 +39,14 @@ Use the [PowerApps Collections Cookbook](https://www.matthewdevaney.com/powerapp
 
 **2. Find your recipe**
 
-🔸 Look for the task you need — adding row numbers, counting distinct items, reversing a collection, and more.
+🔸 Look for the task you need, adding row numbers, counting distinct items, reversing a collection, and more.
 
 **3. Copy, paste and adapt**
 
 🔸 Paste the snippet into your app, test it in a safe screen, and adjust it to your data.
 
 ## 🎉 Result
-You unlock advanced collection capabilities — row numbering, distinct counts and more — without writing the logic yourself.
+You unlock advanced collection capabilities, row numbering, distinct counts and more, without writing the logic yourself.
 
 ## 🌟 Key Advantages
 
@@ -57,7 +57,7 @@ You unlock advanced collection capabilities — row numbering, distinct counts a
 🔸 **More reliable apps** thanks to tested examples.
 
 ## 🔗 Related Tips
-- [#PowerPlatformTip 93 – Add RowNumbers](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-93-add-rownumbers/) — a specific cookbook-style recipe for numbering collection rows.
+- [#PowerPlatformTip 93: Add RowNumbers](https://www.powerplatformtip.com/article/powerplatformtip/powerplatformtip-93-add-rownumbers/), a specific cookbook-style recipe for numbering collection rows.
 
 ---
 

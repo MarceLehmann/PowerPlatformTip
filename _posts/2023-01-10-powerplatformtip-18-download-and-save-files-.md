@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 18 – 'Download & Save Files'"
+title: "#PowerPlatformTip 18: 'Download & Save Files'"
 date: 2023-01-10
 last_modified_at: 2026-07-09
 categories:
@@ -26,7 +26,7 @@ Downloading files in a flow works differently depending on whether the file is o
 Use the right action for each case: a simple URL action for public files, and an authenticated HTTP request for protected ones.
 
 ## 💡 Challenge
-Public and password-protected files need different handling — one approach doesn't cover both accessibility and security.
+Public and password-protected files need different handling, one approach doesn't cover both accessibility and security.
 
 ## ✅ Solution
 Use two methods depending on the source: **Upload file from URL** for public files, and **HTTP request + Create file** for files that require authentication.
@@ -35,7 +35,7 @@ Use two methods depending on the source: **Upload file from URL** for public fil
 
 **1. Public files**
 
-🔸 Use the **Upload file from URL** action — straightforward for files that are openly accessible online.
+🔸 Use the **Upload file from URL** action, straightforward for files that are openly accessible online.
 
 **2. Password-protected files**
 
@@ -58,7 +58,7 @@ A reliable, secure process for downloading and saving files regardless of whethe
 
 **Q1: What file types can I download and save?**
 
-Many formats work — documents (PDF, Word, Excel), images (JPG, PNG) and others supported by Power Automate.
+Many formats work, documents (PDF, Word, Excel), images (JPG, PNG) and others supported by Power Automate.
 
 **Q2: How do I handle authentication for protected files?**
 

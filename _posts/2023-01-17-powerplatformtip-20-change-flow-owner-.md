@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 20 – 'Change Flow-Owner'"
+title: "#PowerPlatformTip 20: 'Change Flow-Owner'"
 date: 2023-01-17
 last_modified_at: 2026-07-09
 categories:
@@ -22,7 +22,7 @@ toc_sticky: true
 
 > **TL;DR:** Make a cloud flow solution-aware, then reassign its owner in place via Details → Edit → Owner, keeping connections and run history intact.
 
-You can't change the owner of a plain (non-solution) cloud flow in place — the owner is part of the flow's identity, so you'd normally have to export and re-import.
+You can't change the owner of a plain (non-solution) cloud flow in place, the owner is part of the flow's identity, so you'd normally have to export and re-import.
 The clean way is to make the flow **solution-aware**, then reassign the owner directly from its **Details**.
 
 ## 💡 Challenge
@@ -47,10 +47,10 @@ Add the flow to a **solution** (in a Dataverse-enabled environment), which unloc
 
 **4. Refresh the license (if needed)**
 
-🔸 For scheduled or automated flows, the new owner's license takes effect within about 7 days — edit and re-save the flow to apply it immediately.
+🔸 For scheduled or automated flows, the new owner's license takes effect within about 7 days, edit and re-save the flow to apply it immediately.
 
 ## 🎉 Result
-Ownership transfers without export/import, and all connection references and run history stay intact — no downtime.
+Ownership transfers without export/import, and all connection references and run history stay intact, no downtime.
 
 ## 🌟 Key Advantages
 
@@ -77,4 +77,4 @@ The complete run history stays intact and accessible to the new owner.
 
 **Q3: Do I need special permissions to change flow ownership?**
 
-Yes — you must be the current owner, a co-owner, or an environment admin.
+Yes, you must be the current owner, a co-owner, or an environment admin.

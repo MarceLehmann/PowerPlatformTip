@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 22 – 'Change Fill & Color'"
+title: "#PowerPlatformTip 22: 'Change Fill & Color'"
 date: 2023-01-24
 last_modified_at: 2026-07-09
 categories:
@@ -48,12 +48,12 @@ Here's how to do it:
    )
    ```
 
-   🔸 Reference `varTheme.Primary` in your controls instead of hardcoding colors – changing one line updates the whole app.
+   🔸 Reference `varTheme.Primary` in your controls instead of hardcoding colors, changing one line updates the whole app.
 
 3. Replace existing hardcoded colors.
    🔸 Use the formula editor's **Find & Replace** to swap hardcoded color values or `RGBA(...)` calls with your `varTheme` references.
 
-> ℹ️ Note: Power Fx does not have a `ReplaceAll` function. For replacing text inside a string you would use `Substitute(text, old, new)` (all matches) or `Replace(text, start, count, new)` (by position) – but for swapping colors across controls, the theme variable plus Find & Replace approach above is the reliable way.
+> ℹ️ Note: Power Fx does not have a `ReplaceAll` function. For replacing text inside a string you would use `Substitute(text, old, new)` (all matches) or `Replace(text, start, count, new)` (by position), but for swapping colors across controls, the theme variable plus Find & Replace approach above is the reliable way.
 
 ## 🎉 Result
 You can update the color scheme across all screens and controls in your app from a single place, ensuring a consistent and branded UI without manual per-control edits.
@@ -78,7 +78,7 @@ Yes, but test the theme changes carefully as some custom formatting may be overr
 
 **3. Can I save my palette for use in other apps?**
 
-Yes – keep your `App.OnStart` theme record in a shared component or snippet and reuse it across Canvas Apps to ensure brand consistency.
+Yes, keep your `App.OnStart` theme record in a shared component or snippet and reuse it across Canvas Apps to ensure brand consistency.
 
 ---
 

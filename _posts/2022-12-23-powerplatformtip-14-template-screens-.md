@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 14 – 'Template Screens'"
+title: "#PowerPlatformTip 14: 'Template Screens'"
 date: 2022-12-23
 last_modified_at: 2026-07-09
 categories:
@@ -23,10 +23,10 @@ toc_sticky: true
 > **TL;DR:** Insert a pre-built template screen (Email, Calendar, Tutorial…) from the Insert tab, then customize it instead of building from a blank screen.
 
 Building common app screens from scratch takes time you don't need to spend.
-Power Apps ships **template screens** for frequent functions — add one, customise it, and layer in your own logic.
+Power Apps ships **template screens** for frequent functions, add one, customise it, and layer in your own logic.
 
 ## 💡 Challenge
-Recreating standard screens — email lists, calendars, tutorials — for every app is repetitive and slow.
+Recreating standard screens, email lists, calendars, tutorials, for every app is repetitive and slow.
 
 ## ✅ Solution
 Insert a pre-built template screen to start with a working layout, then adapt it to your needs.
@@ -66,7 +66,7 @@ They're available when creating a new app and under the **Insert** tab via **New
 
 **Q2: Can I customise template screens after inserting them?**
 
-Yes. Template screens are fully customisable — change layouts, colors and controls, and add your own business logic.
+Yes. Template screens are fully customisable, change layouts, colors and controls, and add your own business logic.
 
 **Q3: Do template screens work with different data sources?**
 

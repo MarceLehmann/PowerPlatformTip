@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 19 – 'Resize files'"
+title: "#PowerPlatformTip 19: 'Resize files'"
 date: 2023-01-12
 last_modified_at: 2026-07-09
 categories:
@@ -20,9 +20,9 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Resize an image for free by storing it on SharePoint and using the 'Upload file from URL' action's thumbnail output — no image editor needed.
+> **TL;DR:** Resize an image for free by storing it on SharePoint and using the 'Upload file from URL' action's thumbnail output, no image editor needed.
 
-Need a smaller version of an image inside a flow — without a premium image-processing connector or external editor?
+Need a smaller version of an image inside a flow, without a premium image-processing connector or external editor?
 SharePoint automatically generates **thumbnails** for images stored in a library. Combine the **Upload file from URL** action with that thumbnail output to get a resized copy.
 
 ## 💡 Challenge
@@ -43,7 +43,7 @@ Use the **Upload file from URL** action together with the **thumbnail output** f
 
 **3. Access the thumbnail output**
 
-🔸 Use the action's **thumbnail** output — a smaller, resized version of the original image.
+🔸 Use the action's **thumbnail** output, a smaller, resized version of the original image.
 
 ## 🎉 Result
 You get a smaller version of your image without any complex processing or external editor.
