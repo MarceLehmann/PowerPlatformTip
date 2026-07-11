@@ -1,5 +1,5 @@
-﻿---
-title: "Run Power Apps Connections with Elevated Permissions via Power Automate â€“ Impersonate Flow Actions from Reza Dorrani"
+---
+title: "Run Power Apps Connections with Elevated Permissions via Power Automate: Impersonate Flow Actions from Reza Dorrani"
 date: 2022-05-18
 permalink: "/article/powerplatform/2022/05/18/power-apps-elevated-permissions-power-automate/"
 updated: 2025-06-26
@@ -27,7 +27,7 @@ tags:
 
 Brilliant solution from Reza Dorrani! This demonstrates how end users can create entries without sufficient permissions through Power Automate's impersonation capabilities. A game-changer for permission management in Power Platform.
 
-**ðŸ”‘ IMPORTANT NOTE: This technique works exclusively with the 'PowerApps V2' Connector**
+**🔑 IMPORTANT NOTE: This technique works exclusively with the 'PowerApps V2' Connector**
 
 {% include video id="ts-ggDAy7IQ" provider="youtube" %}
 
@@ -52,7 +52,7 @@ Traditional Power Apps face common permission challenges:
 - **Direct integration** eliminating need for child flows
 - **Seamless user experience** with backend privilege elevation
 
-## ðŸ”§ Technical Implementation
+## 🔧 Technical Implementation
 
 ### PowerApps V2 Connector Advantages
 
@@ -69,7 +69,7 @@ The **PowerApps V2 Connector** provides:
 3. **Flow Design** - Implement elevated operations seamlessly
 4. **User Experience** - Maintain standard app interaction
 
-## ðŸ› ï¸ Step-by-Step Implementation
+## 🛠️ Step-by-Step Implementation
 
 ### 1. Service Account Preparation
 
@@ -114,7 +114,7 @@ The **PowerApps V2 Connector** provides:
 - **Error handling** for permission failures
 - **User feedback** on operation status
 
-## ðŸ’¡ Practical Use Cases
+## 💡 Practical Use Cases
 
 ### 1. SharePoint List Management
 
@@ -122,13 +122,13 @@ The **PowerApps V2 Connector** provides:
 
 **Before (Child Flow Approach)**:
 ```
-PowerApp â†’ Parent Flow â†’ Child Flow â†’ SharePoint
+PowerApp → Parent Flow → Child Flow → SharePoint
 (Complex, multiple components)
 ```
 
 **After (V2 Connector Approach)**:
 ```
-PowerApp â†’ Flow with V2 Connector â†’ SharePoint
+PowerApp → Flow with V2 Connector → SharePoint
 (Direct, simplified architecture)
 ```
 
@@ -176,7 +176,7 @@ PowerApp â†’ Flow with V2 Connector â†’ SharePoint
 - **Folder creation** in secured locations
 - **Permission inheritance** management
 
-## ðŸ—ï¸ Advanced Implementation Patterns
+## 🏗️ Advanced Implementation Patterns
 
 ### Dynamic Permission Elevation
 
@@ -234,7 +234,7 @@ PowerApp â†’ Flow with V2 Connector â†’ SharePoint
 }
 ```
 
-## ðŸ”„ Migration from Child Flows
+## 🔄 Migration from Child Flows
 
 ### Traditional Child Flow Architecture
 
@@ -261,7 +261,7 @@ PowerApp â†’ Flow with V2 Connector â†’ SharePoint
 5. **Test thoroughly** with various permission scenarios
 6. **Deploy and monitor** new implementation
 
-## ðŸ“Š Security Considerations
+## 📊 Security Considerations
 
 ### Service Account Management
 
@@ -288,7 +288,7 @@ PowerApp â†’ Flow with V2 Connector â†’ SharePoint
 - **Data retention** policies for audit trails
 - **Regulatory compliance** documentation
 
-## âš¡ Performance Optimization
+## ⚡ Performance Optimization
 
 ### Connection Management
 
@@ -306,7 +306,7 @@ PowerApp â†’ Flow with V2 Connector â†’ SharePoint
 - **Result caching** for repeated operations
 - **Asynchronous processing** for non-critical paths
 
-## ðŸ”§ Troubleshooting Guide
+## 🔧 Troubleshooting Guide
 
 ### Common Issues
 
@@ -330,7 +330,7 @@ PowerApp â†’ Flow with V2 Connector â†’ SharePoint
 3. **Use run history** to trace execution flow
 4. **Enable detailed logging** for permission operations
 
-## ðŸš€ Future Enhancements
+## 🚀 Future Enhancements
 
 ### Planned Improvements
 
@@ -346,7 +346,7 @@ PowerApp â†’ Flow with V2 Connector â†’ SharePoint
 - **Power BI** for permission usage analytics
 - **Microsoft Sentinel** for security monitoring
 
-## ðŸŽ–ï¸ About Reza Dorrani
+## 🎖️ About Reza Dorrani
 
 Reza Dorrani is renowned for:
 - **Advanced Power Platform** architecture
@@ -356,7 +356,7 @@ Reza Dorrani is renowned for:
 
 This impersonation technique showcases Reza's deep understanding of Power Platform security and practical problem-solving capabilities.
 
-## ðŸŽ¯ Key Takeaways
+## 🎯 Key Takeaways
 
 - **PowerApps V2 Connector** enables direct permission elevation
 - **Eliminates need** for complex child flow architectures
@@ -372,5 +372,3 @@ This revolutionary approach transforms how organizations can implement secure, e
 ---
 
 *You can see this video here on my blog because I have rated this video with 5 stars in my YouTube video library. This video was automatically posted using PowerAutomate.*
-
-

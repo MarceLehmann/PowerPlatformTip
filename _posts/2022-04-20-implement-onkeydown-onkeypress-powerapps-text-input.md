@@ -1,5 +1,5 @@
-﻿---
-title: "How to Implement OnKeyDown/OnKeyPress Behavior in PowerApps Text Input â€“ Creative Control Workarounds by Paulie M"
+---
+title: "How to Implement OnKeyDown/OnKeyPress Behavior in PowerApps Text Input: Creative Control Workarounds by Paulie M"
 date: 2022-04-20
 permalink: "/article/powerplatform/2022/04/20/implement-onkeydown-onkeypress-powerapps-text-input/"
 updated: 2025-06-26
@@ -52,7 +52,7 @@ Traditional approaches require workarounds that often feel clunky or don't provi
 - **Creative property binding** for seamless integration
 - **User-friendly interactions** despite platform limitations
 
-## ðŸ”§ Technical Implementation
+## 🔧 Technical Implementation
 
 ### Control Repurposing Strategy
 
@@ -66,10 +66,10 @@ The approach leverages existing controls with change events:
 
 ```javascript
 // Conceptual event flow
-TextInput.OnChange â†’ Hidden Control â†’ Event Handler â†’ Response
+TextInput.OnChange → Hidden Control → Event Handler → Response
 ```
 
-## ðŸ› ï¸ Step-by-Step Implementation
+## 🛠️ Step-by-Step Implementation
 
 ### 1. Slider-Based Keyboard Detection
 
@@ -120,7 +120,7 @@ UpdateContext({
 - **Hidden toggle** for state management
 - **Event handling** logic coordination
 
-## ðŸ’¡ Practical Use Cases
+## 💡 Practical Use Cases
 
 ### 1. Real-Time Search Implementation
 
@@ -189,7 +189,7 @@ If(
 )
 ```
 
-## ðŸ—ï¸ Advanced Implementation Patterns
+## 🏗️ Advanced Implementation Patterns
 
 ### Multi-Control Event System
 
@@ -248,7 +248,7 @@ Switch(
 )
 ```
 
-## ðŸŽ¯ Control Repurposing Strategies
+## 🎯 Control Repurposing Strategies
 
 ### Slider Control Benefits
 
@@ -276,7 +276,7 @@ Switch(
 - **Timer** for delayed events
 - **Label** for visual feedback
 
-## ðŸ”„ User Experience Enhancements
+## 🔄 User Experience Enhancements
 
 ### Immediate Feedback Patterns
 
@@ -308,7 +308,7 @@ SubmitButton.Visible = varInputState = "valid"
 - **Maintain focus** management
 - **Support keyboard navigation**
 
-## ðŸ“Š Performance Optimization
+## 📊 Performance Optimization
 
 ### Efficient Event Handling
 
@@ -326,7 +326,7 @@ SubmitButton.Visible = varInputState = "valid"
 - **Use delegation** where possible
 - **Monitor performance** with Monitor tool
 
-## âš ï¸ Implementation Considerations
+## ⚠️ Implementation Considerations
 
 ### Platform Limitations
 
@@ -352,7 +352,7 @@ SubmitButton.Visible = varInputState = "valid"
 - **Group related controls** logically
 - **Test after platform** updates
 
-## ðŸš€ Future Enhancements
+## 🚀 Future Enhancements
 
 ### Potential Improvements
 
@@ -367,7 +367,7 @@ SubmitButton.Visible = varInputState = "valid"
 - **Custom connectors** for advanced scenarios
 - **Power Platform** ecosystem integration
 
-## ðŸŽ–ï¸ About Paulie M
+## 🎖️ About Paulie M
 
 Paulie M is known for:
 - **Creative problem-solving** approaches
@@ -377,7 +377,7 @@ Paulie M is known for:
 
 This keyboard event workaround exemplifies Paulie's ability to think outside the box and find elegant solutions to platform limitations.
 
-## ðŸŽ¯ Key Takeaways
+## 🎯 Key Takeaways
 
 - **Creative control repurposing** enables missing functionality
 - **Slider and toggle controls** can simulate keyboard events
@@ -393,5 +393,3 @@ This ingenious approach transforms how developers can implement interactive text
 ---
 
 *You can see this video here on my blog because I have rated this video with 5 stars in my YouTube video library. This video was automatically posted using PowerAutomate.*
-
-
