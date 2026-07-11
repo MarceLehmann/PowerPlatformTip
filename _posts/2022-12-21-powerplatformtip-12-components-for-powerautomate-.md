@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 12 – 'Components for PowerAutomate'"
+title: "#PowerPlatformTip 12: 'Components for PowerAutomate'"
 date: 2022-12-21
 last_modified_at: 2026-07-09
 categories:

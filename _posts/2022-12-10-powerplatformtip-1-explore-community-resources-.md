@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 1 – 'Explore Community Resources'"
+title: "#PowerPlatformTip 1: 'Explore Community Resources'"
 date: 2022-12-10
 last_modified_at: 2026-07-09
 categories:
@@ -25,7 +25,7 @@ toc_sticky: true
 Have you ever found yourself stuck on a Power Apps problem, desperately searching for a solution? Or maybe you're looking for that perfect sample app to kickstart your project? It can be frustrating when you don't know where to turn for expert advice and ready-to-use examples.
 
 ## ✅ Solution
-Enter the Microsoft Power Platform Community – a vibrant hub where Power Apps, Power Automate and Copilot Studio enthusiasts share knowledge, solve challenges, and publish samples to accelerate your projects.
+Enter the Microsoft Power Platform Community, a vibrant hub where Power Apps, Power Automate and Copilot Studio enthusiasts share knowledge, solve challenges, and publish samples to accelerate your projects.
 
 ## 🔧 How It's Done
 
@@ -66,4 +66,4 @@ Yes, anyone with a Microsoft account can join and participate at no cost.
 
 **3. What types of resources are available?**
 
-You'll find product forums, sample/component galleries, blogs and learning resources – from data-entry forms and dashboards to process-automation samples and custom connectors.
+You'll find product forums, sample/component galleries, blogs and learning resources, from data-entry forms and dashboards to process-automation samples and custom connectors.

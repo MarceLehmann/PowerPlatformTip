@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 9 – 'Test Your Flow Before Activation'"
+title: "#PowerPlatformTip 9: 'Test Your Flow Before Activation'"
 date: 2022-12-18
 last_modified_at: 2026-07-09
 categories:
@@ -23,7 +23,7 @@ toc_sticky: true
 > **TL;DR:** Run the built-in Test feature to trigger your flow manually and inspect every action's inputs and outputs before you activate it.
 
 ## 💡 Challenge
-You've created a complex flow in Power Automate and want to make sure everything works as expected—without activating it and taking risks?
+You've created a complex flow in Power Automate and want to make sure everything works as expected, without activating it and taking risks?
 
 ## ✅ Solution
 Use the built-in **Test** feature in Power Automate to try your flow in advance. This way you can identify errors and optimization opportunities before the flow goes live.

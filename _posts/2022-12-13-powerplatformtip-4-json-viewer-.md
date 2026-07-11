@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 4 – 'JSON Viewer'"
+title: "#PowerPlatformTip 4: 'JSON Viewer'"
 date: 2022-12-13
 last_modified_at: 2026-07-09
 categories:
@@ -35,7 +35,7 @@ Use a JSON Viewer extension to transform raw JSON into a readable and manageable
 
 **2. Use Edge's native formatting**
 
-🔸 Microsoft Edge formats JSON responses automatically when you open a `.json` URL – no extension required.
+🔸 Microsoft Edge formats JSON responses automatically when you open a `.json` URL, no extension required.
 
 🔸 For older builds, you can enable it via `edge://flags`.
 

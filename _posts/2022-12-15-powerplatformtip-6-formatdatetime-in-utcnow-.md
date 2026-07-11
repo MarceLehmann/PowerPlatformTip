@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 6 – 'formatDateTime in utcNow'"
+title: "#PowerPlatformTip 6: 'formatDateTime in utcNow'"
 date: 2022-12-15
 last_modified_at: 2026-07-09
 categories:

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 7 – 'UNION and FilterArray'"
+title: "#PowerPlatformTip 7: 'UNION and FilterArray'"
 date: 2022-12-16
 last_modified_at: 2026-07-09
 categories:
@@ -22,7 +22,7 @@ toc_sticky: true
 > **TL;DR:** Merge and deduplicate arrays with `union()` (pass the same array twice for DISTINCT), then narrow results with the Filter Array action.
 
 ## 💡 Challenge
-Data manipulation is a cornerstone of Power Automate, and you often need to merge or filter data sets for various workflows—which quickly gets messy with basic actions alone.
+Data manipulation is a cornerstone of Power Automate, and you often need to merge or filter data sets for various workflows, which quickly gets messy with basic actions alone.
 
 ## ✅ Solution
 Combine the `union()` function and the 'Filter Array' action. `union()` merges arrays (and deduplicates), while 'Filter Array' returns only the items you're looking for.
@@ -42,7 +42,7 @@ Combine the `union()` function and the 'Filter Array' action. `union()` merges a
 🔸 Merge/deduplicate with `union()`, then narrow the result with 'Filter Array' for precise data sets.
 
 ## 🎉 Result
-With `union()` and 'Filter Array', you can efficiently merge, deduplicate and filter data sets—fewer actions, cleaner data, faster runs.
+With `union()` and 'Filter Array', you can efficiently merge, deduplicate and filter data sets, fewer actions, cleaner data, faster runs.
 
 ## 🌟 Key Advantages
 

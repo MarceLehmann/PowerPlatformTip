@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 3 – 'Advanced Filtering Array'"
+title: "#PowerPlatformTip 3: 'Advanced Filtering Array'"
 date: 2022-12-12
 last_modified_at: 2026-07-09
 categories:
@@ -25,7 +25,7 @@ toc_sticky: true
 At first glance, the 'Filter Array' action in Power Automate seems limited to basic filtering, making complex scenarios difficult to address. Users often find themselves chaining multiple actions or writing lengthy workarounds to achieve precise results.
 
 ## ✅ Solution
-Enable the Advanced Mode in 'Filter Array' and craft custom expressions to perform sophisticated, precise filtering within a single action—simplifying your flow and reducing steps.
+Enable the Advanced Mode in 'Filter Array' and craft custom expressions to perform sophisticated, precise filtering within a single action, simplifying your flow and reducing steps.
 
 ## 🔧 How It's Done
 
@@ -48,7 +48,7 @@ Enable the Advanced Mode in 'Filter Array' and craft custom expressions to perfo
 🔸 Observe how 'Filter Array' applies your custom logic to return only the desired items.
 
 ## 🎉 Result
-Harnessing Advanced Mode transforms 'Filter Array' into a powerful tool capable of handling intricate filtering tasks—reducing action count, improving performance, and increasing accuracy.
+Harnessing Advanced Mode transforms 'Filter Array' into a powerful tool capable of handling intricate filtering tasks, reducing action count, improving performance, and increasing accuracy.
 
 ## 🌟 Key Advantages
 

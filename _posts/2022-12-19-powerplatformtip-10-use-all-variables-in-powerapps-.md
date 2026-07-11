@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 10 – 'Use all variables in PowerApps'"
+title: "#PowerPlatformTip 10: 'Use all variables in PowerApps'"
 date: 2022-12-19
 last_modified_at: 2026-07-09
 categories:
@@ -19,10 +19,10 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Go beyond Set and UpdateContext—use `With` for scoped record contexts and `Param` to read inbound app parameters.
+> **TL;DR:** Go beyond Set and UpdateContext, use `With` for scoped record contexts and `Param` to read inbound app parameters.
 
 ## 💡 Challenge
-Finding yourself limited to `Set` and `UpdateContext` variables in PowerApps? It's like trying to paint a masterpiece with only two colors – you can do it, but why limit yourself?
+Finding yourself limited to `Set` and `UpdateContext` variables in PowerApps? It's like trying to paint a masterpiece with only two colors, you can do it, but why limit yourself?
 
 ## ✅ Solution
 Branch out by using additional variable types like `With` and `Param` to expand your toolkit and build more dynamic PowerApps.
