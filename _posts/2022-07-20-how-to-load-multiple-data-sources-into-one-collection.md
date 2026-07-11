@@ -9,7 +9,7 @@ categories:
   - Article
   - PowerPlatform
 excerpt: "Learn efficient techniques to combine multiple data sources into a single collection in PowerApps. This guide covers identical data sources, different data sources, and adding enriched data from lookups."
-description: "Combine multiple data sources into one Power Apps collection with ClearCollect — merge identical or different sources and enrich rows with AddColumns and LookUp."
+description: "Combine multiple data sources into one Power Apps collection with ClearCollect, merge identical or different sources and enrich rows with AddColumns and LookUp."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

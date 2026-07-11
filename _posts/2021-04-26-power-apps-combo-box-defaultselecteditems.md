@@ -8,7 +8,7 @@ categories:
   - Article
   - PowerPlatform
 excerpt: "Learn how to properly set DefaultSelectedItems in PowerApps ComboBox controls using tables, lookups, and manually-created records. A comprehensive guide by Shane Young."
-description: "Set DefaultSelectedItems in a Power Apps ComboBox the right way — using tables, lookups, or manual records. Fix type mismatches and default your multi-select values."
+description: "Set DefaultSelectedItems in a Power Apps ComboBox the right way, using tables, lookups, or manual records. Fix type mismatches and default your multi-select values."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
