@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 33 – 'Coalesce'"
+title: "#PowerPlatformTip 33: 'Coalesce'"
 date: 2023-03-07
 last_modified_at: 2026-07-09
 categories:
@@ -34,7 +34,7 @@ Implement the Coalesce function. It scans through a list of parameters and retur
 * The function evaluates each parameter in order and returns the first non-blank value it encounters.
 
 ## 🎉 Result
-This streamlines your formulas, making them easier to read and maintain – improving both development and future maintenance of the app or flow.
+This streamlines your formulas, making them easier to read and maintain, improving both development and future maintenance of the app or flow.
 
 ## 🌟 Key Advantages
 🔸 Enhanced readability.

@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 40 – 'Delete Apps / Flows'"
+title: "#PowerPlatformTip 40: 'Delete Apps / Flows'"
 date: 2023-03-30
 last_modified_at: 2026-07-09
 categories:

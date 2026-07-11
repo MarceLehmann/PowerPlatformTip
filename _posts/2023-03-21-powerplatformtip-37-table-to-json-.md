@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 37 – 'Table to JSON'"
+title: "#PowerPlatformTip 37: 'Table to JSON'"
 date: 2023-03-21
 last_modified_at: 2026-07-09
 categories:
@@ -22,7 +22,7 @@ toc_sticky: true
 > **TL;DR:** Convert a two-column Name/Value table to a JSON record and run it through Parse JSON so you can access each entry directly.
 
 ## 💡 Challenge
-Working with two-column tables – specifically 'Name' and 'Value' pairs – in Power Automate can be tedious when trying to access individual entries efficiently.
+Working with two-column tables, specifically 'Name' and 'Value' pairs, in Power Automate can be tedious when trying to access individual entries efficiently.
 
 ## ✅ Solution
 Streamline the selection of individual entries by converting the table into a JSON record and using the "Parse JSON" action.

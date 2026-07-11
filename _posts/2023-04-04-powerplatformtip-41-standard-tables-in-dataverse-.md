@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 41 – 'Standard tables in Dataverse'"
+title: "#PowerPlatformTip 41: 'Standard tables in Dataverse'"
 date: 2023-04-04
 last_modified_at: 2026-07-09
 categories:
@@ -22,7 +22,7 @@ toc_sticky: true
 > **TL;DR:** Reuse Dataverse's built-in standard tables (Account, Contact, Task, Appointment, Email) instead of custom-building them, for consistency and interoperability.
 
 ## 💡 Challenge
-When modeling data in Dataverse (or Dataverse for Teams), it's tempting to build custom tables for everything – but that often duplicates structures Microsoft already ships and makes interoperability harder.
+When modeling data in Dataverse (or Dataverse for Teams), it's tempting to build custom tables for everything, but that often duplicates structures Microsoft already ships and makes interoperability harder.
 
 ## ✅ Solution
 Use the built-in standard tables for common business processes. They're ready to use, follow a consistent schema, and let other apps and services interact with your data seamlessly. Some important standard tables are:

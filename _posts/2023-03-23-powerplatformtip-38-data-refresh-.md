@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 38 – 'Data Refresh'"
+title: "#PowerPlatformTip 38: 'Data Refresh'"
 date: 2023-03-23
 last_modified_at: 2026-07-09
 categories:

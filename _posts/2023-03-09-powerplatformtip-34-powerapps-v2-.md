@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 34 – 'PowerApps V2'"
+title: "#PowerPlatformTip 34: 'PowerApps V2'"
 date: 2023-03-09
 last_modified_at: 2026-07-09
 categories:
@@ -25,7 +25,7 @@ toc_sticky: true
 Creating secure, manageable, and flexible flows in Power Automate can be challenging, especially when integrating with PowerApps and requiring precise control over flow inputs and execution context.
 
 ## ✅ Solution
-Leverage the "PowerApps V2" trigger for enhanced control and security over your Power Automate flows – including custom connection configurations, precise input type definitions, and flexible usage as either a child flow or triggered directly from PowerApps.
+Leverage the "PowerApps V2" trigger for enhanced control and security over your Power Automate flows, including custom connection configurations, precise input type definitions, and flexible usage as either a child flow or triggered directly from PowerApps.
 
 ## 🔧 How It's Done
 * **Customize Connection:** Configure the flow to run with a service user by customizing the connection used in the PowerApps V2 trigger. This enhances security and manageability.

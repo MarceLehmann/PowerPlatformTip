@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 42 – 'Dataverse Views'"
+title: "#PowerPlatformTip 42: 'Dataverse Views'"
 date: 2023-04-06
 last_modified_at: 2026-07-09
 categories:
@@ -19,7 +19,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Define filtering in a Dataverse View so the work happens server-side — faster apps and no delegation headaches when you bind a gallery to it.
+> **TL;DR:** Define filtering in a Dataverse View so the work happens server-side, faster apps and no delegation headaches when you bind a gallery to it.
 
 ## 💡 Challenge
 Filtering large Dataverse tables directly in a Canvas App can hurt performance and run into delegation limits, especially in PowerApps and PowerApps for Teams.

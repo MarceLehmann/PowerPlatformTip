@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 36 – 'Static Result'"
+title: "#PowerPlatformTip 36: 'Static Result'"
 date: 2023-03-16
 last_modified_at: 2026-07-09
 categories:
@@ -19,7 +19,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Enable Static Result on an action to return a predefined output without actually running it — great for fast, safe flow testing.
+> **TL;DR:** Enable Static Result on an action to return a predefined output without actually running it, great for fast, safe flow testing.
 
 ## 💡 Challenge
 Testing Power Automate flows often requires running actions that can modify data or consume significant time, which isn't always desirable or efficient.

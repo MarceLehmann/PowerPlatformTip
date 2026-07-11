@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 39 – 'Mastering FetchXML'"
+title: "#PowerPlatformTip 39: 'Mastering FetchXML'"
 date: 2023-03-28
 last_modified_at: 2026-07-09
 categories:
@@ -19,7 +19,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** Build advanced Dataverse/Dynamics 365 queries with FetchXML — generate it in FetchXML Builder or Advanced Find, then use it in flows and plugins.
+> **TL;DR:** Build advanced Dataverse/Dynamics 365 queries with FetchXML: generate it in FetchXML Builder or Advanced Find, then use it in flows and plugins.
 
 ## 💡 Challenge
 Do you need to retrieve complex data from Dataverse or Dynamics 365, but find the standard query options too limited?

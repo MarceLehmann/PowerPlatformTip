@@ -1,5 +1,5 @@
 ---
-title: "#PowerPlatformTip 35 – 'Concurrent Control'"
+title: "#PowerPlatformTip 35: 'Concurrent Control'"
 date: 2023-03-14
 last_modified_at: 2026-07-09
 categories:
