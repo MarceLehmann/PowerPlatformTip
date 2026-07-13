@@ -2,36 +2,40 @@ name: SEO Validation
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
   push:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   seo-check:
     runs-on: ubuntu-latest
     name: SEO Validation & Best Practices
-    
+    timeout-minutes: 15
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'  # Match GitHub Pages Ruby version
           bundler-cache: true
-          
+
       - name: Install Dependencies
         run: |
           bundle install
-          
+
       - name: Build Jekyll Site
         run: |
           bundle exec jekyll build
         env:
           JEKYLL_ENV: production
-          
+
       - name: Validate Sitemap Generated
         run: |
           echo "🔍 Checking if sitemap.xml was generated..."
@@ -40,7 +44,7 @@ jobs:
             echo "📊 Sitemap statistics:"
             echo "  - URLs: $(grep -c '<loc>' _site/sitemap.xml)"
             echo "  - Size: $(du -h _site/sitemap.xml | cut -f1)"
-            
+
             # Check sitemap is valid XML
             if command -v xmllint &> /dev/null; then
               xmllint --noout _site/sitemap.xml && echo "✅ Sitemap is valid XML" || echo "❌ Sitemap XML validation failed"
@@ -49,7 +53,7 @@ jobs:
             echo "❌ ERROR: Sitemap not generated!"
             exit 1
           fi
-          
+
       - name: Validate Feed Generated
         run: |
           echo "🔍 Checking if feed.xml was generated..."
@@ -61,7 +65,7 @@ jobs:
           else
             echo "⚠️ WARNING: Feed not generated!"
           fi
-          
+
       - name: Check Robots.txt
         run: |
           echo "🔍 Checking robots.txt..."
@@ -73,7 +77,7 @@ jobs:
             echo "❌ ERROR: robots.txt not found!"
             exit 1
           fi
-          
+
       - name: Validate Canonical URLs
         run: |
           echo "🔍 Checking for canonical URL issues..."
@@ -84,11 +88,11 @@ jobs:
           else
             echo "✅ No www in canonical URLs"
           fi
-          
+
       - name: Check Meta Robots Tags
         run: |
           echo "🔍 Checking meta robots tags..."
-          
+
           # Check 404 page has noindex
           if [ -f "_site/404.html" ]; then
             if grep -q 'name="robots".*noindex' _site/404.html; then
@@ -97,22 +101,22 @@ jobs:
               echo "⚠️ WARNING: 404 page should have noindex"
             fi
           fi
-          
+
           # Sample check of regular pages for index
           echo "📄 Sample robots tags from pages:"
           find _site -name "*.html" -type f | head -3 | while read file; do
             echo "File: $file"
             grep -o 'name="robots"[^>]*' "$file" || echo "  No robots meta tag"
           done
-          
+
       - name: Check Structured Data
         run: |
           echo "🔍 Checking for structured data (Schema.org)..."
-          
+
           # Count pages with structured data
           schema_count=$(grep -r 'application/ld\+json' _site/*.html 2>/dev/null | wc -l || echo 0)
           echo "📊 Pages with structured data: $schema_count"
-          
+
           if [ $schema_count -gt 0 ]; then
             echo "✅ Structured data found"
             echo "📄 Schema types found:"
@@ -120,13 +124,13 @@ jobs:
           else
             echo "⚠️ WARNING: No structured data found"
           fi
-          
+
       - name: Performance Check - Page Size
         run: |
           echo "🔍 Checking page sizes for performance..."
           echo "📊 Largest HTML files:"
           find _site -name "*.html" -type f -exec du -h {} + | sort -rh | head -10
-          
+
           # Check if any HTML file is too large
           large_files=$(find _site -name "*.html" -type f -size +500k)
           if [ -n "$large_files" ]; then
@@ -135,14 +139,14 @@ jobs:
           else
             echo "✅ All HTML files under 500KB"
           fi
-          
+
       - name: Check for Missing Alt Tags
         run: |
           echo "🔍 Checking for images without alt tags..."
-          
+
           # Find img tags without alt attribute
           missing_alt=$(grep -rh '<img' _site/*.html 2>/dev/null | grep -v 'alt=' | wc -l || echo 0)
-          
+
           if [ $missing_alt -gt 0 ]; then
             echo "⚠️ WARNING: Found $missing_alt img tags without alt attributes"
             echo "📄 Sample:"
@@ -150,27 +154,27 @@ jobs:
           else
             echo "✅ All images have alt tags (or no images found)"
           fi
-          
+
       - name: Check Internal Links
         run: |
           echo "🔍 Checking for broken internal links..."
-          
+
           # Simple check for common broken link patterns
           broken_patterns=$(grep -rh 'href=".*localhost' _site/*.html 2>/dev/null | wc -l || echo 0)
-          
+
           if [ $broken_patterns -gt 0 ]; then
             echo "⚠️ WARNING: Found localhost links in production:"
             grep -rh 'href=".*localhost' _site/*.html 2>/dev/null | head -5
           else
             echo "✅ No localhost links found"
           fi
-          
+
       - name: SEO Summary Report
         if: always()
         run: |
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           echo "📊 SEO VALIDATION SUMMARY"
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           echo ""
           echo "✅ Checks Passed:"
           echo "  - Sitemap generation"
@@ -187,11 +191,11 @@ jobs:
           echo "  - Feed: https://powerplatformtip.com/feed.xml"
           echo "  - Robots: https://powerplatformtip.com/robots.txt"
           echo ""
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
       - name: Upload Build Artifacts
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: seo-validation-results
           path: |
@@ -199,3 +203,4 @@ jobs:
             _site/feed.xml
             _site/robots.txt
           retention-days: 30
+          if-no-files-found: warn

@@ -8,24 +8,28 @@ on:
   schedule:
     - cron: '0 6 * * 1'  # Montags um 6 Uhr
 
+permissions:
+  contents: read
+
 jobs:
   web-vitals:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'schedule' }}
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-      
+          node-version: '20'
+
       - name: Install Lighthouse CI (richtige Web Vitals Messung)
         run: npm install -g @lhci/cli
-      
+
       - name: Wait for deployment
         run: sleep 30
-      
+
       - name: Run Lighthouse for Core Web Vitals
         run: npx lhci autorun --assertions.preset=none
         env:
