@@ -11,9 +11,13 @@ on:
     - cron: '0 5 * * *'  # Täglich um 5 Uhr UTC prüfen
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   validate-posts:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
@@ -26,48 +30,48 @@ jobs:
         run: |
           echo "🔍 Checking post frontmatter..."
           errors=0
-          
+
           for file in _posts/*.md; do
             if [[ -f "$file" ]]; then
               filename=$(basename "$file")
-              
+
               # Check filename format (YYYY-MM-DD-title.md)
               if ! [[ "$filename" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}-.+\.md$ ]]; then
                 echo "❌ Invalid filename format: $filename"
                 echo "   Expected: YYYY-MM-DD-title.md"
-                ((errors++))
+                errors=$((errors + 1))
               fi
-              
+
               # Check for required frontmatter
               if ! grep -q "^title:" "$file"; then
                 echo "❌ Missing 'title' in: $filename"
-                ((errors++))
+                errors=$((errors + 1))
               fi
-              
+
               if ! grep -q "^date:" "$file"; then
                 echo "⚠️  Missing 'date' in: $filename (will use filename date)"
               fi
-              
+
               # Check for empty title
               if grep -q "^title: *$" "$file"; then
                 echo "❌ Empty 'title' in: $filename"
-                ((errors++))
+                errors=$((errors + 1))
               fi
-              
+
               # Extract date from filename
               file_date=$(echo "$filename" | grep -oE "^[0-9]{4}-[0-9]{2}-[0-9]{2}")
-              
+
               # Check if date is valid
               if ! date -d "$file_date" &>/dev/null; then
                 echo "❌ Invalid date in filename: $filename"
-                ((errors++))
+                errors=$((errors + 1))
               fi
             fi
           done
-          
+
           echo ""
           echo "📊 Validation complete!"
-          
+
           if [[ $errors -gt 0 ]]; then
             echo "❌ Found $errors error(s)"
             exit 1
@@ -80,19 +84,19 @@ jobs:
           echo "📅 Checking for scheduled posts..."
           today=$(date +%Y-%m-%d)
           future_posts=0
-          
+
           for file in _posts/*.md; do
             if [[ -f "$file" ]]; then
               filename=$(basename "$file")
               file_date=$(echo "$filename" | grep -oE "^[0-9]{4}-[0-9]{2}-[0-9]{2}")
-              
+
               if [[ "$file_date" > "$today" ]]; then
                 echo "📆 Scheduled for $file_date: $filename"
-                ((future_posts++))
+                future_posts=$((future_posts + 1))
               fi
             fi
           done
-          
+
           echo ""
           if [[ $future_posts -gt 0 ]]; then
             echo "📊 Found $future_posts scheduled post(s) for future publication"
@@ -107,7 +111,7 @@ jobs:
           echo "==================="
           total=$(ls -1 _posts/*.md 2>/dev/null | wc -l)
           echo "📝 Total posts: $total"
-          
+
           # Posts per year
           echo ""
           echo "📅 Posts per year:"
@@ -115,7 +119,7 @@ jobs:
             count=$(ls _posts/$year-*.md 2>/dev/null | wc -l)
             echo "   $year: $count posts"
           done
-          
+
           # Recent posts
           echo ""
           echo "🕐 Last 5 posts:"

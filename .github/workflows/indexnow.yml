@@ -5,12 +5,16 @@ on:
     workflows: ["Deploy Jekyll site to Pages"]
     types: [completed]
   schedule:
-    - cron: "0 2 * * *" # daily at 02:00 UTC
+    - cron: '0 2 * * *' # daily at 02:00 UTC
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   submit-to-indexnow:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Submit sitemap to IndexNow
         uses: bojieyang/indexnow-action@v2
