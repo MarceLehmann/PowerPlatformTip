@@ -1,15 +1,12 @@
 ---
 title: "How to Send a 1:1 Message via Power Automate in Teams: Direct Personal Messaging Solution"
-seo_title: "Send 1:1 Teams Messages as You in Power Automate"
 date: 2021-10-13
 permalink: "/article/powerplatform/2021/10/13/send-1-1-message-flow-teams/"
 updated: 2025-06-26
-last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatform
 excerpt: "Learn how to send direct 1:1 messages via Power Automate in Microsoft Teams using your own account instead of the flow bot. Perfect for personal communication and support scenarios."
-description: "Send direct 1:1 Teams messages via Power Automate that appear from you, not the flow bot. A simple two-step chat pattern for support, onboarding & notifications."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"

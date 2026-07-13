@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to Restore and Create a Backup from a Flow"
 date: 2022-08-30
 permalink: "/article/powerplatform/2022/08/30/how-to-restore-create-backup-flow/"
@@ -31,7 +31,7 @@ The most frequently asked question I receive is **"How to restore (and create) a
 
 Unfortunately, there is no simple standard solution, but I will show you some possibilities to avoid this problem in the future. My inspiration for this solution was [Audrie Gordon](https://www.youtube.com/watch?v=2wQSvOfIoBI) and [Pieter Veenstra](https://sharepains.com/2021/06/29/export-and-import-solutions-power-automate/).
 
-## ðŸŽ¯ Three Comprehensive Backup Strategies
+## 🎯 Three Comprehensive Backup Strategies
 
 ### 1. Third-Party Solution by John Liu
 
@@ -47,7 +47,7 @@ For this approach, we create a 'backup' solution where we add the specific flow 
 
 In this solution, the flow is saved with the solution as a ZIP file on OneDrive for Business, but any storage location is possible.
 
-#### ðŸ”„ Backup Process
+#### 🔄 Backup Process
 
 ![Export Solution](/assets/images/posts/2022/08/exportsolution.png){: .align-center}
 
@@ -56,7 +56,7 @@ In this solution, the flow is saved with the solution as a ZIP file on OneDrive 
 2. **SolutionName** = Name column in the solution (no spaces)
 3. **File Content** = `base64ToBinary(outputs('Perform_an_unbound_action')?['body/ExportSolutionFile'])`
 
-#### ðŸ”„ Restore Process
+#### 🔄 Restore Process
 
 ![Import Solution](/assets/images/posts/2022/08/importsolution.png){: .align-center}
 
@@ -72,15 +72,15 @@ Even if this solution looks most complicated at first sight, I prefer this varia
 
 In this solution, the flow is saved as a JSON file on OneDrive for Business, but any storage location is possible.
 
-#### ðŸ“¤ Backup Implementation
+#### 📤 Backup Implementation
 
 ![Export Flow](/assets/images/posts/2022/08/exportflow.png){: .align-center}
 
-#### ðŸ“¥ Restore Implementation
+#### 📥 Restore Implementation
 
 ![Import Flow](/assets/images/posts/2022/08/importflow.png){: .align-center}
 
-## ðŸ› ï¸ Ready-to-Use Flow Templates
+## 🛠️ Ready-to-Use Flow Templates
 
 ### Method 2: Solution-Based Backup Templates
 
@@ -290,7 +290,7 @@ In this solution, the flow is saved as a JSON file on OneDrive for Business, but
 }
 ```
 
-## ðŸŽ¯ Implementation Strategies
+## 🎯 Implementation Strategies
 
 ### Development Phase Best Practices
 
@@ -306,7 +306,7 @@ In this solution, the flow is saved as a JSON file on OneDrive for Business, but
 3. **Access Control**: Secure backup files appropriately
 4. **Retention Policies**: Implement backup retention strategies
 
-## ðŸ”§ Technical Requirements
+## 🔧 Technical Requirements
 
 ### Method 2 (Solutions) Requirements:
 - **Dataverse connection** (included in standard licensing)
@@ -320,7 +320,7 @@ In this solution, the flow is saved as a JSON file on OneDrive for Business, but
 - **Environment and Flow IDs**
 - **Flow modification** permissions
 
-## ðŸ’¡ Advanced Tips
+## 💡 Advanced Tips
 
 ### Error Handling
 - Implement robust error handling in backup flows
@@ -337,7 +337,7 @@ In this solution, the flow is saved as a JSON file on OneDrive for Business, but
 - Use service accounts for automated backups
 - Implement proper access controls on backup storage
 
-## ðŸŽ¯ Key Takeaways
+## 🎯 Key Takeaways
 
 - **No native backup**: Power Automate lacks built-in version control
 - **Multiple approaches**: Choose based on your specific needs and constraints
@@ -346,7 +346,7 @@ In this solution, the flow is saved as a JSON file on OneDrive for Business, but
 - **Development integration**: Build backup into your development workflow
 - **Testing crucial**: Always test restore procedures before you need them
 
-## ðŸ”„ Future Considerations
+## 🔄 Future Considerations
 
 Microsoft continues to enhance Power Automate capabilities. Keep an eye on:
 - **Native versioning** features
@@ -357,5 +357,3 @@ Microsoft continues to enhance Power Automate capabilities. Keep an eye on:
 This comprehensive backup strategy ensures your critical Power Automate flows are protected and recoverable, providing peace of mind and business continuity.
 
 *This article was originally published on Marcel Lehmann's blog and has been migrated to PowerPlatformTip for better accessibility and searchability.*
-
-
