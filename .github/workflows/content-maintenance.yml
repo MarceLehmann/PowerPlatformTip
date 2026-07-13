@@ -59,9 +59,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
           git add -A
-          git commit -m "chore(content): fix legacy encoding and backfill FAQ schema
-
-Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+          git commit -m "chore(content): fix legacy encoding and backfill FAQ schema" \
+                     -m "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
           git push origin "$BRANCH"
           {
             echo "### Content maintenance applied"
