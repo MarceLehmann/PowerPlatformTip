@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Power Apps Dynamic Form Schema: Add Controls on the Fly"
 date: 2023-04-26
 permalink: "/article/powerplatform/2023/04/26/power-apps-dynamic-form-schema-add-controls/"
@@ -21,7 +21,7 @@ toc: true
 toc_sticky: true
 ---
 
-## ðŸ’¡ Challenge
+## 💡 Challenge
 
 Traditional form controls in Power Apps can be limiting when you need to create dynamic, flexible forms that can adapt their structure based on data or user input. Users often struggle with:
 
@@ -30,11 +30,11 @@ Traditional form controls in Power Apps can be limiting when you need to create 
 - Difficulty creating forms that dynamically add or remove controls
 - Need for more flexible design approaches for complex data entry scenarios
 
-## âœ… Solution
+## ✅ Solution
 
 Create dynamic forms using a schema-driven approach that allows you to build custom forms without relying on the traditional Forms control. This method enables you to add controls on the fly and create highly customizable form experiences.
 
-## ðŸ”§ How It's Done
+## 🔧 How It's Done
 
 **Reza Dorrani** demonstrates this innovative approach in his comprehensive video tutorial:
 
@@ -62,7 +62,7 @@ Create dynamic forms using a schema-driven approach that allows you to build cus
    - Implement dynamic show/hide logic
    - Create responsive layouts that adapt to different screen sizes
 
-## ðŸŽ¯ Key Takeaways
+## 🎯 Key Takeaways
 
 - **Schema-Driven Design**: Use data structures to define form layouts dynamically
 - **Custom Control Creation**: Build your own form controls for maximum flexibility
@@ -70,7 +70,7 @@ Create dynamic forms using a schema-driven approach that allows you to build cus
 - **Enhanced User Experience**: Provide more intuitive and flexible form interactions
 - **Reusable Components**: Build form components that can be reused across applications
 
-## ðŸ”— Additional Resources
+## 🔗 Additional Resources
 
 - [Power Apps Documentation: Controls and Properties](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/reference-properties)
 - [Dynamic Forms Best Practices](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-forms)
@@ -81,4 +81,3 @@ Create dynamic forms using a schema-driven approach that allows you to build cus
 *This technique was shared by **Reza Dorrani**, a Microsoft MVP and Power Platform expert. His innovative approaches to Power Apps development continue to inspire the community.*
 
 **Video Credit**: [Reza Dorrani](https://www.youtube.com/channel/UC6JfKeJ8RwOOGOLOAMO0eEQ)
-

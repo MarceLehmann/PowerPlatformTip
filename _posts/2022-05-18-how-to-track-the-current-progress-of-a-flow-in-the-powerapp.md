@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to Track the Current Progress of a Flow in PowerApps"
 date: 2022-05-18
 permalink: "/article/powerplatform/2022/05/18/how-to-track-the-current-progress-of-a-flow-in-the-powerapp/"
@@ -30,20 +30,20 @@ In some scenarios, you or your users would like to see how far a Cloud Flow proc
 
 Unfortunately, it's not possible to use "Respond to PowerApps" multiple times to show status updates in the PowerApp during flow execution.
 
-## ðŸ’¡ The Solution: StateLog Table with Timer
+## 💡 The Solution: StateLog Table with Timer
 
 For this challenge, we can easily create a StateLog table and check it regularly via a timer control. The key is to send updates to the StateLog entry after reaching important milestones in the flow.
 
 [**Download the complete solution here**](https://lehmannws.sharepoint.com/:u:/s/powerplatformtip.com/EZPqZIeuWXNBmNMDKrVf7cAB515lmUp4PTtzG8dfWmoZpw?e=8gJXFt) - ready to use at your location.
 
-## ðŸ› ï¸ What You Need for Implementation
+## 🛠️ What You Need for Implementation
 
-- **Flow Trigger** â†’ Button in your app
-- **Timer Control** â†’ To refresh the data periodically  
-- **Status Display** â†’ Text labels and icons
-- **StateLog Table** â†’ SharePoint list for state tracking
+- **Flow Trigger** → Button in your app
+- **Timer Control** → To refresh the data periodically  
+- **Status Display** → Text labels and icons
+- **StateLog Table** → SharePoint list for state tracking
 
-## ðŸ“Š Setting Up the StateLog Data Source
+## 📊 Setting Up the StateLog Data Source
 
 ![SharePoint List Overview](/assets/images/posts/2022/05/overview-sp-list-1.png){: .align-center}
 
@@ -53,7 +53,7 @@ For this challenge, we can easily create a StateLog table and check it regularly
 2. **GUID** (text column) - for filtering by unique flow instance
 3. **StateCode** (number column) - for programmatic status handling
 
-## âš¡ Configuring the Power Automate Flow
+## ⚡ Configuring the Power Automate Flow
 
 ![Cloud Flow Overview](/assets/images/posts/2022/05/overview-cloudflow.png){: .align-center}
 
@@ -69,7 +69,7 @@ For this challenge, we can easily create a StateLog table and check it regularly
 
 The scopes named "Flow Actions" are symbolic - use any actions you need. After important milestones, simply update the status (or create additional entries for detailed logging).
 
-## ðŸ“± PowerApps Implementation
+## 📱 PowerApps Implementation
 
 ![PowerApps Overview](/assets/images/posts/2022/05/overview.png){: .align-center}
 
@@ -114,14 +114,14 @@ You can also display different icons based on StateCode:
 ```powerapps
 Switch(
     locCurrentState.StateCode,
-    0, "â³ Starting...",
-    1, "ðŸ”„ Processing...", 
-    2, "âš™ï¸ Finalizing...",
-    3, "âœ… Complete!"
+    0, "⏳ Starting...",
+    1, "🔄 Processing...", 
+    2, "⚙️ Finalizing...",
+    3, "✅ Complete!"
 )
 ```
 
-## ðŸ’¾ Complete Flow Code
+## 💾 Complete Flow Code
 
 Here's the complete flow definition you can import:
 
@@ -181,7 +181,7 @@ Here's the complete flow definition you can import:
 }
 ```
 
-## ðŸŽ¯ Key Takeaways
+## 🎯 Key Takeaways
 
 - **Real-time tracking**: Monitor flow progress without blocking the UI
 - **GUID-based**: Each flow instance is uniquely trackable
@@ -189,7 +189,7 @@ Here's the complete flow definition you can import:
 - **User feedback**: Provide clear progress indication to users
 - **Scalable**: Works with any complexity of flow logic
 
-## ðŸ’¡ Alternative Approaches
+## 💡 Alternative Approaches
 
 Instead of updating the same StateLog entry, you could:
 - **Create new entries** for each milestone (provides detailed history)
@@ -197,7 +197,7 @@ Instead of updating the same StateLog entry, you could:
 - **Add timestamps** to track duration of each phase
 - **Include error handling** with specific error state codes
 
-## ðŸ”„ Enhanced Timer Logic
+## 🔄 Enhanced Timer Logic
 
 For better performance, you might want to:
 - **Increase timer duration** for longer flows (reduce SharePoint calls)
@@ -208,5 +208,3 @@ For better performance, you might want to:
 This solution provides a robust way to track Power Automate flow progress in real-time, giving your users visibility into long-running processes and improving the overall user experience.
 
 *This article was originally published on Marcel Lehmann's blog and has been migrated to PowerPlatformTip for better accessibility and searchability.*
-
-

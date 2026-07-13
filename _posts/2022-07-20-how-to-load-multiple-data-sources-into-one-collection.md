@@ -1,15 +1,12 @@
 ---
 title: "How to Load Multiple Data Sources into ONE Collection"
-seo_title: "Multiple Data Sources in One Power Apps Collection"
 date: 2022-07-20
 permalink: "/article/powerplatform/2022/07/20/how-to-load-multiple-data-sources-into-one-collection/"
 updated: 2025-06-26
-last_modified_at: 2026-07-10
 categories:
   - Article
   - PowerPlatform
 excerpt: "Learn efficient techniques to combine multiple data sources into a single collection in PowerApps. This guide covers identical data sources, different data sources, and adding enriched data from lookups."
-description: "Combine multiple data sources into one Power Apps collection with ClearCollect, merge identical or different sources and enrich rows with AddColumns and LookUp."
 header:
   overlay_color: "#2dd4bf"
   overlay_filter: "0.5"
