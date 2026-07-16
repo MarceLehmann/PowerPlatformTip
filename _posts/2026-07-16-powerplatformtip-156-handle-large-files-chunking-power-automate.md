@@ -19,7 +19,7 @@ toc: true
 toc_sticky: true
 ---
 
-> **TL;DR:** A single Power Automate message is limited to **100 MB**. Enable **Allow chunking** under an action's **Settings → Content transfer** and supported actions handle files up to **1 GB** — but only when the content flows **directly by reference** from one chunk-capable action to the next. The moment a variable, expression **or a Compose** materialises it, you are back to the 100 MB ceiling.
+> **TL;DR:** A single Power Automate message is limited to **100 MB**. Enable **Allow chunking** under an action's **Settings → Content transfer** and supported actions handle files up to **1 GB** — but only when the content flows **directly by reference** from one chunk-capable action to the next. The moment a variable, expression **or a Compose** materialises it, you are back to the 100 MB ceiling. Beyond 1 GB, copy **server-side** (e.g. a SharePoint copy job).
 
 Uploading or copying a large document in a flow suddenly fails with a size or timeout error? You have hit the **100 MB message size limit** that applies to a single HTTP call in Power Automate. For actions that support it, switching on **Allow chunking** raises the ceiling to **1 GB** by splitting the payload into smaller pieces automatically.
 
@@ -52,7 +52,7 @@ Many file actions can transfer larger content in pieces instead of one block. Tu
 
 **4. When Compose *does* help (≤100 MB only).**
 
-🔸 If your content is **≤100 MB** but comes from a `triggerBody()`, a variable or an inline expression, those inputs **disable chunking**. Wrap the content in a **Compose** action and reference it with `@body('Compose')` so a chunk-enabled action can activate chunking — useful when the destination connector's own limit is *below* 100 MB. Compose only fixes the reference form; it never raises the 100 MB cap.
+🔸 If your content is **≤100 MB** but comes from a `triggerBody()`, a variable or an inline expression, those inputs **disable chunking**. Wrap the content in a **Compose** action and reference it with `@body('Compose')` so a chunk-enabled action can activate chunking — useful when the destination connector's own limit is *below* 100 MB (for example a connector that already treats 30 MB as "large"). Compose only fixes the reference form; it never raises the 100 MB cap.
 
 **5. Confirm the connector actually supports chunking.**
 
@@ -60,9 +60,13 @@ Many file actions can transfer larger content in pieces instead of one block. Tu
 
 🔸 For **HTTP** actions specifically, the external endpoint must implement the **Logic Apps chunking protocol** (`206 Partial Content` for downloads, `x-ms-transfer-mode: chunked` + PATCH for uploads). A generic web server that only speaks standard HTTP chunking will **not** work.
 
-**6. For files well beyond 1 GB, copy server-side.**
+**6. For files well beyond 1 GB, copy server-side (never move the bytes through the flow).**
 
-🔸 Skip downloading and re-uploading the bytes through the flow. Use a **server-side copy** — e.g. Azure Blob **Copy Blob From URL** with a Microsoft Graph `@microsoft.graph.downloadUrl` — so the file never passes through Power Automate's size limits.
+🔸 **Azure Blob:** *Copy Blob From URL* with a Microsoft Graph `@microsoft.graph.downloadUrl`.
+
+🔸 **SharePoint → SharePoint:** the **Copy file** action copies within the same tenant server-side. For large or bulk moves, call the **`CreateCopyJobs` REST API** via *Send an HTTP request to SharePoint* (`POST /_api/site/CreateCopyJobs`) — it copies/moves files server-side up to SharePoint's own file-size limit (**250 GB**), and the payload never enters Power Automate.
+
+> 💡 **Extra tip — beyond 1 GB in SharePoint:** Don't try to force a multi-GB file through chunking. Use a **SharePoint copy job**. The simplest option is the standard **Copy file** action (same tenant). For heavier scenarios — very large files, whole folders, or many files at once — POST to `/_api/site/CreateCopyJobs` with a *Send an HTTP request to SharePoint* action. SharePoint performs the copy/move entirely on the server, so neither the 100 MB nor the 1 GB flow limit applies. You only pass the source and destination URLs, not the bytes.
 
 ## 🔁 Reference vs. value: the part that trips everyone up
 Chunking lives on **references**, not on evaluated **values**:
@@ -110,7 +114,7 @@ The content stays a chunked reference the whole way — chunk-capable download �
 > ⚠️ **Heads-up:** When chunking is enabled, the action's output contains **only** the `body` property — `statusCode` and `headers` are gone. Tracked properties that reference `outputs['statusCode']` or `outputs['headers']` fail with `TrackedPropertiesEvaluationFailed`, even though the download/upload actually succeeded. Remove those references.
 
 ## 🎉 Result
-Large-file actions that used to fail at ~100 MB now transfer content up to **1 GB** — provided the payload stays a chunked reference from one chunk-capable action to the next. No premium connector, no restructuring, and no manual splitting.
+Large-file actions that used to fail at ~100 MB now transfer content up to **1 GB** — provided the payload stays a chunked reference from one chunk-capable action to the next. Above 1 GB, a **server-side copy** (Azure Blob or a SharePoint copy job) moves the file without ever touching Power Automate's size limits. No premium connector, no restructuring, and no manual splitting.
 
 ## 🌟 Key Advantages
 
@@ -140,7 +144,7 @@ No. Chunking applies to **actions** only. A trigger can't deliver more than the 
 
 **Q5: The file is 3 GB — what now?**
 
-Chunking tops out at **1 GB**. For larger files, use a **server-side copy** (e.g. Azure Blob *Copy Blob From URL* with a direct download URL) so the bytes never flow through Power Automate.
+Chunking tops out at **1 GB**, so copy **server-side**. Within SharePoint, use the **Copy file** action or the **`CreateCopyJobs` REST API** (`POST /_api/site/CreateCopyJobs` via *Send an HTTP request to SharePoint*) — SharePoint copies/moves the file on the server up to its 250 GB file limit, bytes never entering the flow. For blob storage, use Azure Blob *Copy Blob From URL* with a direct download URL.
 
 **Q6: Enabling chunking removed my Overwrite option — is that related?**
 
