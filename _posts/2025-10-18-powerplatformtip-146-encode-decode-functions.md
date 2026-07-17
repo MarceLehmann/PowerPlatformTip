@@ -2,7 +2,7 @@
 title: "#PowerPlatformTip 146: Encode & Decode Functions"
 seo_title: "Encode & Decode in Power Apps & Power Automate"
 date: 2025-12-04
-last_modified_at: 2026-07-10
+last_modified_at: 2026-07-17
 categories:
   - Article
   - PowerPlatformTip
@@ -37,6 +37,8 @@ faq:
 ---
 
 > **TL;DR:** Encode special characters in Power Platform, `EncodeUrl`/`EncodeHTML` in Power Apps, `encodeUriComponent`/`decodeUriComponent` in flows, and double apostrophes for OData filters.
+
+> 🧰 **Free tool:** Encode or decode text to and from Base64 (UTF-8 safe, right in the browser): **[Base64 to Text converter](https://tools.powerplatformtip.com/tools/base64-text/)**.
 
 ## 💡 Challenge
 
