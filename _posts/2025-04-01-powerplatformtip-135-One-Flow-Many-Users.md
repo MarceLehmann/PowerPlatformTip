@@ -1,7 +1,7 @@
 ---
 title: "#PowerPlatformTip 135: 'One Flow, Many Users'"
 date: 2025-04-01
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-17
 categories:
   - Article
   - PowerPlatformTip
@@ -22,6 +22,8 @@ toc_sticky: true
 ---
 
 > **TL;DR:** Make one Power App the trigger hub for your shared flows and send Adaptive Cards that link to it, every user runs the flow in their own context, with no per-user permissions or duplicate flows.
+
+> 🧰 **Free tool:** Not sure how your recurrence trigger schedule reads? Get it explained in plain language (frequency + interval, not Unix cron): **[Recurrence trigger explainer](https://tools.powerplatformtip.com/tools/recurrence-explainer/)**.
 
 ## 💡 Challenge
 You've built an awesome flow, but now everyone should use it. The problem: Outlook-based flows need permission setups or even a duplicate per user. That's messy, slow, and hard to maintain.

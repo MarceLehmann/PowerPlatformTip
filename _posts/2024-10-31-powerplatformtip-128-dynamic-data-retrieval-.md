@@ -1,7 +1,7 @@
 ---
 title: "#PowerPlatformTip 128: 'Dynamic Data Retrieval'"
 date: 2024-10-31
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-17
 categories:
   - Article
   - PowerPlatformTip
@@ -20,6 +20,8 @@ toc_sticky: true
 ---
 
 > **TL;DR:** Pull values from JSON dynamically in Power Automate using Parse JSON with variable keys, no Switch or If cascades.
+
+> 🧰 **Free tool:** Working with JSON on the Power Apps side too? Turn a JSON sample into ready-to-use Power Fx (`ParseJSON`, `Type()`, `ClearCollect`/`ForAll`): **[ParseJSON in Power Apps converter](https://tools.powerplatformtip.com/tools/parsejson-converter/)**.
 
 ## 💡 Challenge
 Handling dynamic data in Power Automate often pushes you toward sprawling Switch or If structures, one branch per language, user role or message type. That gets hard to maintain fast.

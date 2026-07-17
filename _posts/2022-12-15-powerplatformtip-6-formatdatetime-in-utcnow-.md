@@ -1,7 +1,7 @@
 ---
 title: "#PowerPlatformTip 6: 'formatDateTime in utcNow'"
 date: 2022-12-15
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-17
 categories:
   - Article
   - PowerPlatformTip
@@ -20,6 +20,8 @@ toc_sticky: true
 ---
 
 > **TL;DR:** Format dates directly with `utcNow('your-format')` instead of wrapping it in a separate `formatDateTime` call.
+
+> 🧰 **Free tool:** Test your `utcNow()` / `formatDateTime` format strings with a live preview (remember: `MM` is month, `mm` is minute): **[utcNow date format tester](https://tools.powerplatformtip.com/tools/date-format-tester/)**.
 
 ## 💡 Challenge
 Working with dates and times often requires using formatDateTime with utcNow to format values, adding unnecessary complexity and extra steps in your flow.

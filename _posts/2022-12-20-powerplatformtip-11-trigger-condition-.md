@@ -1,7 +1,7 @@
 ---
 title: "#PowerPlatformTip 11: 'Trigger Condition'"
 date: 2022-12-20
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-17
 categories:
   - Article
   - PowerPlatformTip
@@ -21,6 +21,8 @@ toc_sticky: true
 ---
 
 > **TL;DR:** Build your trigger condition visually with a Filter array action in advanced mode, then copy the generated expression into the trigger's Trigger Conditions setting.
+
+> 🧰 **Free tool:** Build valid trigger conditions without hand-writing the expression: **[Trigger condition builder](https://tools.powerplatformtip.com/tools/trigger-builder/)**.
 
 Trigger conditions stop a flow from running unless specific criteria are met, saving run quota and keeping your logic clean.
 Writing the raw expression by hand is error-prone. Build it visually with a **Filter array** action, then copy the generated expression into the trigger.

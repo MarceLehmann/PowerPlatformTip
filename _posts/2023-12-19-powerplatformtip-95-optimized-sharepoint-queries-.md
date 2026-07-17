@@ -1,7 +1,7 @@
 ---
 title: "#PowerPlatformTip 95: 'Optimized SharePoint Queries'"
 date: 2023-12-19
-last_modified_at: 2026-07-09
+last_modified_at: 2026-07-17
 categories:
   - Article
   - PowerPlatformTip
@@ -22,6 +22,8 @@ toc_sticky: true
 ---
 
 > **TL;DR:** Filter SharePoint data at the source with OData Filter Query expressions in Get items to retrieve only the records you need.
+
+> 🧰 **Free tool:** Assemble valid OData `$filter` expressions for the SharePoint Get items action: **[SharePoint OData filter builder](https://tools.powerplatformtip.com/tools/odata-filter-builder/)**.
 
 ## 💡 Challenge
 Filtering data within SharePoint via Power Automate can be cumbersome, particularly with large lists and intricate filter conditions.
