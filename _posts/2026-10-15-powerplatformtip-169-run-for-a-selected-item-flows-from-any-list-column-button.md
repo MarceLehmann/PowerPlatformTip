@@ -79,11 +79,27 @@ first(split(triggerBody()?['entity']?['itemUrl'], '/Shared Documents'))
 triggerOutputs()?['headers']?['x-ms-user-email']
 ```
 
-**3. Copy the flow's ID for the button.**
+**3. Get the flow ID for the button, straight from the flow URL.**
 
-🔸 The `executeFlow` action needs the flow ID in the form `v1/<region-id>/<flow-guid>`.
+The `executeFlow` action needs the flow ID in the form `v1/<environment-id>/<flow-guid>`. You can read **both** parts from the flow's URL in Power Automate. Open the flow and look at the address bar:
 
-🔸 Easiest way: temporarily add the flow to the list via *Integrate → Power Automate* once, open the generated column formatting, and copy the `id` value, or read it from the flow's URL.
+```
+https://make.powerautomate.com/environments/Default-16b0ff2b-bf0e-e4ad-afc0-1d4d2911e350/flows/7503af2b-1cf8-4e3c-a7ff-dbac9ae240f4/details
+```
+
+🔸 **Environment ID** = the value after `/environments/`, **without** the `Default-` prefix:
+`Default-16b0ff2b-bf0e-e4ad-afc0-1d4d2911e350` → `16b0ff2b-bf0e-e4ad-afc0-1d4d2911e350`
+
+🔸 **Flow GUID** = the value after `/flows/`:
+`7503af2b-1cf8-4e3c-a7ff-dbac9ae240f4`
+
+🔸 **Assemble** them as `v1/<environment-id>/<flow-guid>`:
+
+```
+v1/16b0ff2b-bf0e-e4ad-afc0-1d4d2911e350/7503af2b-1cf8-4e3c-a7ff-dbac9ae240f4
+```
+
+That is exactly the string you drop into `actionParams` in the next step. (Alternatively, add the flow to the list once via *Integrate → Power Automate* and copy the `id` it generates, same value.)
 
 **4. Add a button column with `customRowAction: executeFlow`.**
 
@@ -109,7 +125,7 @@ triggerOutputs()?['headers']?['x-ms-user-email']
 }
 ```
 
-🔸 Replace the `id` inside `actionParams` with **your** flow ID.
+🔸 Replace the `id` inside `actionParams` with **your** assembled value from step 3. Keep the `v1/` prefix and the two GUIDs separated by a single `/`.
 
 **5. Test it.**
 
@@ -142,9 +158,9 @@ Correct. *For a selected item* passes the actual item at runtime in `entity` (`I
 
 Split `itemUrl` on the library segment (e.g. `/Shared Documents`) and take the first part, that's your site URL. Then use *Get item* / *Get file properties* with that site, your list name and the `ID`.
 
-**Q3: Where do I get the flow ID for `actionParams`?**
+**Q3: Where exactly in the flow URL are the two IDs?**
 
-It's the `v1/<region>/<flow-guid>` value. Add the flow to the list once via *Integrate → Power Automate* and copy the generated `id`, or read the GUID from the flow's URL.
+Open the flow and read the address bar: `.../environments/Default-<ENV-GUID>/flows/<FLOW-GUID>/details`. The **environment ID** is the GUID after `/environments/` (drop the `Default-` prefix), the **flow GUID** is the part after `/flows/`. Combine them as `v1/<ENV-GUID>/<FLOW-GUID>` and paste that into `actionParams`.
 
 **Q4: Does this also work for documents?**
 
